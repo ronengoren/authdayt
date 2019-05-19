@@ -7,8 +7,17 @@
     "test": "jest"
   },
   "dependencies": {
+    "aws-amplify": "^1.1.28",
+    "aws-amplify-react-native": "^2.1.12",
+    "moment": "^2.24.0",
     "react": "16.8.3",
-    "react-native": "0.59.8"
+    "react-native": "0.59.8",
+    "react-native-gesture-handler": "^1.2.1",
+    "react-navigation": "^3.10.2",
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "7.4.4",
@@ -20,5 +29,10 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "./src/assets/fonts"
+    ]
   }
 }
