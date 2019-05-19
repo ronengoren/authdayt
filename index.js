@@ -11,9 +11,9 @@ import thunk from 'redux-thunk'
 const store = createStore(rootReducer, applyMiddleware(thunk))
 
 // Amplify
-import config from './aws-exports'
+import awsmobile from './src/aws-exports'
 import Amplify from 'aws-amplify'
-Amplify.configure(config);
+Amplify.configure(awsmobile);
 
 
 const ReduxApp = () => (

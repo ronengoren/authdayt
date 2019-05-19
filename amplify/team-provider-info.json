@@ -1,0 +1,19 @@
+{
+    "react": {
+        "awscloudformation": {
+            "AuthRoleName": "dayt-react-20190519170111-authRole",
+            "UnauthRoleArn": "arn:aws:iam::144552980965:role/dayt-react-20190519170111-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::144552980965:role/dayt-react-20190519170111-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "dayt-react-20190519170111-deployment",
+            "UnauthRoleName": "dayt-react-20190519170111-unauthRole",
+            "StackName": "dayt-react-20190519170111",
+            "StackId": "arn:aws:cloudformation:us-east-2:144552980965:stack/dayt-react-20190519170111/3db2cbb0-7a79-11e9-8b26-0a1513ed47e4"
+        },
+        "categories": {
+            "auth": {
+                "cognitoc3ce9b27": {}
+            }
+        }
+    }
+}

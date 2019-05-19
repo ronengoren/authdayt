@@ -7,29 +7,27 @@ import {
   Button,
   Animated,
   Dimensions
-} from 'react-native';
-import { connect } from 'react-redux';
-import { Auth } from 'aws-amplify';
-import { colors, fonts } from '../theme'
+} from 'react-native'
+
+import { connect } from 'react-redux'
+import { Auth } from 'aws-amplify'
+
 import { logOut } from '../actions'
-
-
-
+import { colors, fonts } from '../theme'
 const { width, height } = Dimensions.get('window')
 
-
 class Home extends React.Component {
-      static navigationOptions = {
+  static navigationOptions = {
     header: null
   }
-    state = {
+  state = {
     username: ''
   }
-   AnimatedScale = new Animated.Value(1)
+  AnimatedScale = new Animated.Value(1)
   componentDidMount() {
     this.animate()
   }
-    logout() {
+  logout() {
     Auth.signOut()
       .then(() => {
         this.props.dispatchLogout()
@@ -38,10 +36,10 @@ class Home extends React.Component {
         console.log('err: ', err)
       })
   }
-   navigate() {
+  navigate() {
     this.props.navigation.navigate('Route1')
   }
-   animate() {
+  animate() {
     Animated.timing(
       this.AnimatedScale,
       {
@@ -61,25 +59,21 @@ class Home extends React.Component {
     })
   }
   render() {
-          return (
-                 <View style={styles.container}>
-                    <View style={styles.homeContainer}>
-
-                            <Text style={styles.welcome}>Welcome3</Text>
-                             <Animated.Image
-                                 source={require('../assets/boomboxcropped.png')}
-                                 style={{ tintColor: colors.primary, width: width / 2, height: width / 2, transform: [{scale: this.AnimatedScale}]}}
-                                 resizeMode='contain'
+    return (
+      <View style={styles.container}>
+        <View style={styles.homeContainer}>
+          <Text style={styles.welcome}>Welcome</Text>
+          <Animated.Image
+            source={require('../assets/boomboxcropped.png')}
+            style={{ tintColor: colors.primary, width: width / 2, height: width / 2, transform: [{scale: this.AnimatedScale}]}}
+            resizeMode='contain'
           />
-                            <Text onPress={this.logout.bind(this)} style={styles.welcome}>Logout</Text>
-
-                  </View>
-              </View>
-          )
+          <Text onPress={this.logout.bind(this)} style={styles.welcome}>Logout</Text>
+        </View>
+      </View>
+    )
   }
-    
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -92,12 +86,14 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   welcome: {
+    fontFamily: fonts.light,
     color: 'rgba(0, 0, 0, .85)',
     marginBottom: 26,
     fontSize: 22,
     textAlign: 'center'
   },
   registration: {
+    fontFamily: fonts.base,
     color: 'rgba(0, 0, 0, .5)',
     marginTop: 20,
     fontSize: 16,
@@ -106,4 +102,12 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Home;
+const mapStateToProps = state => ({
+  auth: state.auth
+})
+
+const mapDispatchToProps = {
+  dispatchLogout: () => logOut()
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

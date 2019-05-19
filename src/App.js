@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, StatusBar} from 'react-native';
-import { Auth } from 'aws-amplify';
+import Amplify, { Auth } from 'aws-amplify';
+import awsmobile from './aws-exports';
 import { connect } from 'react-redux';
 import Nav from './nav/Nav'
 import Tabs from './auth/Tabs'
-
+import { withAuthenticator } from 'aws-amplify-react-native'; 
+Amplify.configure(awsmobile);
 
 class App extends React.Component {
   state = {
@@ -49,4 +51,4 @@ const mapStateToProps = state => ({
   auth: state.auth
 })
 
-export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps)(withAuthenticator(App, true))
