@@ -122,22 +122,22 @@ export function showSignUpConfirmationModal() {
   }
 }
 
-// export function confirmUserLogin(authCode) {
-//   return (dispatch, getState) => {
-//     dispatch(confirmLogIn())
-//     const { auth: { user }} = getState()
-//     console.log('state: ', getState())
-//     Auth.confirmSignIn(user, authCode)
-//       .then(data => {
-//         console.log('data from confirmLogin: ', data)
-//         dispatch(confirmLoginSuccess(data))
-//       })
-//       .catch(err => {
-//         console.log('error signing in: ', err)
-//         dispatch(confirmSignUpFailure(err))
-//       })
-//   }
-// }
+export function confirmUserLogin(authCode) {
+  return (dispatch, getState) => {
+    dispatch(confirmLogIn())
+    const { auth: { user }} = getState()
+    console.log('state: ', getState())
+    Auth.confirmSignIn(user, authCode)
+      .then(data => {
+        console.log('data from confirmLogin: ', data)
+        dispatch(confirmLoginSuccess(data))
+      })
+      .catch(err => {
+        console.log('error signing in: ', err)
+        dispatch(confirmSignUpFailure(err))
+      })
+  }
+}
 
 function confirmLogIn() {
   return {
@@ -159,23 +159,23 @@ function confirmLoginFailure() {
   }
 }
 
-// export function confirmUserSignUp(username, authCode) {
-//   return (dispatch) => {
-//     dispatch(confirmSignUp())
-//     Auth.confirmSignUp(username, authCode)
-//       .then(data => {
-//         console.log('data from confirmSignUp: ', data)
-//         dispatch(confirmSignUpSuccess())
-//         setTimeout(() => {
-//           Alert.alert('Successfully Signed Up!', 'Please Sign')
-//         }, 0)
-//       })
-//       .catch(err => {
-//         console.log('error signing up: ', err)
-//         dispatch(confirmSignUpFailure(err))
-//       });
-//   }
-// }
+export function confirmUserSignUp(username, authCode) {
+  return (dispatch) => {
+    dispatch(confirmSignUp())
+    Auth.confirmSignUp(username, authCode)
+      .then(data => {
+        console.log('data from confirmSignUp: ', data)
+        dispatch(confirmSignUpSuccess())
+        setTimeout(() => {
+          Alert.alert('Successfully Signed Up!', 'Please Sign')
+        }, 0)
+      })
+      .catch(err => {
+        console.log('error signing up: ', err)
+        dispatch(confirmSignUpFailure(err))
+      });
+  }
+}
 
 function confirmSignUp() {
   return {

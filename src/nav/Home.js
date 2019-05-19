@@ -65,7 +65,7 @@ class Home extends React.Component {
                  <View style={styles.container}>
                     <View style={styles.homeContainer}>
 
-                            <Text style={styles.welcome}>Welcome2</Text>
+                            <Text style={styles.welcome}>Welcome3</Text>
                              <Animated.Image
                                  source={require('../assets/boomboxcropped.png')}
                                  style={{ tintColor: colors.primary, width: width / 2, height: width / 2, transform: [{scale: this.AnimatedScale}]}}

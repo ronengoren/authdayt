@@ -5,7 +5,12 @@ import { colors, fonts } from '../theme';
 import SignIn from './SignIn'
 import SignUp from './SignUp'
 
-
+const styles = StyleSheet.create({
+  icon: {
+    width: 26,
+    height: 26
+  }
+})
 
 const routes = {
   SignIn: {
@@ -15,6 +20,18 @@ const routes = {
       tabBarIcon: ({ tintColor }) => (
         <Image
           source={require('../assets/signInButton.png')}
+          style={[styles.icon, { tintColor }]}
+        />
+      )
+    }
+  },
+    SignUp: {
+    screen: SignUp,
+    navigationOptions: {
+      title: 'Sign Up',
+      tabBarIcon: ({ tintColor }) => (
+        <Image
+          source={require('../assets/signUpButton.png')}
           style={[styles.icon, { tintColor }]}
         />
       )
@@ -41,36 +58,8 @@ const routes = {
   }
 }
 
-const styles = StyleSheet.create({
-    icon: {
-    width: 26,
-    height: 26
-  },
-  container: {
-    backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1
-  },
-  homeContainer: {
-    alignItems: 'center'
-  },
-  welcome: {
-    color: 'rgba(0, 0, 0, .85)',
-    marginBottom: 26,
-    fontSize: 22,
-    textAlign: 'center'
-  },
-  registration: {
-    color: 'rgba(0, 0, 0, .5)',
-    marginTop: 20,
-    fontSize: 16,
-    paddingHorizontal: 20,
-    textAlign: 'center'
-  }
-})
+
 
 
 export default createAppContainer(createBottomTabNavigator(routes, routeConfig))
 
-// export default Tabs;

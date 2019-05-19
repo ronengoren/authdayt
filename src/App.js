@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 import {Platform, StyleSheet, Text, View, StatusBar} from 'react-native';
 import { Auth } from 'aws-amplify';
 import { connect } from 'react-redux';
@@ -8,42 +7,46 @@ import Tabs from './auth/Tabs'
 
 
 class App extends React.Component {
-    state = {
+  state = {
     user: {},
     isLoading: true
   }
-  
+  async componentDidMount() {
+    StatusBar.setHidden(true)
+    try {
+      const user = await Auth.currentAuthenticatedUser()
+      this.setState({ user, isLoading: false })
+    } catch (err) {
+      this.setState({ isLoading: false })
+    }
+  }
+  async componentWillReceiveProps(nextProps) {
+    try {
+      const user = await Auth.currentAuthenticatedUser()
+      this.setState({ user })
+    } catch (err) {
+      this.setState({ user: {} })
+    }
+  }
   render() {
-          return (
-      <Nav/>
-          )
+    if (this.state.isLoading) return null
+    let loggedIn = false
+    if (this.state.user.username) {
+      loggedIn = true
+    }
+    if (loggedIn) {
+      return (
+        <Nav />
+      )
+    }
+    return (
+      <Tabs />
+    )
   }
-
 }
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1
-  },
-  homeContainer: {
-    alignItems: 'center'
-  },
-  welcome: {
-    color: 'rgba(0, 0, 0, .85)',
-    marginBottom: 26,
-    fontSize: 22,
-    textAlign: 'center'
-  },
-  registration: {
-    color: 'rgba(0, 0, 0, .5)',
-    marginTop: 20,
-    fontSize: 16,
-    paddingHorizontal: 20,
-    textAlign: 'center'
-  }
+
+const mapStateToProps = state => ({
+  auth: state.auth
 })
 
-
-export default App;
+export default connect(mapStateToProps)(App)

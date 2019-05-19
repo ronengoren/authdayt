@@ -11,7 +11,7 @@ import thunk from 'redux-thunk'
 const store = createStore(rootReducer, applyMiddleware(thunk))
 
 // Amplify
-import config from './src/aws-exports'
+import config from './aws-exports'
 import Amplify from 'aws-amplify'
 Amplify.configure(config);
 
