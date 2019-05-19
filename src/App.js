@@ -15,7 +15,7 @@ class App extends React.Component {
   
   render() {
           return (
-      <Tabs/>
+      <Nav/>
           )
   }
 

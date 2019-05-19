@@ -41,20 +41,6 @@ const routes = {
   }
 }
 
-
-class Tabs extends React.Component {
-    render() {
-          return (
-        <View style={styles.container}>
-                    <View style={styles.homeContainer}>
-                            <Text style={styles.welcome}>Tabs12</Text>
-                  </View>
-              </View>
-          )
-  }
-
-}
-
 const styles = StyleSheet.create({
     icon: {
     width: 26,

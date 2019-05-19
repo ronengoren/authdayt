@@ -1,27 +1,18 @@
 import React from 'react'
-import { StackNavigator } from 'react-navigation'
+import { createStackNavigator, createAppContainer } from 'react-navigation'
 import {Platform, StyleSheet, Text, View, StatusBar} from 'react-native';
 import Home from './Home'
 
 const routeConfig = {
   Home: { screen: Home },
 }
-// const StackNav = StackNavigator(routeConfig)
+const StackNav = createStackNavigator(routeConfig)
 
 
 class Nav extends React.Component {
   render() {
     return (
-         <View style={styles.container}>
-                    <View style={styles.homeContainer}>
-
-                            <Text style={styles.welcome}>Nav25s</Text>
-                            
-
-                  </View>
-              </View>
-                    //   <Home />
-   
+      <StackNav />
     )
   }
 }
@@ -53,4 +44,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Nav;
+export default createAppContainer(StackNav)
