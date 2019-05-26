@@ -2,8 +2,10 @@ import React from 'react'
 import { createStackNavigator, createAppContainer } from 'react-navigation'
 import {Platform, StyleSheet, Text, View, StatusBar} from 'react-native';
 import Home from './Home'
+import Authentication from '../auth/Authentication';
 
 const routeConfig = {
+  Authentication: { screen: Authentication },
   Home: { screen: Home },
 }
 const StackNav = createStackNavigator(routeConfig)

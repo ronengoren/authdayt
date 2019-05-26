@@ -39,6 +39,11 @@ class Home extends React.Component {
   navigate() {
     this.props.navigation.navigate('Route1')
   }
+  handleSignOut = () => {
+    Auth.signOut()
+      .then(() => this.props.navigation.navigate('Authentication'))
+      .catch(err => console.log(err));
+  }
   animate() {
     Animated.timing(
       this.AnimatedScale,
@@ -62,13 +67,13 @@ class Home extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.homeContainer}>
-          <Text style={styles.welcome}>Welcome</Text>
+          <Text style={styles.welcome}>Welcome to dayT</Text>
           <Animated.Image
             source={require('../assets/boomboxcropped.png')}
             style={{ tintColor: colors.primary, width: width / 2, height: width / 2, transform: [{scale: this.AnimatedScale}]}}
             resizeMode='contain'
           />
-          <Text onPress={this.logout.bind(this)} style={styles.welcome}>Logout</Text>
+          <Button title="Logout" onPress={this.handleSignOut} style={styles.welcome}></Button>
         </View>
       </View>
     )

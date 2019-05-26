@@ -1,18 +1,18 @@
 {
-    "react": {
+    "dev": {
         "awscloudformation": {
-            "AuthRoleName": "dayt-react-20190519170111-authRole",
-            "UnauthRoleArn": "arn:aws:iam::144552980965:role/dayt-react-20190519170111-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::144552980965:role/dayt-react-20190519170111-authRole",
+            "AuthRoleName": "dayt2-dev-20190526143848-authRole",
+            "UnauthRoleArn": "arn:aws:iam::144552980965:role/dayt2-dev-20190526143848-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::144552980965:role/dayt2-dev-20190526143848-authRole",
             "Region": "us-east-2",
-            "DeploymentBucketName": "dayt-react-20190519170111-deployment",
-            "UnauthRoleName": "dayt-react-20190519170111-unauthRole",
-            "StackName": "dayt-react-20190519170111",
-            "StackId": "arn:aws:cloudformation:us-east-2:144552980965:stack/dayt-react-20190519170111/3db2cbb0-7a79-11e9-8b26-0a1513ed47e4"
+            "DeploymentBucketName": "dayt2-dev-20190526143848-deployment",
+            "UnauthRoleName": "dayt2-dev-20190526143848-unauthRole",
+            "StackName": "dayt2-dev-20190526143848",
+            "StackId": "arn:aws:cloudformation:us-east-2:144552980965:stack/dayt2-dev-20190526143848/8059fc10-7fe5-11e9-8dc8-02edfbb31034"
         },
         "categories": {
             "auth": {
-                "cognitoc3ce9b27": {}
+                "dayt23ef97c74": {}
             }
         }
     }

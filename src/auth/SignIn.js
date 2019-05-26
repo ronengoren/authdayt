@@ -45,12 +45,7 @@ class SignIn extends Component<{}> {
   
   render() {
     const { fontsLoaded } = this.state
-    const { auth: {
-      signInErrorMessage,
-      isAuthenticating,
-      signInError,
-      showSignInConfirmationModal
-    }} = this.props
+  
     return (
       <View style={styles.container}>
         <View style={styles.heading}>
@@ -63,53 +58,6 @@ class SignIn extends Component<{}> {
         <Text style={[styles.greeting]}>
           Welcome back,
         </Text>
-        <Text style={[styles.greeting2]}>
-          sign in to continue
-        </Text>
-        <View style={styles.inputContainer}>
-          <Input
-            placeholder="User Name"
-            type='username'
-            onChangeText={this.onChangeText}
-            value={this.state.username}
-          />
-          <Input
-            placeholder="Password"
-            type='password'
-            onChangeText={this.onChangeText}
-            value={this.state.password}
-            secureTextEntry
-          />
-        </View>
-
-        <Button
-          isLoading={isAuthenticating}
-          title='Sign In'
-          onPress={this.signIn.bind(this)}
-        />      
-        <Text style={[styles.errorMessage, signInError && { color: 'black' }]}>Error logging in. Please try again.</Text>
-        <Text style={[styles.errorMessage, signInError && { color: 'black' }]}>{signInErrorMessage}</Text>
-        {
-          showSignInConfirmationModal && (
-            <Modal>
-              <View style={styles.modal}>
-                <Input
-                  placeholder="Authorization Code"
-                  type='authCode'
-                  keyboardType='numeric'
-                  onChangeText={this.onChangeText}
-                  value={this.state.authCode}
-                  keyboardType='numeric'
-                />
-                <Button
-                  title='Confirm'
-                  onPress={this.confirm.bind(this)}
-                  isLoading={isAuthenticating}
-                />
-              </View>
-            </Modal>
-          )
-        }
       </View>
     );
   }

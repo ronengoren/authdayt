@@ -1,54 +1,18 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, StatusBar} from 'react-native';
-import Amplify, { Auth } from 'aws-amplify';
-import awsmobile from './aws-exports';
-import { connect } from 'react-redux';
-import Nav from './nav/Nav'
-import Tabs from './auth/Tabs'
-import { withAuthenticator } from 'aws-amplify-react-native'; 
-Amplify.configure(awsmobile);
+// import {Platform, StyleSheet, Text, View, StatusBar} from 'react-native';
+// import Amplify from 'aws-amplify';
+// import aws_exports from '../aws-exports';
+import AppNavigator from './nav/AppNavigator'
+
 
 class App extends React.Component {
-  state = {
-    user: {},
-    isLoading: true
-  }
-  async componentDidMount() {
-    StatusBar.setHidden(true)
-    try {
-      const user = await Auth.currentAuthenticatedUser()
-      this.setState({ user, isLoading: false })
-    } catch (err) {
-      this.setState({ isLoading: false })
-    }
-  }
-  async componentWillReceiveProps(nextProps) {
-    try {
-      const user = await Auth.currentAuthenticatedUser()
-      this.setState({ user })
-    } catch (err) {
-      this.setState({ user: {} })
-    }
-  }
   render() {
-    if (this.state.isLoading) return null
-    let loggedIn = false
-    if (this.state.user.username) {
-      loggedIn = true
-    }
-    if (loggedIn) {
       return (
-        <Nav />
+        <AppNavigator />
       )
-    }
-    return (
-      <Tabs />
-    )
   }
 }
 
-const mapStateToProps = state => ({
-  auth: state.auth
-})
 
-export default connect(mapStateToProps)(withAuthenticator(App, true))
+
+export default App;
