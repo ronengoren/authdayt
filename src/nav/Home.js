@@ -15,7 +15,7 @@ class Home extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.homeContainer}>
-          <Text style={styles.welcome}>Welcome to dayT</Text>
+          <Text style={styles.welcome}>We have { this.props.friends.current.length } friends!</Text>
           <Button
         title="Add some friends"
         onPress={() =>
@@ -59,5 +59,10 @@ const styles = StyleSheet.create({
   }
 })
 
+const mapStateToProps = (state) => {
+  const { friends } = state
+  return { friends }
+};
 
-export default Home;
+
+export default connect(mapStateToProps)(Home);
