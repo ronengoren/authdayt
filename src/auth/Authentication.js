@@ -21,6 +21,14 @@ export default class Authentication extends React.Component {
     const newIndex = this.state.selectedIndex === 0 ? 1 : 0
     this.setState({ selectedIndex: newIndex })
   }
+  handleSignIn = () => {
+    const { email, password } = this.state;
+    Auth.signIn(email, password)
+      // If we are successful, navigate to Home screen
+      .then(user => this.props.navigation.navigate('Home'))
+      // On failure, display error in console
+      .catch(err => console.log(err));
+  }
   handleSignUp = () => {
      // alert(JSON.stringify(this.state));
     const { email, password, confirmPassword } = this.state;
@@ -95,7 +103,7 @@ export default class Authentication extends React.Component {
     />
   </View>
 ) : (
-  <View>
+  <View style={styles.form}>
     <Input
       label="Email"
       leftIcon={{ type: 'font-awesome', name: 'envelope' }}
