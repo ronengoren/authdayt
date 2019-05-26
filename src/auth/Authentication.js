@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Modal } from 'react-native';
-import { Input, Button } from "react-native-elements";
+import { Input, Button, ButtonGroup } from "react-native-elements";
 import { Auth } from 'aws-amplify';
 
 export default class Authentication extends React.Component {
@@ -12,7 +12,14 @@ export default class Authentication extends React.Component {
       confirmPassword: '',
       confirmationCode: '',
       modalVisible: false,
+      selectedIndex: 0,
     };
+    this.buttons = ['Sign Up', 'Sign In']
+  }
+  updateIndex = () => {
+    // If selectedIndex was 0, make it 1.  If it was 1, make it 0
+    const newIndex = this.state.selectedIndex === 0 ? 1 : 0
+    this.setState({ selectedIndex: newIndex })
   }
   handleSignUp = () => {
      // alert(JSON.stringify(this.state));
@@ -45,39 +52,76 @@ export default class Authentication extends React.Component {
     return (
       <View style={styles.container}>
         <Text>Welcome to MyAlligatorFace!</Text>
-        <Input
-          label="Email"
-          leftIcon={{ type: "font-awesome", name: "envelope" }}
-          onChangeText={
-            // Set this.state.email to the value in this Input box
-            (value) => this.setState({ email: value })
-          }
-          placeholder="my@email.com"
-        />
-        <Input
-          label="Password"
-          leftIcon={{ type: "font-awesome", name: "lock" }}
-          onChangeText={
-            // Set this.state.password to the value in this Input box
-            (value) => this.setState({ password: value })
-          }
-          placeholder="p@ssw0rd123"
-          secureTextEntry
-        />
-        <Input
-          label="Confirm Password"
-          leftIcon={{ type: "font-awesome", name: "lock" }}
-          onChangeText={
-            // Set this.state.confirmPassword to the value in this Input box
-            (value) => this.setState({ confirmPassword: value })
-          }
-          placeholder="p@ssw0rd123"
-          secureTextEntry
-        />
-        <Button 
-        title="Submit"
-        onPress={ this.handleSignUp }
-         />
+        <ButtonGroup
+        onPress={this.updateIndex}
+        selectedIndex={this.state.selectedIndex}
+        buttons={ this.buttons }
+      />
+
+     { this.state.selectedIndex === 0 ? (
+  <View style={styles.form}>
+    <Input
+      label="Email"
+      leftIcon={{ type: 'font-awesome', name: 'envelope' }}
+      onChangeText={
+        // Set this.state.email to the value in this Input box
+        (value) => this.setState({ email: value })
+      }
+      placeholder="my@email.com"
+    />
+    <Input
+      label="Password"
+      leftIcon={{ type: 'font-awesome', name: 'lock' }}
+      onChangeText={
+        // Set this.state.email to the value in this Input box
+        (value) => this.setState({ password: value })
+      }
+      placeholder="p@ssw0rd123"
+      secureTextEntry
+    />
+    <Input
+      label="Confirm Password"
+      leftIcon={{ type: 'font-awesome', name: 'lock' }}
+      onChangeText={
+        // Set this.state.email to the value in this Input box
+        (value) => this.setState({ confirmPassword: value })
+      }
+      placeholder="p@ssw0rd123"
+      secureTextEntry
+    />
+    <Button
+      title='Submit'
+      onPress={ this.handleSignUp }
+    />
+  </View>
+) : (
+  <View>
+    <Input
+      label="Email"
+      leftIcon={{ type: 'font-awesome', name: 'envelope' }}
+      onChangeText={
+        // Set this.state.email to the value in this Input box
+        (value) => this.setState({ email: value })
+      }
+      placeholder="my@email.com"
+    />
+    <Input
+      label="Password"
+      leftIcon={{ type: 'font-awesome', name: 'lock' }}
+      onChangeText={
+        // Set this.state.email to the value in this Input box
+        (value) => this.setState({ password: value })
+      }
+      placeholder="p@ssw0rd123"
+      secureTextEntry
+    />
+    <Button
+      title='Submit'
+      onPress={ this.handleSignIn }
+    />
+  </View>
+) }
+         
          <Modal
           visible={this.state.modalVisible}
         >
@@ -109,5 +153,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+   
   },
+  form: {
+    width: '90%',
+   }
 });
