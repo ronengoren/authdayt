@@ -1,9 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, Image } from 'react-native';
 import { Button } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { Auth } from 'aws-amplify';
-import { fonts, colors } from '../theme'
+import { fonts, colors } from '../theme';
+
 
 class Home extends React.Component {
   state = {
@@ -31,7 +32,7 @@ class Home extends React.Component {
         <View style={styles.homeContainer}>
           <Text style={styles.welcome}>We have { this.props.friends.current.length } friends! {this.state.username}s</Text>
           <Button
-        title="Add some friends"
+        title="Choose your day to dayT"
         onPress={() =>
           this.props.navigation.navigate('Friends')
         }

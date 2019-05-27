@@ -4,10 +4,14 @@ import { ADD_FRIEND } from '../types';
 const INITIAL_STATE = {
     current: [],
     possible: [
-      'Allie',
-      'Gator',
-      'Lizzie',
-      'Reptar',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday'
+
     ],
   };
   

@@ -11,12 +11,12 @@ class Friends extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-     <Text> Add friends here! </Text>
+     <Text> Choose day </Text>
       {
         this.props.friends.possible.map((friend, index) => (
           <Button
             key={ friend }
-            title={ `Add ${ friend }` }
+            title={ `${ friend }` }
             onPress={() =>
               this.props.addFriend(index)
             }
