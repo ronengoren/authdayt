@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import AppNavigator from './nav/AppNavigator'
+import AppNavigator from './navigation/AppNavigator'
 import friendReducer from './reducers/FriendReducer';
 // redux
 import { createStore } from 'redux'
@@ -8,6 +8,8 @@ import thunk from 'redux-thunk';
 // Amplify
 import aws_exports from '../aws-exports'
 import Amplify from 'aws-amplify';
+
+// ApolloServer
 Amplify.configure(aws_exports);
 
 const store = createStore(friendReducer)
