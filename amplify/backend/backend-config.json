@@ -1,9 +1,8 @@
 {
 	"auth": {
-		"dayt23ef97c74": {
+		"dayt27a74de79": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation"
 		}
-	},
-	"api": {}
+	}
 }

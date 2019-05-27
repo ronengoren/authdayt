@@ -1,12 +1,12 @@
 {
-    "identityPoolName": "dayt23ef97c74_identitypool_3ef97c74",
+    "identityPoolName": "dayt27a74de79_identitypool_7a74de79",
     "allowUnauthenticatedIdentities": false,
-    "lambdaLogPolicy": "dayt23_3ef97c74_lambda_log_policy",
-    "openIdLambdaRoleName": "dayt23_3ef97c74_openid_lambda_role",
-    "openIdRolePolicy": "dayt23_3ef97c74_openid_pass_role_policy",
-    "openIdLambdaIAMPolicy": "dayt23_3ef97c74_openid_lambda_iam_policy",
-    "openIdLogPolicy": "dayt23_3ef97c74_openid_lambda_log_policy",
-    "userPoolName": "dayt23ef97c74_userpool_3ef97c74",
+    "lambdaLogPolicy": "dayt27_7a74de79_lambda_log_policy",
+    "openIdLambdaRoleName": "dayt27_7a74de79_openid_lambda_role",
+    "openIdRolePolicy": "dayt27_7a74de79_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "dayt27_7a74de79_openid_lambda_iam_policy",
+    "openIdLogPolicy": "dayt27_7a74de79_openid_lambda_log_policy",
+    "userPoolName": "dayt27a74de79_userpool_7a74de79",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -14,9 +14,9 @@
     "mfaTypes": [
         "SMS Text Message"
     ],
-    "roleName": "dayt233ef97c74_sns-role",
-    "roleExternalId": "dayt233ef97c74_role_external_id",
-    "policyName": "dayt233ef97c74-sns-policy",
+    "roleName": "dayt277a74de79_sns-role",
+    "roleExternalId": "dayt277a74de79_role_external_id",
+    "policyName": "dayt277a74de79-sns-policy",
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
     "emailVerificationSubject": "Your verification code",
@@ -27,7 +27,7 @@
     "requiredAttributes": [
         "email"
     ],
-    "userpoolClientName": "dayt233ef97c74_app_client",
+    "userpoolClientName": "dayt277a74de79_app_client",
     "userpoolClientGenerateSecret": true,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
@@ -36,15 +36,15 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "mfaLambdaRole": "dayt233ef97c74_totp_lambda_role",
-    "mfaLambdaLogPolicy": "dayt233ef97c74_totp_lambda_log_policy",
-    "mfaPassRolePolicy": "dayt233ef97c74_totp_pass_role_policy",
-    "mfaLambdaIAMPolicy": "dayt233ef97c74_totp_lambda_iam_policy",
-    "userpoolClientLambdaRole": "dayt233ef97c74_userpoolclient_lambda_role",
-    "userpoolClientLogPolicy": "dayt233ef97c74_userpoolclient_lambda_log_policy",
-    "userpoolClientLambdaPolicy": "dayt233ef97c74_userpoolclient_lambda_iam_policy",
+    "mfaLambdaRole": "dayt277a74de79_totp_lambda_role",
+    "mfaLambdaLogPolicy": "dayt277a74de79_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "dayt277a74de79_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "dayt277a74de79_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "dayt277a74de79_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "dayt277a74de79_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "dayt277a74de79_userpoolclient_lambda_iam_policy",
     "userpoolClientSetAttributes": false,
-    "resourceName": "dayt23ef97c74",
+    "resourceName": "dayt27a74de79",
     "authSelections": "identityPoolAndUserPool",
     "authRoleName": {
         "Ref": "AuthRoleName"
