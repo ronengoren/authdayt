@@ -45,7 +45,7 @@ export default {
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: '#F64A25',
+    backgroundColor: '#000000',
     flexDirection: 'row',
     height: 65,
     alignItems: 'center',
@@ -84,6 +84,16 @@ export default {
 
     fontSize: 36,
     fontWeight: '400',
+  },
+  SwipeText: {
+    fontSize: 36,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    width: 100,
+    height: 100,
+    position: 'absolute',
+    left: 50,
+    margin: 50
   },
   detailText: {
     marginBottom: 4,

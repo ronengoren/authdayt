@@ -22,7 +22,7 @@ class Profile extends React.Component {
   static navigationOptions = {
     title: 'Profile',
     headerStyle: {
-      backgroundColor: '#f4511e',
+      backgroundColor: '#000000',
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
@@ -39,7 +39,7 @@ class Profile extends React.Component {
     return (
       <View>
         <Text style={styles.detailText}>For Sale Property Details</Text>
-        <Text style={styles.subDetailText}>{this.props.detail}</Text>
+        <Text style={styles.subDetailText}>tetete</Text>
       </View>
     )
   }
@@ -51,13 +51,13 @@ class Profile extends React.Component {
         }}
       >
         <TouchableOpacity style={[styles.navigatorButton, { flex: 2 }]}>
-          <Text style={styles.navigatorText}>DIRECTIONS</Text>
+          <Text style={styles.navigatorText}>DateType1</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.navigatorButton, { flex: 2 }]}>
-          <Text style={styles.navigatorText}>STREET VIEW</Text>
+          <Text style={styles.navigatorText}>DateType2</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.navigatorButton, { flex: 1 }]}>
-          <Text style={styles.navigatorText}>MAP</Text>
+          <Text style={styles.navigatorText}>DateType3</Text>
         </TouchableOpacity>
       </View>
     )
@@ -65,8 +65,8 @@ class Profile extends React.Component {
   renderDescription = () => {
     return (
       <View>
-        <Text style={styles.priceText}>$1,175,000</Text>
-        <Text style={styles.descriptionText}>1 Bed, 2 Bath, 1088 soft</Text>
+        <Text style={styles.priceText}>Name</Text>
+        <Text style={styles.descriptionText}>A story the system create per his date types</Text>
         <Text style={styles.descriptionText}>Condo, 342 Days on Trulia</Text>
         <Text style={styles.descriptionText}>Est. Mortgage $52,604</Text>
       </View>
@@ -81,6 +81,7 @@ class Profile extends React.Component {
             source={Image}
             style={styles.coverImage}
           >
+            <Text style={styles.SwipeText}>Swipe</Text>
             <PhotoButton />
           </ImageBackground>
         </View>
