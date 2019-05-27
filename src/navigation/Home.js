@@ -6,6 +6,19 @@ import { Auth } from 'aws-amplify';
 import { fonts, colors } from '../theme'
 
 class Home extends React.Component {
+  state = {
+    username: '',
+  }
+  componentDidMount() {
+    Auth.currentUserInfo()
+      .then(data => {
+        this.setState({
+          username: data.username
+        })
+      })
+      .catch(err => console.log('error: ', err))
+  }
+
   handleSignOut = () => {
     Auth.signOut()
       .then(() => this.props.navigation.navigate('Authentication'))
@@ -15,7 +28,7 @@ class Home extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.homeContainer}>
-          <Text style={styles.welcome}>We have { this.props.friends.current.length } friends!</Text>
+          <Text style={styles.welcome}>Hi {this.state.username}!</Text>
           <Button
         title="Add some friends"
         onPress={() =>
