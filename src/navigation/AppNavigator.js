@@ -9,9 +9,9 @@ import CreateProfile  from '../screens/CreateProfile';
 
 const AppNavigator = createStackNavigator({
     Authentication: { 
-      screen: CreateProfile
+      screen: Authentication
     },
-    Home: { screen: Home },
+    Home: { screen: CreateProfile },
     Friends: { screen: Friends},
   });
   const AppContainer = createAppContainer(AppNavigator);

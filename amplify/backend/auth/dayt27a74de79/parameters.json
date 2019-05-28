@@ -64,8 +64,10 @@
             "Arn"
         ]
     },
-    "useDefault": "default",
+    "useDefault": "manual",
     "usernameAttributes": [
         "email"
-    ]
+    ],
+    "thirdPartyAuth": false,
+    "hostedUI": false
 }
