@@ -1,128 +1,62 @@
+import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
+
 import React from 'react';
-import { StyleSheet, 
-    Text,
-    View,
-    StatusBar,
-    Image, 
-    TextInput, 
-    ScrollView, 
-    Keyboard, 
-    TouchableOpacity,
-    FlatList } from 'react-native';
-    import { Button, Icon } from 'react-native-elements'
+import { StyleSheet, Text, View, StatusBar, Image, TextInput, ScrollView, Keyboard, TouchableOpacity, FlatList } from 'react-native';
+import { Button, Icon } from 'react-native-elements';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import {loadSettings,
-        saveSettings
-      } from '../storage/settingsStorage';
+
+// import {loadSettings,
+//         saveSettings
+//       } from '../storage/settingsStorage';
 import Amplify, { API, graphqlOperation } from "aws-amplify";
-import { createTodo } from "../graphql/mutations"
-import { listTodos } from "../graphql/queries"
+// import { createTodo } from "../graphql/mutations"
+// import { listTodos } from "../graphql/queries"
 import { Auth } from 'aws-amplify';
+import gql from 'graphql-tag';
+import { graphql, compose, ApolloClient } from 'react-apollo';
+import { ApolloProvider } from "react-apollo";
+import Profile  from './Profile/Profile';
+import Chat  from './Chat';
+import Feed  from './Feed';
 
 
-      
+
+
+// import { graphqlMutation } from 'aws-appsync-react';
+import AppSyncConfig from '../../aws-exports';
+import { Rehydrated } from 'aws-appsync-react';
+import AWSAppSyncClient from 'aws-appsync';
+
+
+// const client = new AWSAppSyncClient({
+//     "url": "https://gtqfztktofhxbchdhpifotiz54.appsync-api.us-east-1.amazonaws.com/graphql",
+// "region": "us-east-1",
+//     auth: {
+//         "type": "API_KEY",
+//         "apiKey": "da2-tod75vhfqra3pkh6yjimdbkxje",
+//     }
+//   });
 class CreateProfile extends React.Component {
     constructor(props) {
         super(props);
-        this.state={Todo: [],
-                    note: ""
-
-        } 
-
-        handleInputChange = event => this.setState({ note: event.target.value })
        
-        addNote = async event => {
-            const { note, Todo } = this.state
-    
-            event.preventDefault()
-    
-            const input = {
-                note
-            }
-    
-            const result = await API.graphql(graphqlOperation(createTodo, { input }))
-    
-            const newNote = result.data.createTodo
-            const updateTodo = [newNote, ...Todo]
-            this.setState({ Todo: updateTodo, note: "" })
-        }
-      
-      
-     
-      
-      }
 
-      _keyExtractor = (item, index) => item.id;
       
-      async componentDidMount() {
-        const result = await API.graphql(graphqlOperation(listTodos))
-        this.setState({ Todo: result.data.listTodos.items })
-        
-      
-        
-      }
-      handleSignOut = () => {
-        Auth.signOut()
-          .then(() => this.props.navigation.navigate('Authentication'))
-          .catch(err => console.log(err));
-      }
-
-   
+    }
   render() {
    
 
     return (
-      <View style={styles.container}>
-       <ScrollView>
-  <View style={styles.inputContainer}>
-  <TouchableOpacity>
-  <TextInput
-    style={styles.textInput}
-    editable={true}
-    placeholder="Please enter your text"
-    onBlur={Keyboard.dismiss}
-    onChangeText={this.handleInputChange}
-    pointerEvents="none"
-    value={this.note}
-     />
-     <Text
-     style={styles.saveButton}
-     onPress={()=>{this.addNote}}
-     >hi</Text>
-
-  </TouchableOpacity>
+      
+         <View>
+      <Text>create profile1 </Text>
+    </View>
   
-    {/* <TextInput
-      style={styles.textInput}
-      placeholder="Add your note"
-      maxLength={20}
-      onBlur={Keyboard.dismiss}
-      onChangeText={this.handleInputChange}
-      value={this.state.note}
-    />
-     <TouchableOpacity
-    style={styles.saveButton}
-    onPress={()=>{console.log('press')}}
-  >
-    <Text style={styles.saveButtonText}>Create Profile</Text>
-  </TouchableOpacity> */}
-  <View style={styles.container}>
-        <FlatList 
-          data={this.state.Todo}
-          keyExtractor={(item, index) => item.id}
-          renderItem={({item}) => <Text  key={item.id} style={styles.item}>{item.name}</Text>}
-          
-        />
-      </View>
-  </View>
-  <Button
-        title="Sign Out"
-        onPress={this.handleSignOut}
-      />
-</ScrollView>
-      </View>
+
     )
   }
+
 }
 
 const styles = StyleSheet.create({
@@ -169,7 +103,8 @@ const styles = StyleSheet.create({
     borderColor: '#007BFF',
     backgroundColor: '#007BFF',
     padding: 15,
-    margin: 5
+    margin: 5,
+    color: "white"
   },
   saveButtonText: {
     color: '#FFFFFF',
@@ -178,8 +113,15 @@ const styles = StyleSheet.create({
   }
 })
 
+const TabNavigator = createBottomTabNavigator({
+  Home: CreateProfile,
+  Settings: Profile,
+  Chat: Chat,
+  Feed: Feed,
+}
+);
 
 
 
-export default CreateProfile;
 
+export default createAppContainer(TabNavigator);
