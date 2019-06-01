@@ -11,6 +11,8 @@ import Amplify from 'aws-amplify';
 import client from './client';
 
 // ApolloServer
+import { ApolloProvider } from 'react-apollo';
+
 Amplify.configure(aws_exports);
 
 const store = createStore(friendReducer)
@@ -18,10 +20,9 @@ const store = createStore(friendReducer)
 export default class App extends React.Component {
   render() {
       return (
-        <Provider store={ store }>
-        <AppNavigator
-        />
-      </Provider>
+        <ApolloProvider client={client} store={store}>
+          <AppNavigator />
+    </ApolloProvider>
       )
   };
 }

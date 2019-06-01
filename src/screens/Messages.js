@@ -9,7 +9,7 @@ class Chat extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.homeContainer}>
-          <Text style={styles.welcome}>Chat</Text>
+          <Text style={styles.welcome}>Messages</Text>
         </View>
       </View>
     )

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "apollo-boost": "^0.4.0",
+    "apollo-cache-inmemory": "^1.6.0",
     "aws-amplify": "^1.1.28",
     "aws-amplify-react-native": "^2.1.12",
     "aws-appsync": "^1.8.0",
