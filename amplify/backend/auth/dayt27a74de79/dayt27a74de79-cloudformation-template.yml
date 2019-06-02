@@ -130,9 +130,6 @@ Parameters:
   usernameAttributes:
     Type: CommaDelimitedList
         
-  thirdPartyAuth:
-    Type: String
-            
   hostedUI:
     Type: String
         

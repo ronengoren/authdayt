@@ -1,6 +1,6 @@
 {
     "identityPoolName": "dayt27a74de79_identitypool_7a74de79",
-    "allowUnauthenticatedIdentities": true,
+    "allowUnauthenticatedIdentities": false,
     "lambdaLogPolicy": "dayt27_7a74de79_lambda_log_policy",
     "openIdLambdaRoleName": "dayt27_7a74de79_openid_lambda_role",
     "openIdRolePolicy": "dayt27_7a74de79_openid_pass_role_policy",
@@ -64,10 +64,9 @@
             "Arn"
         ]
     },
-    "useDefault": "manual",
+    "useDefault": "default",
     "usernameAttributes": [
         "email"
     ],
-    "thirdPartyAuth": false,
     "hostedUI": false
 }

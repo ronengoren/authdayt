@@ -7,8 +7,7 @@ import { Auth } from 'aws-amplify';
 import gql from 'graphql-tag';
 import { graphql, compose, ApolloClient } from 'react-apollo';
 import { ApolloProvider } from "react-apollo";
-import Profile  from './Profile/Profile';
-import Messages  from './Messages';
+import Profile  from './Profile';
 import Feed  from './Feed';
 import AppSyncConfig from '../../aws-exports';
 import { Rehydrated, S3Album } from 'aws-appsync-react';
@@ -116,8 +115,7 @@ async componentDidMount() {
 
 const TabNavigator = createBottomTabNavigator({
   Home: CreateProfile,
-  Settings: Profile,
-  Messages: Messages,
+  Profile: Profile,
   Feed: Feed,
 },
 {

@@ -1,4 +1,3 @@
-import { createNetworkInterface } from 'react-apollo';
 import { SubscriptionClient, addGraphQLSubscriptions } from 'subscriptions-transport-ws';
 import awsmobile from '../aws-exports';
 import Amplify, { API } from "aws-amplify";
