@@ -3,13 +3,13 @@ import { StyleSheet, Text, View, StatusBar, Image } from 'react-native';
 
 
 
-class Calendar extends React.Component {
+class Messages extends React.Component {
 
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.homeContainer}>
-          <Text style={styles.welcome}>Calendar</Text>
+          <Text style={styles.welcome}>Messages</Text>
         </View>
       </View>
     )
@@ -27,14 +27,12 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   welcome: {
-    fontFamily: fonts.light,
     color: 'rgba(0, 0, 0, .85)',
     marginBottom: 26,
     fontSize: 22,
     textAlign: 'center'
   },
   registration: {
-    fontFamily: fonts.base,
     color: 'rgba(0, 0, 0, .5)',
     marginTop: 20,
     fontSize: 16,
@@ -50,4 +48,4 @@ const styles = StyleSheet.create({
 
 
 
-export default Calendar;
+export default Messages;

@@ -1,5 +1,5 @@
 const headerColorStyle = "#333";
 const headerTextColorStyle = "#FFF";
-const buttonStyle = "#555";
+const buttonStyle = "#FFFFF";
 
 export { headerColorStyle, headerTextColorStyle, buttonStyle };
