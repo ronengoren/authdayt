@@ -1,53 +1,50 @@
-import React from 'react';
-import { StyleSheet, Text, View, Modal, Alert, KeyboardAvoidingView, Image, TouchableHighlight, ScrollView, ActivityIndicator } from 'react-native';
+import React from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Modal,
+  Alert,
+  KeyboardAvoidingView,
+  Image,
+  TouchableHighlight,
+  ScrollView,
+  ActivityIndicator
+} from "react-native";
 import { Input, Button, ButtonGroup } from "react-native-elements";
 import Amplify, { API } from "aws-amplify";
 import aws_config from "../../aws-exports";
 
-
-import Auth0 from 'react-native-auth0';
-import LoginForm from './LoginForm';
-import SignUpForm from './SignupForm';
-import Config from 'react-native-config'
-import DeviceInfo from 'react-native-device-info';
-import SInfo from 'react-native-sensitive-info';
-import { StackActions, NavigationActions } from 'react-navigation';
-import RNRestart from 'react-native-restart';
+import Auth0 from "react-native-auth0";
+import Config from "react-native-config";
+import DeviceInfo from "react-native-device-info";
+import SInfo from "react-native-sensitive-info";
+import { StackActions, NavigationActions } from "react-navigation";
 import {
-      headerColorStyle,
-      headerTextColorStyle,
-      buttonStyle
-    } from "../assets/styles/colors.js";
+  headerColorStyle,
+  headerTextColorStyle,
+  buttonStyle
+} from "../assets/styles/colors.js";
 import styles from "../assets/styles/Login";
-
 
 Amplify.configure(aws_config);
 Amplify.configure({
   API: {
     graphql_headers: async () => ({
-        'My-Custom-Header': 'my value'
+      "My-Custom-Header": "my value"
     })
   }
 });
 
-
-
-
-
-
-
 const auth0 = new Auth0({
-      domain: Config.AUTH0_DOMAIN,
-      clientId: Config.AUTH0_CLIENT_ID
-    });
-
+  domain: Config.AUTH0_DOMAIN,
+  clientId: Config.AUTH0_CLIENT_ID
+});
 
 // const credentials = new Auth0({ domain: 'dayt.auth0.com', clientId: '36T4u5KGuKD8o2DI8HWDboFIpjshxrTT' });
 
-
-
 export default class Authentication extends React.Component {
-   static navigationOptions = ({ navigation }) => {
+  static navigationOptions = ({ navigation }) => {
     return {
       headerTitle: "Login",
       headerStyle: {
@@ -63,7 +60,6 @@ export default class Authentication extends React.Component {
     hasInitialized: true
   };
 
-
   render() {
     return (
       <View style={styles.container}>
@@ -76,7 +72,6 @@ export default class Authentication extends React.Component {
           <Button onPress={this.login} title="Login" color={buttonStyle} />
         )}
       </View>
-
     );
   }
 
@@ -121,7 +116,7 @@ export default class Authentication extends React.Component {
           params: {
             id: data.user_id,
             name: data.name,
-            picture: data.picture,
+            picture: data.picture
           }
         })
       ]
@@ -130,4 +125,3 @@ export default class Authentication extends React.Component {
     this.props.navigation.dispatch(resetAction);
   };
 }
-

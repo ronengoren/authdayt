@@ -8,7 +8,7 @@ import {
   Dimensions,
   TouchableOpacity
 } from "react-native";
-import config from "../../screens/Feed/config/index";
+import config from "../../config/index";
 
 class Post extends React.Component {
   constructor() {

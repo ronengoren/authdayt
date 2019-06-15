@@ -1,14 +1,11 @@
-import { createAppContainer, createStackNavigator } from 'react-navigation';
-import Home from './Home';
-import Friends from './Friends';
-import Authentication from '../auth/Authentication';
-import Profile  from '../screens/Profile';
-import { withAuthenticator } from 'aws-amplify';
+import { createAppContainer, createStackNavigator } from "react-navigation";
+import Authentication from "../auth/Authentication";
+import Profile from "../screens/Profile";
 
 const AppNavigator = createStackNavigator({
-   Authentication: { screen: Authentication },
+  Authentication: { screen: Authentication },
   Profile: { screen: Profile }
 });
-  const AppContainer = createAppContainer(AppNavigator);
+const AppContainer = createAppContainer(AppNavigator);
 
-  export default AppContainer;
+export default AppContainer;
