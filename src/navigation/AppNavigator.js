@@ -1,10 +1,8 @@
 import { createAppContainer, createStackNavigator } from "react-navigation";
-import Authentication from "../auth/Authentication";
-import Profile from "../screens/Profile";
+import MainFeed from "../screens/MainFeed";
 
 const AppNavigator = createStackNavigator({
-  Authentication: { screen: Authentication },
-  Profile: { screen: Profile }
+  MainFeed: { screen: MainFeed }
 });
 const AppContainer = createAppContainer(AppNavigator);
 

@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import { StyleSheet, Text, View, StatusBar, Image } from "react-native";
 
-class Profile extends Component {
+class Camera extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.homeContainer}>
-          <Text style={styles.welcome}>Profile</Text>
+          <Text style={styles.welcome}>Camera</Text>
         </View>
       </View>
     );
@@ -31,4 +31,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Profile;
+export default Camera;

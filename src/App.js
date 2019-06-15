@@ -1,45 +1,41 @@
 import React, { Component } from "react";
-import AppNavigator from "./navigation/AppNavigator";
-// redux
+import MainFeed from "./screens/MainFeed";
+import Camera from "./screens/Camera";
+import Profile from "./screens/Profile";
+import Login from "./screens/Login";
+import Register from "./screens/Register";
 
-// Amplify
-import aws_exports from "../aws-exports";
-import Amplify, { Rehydrated } from "aws-amplify";
-import Profile from "../src/screens/Profile";
-// ApolloServer
-import { ApolloProvider } from "react-apollo";
-import { createStore, applyMiddleware } from "redux";
-import { setContext } from "apollo-link-context";
-import ApolloClient from "apollo-client";
-import { createHttpLink } from "apollo-link-http";
-import { InMemoryCache } from "apollo-cache-inmemory";
+import {
+  createSwitchNavigator,
+  createBottomTabNavigator,
+  createAppContainer,
+  createStackNavigator
+} from "react-navigation";
 
-const httpLink = createHttpLink({
-  uri: "https://api.graph.cool/simple/v1/cjwbj2hiy90l20162srbtmzib"
+const Tabs = createBottomTabNavigator({
+  feed: MainFeed,
+  camera: Camera,
+  profile: Profile
 });
 
-const middlewareLink = setContext(() => ({
-  headers: {
-    authorization: localStorage.getItem("token") || null
-  }
-}));
-
-const link = middlewareLink.concat(httpLink);
-const cache = new InMemoryCache();
-
-const client = new ApolloClient({
-  cache,
-  link
+const IntroStack = createStackNavigator({
+  register: Register,
+  login: Login
 });
-
-Amplify.configure(aws_exports);
+const MainStack = createAppContainer(
+  createSwitchNavigator(
+    {
+      login: IntroStack,
+      main: Tabs
+    },
+    {
+      initialRouteName: "login"
+    }
+  )
+);
 
 export default class App extends React.Component {
   render() {
-    return (
-      <ApolloProvider client={client}>
-        <Profile />
-      </ApolloProvider>
-    );
+    return <MainStack />;
   }
 }
