@@ -22,7 +22,6 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import ApolloClient from 'apollo-client';
 import { createHttpLink } from 'apollo-link-http';
 import { ApolloProvider } from 'react-apollo';
-import ListPage from '../containers/ListPage';
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 import Feed from './Feed';
 import Filters from './Filters';
@@ -99,7 +98,6 @@ class Profile extends React.Component {
               <Text style={styles.usernameText}>{name}</Text>
               <Button onPress={this.logout} title="Logout" color={buttonStyle} />
               <Text>profile</Text>
-              {/* <ListPage /> */}
 
             </View>
           )}
