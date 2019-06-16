@@ -68,19 +68,21 @@ class Login extends Component {
         }}
       >
         <TextInput
+          autoCapitalize="none"
           value={this.state.email}
-          placeholder={"username"}
+          placeholder="Email"
           style={styles.input}
           autoCorrect={false}
           onChangeText={text => this.updateText(text, "email")}
         />
 
         <TextInput
+          autoCapitalize="none"
           value={this.state.password}
           onChangeText={text => this.updateText(text, "password")}
           secureTextEntry
           autoCorrect={false}
-          placeholder={"password"}
+          placeholder="Password"
           style={styles.input}
         />
         <Button

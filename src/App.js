@@ -4,7 +4,7 @@ import Camera from "./screens/Camera";
 import Profile from "./screens/Profile";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
-
+import Messages from "./screens/Messages";
 import {
   createSwitchNavigator,
   createBottomTabNavigator,
@@ -13,6 +13,7 @@ import {
 } from "react-navigation";
 
 const Tabs = createBottomTabNavigator({
+  Messages: Messages,
   feed: MainFeed,
   camera: Camera,
   profile: Profile
@@ -29,7 +30,7 @@ const MainStack = createAppContainer(
       main: Tabs
     },
     {
-      initialRouteName: "login"
+      initialRouteName: "main"
     }
   )
 );

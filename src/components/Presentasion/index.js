@@ -1,5 +1,3 @@
-import Post from './Post';
-
-export {
-Post
-} ;
+import Post from "./Post";
+import Message from "./Message";
+export { Post, Message };

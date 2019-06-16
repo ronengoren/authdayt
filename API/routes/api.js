@@ -46,6 +46,59 @@ router.post("/login", (req, res) => {
       });
     });
 });
+
+router.get("/:resource", (req, res) => {
+  const { resource } = req.params;
+  // res.json({
+  //   confirmation: "success",
+  //   resource: req.params.resource,
+  //   id: req.params.id,
+  //   query: req.query // from the url query string
+  // });
+  const messages = [
+    {
+      toUser: "Ryan",
+      fromUser: "Dan",
+      message: "up for a dayt?",
+      dateTime: new Date()
+    },
+    {
+      toUser: "Ryan",
+      fromUser: "Dan",
+      message: "up for a dayt?",
+      dateTime: new Date()
+    },
+    {
+      toUser: "Ryan",
+      fromUser: "Dan",
+      message: "up for a dayt?",
+      dateTime: new Date()
+    },
+    {
+      toUser: "Ryan",
+      fromUser: "Dan",
+      message: "up for a dayt?",
+      dateTime: new Date()
+    },
+    {
+      toUser: "Ryan",
+      fromUser: "Dan",
+      message: "up for a dayt?",
+      dateTime: new Date()
+    },
+    {
+      toUser: "Ryan",
+      fromUser: "Dan",
+      message: "up for a dayt?",
+      dateTime: new Date()
+    }
+  ];
+  res.json({
+    confirmation: "success",
+    data: messages
+  });
+});
+
 router.get("/:resource/:id", (req, res) => {
   res.json({
     confirmation: "success",

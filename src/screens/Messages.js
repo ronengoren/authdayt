@@ -1,13 +1,44 @@
-import React from "react";
+import React, { Component } from "react";
 import { StyleSheet, Text, View, StatusBar, Image } from "react-native";
+import { Message } from "../components/Presentasion/Index";
+import config from "../config";
 
-class Messages extends React.Component {
+class Messages extends Component {
+  constructor() {
+    super();
+    this.state = {
+      messages: []
+    };
+  }
+  componentDidMount() {
+    return fetch(config.baseUrl + "message", {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      }
+      // body: JSON.stringify(credentials)
+    })
+      .then(response => {
+        return response.json();
+      })
+      .then(jsonResopnse => {
+        this.setState({ messages: jsonResopnse.data });
+      })
+      .catch(err => {
+        console.log(JSON.stringify(err.message));
+      });
+  }
   render() {
+    const { messages } = this.state;
+    const lastIndex = messages.length - 1;
+
     return (
       <View style={styles.container}>
-        <View style={styles.homeContainer}>
-          <Text style={styles.welcome}>Messages</Text>
-        </View>
+        {messages.map((message, i) => {
+          const last = i === lastIndex;
+          return <Message last={last} {...message} />;
+        })}
       </View>
     );
   }
@@ -15,30 +46,12 @@ class Messages extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
-    alignItems: "center",
+    width: 100 + "%",
+    height: 100 + "%",
+    display: "flex",
+    flex: 1,
     justifyContent: "center",
-    flex: 1
-  },
-  homeContainer: {
     alignItems: "center"
-  },
-  welcome: {
-    color: "rgba(0, 0, 0, .85)",
-    marginBottom: 26,
-    fontSize: 22,
-    textAlign: "center"
-  },
-  registration: {
-    color: "rgba(0, 0, 0, .5)",
-    marginTop: 20,
-    fontSize: 16,
-    paddingHorizontal: 20,
-    textAlign: "center"
-  },
-  icon: {
-    width: 26,
-    height: 26
   }
 });
 
