@@ -9,5 +9,6 @@ export default {
   },
   styleConstants: {
     rowHeight: 50
-  }
+  },
+  baseUrl: "https://daytapi-pjnegz.turbo360-vertex.com/api/"
 };

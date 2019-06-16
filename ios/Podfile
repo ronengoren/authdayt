@@ -1,18 +1,24 @@
+platform :ios, '12.1'
+
 target 'dayt2' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
-  pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
+    pod 'AFNetworking', '~> 3.0'
+    pod 'FBSDKCoreKit', '~> 4.9'
+    pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+    pod 'React', :path => '../node_modules/react-native'
 
-  pod 'react-native-config', :path => '../node_modules/react-native-config'
-
-  pod 'react-native-sensitive-info', :path => '../node_modules/react-native-sensitive-info'
-
-end
-
-# Auth0 Lock
-
-pod 'Lock', '~> 1.29'
-pod 'Lock/TouchID'
-pod 'Lock/SMS'
-pod 'Lock/Email'
-pod 'Lock/Safari'
+    pod 'React', :path => '../node_modules/react-native', :subspecs => [
+        'Core',
+        'CxxBridge', # Include this for RN >= 0.47
+        'DevSupport', # Include this to enable In-App Devmenu if RN >= 0.43
+        'RCTText',
+        'RCTNetwork',
+        'RCTWebSocket', # Needed for debugging
+        'RCTAnimation', # Needed for FlatList and animations running on native UI thread
+        # Add any other subspecs you want to use in your project
+      ]
+      pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+      pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+      pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
+      pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+      
+      end

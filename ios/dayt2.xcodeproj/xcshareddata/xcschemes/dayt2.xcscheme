@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0940"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "NO"
@@ -46,6 +46,34 @@
                BuildableName = "dayt2Tests.xctest"
                BlueprintName = "dayt2Tests"
                ReferencedContainer = "container:dayt2.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2D2A28121D9B038B00D4039D"
+               BuildableName = "libReact.a"
+               BlueprintName = "React-tvOS"
+               ReferencedContainer = "container:../node_modules/react-native/React/React.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ADD01A671E09402E00F6D226"
+               BuildableName = "libRCTBlob-tvOS.a"
+               BlueprintName = "RCTBlob-tvOS"
+               ReferencedContainer = "container:../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

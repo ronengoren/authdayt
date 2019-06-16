@@ -7,13 +7,13 @@ import {
   Button,
   StyleSheet
 } from "react-native";
-
+import config from "../config";
 class Register extends Component {
   constructor() {
     super();
     this.state = {
       credentials: {
-        login: "",
+        email: "",
         password: ""
       }
     };
@@ -31,8 +31,20 @@ class Register extends Component {
   }
 
   register() {
-    alert(JSON.stringify(this.state.credentials));
-    // this.props.navigation.navigate("main");
+    fetch(config.baseUrl + "signup", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(this.state.credentials)
+    })
+      .then(data => {
+        alert(JSON.stringify(data));
+      })
+      .catch(err => {
+        alert(err);
+      });
   }
 
   render() {
@@ -48,11 +60,11 @@ class Register extends Component {
         }}
       >
         <TextInput
-          value={this.state.login}
+          value={this.state.email}
           placeholder={"username"}
           style={styles.input}
           autoCorrect={false}
-          onChangeText={text => this.updateText(text, "login")}
+          onChangeText={text => this.updateText(text, "email")}
         />
 
         <TextInput
