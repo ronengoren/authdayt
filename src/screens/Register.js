@@ -39,8 +39,15 @@ class Register extends Component {
       },
       body: JSON.stringify(this.state.credentials)
     })
-      .then(data => {
-        alert(JSON.stringify(data));
+      .then(response => response.json())
+      .then(jsonResopnse => {
+        if (jsonResopnse.confirmation === "success") {
+          this.props.navigation.navigate("main");
+        } else {
+          throw new Error({
+            message: "Sorry, something went wrong; please try again"
+          });
+        }
       })
       .catch(err => {
         alert(err);

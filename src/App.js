@@ -19,8 +19,8 @@ const Tabs = createBottomTabNavigator({
 });
 
 const IntroStack = createStackNavigator({
-  register: Register,
-  login: Login
+  login: Login,
+  register: Register
 });
 const MainStack = createAppContainer(
   createSwitchNavigator(

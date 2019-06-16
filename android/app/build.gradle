@@ -146,7 +146,6 @@ dependencies {
     implementation project(':react-native-sensitive-info')
     implementation project(':react-native-config')
     implementation project(':react-native-device-info')
-    implementation project(':react-native-auth0')
     implementation project(':react-native-vector-icons')
     implementation project(':amazon-cognito-identity-js')
     implementation project(':react-native-gesture-handler')

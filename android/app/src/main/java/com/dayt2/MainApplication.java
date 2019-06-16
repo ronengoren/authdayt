@@ -7,7 +7,6 @@ import com.avishayil.rnrestart.ReactNativeRestartPackage;
 import br.com.classapp.RNSensitiveInfo.RNSensitiveInfoPackage;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
-import com.auth0.react.A0Auth0Package;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.amazonaws.RNAWSCognitoPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
@@ -35,7 +34,6 @@ public class MainApplication extends Application implements ReactApplication {
             new RNSensitiveInfoPackage(),
             new ReactNativeConfigPackage(),
             new RNDeviceInfo(),
-            new A0Auth0Package(),
             new VectorIconsPackage(),
             new RNAWSCognitoPackage(),
             new RNGestureHandlerPackage()

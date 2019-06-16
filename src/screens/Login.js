@@ -1,29 +1,111 @@
 import React, { Component } from "react";
-import { View, Text, TouchableOpacity, TextInput, Button } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  TextInput,
+  Button,
+  StyleSheet
+} from "react-native";
+import config from "../config";
 
 class Login extends Component {
+  constructor() {
+    super();
+    this.state = {
+      credentials: {
+        email: "",
+        password: ""
+      }
+    };
+  }
+  static navigationOptions = {
+    title: "Please Login"
+  };
+
+  updateText(text, field) {
+    let newCredentials = Object.assign(this.state.credentials);
+    newCredentials[field] = text;
+    this.setState({
+      credentials: newCredentials
+    });
+  }
+
   login() {
-    this.props.navigation.navigate("register");
+    let credentials = this.state.credentials;
+    credentials.email = this.state.credentials.email.toLowerCase();
+    fetch(config.baseUrl + "login", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(credentials)
+    })
+      .then(response => response.json())
+      .then(jsonResopnse => {
+        if (jsonResopnse.confirmation === "success") {
+          this.props.navigation.navigate("main");
+        } else {
+          throw new Error(jsonResopnse.message);
+        }
+      })
+      .catch(err => {
+        alert(JSON.stringify(err.message));
+      });
   }
 
   render() {
     return (
-      <TouchableOpacity
+      <View
         style={{
           height: 100 + "%",
           width: 100 + "%",
           flex: 1,
           justifyContent: "center",
-          alignItems: "center"
-        }}
-        onPress={() => {
-          this.login();
+          alignItems: "center",
+          backgroundColor: "rgb(252,61,57)"
         }}
       >
-        <Text>New user?</Text>
-      </TouchableOpacity>
+        <TextInput
+          value={this.state.email}
+          placeholder={"username"}
+          style={styles.input}
+          autoCorrect={false}
+          onChangeText={text => this.updateText(text, "email")}
+        />
+
+        <TextInput
+          value={this.state.password}
+          onChangeText={text => this.updateText(text, "password")}
+          secureTextEntry
+          autoCorrect={false}
+          placeholder={"password"}
+          style={styles.input}
+        />
+        <Button
+          onPress={() => {
+            this.login();
+          }}
+          title="Login"
+        />
+        <Button
+          title="No account? Sign up here!"
+          onPress={() => this.props.navigation.navigate("register")}
+        />
+      </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  input: {
+    width: 100 + "%",
+    height: 50,
+    marginHorizontal: 50,
+    backgroundColor: "rgb(255,255,255)",
+    marginBottom: 10
+  }
+});
 
 export default Login;
