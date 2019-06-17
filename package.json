@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.5.0",
     "apollo-boost": "^0.4.0",
     "apollo-cache-inmemory": "^1.6.0",
     "aws-amplify": "^1.1.28",
@@ -37,6 +38,7 @@
     "redux-persist": "^5.10.0",
     "redux-thunk": "^2.3.0",
     "subscriptions-transport-ws": "^0.9.16",
+    "turbo360": "^1.8.65",
     "uuid": "^3.3.2"
   },
   "devDependencies": {

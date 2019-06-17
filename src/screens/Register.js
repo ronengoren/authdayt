@@ -5,7 +5,8 @@ import {
   TouchableOpacity,
   TextInput,
   Button,
-  StyleSheet
+  StyleSheet,
+  AsyncStorage
 } from "react-native";
 import config from "../config";
 class Register extends Component {

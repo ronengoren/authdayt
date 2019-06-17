@@ -7,7 +7,7 @@ import {
   Dimensions,
   TouchableOpacity
 } from "react-native";
-import config from "../config/index";
+import config from "../config";
 import { PostFeed } from "../components/container";
 
 class MainFeed extends React.Component {

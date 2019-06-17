@@ -48,6 +48,7 @@
 		37CEA7BF39CB417C959A5615 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68BE101C88AB4DF8A7E55114 /* FontAwesome5_Solid.ttf */; };
 		3C796918401B4EDF9F1B2920 /* Raleway-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32B422CFCD394BE88419CF9E /* Raleway-MediumItalic.ttf */; };
 		3DA9CBF0E2D84B028EE0D140 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6B6069265C24692ACF2384E /* libRNGestureHandler.a */; };
+		40D62757CF787636BEB6B8EF /* libPods-dayt2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9490BD32AF4D879A379292D5 /* libPods-dayt2.a */; };
 		45E4A27B07A14A99AC85C34B /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD375F40D4114E2EBE9A9A28 /* Ionicons.ttf */; };
 		4630306445F24AF3B5916108 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 113C39746A9C44C6BEC2BC5A /* Lato-LightItalic.ttf */; };
 		4829A06BF8EA4A9DB488D634 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DDFDFB050B141D6B83E3D7F /* Raleway-Light.ttf */; };
@@ -67,6 +68,7 @@
 		8A80D69D76FF4FB982279506 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B8F6A5DCB0A42BBA6B3EF30 /* Raleway-Regular.ttf */; };
 		90C2F68FAFB84BE3924BE8AA /* Raleway-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 295F85C001864E0D991AB1EB /* Raleway-LightItalic.ttf */; };
 		941D930222B5B9F400539B7C /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
+		94FEA58322B73A2100442A3C /* libRNCAsyncStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94FEA57E22B739FC00442A3C /* libRNCAsyncStorage.a */; };
 		97C84DD2C84340EBA0CCECD7 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B763C317744C425696C8358F /* Octicons.ttf */; };
 		9E809BB5BE4547AD8A27736A /* Raleway-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50FE1875A58C49AF9097EF43 /* Raleway-ExtraBoldItalic.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
@@ -399,6 +401,13 @@
 			remoteGlobalIDString = A39873CE1EA65EE60051E01A;
 			remoteInfo = "RNVectorIcons-tvOS";
 		};
+		94FEA57D22B739FC00442A3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94FEA55022B739FC00442A3C /* RNCAsyncStorage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNCAsyncStorage;
+		};
 		ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
@@ -464,6 +473,7 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		918DF5A068294A499D53615A /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-SemiBold.ttf"; path = "../src/assets/fonts/Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
 		9490BD32AF4D879A379292D5 /* libPods-dayt2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dayt2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94FEA55022B739FC00442A3C /* RNCAsyncStorage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCAsyncStorage.xcodeproj; path = "../node_modules/@react-native-community/async-storage/ios/RNCAsyncStorage.xcodeproj"; sourceTree = "<group>"; };
 		962197EA611A48028D71702B /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		98C0A86980C84B5CB7C5076E /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-ExtraBold.ttf"; path = "../src/assets/fonts/Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
 		A426EA7DDED541838530EFE0 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
@@ -510,6 +520,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94FEA58322B73A2100442A3C /* libRNCAsyncStorage.a in Frameworks */,
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
@@ -527,6 +538,7 @@
 				FBFFD55A0B9D489AA3156965 /* libRCTRestart.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				40D62757CF787636BEB6B8EF /* libPods-dayt2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,6 +727,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				94FEA55022B739FC00442A3C /* RNCAsyncStorage.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -867,6 +880,14 @@
 			children = (
 				949EDA4022B59C65004E882F /* libRNVectorIcons.a */,
 				949EDA4222B59C65004E882F /* libRNVectorIcons-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94FEA55122B739FC00442A3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94FEA57E22B739FC00442A3C /* libRNCAsyncStorage.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1051,6 +1072,10 @@
 				{
 					ProductGroup = 949EDA2922B59C65004E882F /* Products */;
 					ProjectRef = C097C0E5CEC44888B9BB36F4 /* RNAWSCognito.xcodeproj */;
+				},
+				{
+					ProductGroup = 94FEA55122B739FC00442A3C /* Products */;
+					ProjectRef = 94FEA55022B739FC00442A3C /* RNCAsyncStorage.xcodeproj */;
 				},
 				{
 					ProductGroup = 949EDA2E22B59C65004E882F /* Products */;
@@ -1364,6 +1389,13 @@
 			fileType = archive.ar;
 			path = "libRNVectorIcons-tvOS.a";
 			remoteRef = 949EDA4122B59C65004E882F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		94FEA57E22B739FC00442A3C /* libRNCAsyncStorage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNCAsyncStorage.a;
+			remoteRef = 94FEA57D22B739FC00442A3C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */ = {

@@ -5,9 +5,9 @@ const Message = props => {
   console.log(JSON.stringify(props));
   const style = [];
   style.push(styles.message);
-  if (props.last) {
-    style.push({ borderBottomWidth: StyleSheet.hairlineWidth });
-  }
+  // if (props.last) {
+  //   style.push({ borderBottomWidth: StyleSheet.hairlineWidth });
+  // }
   return (
     <View style={styles.message}>
       <Text>{props.toUser}</Text>
@@ -20,9 +20,13 @@ const Message = props => {
 
 const styles = StyleSheet.create({
   message: {
-    width: 100 + "%",
-    borderColor: "rgb(64,64,64)",
-    borderTopWidth: StyleSheet.hairlineWidth
+    borderColor: "rgb(225,225,225)",
+    backgroundColor: "rgb(255,255,255)",
+    borderWidth: StyleSheet.hairlineWidth,
+    marginHorizontal: 10,
+    marginBottom: 15,
+    padding: 15,
+    borderRadius: 10
   }
 });
 

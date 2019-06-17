@@ -8,9 +8,8 @@ import {
   StyleSheet
 } from "react-native";
 import config from "../config";
-import AsyncStorage from "@react-native-community/async-storage";
 
-class Login extends Component {
+class Authentication extends Component {
   constructor() {
     super();
     this.state = {
@@ -21,46 +20,40 @@ class Login extends Component {
     };
   }
   static navigationOptions = {
-    title: "Please Login"
+    title: "Authentication"
   };
 
-  componentDidMount() {
-    AsyncStorage.getItem(config.userIdKey).then(item => {
-      console.log(item);
-    });
-  }
+  //   updateText(text, field) {
+  //     let newCredentials = Object.assign(this.state.credentials);
+  //     newCredentials[field] = text;
+  //     this.setState({
+  //       credentials: newCredentials
+  //     });
+  //   }
 
-  updateText(text, field) {
-    let newCredentials = Object.assign(this.state.credentials);
-    newCredentials[field] = text;
-    this.setState({
-      credentials: newCredentials
-    });
-  }
-
-  login() {
-    let credentials = this.state.credentials;
-    credentials.email = this.state.credentials.email.toLowerCase();
-    fetch(config.baseUrl + "login", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(credentials)
-    })
-      .then(response => response.json())
-      .then(jsonResopnse => {
-        // if (jsonResopnse.confirmation === "success") {
-        //   this.props.navigation.navigate("main");
-        // } else {
-        //   throw new Error(jsonResopnse.message);
-        // }
-      })
-      .catch(err => {
-        alert(JSON.stringify(err.message));
-      });
-  }
+  //   login() {
+  //     let credentials = this.state.credentials;
+  //     credentials.email = this.state.credentials.email.toLowerCase();
+  //     fetch(config.baseUrl + "login", {
+  //       method: "POST",
+  //       headers: {
+  //         Accept: "application/json",
+  //         "Content-Type": "application/json"
+  //       },
+  //       body: JSON.stringify(credentials)
+  //     })
+  //       .then(response => response.json())
+  //       .then(jsonResopnse => {
+  //         if (jsonResopnse.confirmation === "success") {
+  //           this.props.navigation.navigate("main");
+  //         } else {
+  //           throw new Error(jsonResopnse.message);
+  //         }
+  //       })
+  //       .catch(err => {
+  //         alert(JSON.stringify(err.message));
+  //       });
+  //   }
 
   render() {
     return (
@@ -74,7 +67,7 @@ class Login extends Component {
           backgroundColor: "rgb(252,61,57)"
         }}
       >
-        <TextInput
+        {/* <TextInput
           autoCapitalize="none"
           value={this.state.email}
           placeholder="Email"
@@ -101,7 +94,8 @@ class Login extends Component {
         <Button
           title="No account? Sign up here!"
           onPress={() => this.props.navigation.navigate("register")}
-        />
+        /> */}
+        <Text>Authentication</Text>
       </View>
     );
   }
@@ -117,4 +111,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Login;
+export default Authentication;
