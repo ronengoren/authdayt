@@ -5,9 +5,10 @@ import {
   View,
   StatusBar,
   Image,
-  ActivityIndicator
+  ActivityIndicator,
+  FlatList
 } from "react-native";
-import { Message } from "../components/Presentasion";
+import { Message } from "../components/presentation";
 import config from "../config";
 import AsyncStorage from "@react-native-community/async-storage";
 
@@ -54,10 +55,15 @@ class Messages extends Component {
         {this.state.showActivityIndicator ? (
           <ActivityIndicator animating size="large" />
         ) : null}
-        {messages.map((message, i) => {
+        <FlatList
+          data={this.state.messages}
+          keyExtractor={item => item.id}
+          renderItem={({ item }) => <Message {...item} />}
+        />
+        {/* {messages.map((message, i) => {
           const last = i === lastIndex;
-          return <Message last={last} {...message} />;
-        })}
+          return <Message last={last} {...message} key={i} />;
+        })} */}
       </View>
     );
   }
@@ -69,8 +75,7 @@ const styles = StyleSheet.create({
     height: 100 + "%",
     display: "flex",
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: "center"
   }
 });
 

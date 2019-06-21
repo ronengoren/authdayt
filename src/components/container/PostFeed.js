@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { FlatList } from "react-native";
-import { Post } from "../Presentasion";
+import { Post } from "../presentation";
 
 class PostFeed extends Component {
   _renderPost({ item }) {

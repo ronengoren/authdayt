@@ -80,11 +80,29 @@ class Post extends React.Component {
             ]}
             source={config.images.heartIcon}
           />
-          {/* <Image style={[styles.icon, {height: 50, width: 50, tintColor: barIconColor}]} source={config.images.barIcon}/>
-                    <Image style={[styles.icon, {height: 50, width: 50}]} source={config.images.cinemaIcon}/>
-                    <Image style={[styles.icon, {height: 50, width: 50}]} source={config.images.partyIcon}/>
-                    <Image style={[styles.icon, {height: 50, width: 50}]} source={config.images.restaurantIcon}/>
-                    <Image style={[styles.icon, {height: 50, width: 50}]} source={config.images.villageIcon}/> */}
+          <Image
+            style={[
+              styles.icon,
+              { height: 50, width: 50, tintColor: barIconColor }
+            ]}
+            source={config.images.barIcon}
+          />
+          <Image
+            style={[styles.icon, { height: 50, width: 50 }]}
+            source={config.images.cinemaIcon}
+          />
+          <Image
+            style={[styles.icon, { height: 50, width: 50 }]}
+            source={config.images.partyIcon}
+          />
+          <Image
+            style={[styles.icon, { height: 50, width: 50 }]}
+            source={config.images.restaurantIcon}
+          />
+          <Image
+            style={[styles.icon, { height: 50, width: 50 }]}
+            source={config.images.villageIcon}
+          />
         </View>
         <View style={styles.iconBar}>
           <Image

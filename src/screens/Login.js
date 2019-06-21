@@ -51,11 +51,13 @@ class Login extends Component {
     })
       .then(response => response.json())
       .then(jsonResopnse => {
-        // if (jsonResopnse.confirmation === "success") {
-        //   this.props.navigation.navigate("main");
-        // } else {
-        //   throw new Error(jsonResopnse.message);
-        // }
+        console.log(jsonResopnse.data.id);
+        if (jsonResopnse.confirmation === "success") {
+          AsyncStorage.setItem(config.userIdKey, jsonResopnse.data.id);
+          this.props.navigation.navigate("main");
+        } else {
+          throw new Error(jsonResopnse.message);
+        }
       })
       .catch(err => {
         alert(JSON.stringify(err.message));

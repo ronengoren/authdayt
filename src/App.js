@@ -5,6 +5,7 @@ import Profile from "./screens/Profile";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
 import Messages from "./screens/Messages";
+import Massage from "./components/presentation/Message";
 import Authentication from "./screens/Authentication";
 import { ActivityIndicator } from "react-native";
 import {
@@ -15,8 +16,14 @@ import {
 } from "react-navigation";
 import AsyncStorage from "@react-native-community/async-storage";
 import config from "./config";
+
+const MessageStack = createStackNavigator({
+  home: Messages
+  // message: Massage
+});
+
 const Tabs = createBottomTabNavigator({
-  Messages: Messages,
+  Messages: MessageStack,
   feed: MainFeed,
   camera: Camera,
   profile: Profile
