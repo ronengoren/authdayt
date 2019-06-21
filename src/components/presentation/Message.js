@@ -21,8 +21,7 @@ const Message = props => {
   const croppedImg = profileImg + "=s40-c";
   return (
     <TouchableOpacity
-      onPress={() => alert("message")}
-      // onPress={this.props.navigation.navigate('message')}
+      onPress={() => props.nav()}
       activeOpacity={0.7}
       style={style}
     >

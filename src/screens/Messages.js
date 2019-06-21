@@ -11,8 +11,11 @@ import {
 import { Message } from "../components/presentation";
 import config from "../config";
 import AsyncStorage from "@react-native-community/async-storage";
-
+import utils from "../utils";
 class Messages extends Component {
+  static navigationOptions = {
+    title: "Messages"
+  };
   constructor() {
     super();
     this.state = {
@@ -21,49 +24,45 @@ class Messages extends Component {
     };
   }
   componentDidMount() {
-    AsyncStorage.getItem(config.userIdKey).then(key => {
-      const query = `?toUser=${key}`;
-      console.log("queryqueryquery" + query);
-      return fetch(`${config.baseUrl}/message${query}`, {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json"
-        }
-        // body: JSON.stringify(credentials)
-      })
-        .then(response => {
-          return response.json();
-        })
-        .then(jsonResopnse => {
-          this.setState({
-            messages: jsonResopnse.data,
-            showActivityIndicator: false
-          });
-        })
-        .catch(err => {
-          console.log(err.message);
-          this.setState({ showActivityIndicator: false });
+    utils
+      .fetchMessages({})
+      .then(jsonResopnse => {
+        this.setState({
+          messages: jsonResopnse.data,
+          showActivityIndicator: false
         });
-    });
+      })
+      .catch(err => {
+        console.log(err.message);
+        this.setState({ showActivityIndicator: false });
+      });
+  }
+
+  navigateToConversation(item) {
+    console.log(item);
+    this.props.navigation.navigate("conversation", { user: item.fromUser });
   }
   render() {
     const { messages } = this.state;
     const lastIndex = messages.length - 1;
     return (
       <View style={styles.container}>
+        <StatusBar barStyle="light-content" />
         {this.state.showActivityIndicator ? (
           <ActivityIndicator animating size="large" />
         ) : null}
         <FlatList
           data={this.state.messages}
           keyExtractor={item => item.id}
-          renderItem={({ item }) => <Message {...item} />}
+          renderItem={({ item }) => (
+            <Message
+              {...item}
+              nav={this.navigateToConversation.bind(this, {
+                ...item
+              })}
+            />
+          )}
         />
-        {/* {messages.map((message, i) => {
-          const last = i === lastIndex;
-          return <Message last={last} {...message} key={i} />;
-        })} */}
       </View>
     );
   }

@@ -5,6 +5,8 @@ import Profile from "./screens/Profile";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
 import Messages from "./screens/Messages";
+import Conversation from "./screens/Conversation";
+
 import Massage from "./components/presentation/Message";
 import Authentication from "./screens/Authentication";
 import { ActivityIndicator } from "react-native";
@@ -17,10 +19,24 @@ import {
 import AsyncStorage from "@react-native-community/async-storage";
 import config from "./config";
 
-const MessageStack = createStackNavigator({
-  home: Messages
-  // message: Massage
-});
+const MessageStack = createStackNavigator(
+  {
+    home: Messages,
+    conversation: Conversation
+  },
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: "rgb(162,55,243)"
+      },
+      headerTitleStyle: {
+        fontWeight: "bold",
+        color: "rgb(255,255,255)"
+      },
+      headerTintColor: "rgb(255,255,255)"
+    }
+  }
+);
 
 const Tabs = createBottomTabNavigator({
   Messages: MessageStack,
