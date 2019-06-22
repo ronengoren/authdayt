@@ -111,6 +111,24 @@ class Messages extends Component {
       });
     });
   }
+
+  cancel() {
+    this.toggleCreateMessage();
+    this.updateNewMessage("", "toUser");
+    this.updateNewMessage("", "message");
+  }
+
+  send() {
+    console.log(this.state.newMessage);
+    let params = this.state.newMessage;
+    utils
+      .createMessages(params)
+      .then(data => {
+        this.cancel();
+        this.navigateToConversation(data);
+      })
+      .catch(err => alert("Sorry, something went wrong, please try again"));
+  }
   render() {
     const { messages } = this.state;
     const lastIndex = messages.length - 1;
@@ -151,12 +169,20 @@ class Messages extends Component {
                   backgroundColor: "rgb(255,255,255)"
                 }}
               >
-                <TouchableOpacity style={styles.button} activeOpacity={0.7}>
+                <TouchableOpacity
+                  onPress={() => this.cancel()}
+                  style={styles.button}
+                  activeOpacity={0.7}
+                >
                   <Text style={[styles.buttonText, { color: "red" }]}>
                     Cancel
                   </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button} activeOpacity={0.7}>
+                <TouchableOpacity
+                  onPress={() => this.send()}
+                  style={styles.button}
+                  activeOpacity={0.7}
+                >
                   <Text style={[styles.buttonText, { color: "green" }]}>
                     Send
                   </Text>
@@ -200,10 +226,10 @@ const styles = StyleSheet.create({
     backgroundColor: "rgb(243,243,243)",
     height: 100 + "%",
     width: 100 + "%",
-    marginTop: 88,
+    marginTop: 60,
     flexDirection: "column",
     justifyContent: "space-between",
-    paddingBottom: 88
+    paddingBottom: 60
   },
   toInput: {
     width: 100 + "%",

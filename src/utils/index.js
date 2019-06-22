@@ -22,5 +22,24 @@ export default {
         return response.json();
       });
     });
+  },
+  createMessages: additionalParams => {
+    let params = {};
+    Object.keys(additionalParams).forEach((key, i) => {
+      params[key] = additionalParams[key];
+    });
+    return AsyncStorage.getItem(config.userIdKey).then(key => {
+      params.fromUser = key;
+      return fetch(`${config.baseUrl}api/message`, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-type": "application/json"
+        },
+        body: JSON.stringify(params)
+      }).then(response => {
+        return response.json();
+      });
+    });
   }
 };

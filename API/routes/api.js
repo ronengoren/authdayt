@@ -48,6 +48,28 @@ router.post("/login", (req, res) => {
 });
 
 const validResources = ["message"];
+
+router.post("/message", function(req, res) {
+  console.log(req.body);
+  turbo
+    .create("message", req.body)
+    .then(data => {
+      res.json({
+        confirmation: "success",
+        data: data
+      });
+      return;
+    })
+    .catch(err => {
+      console.log(err);
+      res.json({
+        confirmation: "fail",
+        message: "Sorry, something went wrong"
+      });
+      return;
+    });
+});
+
 router.get("/:resource", (req, res) => {
   const { resource } = req.params;
   const { query } = req;

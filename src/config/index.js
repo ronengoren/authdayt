@@ -13,6 +13,7 @@ export default {
   styleConstants: {
     rowHeight: 50
   },
+  // baseUrl: "http://localhost:3000/",
   baseUrl: "https://daytapi-pjnegz.turbo360-vertex.com/",
   userIdKey: "logged_in_user"
 };
