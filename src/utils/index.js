@@ -41,5 +41,13 @@ export default {
         return response.json();
       });
     });
+  },
+
+  sortMessagesByDate: arrayOfMessages => {
+    console.log(arrayOfMessages);
+    arrayOfMessages.sort((a, b) => {
+      return new Date(b.timestamp) - new Date(a.timestamp);
+    });
+    return arrayOfMessages;
   }
 };

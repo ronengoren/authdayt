@@ -5,7 +5,8 @@ import {
   TouchableOpacity,
   TextInput,
   Button,
-  StyleSheet
+  StyleSheet,
+  StatusBar
 } from "react-native";
 import config from "../config";
 import AsyncStorage from "@react-native-community/async-storage";
@@ -17,11 +18,12 @@ class Login extends Component {
       credentials: {
         email: "",
         password: ""
-      }
+      },
+      loginScreen: true
     };
   }
   static navigationOptions = {
-    title: "Please Login"
+    title: "Auth Screen"
   };
 
   componentDidMount() {
@@ -30,12 +32,16 @@ class Login extends Component {
     });
   }
 
-  updateText(text, field) {
+  updateCredentials(text, field) {
     let newCredentials = Object.assign(this.state.credentials);
     newCredentials[field] = text;
     this.setState({
       credentials: newCredentials
     });
+  }
+
+  togglePage() {
+    this.setState({ loginScreen: !this.state.loginScreen });
   }
 
   login() {
@@ -66,56 +72,96 @@ class Login extends Component {
 
   render() {
     return (
-      <View
-        style={{
-          height: 100 + "%",
-          width: 100 + "%",
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor: "rgb(252,61,57)"
-        }}
-      >
-        <TextInput
-          autoCapitalize="none"
-          value={this.state.email}
-          placeholder="Email"
-          style={styles.input}
-          autoCorrect={false}
-          onChangeText={text => this.updateText(text, "email")}
-        />
+      <View style={styles.container}>
+        <StatusBar barStyle="light-content" />
+        <Text style={styles.title}>
+          {this.state.loginScreen ? "Login" : "Register"}
+        </Text>
+        <View style={styles.main}>
+          <Text style={styles.label}>Email</Text>
 
-        <TextInput
-          autoCapitalize="none"
-          value={this.state.password}
-          onChangeText={text => this.updateText(text, "password")}
-          secureTextEntry
-          autoCorrect={false}
-          placeholder="Password"
-          style={styles.input}
-        />
-        <Button
-          onPress={() => {
-            this.login();
-          }}
-          title="Login"
-        />
-        <Button
-          title="No account? Sign up here!"
-          onPress={() => this.props.navigation.navigate("register")}
-        />
+          <TextInput
+            autoCapitalize="none"
+            value={this.state.email}
+            placeholder="Email"
+            style={styles.input}
+            autoCorrect={false}
+            onChangeText={text => this.updateCredentials(text, "email")}
+          />
+          <Text style={styles.label}>Password</Text>
+
+          <TextInput
+            autoCapitalize="none"
+            value={this.state.password}
+            onChangeText={text => this.updateCredentials(text, "password")}
+            secureTextEntry
+            autoCorrect={false}
+            placeholder="Password"
+            style={styles.input}
+          />
+          <View style={{ width: 100 + "%", flexDirection: "row" }}>
+            <TouchableOpacity
+              style={styles.btn}
+              onPress={() => {
+                this.togglePage();
+              }}
+            >
+              <Text style={styles.btnText}>
+                {this.state.loginScreen ? "New user?" : "Returning User?"}
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              title="No account? Sign up here!"
+              onPress={() => this.login()}
+              style={[styles.btn, { justifyContent: "flex-end" }]}
+            >
+              <Text style={styles.btnText}>Submit</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  container: {
+    width: 100 + "%",
+    height: 100 + "%",
+    display: "flex",
+    flex: 1,
+    backgroundColor: config.colors.purple
+  },
+  main: {
+    justifyContent: "flex-start",
+    flexDirection: "column",
+    flex: 2
+  },
   input: {
     width: 100 + "%",
-    height: 50,
-    marginHorizontal: 50,
-    backgroundColor: "rgb(255,255,255)",
-    marginBottom: 10
+    height: 60,
+    backgroundColor: "rgb(255,255,255)"
+  },
+  title: {
+    fontSize: 36,
+    color: "white",
+    marginTop: 40,
+    alignSelf: "center"
+  },
+  label: {
+    fontSize: 24,
+    color: "white"
+  },
+  btn: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 20,
+    color: "white"
+  },
+  btnText: {
+    fontSize: 24,
+    color: "white"
   }
 });
 

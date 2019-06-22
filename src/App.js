@@ -39,10 +39,10 @@ const MessageStack = createStackNavigator(
 );
 
 const Tabs = createBottomTabNavigator({
+  profile: Profile,
   Messages: MessageStack,
   feed: MainFeed,
-  camera: Camera,
-  profile: Profile
+  camera: Camera
 });
 
 const IntroStack = createStackNavigator({

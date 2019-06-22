@@ -1,13 +1,32 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, StatusBar, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+  Image,
+  TouchableOpacity
+} from "react-native";
+import AsyncStorage from "@react-native-community/async-storage";
+import config from "../config";
 
 class Profile extends Component {
+  logout() {
+    AsyncStorage.removeItem(config.userIdKey).then(removed => {
+      this.props.navigation.navigate("login");
+    });
+  }
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.homeContainer}>
-          <Text style={styles.welcome}>Profile</Text>
-        </View>
+        <Text style={styles.title}>My Profile</Text>
+        <View style={{ width: 100 + "%", flexDirection: "row" }} />
+        <TouchableOpacity
+          onPress={() => this.logout()}
+          style={[styles.btn, { justifyContent: "center" }]}
+        >
+          <Text style={styles.btnText}>Logout</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -15,19 +34,27 @@ class Profile extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    width: 100 + "%",
+    height: 100 + "%",
+    display: "flex",
+    flex: 1,
+    backgroundColor: config.colors.purple
+  },
+  title: {
+    fontSize: 36,
+    color: "white",
+    marginTop: 100,
+    alignSelf: "center"
+  },
+  btn: {
+    flex: 1,
+    flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center",
-    flex: 1
+    padding: 20
   },
-  homeContainer: {
-    alignItems: "center"
-  },
-  welcome: {
-    color: "rgba(0, 0, 0, .85)",
-    marginBottom: 26,
-    fontSize: 22,
-    textAlign: "center"
+  btnText: {
+    fontSize: 24,
+    color: "white"
   }
 });
 

@@ -12,6 +12,7 @@ class Conversation extends Component {
     };
   }
   static navigationOptions = ({ navigation }) => {
+    const params = navigation.state.params || {};
     return {
       headerTitle: navigation.state.params.currentConversation || ""
     };
@@ -25,8 +26,10 @@ class Conversation extends Component {
     utils
       .fetchMessages("message/me", { fromUser: user })
       .then(jsonResopnse => {
+        const sorted = utils.sortMessagesByDate(jsonResopnse.data);
+
         this.setState({
-          messages: jsonResopnse.data,
+          messages: sorted,
           showActivityIndicator: false
         });
       })
