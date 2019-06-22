@@ -41,7 +41,7 @@ class Login extends Component {
   login() {
     let credentials = this.state.credentials;
     credentials.email = this.state.credentials.email.toLowerCase();
-    fetch(config.baseUrl + "login", {
+    fetch(config.baseUrl + "api/" + "login", {
       method: "POST",
       headers: {
         Accept: "application/json",

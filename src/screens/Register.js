@@ -32,7 +32,7 @@ class Register extends Component {
   }
 
   register() {
-    fetch(config.baseUrl + "signup", {
+    fetch(config.baseUrl + "api/" + "signup", {
       method: "POST",
       headers: {
         Accept: "application/json",

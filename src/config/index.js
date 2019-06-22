@@ -7,9 +7,12 @@ export default {
     villageIcon: require("../assets/images/villageIcon.png"),
     heartIcon: require("../assets/images/heartIcon.png")
   },
+  icons: {
+    create: require("../assets/icons/createMessageIcon.png")
+  },
   styleConstants: {
     rowHeight: 50
   },
-  baseUrl: "https://daytapi-pjnegz.turbo360-vertex.com/api/",
+  baseUrl: "https://daytapi-pjnegz.turbo360-vertex.com/",
   userIdKey: "logged_in_user"
 };

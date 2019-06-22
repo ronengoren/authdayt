@@ -3,7 +3,7 @@ import AsyncStorage from "@react-native-community/async-storage";
 const queryString = require("query-string");
 
 export default {
-  fetchMessages: additionalQueryParams => {
+  fetchMessages: (endPoint, additionalQueryParams) => {
     let params = {};
     Object.keys(additionalQueryParams).forEach((key, i) => {
       params[key] = additionalQueryParams[key];
@@ -12,7 +12,7 @@ export default {
       params.toUser = key;
       let query = queryString.stringify(params);
       console.log(query);
-      return fetch(`${config.baseUrl}/message?${query}`, {
+      return fetch(`${config.baseUrl}api/${endPoint}?${query}`, {
         method: "GET",
         headers: {
           Accept: "application/json",

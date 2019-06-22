@@ -5,13 +5,13 @@ const router = vertex.router();
 
 /*  This is a sample API route. */
 
-router.get("/:resource", (req, res) => {
-  res.json({
-    confirmation: "success",
-    resource: req.params.resource,
-    query: req.query // from the url query string
-  });
-});
+// router.get("/:resource", (req, res) => {
+//   res.json({
+//     confirmation: "success",
+//     resource: req.params.resource,
+//     query: req.query // from the url query string
+//   });
+// });
 
 router.post("/signup", (req, res) => {
   turbo
@@ -82,14 +82,53 @@ router.get("/:resource", (req, res) => {
       return;
     });
 });
+router.get("/message/me", function(req, res) {
+  const resource = "message";
+  const { query } = req;
 
-router.get("/:resource/:id", (req, res) => {
-  res.json({
-    confirmation: "success",
-    resource: req.params.resource,
-    id: req.params.id,
-    query: req.query // from the url query string
-  });
+  const messages = [];
+  const first = {
+    toUser: query.toUser,
+    fromUser: query.fromUser
+  };
+  const second = {
+    fromUser: query.toUser,
+    toUser: query.fromUser
+  };
+
+  turbo
+    .fetch(resource, first)
+    .then(data => {
+      data.forEach((mes, i) => {
+        messages.push(mes);
+      });
+      return turbo.fetch(resource, second);
+    })
+    .then((data, i) => {
+      data.forEach((mes, i) => {
+        messages.push(mes);
+      });
+      res.json({
+        confirmation: "success",
+        data: messages
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.json({
+        confirmation: "fail",
+        message: err.message
+      });
+      return;
+    });
 });
+// router.get("/:resource/:id", (req, res) => {
+//   res.json({
+//     confirmation: "success",
+//     resource: req.params.resource,
+//     id: req.params.id,
+//     query: req.query // from the url query string
+//   });
+// });
 
 module.exports = router;

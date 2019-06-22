@@ -7,7 +7,7 @@ import Register from "./screens/Register";
 import Messages from "./screens/Messages";
 import Conversation from "./screens/Conversation";
 
-import Massage from "./components/presentation/Message";
+import Message from "./components/presentation/Message";
 import Authentication from "./screens/Authentication";
 import { ActivityIndicator } from "react-native";
 import {

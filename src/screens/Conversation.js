@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { Message } from "../components/presentation";
+import { MessageShort } from "../components/presentation";
 import config from "../config";
 import utils from "../utils";
+import { FlatList } from "react-native-gesture-handler";
 class Conversation extends Component {
   constructor() {
     super();
@@ -22,7 +23,7 @@ class Conversation extends Component {
     });
     const query = `?fromUser=${user}`;
     utils
-      .fetchMessages({ fromUser: user })
+      .fetchMessages("message/me", { fromUser: user })
       .then(jsonResopnse => {
         this.setState({
           messages: jsonResopnse.data,
@@ -37,9 +38,18 @@ class Conversation extends Component {
   render() {
     return (
       <View>
-        {this.state.messages.map((message, i) => {
-          return <Message {...message} />;
-        })}
+        <FlatList
+          data={this.state.messages}
+          keyExtractor={item => item.id}
+          renderItem={({ item }) => (
+            <MessageShort
+              sentMessage={
+                item.fromUser === this.props.navigation.state.params.user
+              }
+              {...item}
+            />
+          )}
+        />
       </View>
     );
   }
