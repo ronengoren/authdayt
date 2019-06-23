@@ -81,7 +81,7 @@ PODS:
     - React/RCTBlob
   - RNCAsyncStorage (1.5.0):
     - React
-  - RNVectorIcons (6.4.2):
+  - RNVectorIcons (6.5.0):
     - React
   - yoga (0.59.8.React)
 
@@ -140,7 +140,7 @@ SPEC CHECKSUMS:
   React: 76e6aa2b87d05eb6cccb6926d72685c9a07df152
   react-native-camera: 37580137d13b0f2fabd631e4217eb11f0e4d5764
   RNCAsyncStorage: 63407ea82f1b5ac8fc53a0b8c569b08e0516a9e0
-  RNVectorIcons: 6607bd3a30291d0edb56f9bbe7ae411ee2b928b0
+  RNVectorIcons: f6cf608dee5b2cb5726ff3b629a5258586d5677b
   yoga: 92b2102c3d373d1a790db4ab761d2b0ffc634f64
 
 PODFILE CHECKSUM: 1ba2050ecdf8ab4c63ea9f6da41eae6545a58ef1

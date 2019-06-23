@@ -15,7 +15,6 @@
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* dayt2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* dayt2Tests.m */; };
 		084AD4F835154745841326D2 /* Raleway-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9C74A3A9BA74EBF89B1B642 /* Raleway-ExtraLightItalic.ttf */; };
-		0CB119B680464420B9B2C51D /* libRNAWSCognito.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F65D2351E4F481999210477 /* libRNAWSCognito.a */; };
 		11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
@@ -89,7 +88,6 @@
 		EA12E13B131144519B1844A6 /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFF067B4993147E588992319 /* Raleway-BoldItalic.ttf */; };
 		EB22BBE9FBCF405E87ED1531 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 962197EA611A48028D71702B /* AntDesign.ttf */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
-		FBFFD55A0B9D489AA3156965 /* libRCTRestart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5B9CCAD17E42AA93B0800F /* libRCTRestart.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -541,9 +539,7 @@
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				3DA9CBF0E2D84B028EE0D140 /* libRNGestureHandler.a in Frameworks */,
-				0CB119B680464420B9B2C51D /* libRNAWSCognito.a in Frameworks */,
 				482C8A0DE86948B8B2245221 /* libRNVectorIcons.a in Frameworks */,
-				FBFFD55A0B9D489AA3156965 /* libRCTRestart.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				40D62757CF787636BEB6B8EF /* libPods-dayt2.a in Frameworks */,
@@ -1656,11 +1652,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/amazon-cognito-identity-js/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-auth0/ios",
-					"$(SRCROOT)/../node_modules/react-native-lock/ios/A0RNLock/**",
-					"$(SRCROOT)/../node_modules/react-native-restart/ios/RCTRestart",
 				);
 				INFOPLIST_FILE = dayt2Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1698,11 +1690,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/amazon-cognito-identity-js/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-auth0/ios",
-					"$(SRCROOT)/../node_modules/react-native-lock/ios/A0RNLock/**",
-					"$(SRCROOT)/../node_modules/react-native-restart/ios/RCTRestart",
 				);
 				INFOPLIST_FILE = dayt2Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1743,11 +1731,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/amazon-cognito-identity-js/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-auth0/ios",
-					"$(SRCROOT)/../node_modules/react-native-lock/ios/A0RNLock/**",
-					"$(SRCROOT)/../node_modules/react-native-restart/ios/RCTRestart",
 				);
 				INFOPLIST_FILE = dayt2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1781,11 +1765,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/amazon-cognito-identity-js/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-auth0/ios",
-					"$(SRCROOT)/../node_modules/react-native-lock/ios/A0RNLock/**",
-					"$(SRCROOT)/../node_modules/react-native-restart/ios/RCTRestart",
 				);
 				INFOPLIST_FILE = dayt2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1824,11 +1804,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/amazon-cognito-identity-js/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-auth0/ios",
-					"$(SRCROOT)/../node_modules/react-native-lock/ios/A0RNLock/**",
-					"$(SRCROOT)/../node_modules/react-native-restart/ios/RCTRestart",
 				);
 				INFOPLIST_FILE = "dayt2-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1873,11 +1849,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/amazon-cognito-identity-js/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-auth0/ios",
-					"$(SRCROOT)/../node_modules/react-native-lock/ios/A0RNLock/**",
-					"$(SRCROOT)/../node_modules/react-native-restart/ios/RCTRestart",
 				);
 				INFOPLIST_FILE = "dayt2-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1921,11 +1893,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/amazon-cognito-identity-js/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-auth0/ios",
-					"$(SRCROOT)/../node_modules/react-native-lock/ios/A0RNLock/**",
-					"$(SRCROOT)/../node_modules/react-native-restart/ios/RCTRestart",
 				);
 				INFOPLIST_FILE = "dayt2-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1970,11 +1938,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/amazon-cognito-identity-js/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-auth0/ios",
-					"$(SRCROOT)/../node_modules/react-native-lock/ios/A0RNLock/**",
-					"$(SRCROOT)/../node_modules/react-native-restart/ios/RCTRestart",
 				);
 				INFOPLIST_FILE = "dayt2-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

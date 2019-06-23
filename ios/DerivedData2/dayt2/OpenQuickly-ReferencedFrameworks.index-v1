@@ -19,9 +19,9 @@
 	<string>arpa</string>
 	<string>CoreTelephony</string>
 	<string>CoreMedia</string>
-	<string>CoreServices</string>
-	<string>netinet6</string>
 	<string>StoreKit</string>
+	<string>netinet6</string>
+	<string>CoreServices</string>
 	<string>AdSupport</string>
 	<string>Accounts</string>
 	<string>libkern</string>
@@ -40,13 +40,13 @@
 	<string>AppKit</string>
 	<string>netinet</string>
 	<string>AssetsLibrary</string>
+	<string>folly</string>
 	<string>FBSDKCoreKit</string>
-	<string>yoga</string>
 	<string>CoreGraphics</string>
-	<string>SystemConfiguration</string>
+	<string>yoga</string>
 	<string>jsi</string>
 	<string>React</string>
 	<string>UIKit</string>
-	<string>folly</string>
+	<string>SystemConfiguration</string>
 </array>
 </plist>
