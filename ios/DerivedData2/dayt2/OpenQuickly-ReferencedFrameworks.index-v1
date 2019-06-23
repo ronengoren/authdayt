@@ -13,15 +13,15 @@
 	<string>AudioToolbox</string>
 	<string>Accelerate</string>
 	<string>CoreData</string>
-	<string>MobileCoreServices</string>
-	<string>Bolts</string>
-	<string>sys</string>
 	<string>arpa</string>
+	<string>MobileCoreServices</string>
+	<string>sys</string>
+	<string>Bolts</string>
 	<string>CoreTelephony</string>
 	<string>CoreMedia</string>
-	<string>StoreKit</string>
-	<string>netinet6</string>
 	<string>CoreServices</string>
+	<string>netinet6</string>
+	<string>StoreKit</string>
 	<string>AdSupport</string>
 	<string>Accounts</string>
 	<string>libkern</string>
@@ -40,13 +40,13 @@
 	<string>AppKit</string>
 	<string>netinet</string>
 	<string>AssetsLibrary</string>
-	<string>folly</string>
 	<string>FBSDKCoreKit</string>
-	<string>CoreGraphics</string>
 	<string>yoga</string>
+	<string>CoreGraphics</string>
+	<string>SystemConfiguration</string>
 	<string>jsi</string>
 	<string>React</string>
 	<string>UIKit</string>
-	<string>SystemConfiguration</string>
+	<string>folly</string>
 </array>
 </plist>
