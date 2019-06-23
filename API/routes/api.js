@@ -50,9 +50,16 @@ router.post("/login", (req, res) => {
 const validResources = ["message"];
 
 router.post("/message", function(req, res) {
-  console.log(req.body);
+  const toUser = req.body.toUser.toLowerCase();
+  let params = req.body;
+
   turbo
-    .create("message", req.body)
+    .fetch("user", { username: toUser })
+    .then(data => {
+      params.toUser = data[0].id;
+      console.log(params);
+      return turbo.create("message", params);
+    })
     .then(data => {
       res.json({
         confirmation: "success",

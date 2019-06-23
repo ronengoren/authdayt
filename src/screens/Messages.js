@@ -10,12 +10,15 @@ import {
   Modal,
   TouchableOpacity,
   TextInput,
-  Keyboard
+  Keyboard,
+  KeyboardAvoidingView
 } from "react-native";
 import { Message } from "../components/presentation";
 import config from "../config";
 import AsyncStorage from "@react-native-community/async-storage";
 import utils from "../utils";
+import { Header } from "react-navigation";
+
 class Messages extends Component {
   static navigationOptions = ({ navigation }) => {
     const params = navigation.state.params || {};
@@ -24,7 +27,7 @@ class Messages extends Component {
       headerRight: params.showIcon ? (
         <TouchableOpacity
           onPress={params.toggleCreateMessage}
-          style={{ padding: 10 }}
+          style={{ padding: 15 }}
         >
           <Image source={config.icons.create} />
         </TouchableOpacity>
@@ -133,8 +136,9 @@ class Messages extends Component {
     const { messages } = this.state;
     const lastIndex = messages.length - 1;
     return (
-      <View style={styles.container}>
+      <KeyboardAvoidingView behavior="padding" style={styles.container}>
         <Modal
+          onRequestClose={this.cancel}
           animationType="slide"
           visible={this.state.showCreateMessage}
           transparent={true}
@@ -208,7 +212,7 @@ class Messages extends Component {
             />
           )}
         />
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }
@@ -218,6 +222,7 @@ const styles = StyleSheet.create({
     width: 100 + "%",
     height: 100 + "%",
     display: "flex",
+    backgroundColor: "rgb(243,243,243)",
     flex: 1,
     justifyContent: "center",
     alignContent: "center"
@@ -226,7 +231,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgb(243,243,243)",
     height: 100 + "%",
     width: 100 + "%",
-    marginTop: 60,
+    marginTop: Header.HEIGHT,
     flexDirection: "column",
     justifyContent: "space-between",
     paddingBottom: 60

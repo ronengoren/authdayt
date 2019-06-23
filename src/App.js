@@ -9,7 +9,7 @@ import Conversation from "./screens/Conversation";
 
 import Message from "./components/presentation/Message";
 import Authentication from "./screens/Authentication";
-import { ActivityIndicator } from "react-native";
+import { ActivityIndicator, Image } from "react-native";
 import {
   createSwitchNavigator,
   createBottomTabNavigator,
@@ -38,12 +38,36 @@ const MessageStack = createStackNavigator(
   }
 );
 
-const Tabs = createBottomTabNavigator({
-  profile: Profile,
-  Messages: MessageStack,
-  feed: MainFeed,
-  camera: Camera
-});
+const Tabs = createBottomTabNavigator(
+  {
+    Messages: MessageStack,
+
+    profile: Profile,
+    feed: MainFeed,
+    camera: Camera
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => {
+      const { routeName } = navigation.state;
+      const icons = {
+        Messages: config.icons.message,
+        profile: config.icons.profile,
+        feed: config.icons.feed
+      };
+      return {
+        tabBarIcon: <Image source={icons[routeName]} />
+      };
+    },
+    tabBarOptions: {
+      activeTintColor: config.colors.purple,
+      showIcon: true,
+
+      labelStyle: {
+        color: "rgb(179,179,179)"
+      }
+    }
+  }
+);
 
 const IntroStack = createStackNavigator({
   login: Login,
@@ -53,8 +77,8 @@ const MainStack = authBoolean => {
   return createAppContainer(
     createSwitchNavigator(
       {
-        login: IntroStack,
-        main: Tabs
+        main: Tabs,
+        login: Login
       },
       {
         initialRouteName: authBoolean ? "main" : "login"

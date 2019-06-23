@@ -21,27 +21,35 @@ class Login extends Component {
       },
       loginScreen: true
     };
+    this.login = this.login.bind(this);
+    this.register = this.register.bind(this);
   }
   static navigationOptions = {
     title: "Auth Screen"
   };
 
-  componentDidMount() {
-    AsyncStorage.getItem(config.userIdKey).then(item => {
-      console.log(item);
-    });
-  }
+  // componentDidMount() {
+  //   AsyncStorage.getItem(config.userIdKey).then(item => {
+  //     console.log(item);
+  //   });
+  // }
 
   updateCredentials(text, field) {
-    let newCredentials = Object.assign(this.state.credentials);
-    newCredentials[field] = text;
+    let credentials = Object.assign(this.state.credentials);
+    credentials[field] = text;
     this.setState({
-      credentials: newCredentials
+      credentials: credentials
     });
   }
 
   togglePage() {
     this.setState({ loginScreen: !this.state.loginScreen });
+  }
+  submit() {
+    const authFunction = this.state.loginScreen ? this.login : this.register;
+    let { credentials } = this.state;
+    credentials.email = credentials.email.toLowerCase();
+    authFunction(this.state.credentials);
   }
 
   login() {
@@ -69,7 +77,29 @@ class Login extends Component {
         alert(JSON.stringify(err.message));
       });
   }
-
+  register() {
+    fetch(config.baseUrl + "api/" + "signup", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(this.state.credentials)
+    })
+      .then(response => response.json())
+      .then(jsonResopnse => {
+        if (jsonResopnse.confirmation === "success") {
+          this.props.navigation.navigate("main");
+        } else {
+          throw new Error({
+            message: "Sorry, something went wrong; please try again"
+          });
+        }
+      })
+      .catch(err => {
+        alert(err);
+      });
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -111,8 +141,7 @@ class Login extends Component {
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
-              title="No account? Sign up here!"
-              onPress={() => this.login()}
+              onPress={() => this.submit()}
               style={[styles.btn, { justifyContent: "flex-end" }]}
             >
               <Text style={styles.btnText}>Submit</Text>

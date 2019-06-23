@@ -10,7 +10,8 @@ export default {
   icons: {
     create: require("../assets/images/create_message_icon.png"),
     profile: require("../assets/images/icon_profile.png"),
-    message: require("../assets/images/icon_message.png")
+    message: require("../assets/images/icon_message.png"),
+    feed: require("../assets/images/feed_icon.png")
   },
   colors: {
     purple: "rgb(162,55,243)"

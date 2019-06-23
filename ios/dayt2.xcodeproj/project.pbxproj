@@ -401,6 +401,13 @@
 			remoteGlobalIDString = A39873CE1EA65EE60051E01A;
 			remoteInfo = "RNVectorIcons-tvOS";
 		};
+		94C3606E22C0002500A2FA24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94C3604322C0002500A2FA24 /* RNCamera.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4107012F1ACB723B00C6AA39;
+			remoteInfo = RNCamera;
+		};
 		94FEA57D22B739FC00442A3C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 94FEA55022B739FC00442A3C /* RNCAsyncStorage.xcodeproj */;
@@ -473,6 +480,7 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		918DF5A068294A499D53615A /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-SemiBold.ttf"; path = "../src/assets/fonts/Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
 		9490BD32AF4D879A379292D5 /* libPods-dayt2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dayt2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94C3604322C0002500A2FA24 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; };
 		94FEA55022B739FC00442A3C /* RNCAsyncStorage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCAsyncStorage.xcodeproj; path = "../node_modules/@react-native-community/async-storage/ios/RNCAsyncStorage.xcodeproj"; sourceTree = "<group>"; };
 		962197EA611A48028D71702B /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		98C0A86980C84B5CB7C5076E /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-ExtraBold.ttf"; path = "../src/assets/fonts/Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -727,6 +735,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				94C3604322C0002500A2FA24 /* RNCamera.xcodeproj */,
 				94FEA55022B739FC00442A3C /* RNCAsyncStorage.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
@@ -880,6 +889,14 @@
 			children = (
 				949EDA4022B59C65004E882F /* libRNVectorIcons.a */,
 				949EDA4222B59C65004E882F /* libRNVectorIcons-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94C3604422C0002500A2FA24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94C3606F22C0002500A2FA24 /* libRNCamera.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1072,6 +1089,10 @@
 				{
 					ProductGroup = 949EDA2922B59C65004E882F /* Products */;
 					ProjectRef = C097C0E5CEC44888B9BB36F4 /* RNAWSCognito.xcodeproj */;
+				},
+				{
+					ProductGroup = 94C3604422C0002500A2FA24 /* Products */;
+					ProjectRef = 94C3604322C0002500A2FA24 /* RNCamera.xcodeproj */;
 				},
 				{
 					ProductGroup = 94FEA55122B739FC00442A3C /* Products */;
@@ -1389,6 +1410,13 @@
 			fileType = archive.ar;
 			path = "libRNVectorIcons-tvOS.a";
 			remoteRef = 949EDA4122B59C65004E882F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		94C3606F22C0002500A2FA24 /* libRNCamera.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNCamera.a;
+			remoteRef = 94C3606E22C0002500A2FA24 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		94FEA57E22B739FC00442A3C /* libRNCAsyncStorage.a */ = {
