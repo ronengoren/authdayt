@@ -106,5 +106,16 @@
 		<string>FontAwesome5ProLight.ttf</string>
 		<string>FontAwesome5ProSolid.ttf</string>
 	</array>
+<<<<<<< HEAD
+=======
+	<key>NSCameraUsageDescription</key>
+	<string>do you allow dayt Camera Access</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>do you allow dayt Photo Library Access</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>do you allow dayt Photo Access</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>do you allow dayt Camera Role Access</string>
+>>>>>>> added camera and saving to db
 </dict>
 </plist>

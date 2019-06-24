@@ -32,13 +32,9 @@ public class MainApplication extends Application implements ReactApplication {
 
     @Override
     protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(new MainReactPackage(),
-            new RNCViewPagerPackage(),
-            new RNLocalizePackage(),
-            new ReactVideoPackage(),
-            new FastImageViewPackage(),
-            new RNFSPackage(), new RNDeviceInfo(), new RNCameraPackage(),
-          new AsyncStoragePackage(), new ReactNativeConfigPackage(), new VectorIconsPackage(),
+      return Arrays.<ReactPackage>asList(new MainReactPackage(), new RNCViewPagerPackage(), new RNLocalizePackage(),
+          new ReactVideoPackage(), new FastImageViewPackage(), new RNFSPackage(), new RNDeviceInfo(),
+          new RNCameraPackage(), new AsyncStoragePackage(), new ReactNativeConfigPackage(), new VectorIconsPackage(),
           new RNGestureHandlerPackage());
     }
 
