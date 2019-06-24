@@ -40,11 +40,10 @@ const MessageStack = createStackNavigator(
 
 const Tabs = createBottomTabNavigator(
   {
-    Messages: MessageStack,
-
+    camera: Camera,
     profile: Profile,
-    feed: MainFeed,
-    camera: Camera
+    Messages: MessageStack,
+    feed: MainFeed
   },
   {
     defaultNavigationOptions: ({ navigation }) => {

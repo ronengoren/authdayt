@@ -64,13 +64,18 @@ class Login extends Component {
       body: JSON.stringify(credentials)
     })
       .then(response => response.json())
-      .then(jsonResopnse => {
-        console.log(jsonResopnse.data.id);
-        if (jsonResopnse.confirmation === "success") {
-          AsyncStorage.setItem(config.userIdKey, jsonResopnse.data.id);
-          this.props.navigation.navigate("main");
+      .then(jsonResponse => {
+        console.log(jsonResponse.data.id);
+        console.log("jsonResponse.data.id");
+
+        if (jsonResponse.confirmation === "success") {
+          AsyncStorage.setItem(config.userIdKey, jsonResponse.data.id);
+          this.props.navigation.navigate({
+            routeName: "camera",
+            params: { user: config.userIdKey }
+          });
         } else {
-          throw new Error(jsonResopnse.message);
+          throw new Error(jsonResponse.message);
         }
       })
       .catch(err => {
@@ -87,8 +92,8 @@ class Login extends Component {
       body: JSON.stringify(this.state.credentials)
     })
       .then(response => response.json())
-      .then(jsonResopnse => {
-        if (jsonResopnse.confirmation === "success") {
+      .then(jsonResponse => {
+        if (jsonResponse.confirmation === "success") {
           this.props.navigation.navigate("main");
         } else {
           throw new Error({
