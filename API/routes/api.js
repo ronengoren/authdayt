@@ -47,6 +47,56 @@ router.post("/login", (req, res) => {
     });
 });
 
+router.get("/users/:id/photo", function(req, res) {
+  const userId = req.params.id;
+  console.log(req.params);
+  const myPhoto = {
+    url: req.body.imageUrl,
+    user: req.params.id
+  };
+  turbo
+    .create("photo", myPhoto)
+    .then(data => {
+      res.json({
+        confirmation: "success",
+        data: data
+      });
+      return;
+    })
+    .catch(err => {
+      res.json({
+        confirmation: "fail",
+        message: "Sorry, something went wrong"
+      });
+      return;
+    });
+});
+
+router.post("/users/:id/photo", function(req, res) {
+  const userId = req.params.id;
+  console.log(req.params.id);
+  console.log(req);
+
+  const myPhoto = {
+    url: req.body.imageUrl,
+    user: req.params.id
+  };
+  turbo
+    .create("photo", myPhoto)
+    .then(resp => {
+      res.json({
+        confirmation: "success",
+        data: resp
+      });
+    })
+    .catch(err => {
+      res.json({
+        confirmation: "fail",
+        err: err
+      });
+    });
+});
+
 const validResources = ["message"];
 
 router.post("/message", function(req, res) {

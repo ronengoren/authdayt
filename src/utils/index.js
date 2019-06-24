@@ -12,7 +12,7 @@ export default {
       params.toUser = key;
       let query = queryString.stringify(params);
       console.log(query);
-      return fetch(`${config.baseUrl}api/${endpoint}?${query}`, {
+      return fetch(`${config.baseUrl}${endpoint}?${query}`, {
         method: "GET",
         headers: {
           Accept: "application/json",

@@ -1,3 +1,5 @@
+import { Dimensions } from "react-native";
+
 export default {
   images: {
     barIcon: require("../assets/images/barIcon.png"),
@@ -18,6 +20,10 @@ export default {
   },
   styleConstants: {
     rowHeight: 50
+  },
+  styleConstants: {
+    rowHeight: 50,
+    oneThirdWidth: Dimensions.get("window").width / 3
   },
   // baseUrl: "http://localhost:3000/",
   baseUrl: "https://daytapi-pjnegz.turbo360-vertex.com/",

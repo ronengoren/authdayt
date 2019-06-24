@@ -2,8 +2,5 @@
     "java.configuration.updateBuildConfiguration": "disabled",
     "files.exclude": {
         "**/node_modules": true
-    },
-    "search.exclude": {
-        "**/node_modules": false
     }
 }
