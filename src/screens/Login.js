@@ -28,11 +28,11 @@ class Login extends Component {
     title: "Auth Screen"
   };
 
-  // componentDidMount() {
-  //   AsyncStorage.getItem(config.userIdKey).then(item => {
-  //     console.log(item);
-  //   });
-  // }
+  componentDidMount() {
+    AsyncStorage.getItem(config.userIdKey).then(item => {
+      console.log(item);
+    });
+  }
 
   updateCredentials(text, field) {
     let credentials = Object.assign(this.state.credentials);
@@ -71,7 +71,7 @@ class Login extends Component {
         if (jsonResponse.confirmation === "success") {
           AsyncStorage.setItem(config.userIdKey, jsonResponse.data.id);
           this.props.navigation.navigate({
-            routeName: "camera",
+            routeName: "profile",
             params: { user: config.userIdKey }
           });
         } else {

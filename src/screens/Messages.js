@@ -58,8 +58,8 @@ class Messages extends Component {
   }
 
   componentWillUnmount() {
-    this.keyboardDidShowListener.remove();
-    this.keyboardDidHideListener.remove();
+    // this.keyboardDidShowListener.remove();
+    // this.keyboardDidHideListener.remove();
   }
 
   componentDidMount() {

@@ -6,7 +6,7 @@ import Login from "./screens/Login";
 import Register from "./screens/Register";
 import Messages from "./screens/Messages";
 import Conversation from "./screens/Conversation";
-
+import DateTypes from "./screens/DateTypes";
 import Message from "./components/presentation/Message";
 import Authentication from "./screens/Authentication";
 import { ActivityIndicator, Image } from "react-native";
@@ -18,6 +18,7 @@ import {
 } from "react-navigation";
 import AsyncStorage from "@react-native-community/async-storage";
 import config from "./config";
+import UserDaytsIcons from "./components/container/UserDaytsIcons";
 
 const MessageStack = createStackNavigator(
   {
@@ -40,10 +41,11 @@ const MessageStack = createStackNavigator(
 
 const Tabs = createBottomTabNavigator(
   {
-    camera: Camera,
     profile: Profile,
-    Messages: MessageStack,
+    camera: Camera,
     feed: MainFeed
+
+    // Messages: MessageStack,
   },
   {
     defaultNavigationOptions: ({ navigation }) => {
@@ -76,11 +78,12 @@ const MainStack = authBoolean => {
   return createAppContainer(
     createSwitchNavigator(
       {
-        main: Tabs,
+        main: DateTypes,
         login: Login
       },
       {
-        initialRouteName: authBoolean ? "main" : "login"
+        initialRouteName: "main"
+        // authBoolean ? "main" : "login"
       }
     )
   );

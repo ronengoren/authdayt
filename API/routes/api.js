@@ -5,14 +5,26 @@ const router = vertex.router();
 
 /*  This is a sample API route. */
 
-// router.get("/:resource", (req, res) => {
-//   res.json({
-//     confirmation: "success",
-//     resource: req.params.resource,
-//     query: req.query // from the url query string
-//   });
-// });
-
+router.get("/:resource", function(req, res) {
+  const { resource } = req.params;
+  const { query } = req;
+  turbo
+    .fetch(resource, query)
+    .then(data => {
+      res.json({
+        confirmation: "success",
+        data: data
+      });
+      return;
+    })
+    .catch(err => {
+      res.json({
+        confirmation: "fail",
+        message: "Sorry, something went wrong"
+      });
+      return;
+    });
+});
 router.post("/signup", (req, res) => {
   turbo
     .create("user", req.body)
@@ -33,6 +45,9 @@ router.post("/signup", (req, res) => {
 router.post("/login", (req, res) => {
   turbo
     .login(req.body)
+    .then(user => {
+      return turbo.fetch("photo", { user: user.id });
+    })
     .then(data => {
       res.json({
         confirmation: "success",
@@ -201,13 +216,13 @@ router.get("/message/me", function(req, res) {
       return;
     });
 });
-// router.get("/:resource/:id", (req, res) => {
-//   res.json({
-//     confirmation: "success",
-//     resource: req.params.resource,
-//     id: req.params.id,
-//     query: req.query // from the url query string
-//   });
-// });
+router.get("/:resource/:id", (req, res) => {
+  res.json({
+    confirmation: "success",
+    resource: req.params.resource,
+    id: req.params.id,
+    query: req.query // from the url query string
+  });
+});
 
 module.exports = router;
