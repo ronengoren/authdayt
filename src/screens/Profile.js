@@ -5,32 +5,68 @@ import {
   View,
   StatusBar,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  FlatList,
+  Button
 } from "react-native";
 import AsyncStorage from "@react-native-community/async-storage";
 import config from "../config";
+import ImagePicker from "react-native-image-picker";
 
 class Profile extends Component {
   constructor() {
     super();
     this.state = {
-      userId: "",
+      photo: null,
+      user: "",
       profilePics: []
     };
   }
 
-  componentDidMount() {
-    this._navListener = this.props.navigation.addListener("didFocus", () => {
-      if (this.props.navigation.state.params) {
-        let newPics = Object.assign([], this.state.profilePics);
-        newPics.push(this.props.navigation.state.params.newPic);
-        this.setState({
-          profilePics: newPics
-        });
+  handleChoosePhoto = () => {
+    const options = {
+      noData: true
+    };
+    ImagePicker.launchImageLibrary(options, response => {
+      if (response.uri) {
+        this.setState({ photo: response });
       }
     });
+  };
 
-    fetch(`${config.baseUrl}api/photo?user=${this.state.userId}`, {
+  handleUploadPhoto = () => {
+    fetch(config.baseUrl + "api/" + "users/" + this.state.userId + "/photo", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(this.state.photo, { userId: this.state.userId })
+    })
+      .then(response => response.json())
+      .then(response => {
+        console.log("upload succes", response);
+        alert("Upload success!");
+        this.setState({ photo: null });
+      })
+      .catch(error => {
+        console.log("upload error", error);
+        alert("Upload failed!");
+      });
+  };
+
+  componentDidMount() {
+    // console.log("hey");
+    // this._navListener = this.props.navigation.addListener("didFocus", () => {
+    //   if (this.props.navigation.state.params) {
+    //     let newPics = Object.assign([], this.state.profilePics);
+    //     newPics.push(this.props.navigation.state.params.newPic);
+    //     this.setState({
+    //       profilePics: newPics
+    //     });
+    //   }
+    // });
+    fetch(config.baseUrl + "api/" + "photo/" + "user=" + this.state.user.id, {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -56,6 +92,8 @@ class Profile extends Component {
     });
   }
   render() {
+    const { photo } = this.state;
+
     return (
       <View style={styles.container}>
         <Text style={styles.title}>My Profile</Text>
@@ -68,28 +106,17 @@ class Profile extends Component {
             alignItems: "center"
           }}
         />
-        <View style={styles.profilePicContainer}>
-          {/* {this.state.profilePics.map((pic, i) => {
-            return (
-              <Image
-                key={pic.id}
-                style={styles.profilePicThumb}
-                source={{
-                  uri: `${pic.url}=s${config.styleConstants.oneThirdWidth}-c`
-                }}
-              />
-            );
-          })} */}
-          <Image
-            style={[
-              styles.icon,
-              {
-                height: 30,
-                width: 30
-              }
-            ]}
-            source={config.images.heartIcon}
-          />
+        <View
+          style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+        >
+          {photo && (
+            <Image
+              source={{ uri: photo.uri }}
+              style={{ width: 100, height: 100 }}
+            />
+          )}
+          <Button title="Upload" onPress={this.handleUploadPhoto} />
+          <Button title="Choose Photo" onPress={this.handleChoosePhoto} />
         </View>
         <TouchableOpacity
           onPress={() => this.logout()}
