@@ -16,7 +16,8 @@ class DateTypes extends Component {
   constructor() {
     super();
     this.state = {
-      images: [
+      liked: false,
+      imagesTypeA: [
         require("../assets/images/daytTypesIcons/daytIcon1.png"),
         require("../assets/images/daytTypesIcons/daytIcon2.png"),
         require("../assets/images/daytTypesIcons/daytIcon3.png"),
@@ -26,7 +27,9 @@ class DateTypes extends Component {
         require("../assets/images/daytTypesIcons/daytIcon7.png"),
         require("../assets/images/daytTypesIcons/daytIcon8.png"),
         require("../assets/images/daytTypesIcons/daytIcon9.png"),
-        require("../assets/images/daytTypesIcons/daytIcon10.png"),
+        require("../assets/images/daytTypesIcons/daytIcon10.png")
+      ],
+      imagesTypeB: [
         require("../assets/images/daytTypesIcons/daytIcon11.png"),
         require("../assets/images/daytTypesIcons/daytIcon12.png"),
         require("../assets/images/daytTypesIcons/daytIcon13.png"),
@@ -36,7 +39,9 @@ class DateTypes extends Component {
         require("../assets/images/daytTypesIcons/daytIcon17.png"),
         require("../assets/images/daytTypesIcons/daytIcon18.png"),
         require("../assets/images/daytTypesIcons/daytIcon19.png"),
-        require("../assets/images/daytTypesIcons/daytIcon20.png"),
+        require("../assets/images/daytTypesIcons/daytIcon20.png")
+      ],
+      imagesTypeC: [
         require("../assets/images/daytTypesIcons/daytIcon21.png"),
         require("../assets/images/daytTypesIcons/daytIcon22.png"),
         require("../assets/images/daytTypesIcons/daytIcon23.png"),
@@ -46,7 +51,9 @@ class DateTypes extends Component {
         require("../assets/images/daytTypesIcons/daytIcon27.png"),
         require("../assets/images/daytTypesIcons/daytIcon28.png"),
         require("../assets/images/daytTypesIcons/daytIcon29.png"),
-        require("../assets/images/daytTypesIcons/daytIcon30.png"),
+        require("../assets/images/daytTypesIcons/daytIcon30.png")
+      ],
+      imagesTypeD: [
         require("../assets/images/daytTypesIcons/daytIcon31.png"),
         require("../assets/images/daytTypesIcons/daytIcon32.png"),
         require("../assets/images/daytTypesIcons/daytIcon33.png"),
@@ -56,7 +63,9 @@ class DateTypes extends Component {
         require("../assets/images/daytTypesIcons/daytIcon37.png"),
         require("../assets/images/daytTypesIcons/daytIcon38.png"),
         require("../assets/images/daytTypesIcons/daytIcon39.png"),
-        require("../assets/images/daytTypesIcons/daytIcon40.png"),
+        require("../assets/images/daytTypesIcons/daytIcon40.png")
+      ],
+      imagesTypeE: [
         require("../assets/images/daytTypesIcons/daytIcon41.png"),
         require("../assets/images/daytTypesIcons/daytIcon42.png"),
         require("../assets/images/daytTypesIcons/daytIcon43.png"),
@@ -66,7 +75,9 @@ class DateTypes extends Component {
         require("../assets/images/daytTypesIcons/daytIcon47.png"),
         require("../assets/images/daytTypesIcons/daytIcon48.png"),
         require("../assets/images/daytTypesIcons/daytIcon49.png"),
-        require("../assets/images/daytTypesIcons/daytIcon50.png"),
+        require("../assets/images/daytTypesIcons/daytIcon50.png")
+      ],
+      imagesTypeF: [
         require("../assets/images/daytTypesIcons/daytIcon51.png"),
         require("../assets/images/daytTypesIcons/daytIcon52.png"),
         require("../assets/images/daytTypesIcons/daytIcon53.png"),
@@ -76,7 +87,9 @@ class DateTypes extends Component {
         require("../assets/images/daytTypesIcons/daytIcon57.png"),
         require("../assets/images/daytTypesIcons/daytIcon58.png"),
         require("../assets/images/daytTypesIcons/daytIcon59.png"),
-        require("../assets/images/daytTypesIcons/daytIcon60.png"),
+        require("../assets/images/daytTypesIcons/daytIcon60.png")
+      ],
+      imagesTypeG: [
         require("../assets/images/daytTypesIcons/daytIcon61.png"),
         require("../assets/images/daytTypesIcons/daytIcon62.png"),
         require("../assets/images/daytTypesIcons/daytIcon63.png"),
@@ -86,7 +99,9 @@ class DateTypes extends Component {
         require("../assets/images/daytTypesIcons/daytIcon67.png"),
         require("../assets/images/daytTypesIcons/daytIcon68.png"),
         require("../assets/images/daytTypesIcons/daytIcon69.png"),
-        require("../assets/images/daytTypesIcons/daytIcon70.png"),
+        require("../assets/images/daytTypesIcons/daytIcon70.png")
+      ],
+      imagesTypeH: [
         require("../assets/images/daytTypesIcons/daytIcon71.png"),
         require("../assets/images/daytTypesIcons/daytIcon72.png"),
         require("../assets/images/daytTypesIcons/daytIcon73.png"),
@@ -96,7 +111,9 @@ class DateTypes extends Component {
         require("../assets/images/daytTypesIcons/daytIcon77.png"),
         require("../assets/images/daytTypesIcons/daytIcon78.png"),
         require("../assets/images/daytTypesIcons/daytIcon79.png"),
-        require("../assets/images/daytTypesIcons/daytIcon80.png"),
+        require("../assets/images/daytTypesIcons/daytIcon80.png")
+      ],
+      imagesTypeI: [
         require("../assets/images/daytTypesIcons/daytIcon81.png"),
         require("../assets/images/daytTypesIcons/daytIcon82.png"),
         require("../assets/images/daytTypesIcons/daytIcon83.png"),
@@ -119,18 +136,15 @@ class DateTypes extends Component {
       userDaytsDataSource: {}
     };
   }
-  componentDidMount() {
-    var that = this;
-    let daytTypes = Array.apply(null, Array(90)).map((v, i) => {
-      return { id: i, src: "http://placehold.it/200x200?text=" + (i + 1) };
-    });
-    that.setState({
-      //Setting the data source
-      dataSource: daytTypes
+  likedToggled() {
+    this.setState({
+      liked: !this.state.liked
     });
   }
+
   render() {
-    const { images } = this.state;
+    // const { imagesTypeA } = this.state;
+    const { navigate } = this.props.navigation;
 
     return (
       <View style={styles.MainContainer}>
@@ -160,20 +174,212 @@ class DateTypes extends Component {
             keyExtractor={(item, index) => index}
           />
         </View>
+        {/* dayts types */}
+        {/* dayts types */}
+        {/* dayts types */}
+        {/* dayts types */}
+        {/* dayts types */}
+        {/* dayts types */}
+        {/* dayts types */}
+
         <ScrollView>
           <FlatList
             // style={{ width: 100 + "%" }}
-            data={this.state.images}
+            data={this.state.imagesTypeA}
             renderItem={({ item }) => (
               <TouchableOpacity
                 activeOpacity={0.5}
                 onPress={() => {
-                  alert("hey");
+                  navigate("login");
                 }}
               >
                 <View style={styles.image}>
                   <Image
-                    style={styles.imageThumbnail}
+                    style={styles.imageThumbnailA}
+                    source={item}
+                    resizeMode={"contain"}
+                  />
+                </View>
+              </TouchableOpacity>
+            )}
+            //Setting the number of column
+            numColumns={5}
+            keyExtractor={(item, index) => index}
+          />
+          <FlatList
+            // style={{ width: 100 + "%" }}
+            data={this.state.imagesTypeB}
+            renderItem={({ item }) => (
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => {
+                  navigate("login");
+                }}
+              >
+                <View style={styles.image}>
+                  <Image
+                    style={styles.imageThumbnailB}
+                    source={item}
+                    resizeMode={"contain"}
+                  />
+                </View>
+              </TouchableOpacity>
+            )}
+            //Setting the number of column
+            numColumns={5}
+            keyExtractor={(item, index) => index}
+          />
+          <FlatList
+            // style={{ width: 100 + "%" }}
+            data={this.state.imagesTypeC}
+            renderItem={({ item }) => (
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => {
+                  navigate("login");
+                }}
+              >
+                <View style={styles.image}>
+                  <Image
+                    style={styles.imageThumbnailC}
+                    source={item}
+                    resizeMode={"contain"}
+                  />
+                </View>
+              </TouchableOpacity>
+            )}
+            //Setting the number of column
+            numColumns={5}
+            keyExtractor={(item, index) => index}
+          />
+          <FlatList
+            // style={{ width: 100 + "%" }}
+            data={this.state.imagesTypeD}
+            renderItem={({ item }) => (
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => {
+                  navigate("login");
+                }}
+              >
+                <View style={styles.image}>
+                  <Image
+                    style={styles.imageThumbnailD}
+                    source={item}
+                    resizeMode={"contain"}
+                  />
+                </View>
+              </TouchableOpacity>
+            )}
+            //Setting the number of column
+            numColumns={5}
+            keyExtractor={(item, index) => index}
+          />
+          <FlatList
+            // style={{ width: 100 + "%" }}
+            data={this.state.imagesTypeE}
+            renderItem={({ item }) => (
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => {
+                  navigate("login");
+                }}
+              >
+                <View style={styles.image}>
+                  <Image
+                    style={styles.imageThumbnailE}
+                    source={item}
+                    resizeMode={"contain"}
+                  />
+                </View>
+              </TouchableOpacity>
+            )}
+            //Setting the number of column
+            numColumns={5}
+            keyExtractor={(item, index) => index}
+          />
+          <FlatList
+            // style={{ width: 100 + "%" }}
+            data={this.state.imagesTypeF}
+            renderItem={({ item }) => (
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => {
+                  navigate("login");
+                }}
+              >
+                <View style={styles.image}>
+                  <Image
+                    style={styles.imageThumbnailF}
+                    source={item}
+                    resizeMode={"contain"}
+                  />
+                </View>
+              </TouchableOpacity>
+            )}
+            //Setting the number of column
+            numColumns={5}
+            keyExtractor={(item, index) => index}
+          />
+          <FlatList
+            // style={{ width: 100 + "%" }}
+            data={this.state.imagesTypeG}
+            renderItem={({ item }) => (
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => {
+                  navigate("login");
+                }}
+              >
+                <View style={styles.image}>
+                  <Image
+                    style={styles.imageThumbnailG}
+                    source={item}
+                    resizeMode={"contain"}
+                  />
+                </View>
+              </TouchableOpacity>
+            )}
+            //Setting the number of column
+            numColumns={5}
+            keyExtractor={(item, index) => index}
+          />
+          <FlatList
+            // style={{ width: 100 + "%" }}
+            data={this.state.imagesTypeH}
+            renderItem={({ item }) => (
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => {
+                  navigate("login");
+                }}
+              >
+                <View style={styles.image}>
+                  <Image
+                    style={styles.imageThumbnailH}
+                    source={item}
+                    resizeMode={"contain"}
+                  />
+                </View>
+              </TouchableOpacity>
+            )}
+            //Setting the number of column
+            numColumns={5}
+            keyExtractor={(item, index) => index}
+          />
+          <FlatList
+            // style={{ width: 100 + "%" }}
+            data={this.state.imagesTypeI}
+            renderItem={({ item }) => (
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => {
+                  navigate("login");
+                }}
+              >
+                <View style={styles.image}>
+                  <Image
+                    style={styles.imageThumbnailI}
                     source={item}
                     resizeMode={"contain"}
                   />
@@ -199,7 +405,8 @@ const styles = StyleSheet.create({
     // justifyContent: "space-between",
     // paddingTop: 30,
     width: 100 + "%",
-    backgroundColor: "white"
+    backgroundColor: "white",
+    height: 100 + "%"
   },
   userDaytsBar: {
     alignItems: "center",
@@ -242,15 +449,50 @@ const styles = StyleSheet.create({
 
     // width: 100 + "%"
   },
-  imageThumbnail: {
+  imageThumbnailA: {
     width: 50,
     height: 50,
-    // justifyContent: "space-between",
-    // alignItems: "center",
-
-    // borderColor: "#4c09a2",
-    borderWidth: 2
-    // borderRadius: 50 / 2
+    tintColor: "#E0E000"
+  },
+  imageThumbnailB: {
+    width: 50,
+    height: 50,
+    tintColor: "#006666"
+  },
+  imageThumbnailC: {
+    width: 50,
+    height: 50,
+    tintColor: "#660000"
+  },
+  imageThumbnailD: {
+    width: 50,
+    height: 50,
+    tintColor: "#0000E0"
+  },
+  imageThumbnailE: {
+    width: 50,
+    height: 50,
+    tintColor: "#0000A3"
+  },
+  imageThumbnailF: {
+    width: 50,
+    height: 50,
+    tintColor: "#003366"
+  },
+  imageThumbnailG: {
+    width: 50,
+    height: 50,
+    tintColor: "#660033"
+  },
+  imageThumbnailH: {
+    width: 50,
+    height: 50,
+    tintColor: "#660066"
+  },
+  imageThumbnailI: {
+    width: 50,
+    height: 50,
+    tintColor: "#006633"
   },
   daytTypesBar: {
     // paddingTop: 70,
