@@ -13,6 +13,7 @@
 	<string>AVKit</string>
 	<string>DVAssetLoaderDelegate</string>
 	<string>ImageIO</string>
+<<<<<<< HEAD
 	<string>StoreKit</string>
 	<string>WebImage</string>
 	<string>AssetsLibrary</string>
@@ -25,6 +26,22 @@
 	<string>MobileCoreServices</string>
 	<string>WatchKit</string>
 	<string>CoreText</string>
+=======
+	<string>cxxreact</string>
+	<string>objc</string>
+	<string>AudioToolbox</string>
+	<string>Accelerate</string>
+	<string>CoreData</string>
+	<string>arpa</string>
+	<string>MobileCoreServices</string>
+	<string>sys</string>
+	<string>Bolts</string>
+	<string>CoreTelephony</string>
+	<string>CoreMedia</string>
+	<string>StoreKit</string>
+	<string>netinet6</string>
+	<string>CoreServices</string>
+>>>>>>> added days screen and added momentjs
 	<string>AdSupport</string>
 	<string>SDWebImage</string>
 	<string>AppKit</string>
@@ -33,6 +50,7 @@
 	<string>jsireact</string>
 	<string>Cocoa</string>
 	<string>Accounts</string>
+<<<<<<< HEAD
 	<string>XCTest</string>
 	<string>netinet</string>
 	<string>CoreData</string>
@@ -40,7 +58,12 @@
 	<string>CommonCrypto</string>
 	<string>arpa</string>
 	<string>CoreMotion</string>
+=======
+	<string>libkern</string>
+	<string>CoreText</string>
+>>>>>>> added days screen and added momentjs
 	<string>fishhook</string>
+	<string>WebKit</string>
 	<string>FirebaseMLVision</string>
 	<string>QuartzCore</string>
 	<string>AudioToolbox</string>
@@ -48,6 +71,7 @@
 	<string>Security</string>
 	<string>LocalAuthentication</string>
 	<string>CoreGraphics</string>
+<<<<<<< HEAD
 	<string>objc</string>
 	<string>CoreMedia</string>
 	<string>UIKit</string>
@@ -57,5 +81,12 @@
 	<string>Darwin</string>
 	<string>sys</string>
 	<string>React</string>
+=======
+	<string>SystemConfiguration</string>
+	<string>folly</string>
+	<string>React</string>
+	<string>UIKit</string>
+	<string>jsi</string>
+>>>>>>> added days screen and added momentjs
 </array>
 </plist>
