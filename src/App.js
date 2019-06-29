@@ -19,7 +19,7 @@ import {
 import AsyncStorage from "@react-native-community/async-storage";
 import config from "./config";
 import UserDaytsIcons from "./components/container/UserDaytsIcons";
-
+import DaysScreen from "./screens/DaysScreen";
 const MessageStack = createStackNavigator(
   {
     home: Messages,
@@ -79,7 +79,7 @@ const MainStack = authBoolean => {
     createSwitchNavigator(
       {
         main: DateTypes,
-        login: Login
+        login: DaysScreen
       },
       {
         initialRouteName: "main"

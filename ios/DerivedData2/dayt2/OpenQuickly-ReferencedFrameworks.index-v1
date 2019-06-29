@@ -19,15 +19,15 @@
 	<string>Bolts</string>
 	<string>CoreTelephony</string>
 	<string>CoreMedia</string>
-	<string>CoreServices</string>
-	<string>netinet6</string>
 	<string>StoreKit</string>
+	<string>netinet6</string>
+	<string>CoreServices</string>
 	<string>AdSupport</string>
 	<string>Accounts</string>
 	<string>libkern</string>
 	<string>CoreText</string>
-	<string>WebKit</string>
 	<string>fishhook</string>
+	<string>WebKit</string>
 	<string>FirebaseMLVision</string>
 	<string>CoreMotion</string>
 	<string>XCTest</string>
@@ -44,9 +44,9 @@
 	<string>yoga</string>
 	<string>CoreGraphics</string>
 	<string>SystemConfiguration</string>
-	<string>jsi</string>
+	<string>folly</string>
 	<string>React</string>
 	<string>UIKit</string>
-	<string>folly</string>
+	<string>jsi</string>
 </array>
 </plist>
