@@ -71,9 +71,12 @@
 		8A80D69D76FF4FB982279506 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B8F6A5DCB0A42BBA6B3EF30 /* Raleway-Regular.ttf */; };
 		90A1F1F3417741469100DBBF /* DMSerifDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE4BC9635EA147899116E5B1 /* DMSerifDisplay-Regular.ttf */; };
 		90C2F68FAFB84BE3924BE8AA /* Raleway-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 295F85C001864E0D991AB1EB /* Raleway-LightItalic.ttf */; };
+<<<<<<< HEAD
 		944B5AE622D1B72200F1947B /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 944B5ADF22D1B71400F1947B /* libRNDeviceInfo.a */; };
 		94854C3F22D6E360000B9191 /* libFastImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94854C1122D6E351000B9191 /* libFastImage.a */; };
 		94854C4922D6E6E7000B9191 /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94854C4622D6E6D6000B9191 /* libRCTVideo.a */; };
+=======
+>>>>>>> added days and changed feed icons
 		9495B66D22C8133B000D5001 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		94FEA58322B73A2100442A3C /* libRNCAsyncStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94FEA57E22B739FC00442A3C /* libRNCAsyncStorage.a */; };
 		97C84DD2C84340EBA0CCECD7 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B763C317744C425696C8358F /* Octicons.ttf */; };
@@ -96,7 +99,10 @@
 		EA12E13B131144519B1844A6 /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFF067B4993147E588992319 /* Raleway-BoldItalic.ttf */; };
 		EB22BBE9FBCF405E87ED1531 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 962197EA611A48028D71702B /* AntDesign.ttf */; };
 		EB2808DF8E35428891DE4D1F /* DMSerifDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B32742BB08304CE8ADEDDC77 /* DMSerifDisplay-Italic.ttf */; };
+<<<<<<< HEAD
 		F8360B57DA74496E8366397B /* FontAwesome5ProLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19EE3257B1904FB98653FA13 /* FontAwesome5ProLight.ttf */; };
+=======
+>>>>>>> added days and changed feed icons
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -879,11 +885,14 @@
 				1A6D54D30C31472294C19BE6 /* Zocial.ttf */,
 				B32742BB08304CE8ADEDDC77 /* DMSerifDisplay-Italic.ttf */,
 				FE4BC9635EA147899116E5B1 /* DMSerifDisplay-Regular.ttf */,
+<<<<<<< HEAD
 				3950CC13BCE14C5B8ED97A4C /* tinderclone.ttf */,
 				A80A855EB3E94ABEB6983D1A /* dayt.ttf */,
 				532F6EF50EAF452ABE16CBA9 /* FontAwesome5BrandsRegular.ttf */,
 				19EE3257B1904FB98653FA13 /* FontAwesome5ProLight.ttf */,
 				EAEF7F5E56E04D5580C52D00 /* FontAwesome5ProSolid.ttf */,
+=======
+>>>>>>> added days and changed feed icons
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1573,11 +1582,14 @@
 				66E40940172049CEA79DB021 /* Zocial.ttf in Resources */,
 				EB2808DF8E35428891DE4D1F /* DMSerifDisplay-Italic.ttf in Resources */,
 				90A1F1F3417741469100DBBF /* DMSerifDisplay-Regular.ttf in Resources */,
+<<<<<<< HEAD
 				18D16671ABE24289B62F2795 /* tinderclone.ttf in Resources */,
 				4E52AD03670248C3AB9E6F93 /* dayt.ttf in Resources */,
 				632A167DBC4F406AA39E8D90 /* FontAwesome5BrandsRegular.ttf in Resources */,
 				F8360B57DA74496E8366397B /* FontAwesome5ProLight.ttf in Resources */,
 				87F35D9BAB0C4B2F8A4EC99C /* FontAwesome5ProSolid.ttf in Resources */,
+=======
+>>>>>>> added days and changed feed icons
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
