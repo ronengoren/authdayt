@@ -13,10 +13,10 @@
 	<string>AudioToolbox</string>
 	<string>Accelerate</string>
 	<string>CoreData</string>
-	<string>arpa</string>
 	<string>MobileCoreServices</string>
-	<string>sys</string>
 	<string>Bolts</string>
+	<string>sys</string>
+	<string>arpa</string>
 	<string>CoreTelephony</string>
 	<string>CoreMedia</string>
 	<string>StoreKit</string>
@@ -26,8 +26,8 @@
 	<string>Accounts</string>
 	<string>libkern</string>
 	<string>CoreText</string>
-	<string>fishhook</string>
 	<string>WebKit</string>
+	<string>fishhook</string>
 	<string>FirebaseMLVision</string>
 	<string>CoreMotion</string>
 	<string>XCTest</string>
@@ -44,9 +44,9 @@
 	<string>yoga</string>
 	<string>CoreGraphics</string>
 	<string>SystemConfiguration</string>
-	<string>folly</string>
+	<string>jsi</string>
 	<string>React</string>
 	<string>UIKit</string>
-	<string>jsi</string>
+	<string>folly</string>
 </array>
 </plist>
