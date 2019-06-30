@@ -98,6 +98,8 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>DMSerifDisplay-Italic.ttf</string>
+		<string>DMSerifDisplay-Regular.ttf</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>do you allow dayt Camera Access</string>

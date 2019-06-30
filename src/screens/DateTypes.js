@@ -8,15 +8,20 @@ import {
   TouchableOpacity,
   FlatList,
   Button,
-  ScrollView
+  ScrollView,
+  Animated,
+  Easing,
+  TouchableHighlight
 } from "react-native";
 import config from "../config";
-import UserDaytsIcons from "../components/container";
+import UserDaytsIcons from "../components/container/UserDaytsIcons";
 class DateTypes extends Component {
   constructor() {
     super();
+    this.animatedValue = new Animated.Value(0);
     this.state = {
       liked: false,
+      testImage: [require("../assets/images/daytTypesIcons/daytIcon37.png")],
       imagesTypeA: [
         require("../assets/images/daytTypesIcons/daytIcon1.png"),
         require("../assets/images/daytTypesIcons/daytIcon2.png"),
@@ -136,6 +141,14 @@ class DateTypes extends Component {
       userDaytsDataSource: {}
     };
   }
+  handleAnimation = () => {
+    Animated.timing(this.animatedValue, {
+      toValue: 1,
+      duration: 1500
+      // easing: Easing.ease
+    }).start();
+  };
+
   likedToggled() {
     this.setState({
       liked: !this.state.liked
@@ -143,61 +156,64 @@ class DateTypes extends Component {
   }
 
   render() {
-    // const { imagesTypeA } = this.state;
     const { navigate } = this.props.navigation;
 
     return (
       <View style={styles.MainContainer}>
-        <View style={styles.userDaytsBar}>
-          <FlatList
-            // style={{ width: 100 + "%" }}
-            data={this.state.userdayts}
-            renderItem={({ item }) => (
-              <TouchableOpacity
-                activeOpacity={0.5}
-                onPress={() => {
-                  alert("hey1");
-                }}
-              >
-                <View style={styles.userDaytsImage}>
-                  <Image
-                    style={styles.UserImageThumbnail}
-                    source={item}
-                    resizeMode={"contain"}
-                    horizontal={true}
-                  />
-                </View>
-              </TouchableOpacity>
-            )}
-            //Setting the number of column
-            numColumns={5}
-            keyExtractor={(item, index) => index}
-          />
-        </View>
-        {/* dayts types */}
-        {/* dayts types */}
-        {/* dayts types */}
-        {/* dayts types */}
-        {/* dayts types */}
-        {/* dayts types */}
-        {/* dayts types */}
+        <UserDaytsIcons />
 
         <ScrollView>
           <FlatList
             // style={{ width: 100 + "%" }}
-            data={this.state.imagesTypeA}
+            data={this.state.testImage}
             renderItem={({ item }) => (
               <TouchableOpacity
                 activeOpacity={0.5}
                 onPress={() => {
-                  navigate("login");
+                  alert(item);
                 }}
               >
                 <View style={styles.image}>
                   <Image
+                    style={{
+                      // position: "absolute",
+                      // left: 40,
+                      // top: 100,
+                      height: 50,
+                      width: 50
+                      // transform: [
+                      //   {
+                      //     translateX: this.animatedValue.interpolate({
+                      //       inputRange: [0, 1],
+                      //       outputRange: [0, 1]
+                      //     })
+                      //   },
+                      //   {
+                      //     translateY: this.animatedValue.interpolate({
+                      //       inputRange: [0, 1],
+                      //       outputRange: [0, 4]
+                      //     })
+                      //   },
+                      //   {
+                      //     scaleX: this.animatedValue.interpolate({
+                      //       inputRange: [0, 1],
+                      //       outputRange: [1, 2]
+                      //     })
+                      //   },
+                      //   {
+                      //     scaleY: this.animatedValue.interpolate({
+                      //       inputRange: [0, 1],
+                      //       outputRange: [1, 2]
+                      //     })
+                      //   }
+                      // ]
+                    }}
                     style={styles.imageThumbnailA}
                     source={item}
                     resizeMode={"contain"}
+                    // onPress={() =>
+                    // navigate("UserDaytsIcons", { icon: item }
+                    // )}
                   />
                 </View>
               </TouchableOpacity>
@@ -213,7 +229,7 @@ class DateTypes extends Component {
               <TouchableOpacity
                 activeOpacity={0.5}
                 onPress={() => {
-                  navigate("login");
+                  navigate("main");
                 }}
               >
                 <View style={styles.image}>
@@ -236,7 +252,7 @@ class DateTypes extends Component {
               <TouchableOpacity
                 activeOpacity={0.5}
                 onPress={() => {
-                  navigate("login");
+                  navigate("main");
                 }}
               >
                 <View style={styles.image}>
@@ -259,7 +275,7 @@ class DateTypes extends Component {
               <TouchableOpacity
                 activeOpacity={0.5}
                 onPress={() => {
-                  navigate("login");
+                  navigate("main");
                 }}
               >
                 <View style={styles.image}>
@@ -282,7 +298,7 @@ class DateTypes extends Component {
               <TouchableOpacity
                 activeOpacity={0.5}
                 onPress={() => {
-                  navigate("login");
+                  navigate("main");
                 }}
               >
                 <View style={styles.image}>
@@ -305,7 +321,7 @@ class DateTypes extends Component {
               <TouchableOpacity
                 activeOpacity={0.5}
                 onPress={() => {
-                  navigate("login");
+                  navigate("main");
                 }}
               >
                 <View style={styles.image}>
@@ -328,7 +344,7 @@ class DateTypes extends Component {
               <TouchableOpacity
                 activeOpacity={0.5}
                 onPress={() => {
-                  navigate("login");
+                  navigate("main");
                 }}
               >
                 <View style={styles.image}>
@@ -351,7 +367,7 @@ class DateTypes extends Component {
               <TouchableOpacity
                 activeOpacity={0.5}
                 onPress={() => {
-                  navigate("login");
+                  navigate("main");
                 }}
               >
                 <View style={styles.image}>
@@ -374,7 +390,7 @@ class DateTypes extends Component {
               <TouchableOpacity
                 activeOpacity={0.5}
                 onPress={() => {
-                  navigate("login");
+                  navigate("main");
                 }}
               >
                 <View style={styles.image}>

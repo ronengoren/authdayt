@@ -6,7 +6,8 @@ import {
   View,
   Image,
   Dimensions,
-  TouchableOpacity
+  TouchableOpacity,
+  FlatList
 } from "react-native";
 import config from "../../config";
 
@@ -15,7 +16,13 @@ class Post extends React.Component {
     super();
     this.state = {
       liked: false,
-      screenWidth: Dimensions.get("window").width
+      screenWidth: Dimensions.get("window").width,
+      usersDayts: [
+        require("../../assets/images/daytTypesIcons/daytIcon47.png"),
+        require("../../assets/images/daytTypesIcons/daytIcon54.png"),
+        require("../../assets/images/daytTypesIcons/daytIcon66.png"),
+        require("../../assets/images/daytTypesIcons/daytIcon77.png")
+      ]
     };
   }
 
@@ -80,28 +87,35 @@ class Post extends React.Component {
             ]}
             source={config.images.heartIcon}
           />
-          <Image
-            style={[
-              styles.icon,
-              { height: 50, width: 50, tintColor: barIconColor }
-            ]}
-            source={config.images.barIcon}
-          />
-          <Image
-            style={[styles.icon, { height: 50, width: 50 }]}
-            source={config.images.cinemaIcon}
-          />
-          <Image
-            style={[styles.icon, { height: 50, width: 50 }]}
-            source={config.images.partyIcon}
-          />
-          <Image
-            style={[styles.icon, { height: 50, width: 50 }]}
-            source={config.images.restaurantIcon}
-          />
-          <Image
-            style={[styles.icon, { height: 50, width: 50 }]}
-            source={config.images.villageIcon}
+          <FlatList
+            data={this.state.usersDayts}
+            renderItem={({ item }) => (
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => {
+                  alert("hey1");
+                }}
+              >
+                <View>
+                  <Image
+                    style={[
+                      styles.icon,
+                      {
+                        height: 50,
+                        width: 50,
+                        tintColor: barIconColor
+                      }
+                    ]}
+                    source={item}
+                    resizeMode={"contain"}
+                    horizontal={true}
+                  />
+                </View>
+              </TouchableOpacity>
+            )}
+            //Setting the number of column
+            numColumns={5}
+            keyExtractor={(item, index) => index}
           />
         </View>
         <View style={styles.iconBar}>

@@ -43,36 +43,139 @@ class DaysScreen extends Component {
     var nextSeventhDay = moment()
       .add(7, "days")
       .format("dddd");
+    const { navigate } = this.props.navigation;
 
     return (
-      <View style={styles.MainContainer}>
-        <Text style={styles.DaysScreen}>I'm Available</Text>
-        <Text style={styles.DaysScreen}>Now!</Text>
-        <View />
-        <Text style={styles.DaysScreen}>Or</Text>
-
-        <Text style={styles.DaysScreen}>{currentDate}</Text>
-        <Text style={styles.DaysScreen}>{nextOneDay}</Text>
-        <Text style={styles.DaysScreen}>{nextTwoDay}</Text>
-        <Text style={styles.DaysScreen}>{nextThreeDay}</Text>
-        <Text style={styles.DaysScreen}>{nextFourthDay}</Text>
-        <Text style={styles.DaysScreen}>{nextFifthDay}</Text>
-        <Text style={styles.DaysScreen}>{nextSixthDay}</Text>
-      </View>
+      <ScrollView style={styles.ScrollView}>
+        <View style={styles.MainContainer}>
+          <Text style={styles.dateChoose}>Date for</Text>
+          <Text style={styles.daytHeader}>Dayt</Text>
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => {
+              navigate("login");
+            }}
+          >
+            <Text style={styles.Now}>Now-ish...</Text>
+          </TouchableOpacity>
+          <View />
+          <Text style={styles.Or}>Or</Text>
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => {
+              navigate("login");
+            }}
+          >
+            <Text style={styles.Now} value={currentDate}>
+              Today
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => {
+              navigate("login");
+            }}
+          >
+            <Text style={styles.Now} value={nextOneDay}>
+              {nextOneDay}
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => {
+              navigate("login");
+            }}
+          >
+            <Text style={styles.Now} value={nextTwoDay}>
+              {nextTwoDay}
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => {
+              navigate("login");
+            }}
+          >
+            <Text style={styles.Now} value={nextThreeDay}>
+              {nextThreeDay}
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => {
+              navigate("login");
+            }}
+          >
+            <Text style={styles.Now} value={nextFourthDay}>
+              {nextFourthDay}
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => {
+              navigate("login");
+            }}
+          >
+            <Text style={styles.Now} value={nextFifthDay}>
+              {nextFifthDay}
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => {
+              navigate("login");
+            }}
+          >
+            <Text style={styles.Now} value={nextSixthDay}>
+              {nextSixthDay}
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  ScrollView: {
+    height: 100 + "%",
+    width: 100 + "%"
+  },
   MainContainer: {
-    justifyContent: "center",
+    // justifyContent: "center",
     alignItems: "center",
     height: 100 + "%",
-    width: 100 + "%",
+    width: 100 + "%"
+    // backgroundColor: "pink"
+  },
+  dateChoose: {
+    marginTop: 70,
+    fontSize: 30,
+    fontFamily: "DMSerifDisplay-Regular"
+  },
+  daytHeader: {
+    fontFamily: "DMSerifDisplay-Regular",
+    fontSize: 30,
     backgroundColor: "pink"
   },
-  DaysScreen: {
-    fontSize: 20
+  Now: {
+    marginTop: 50,
+    fontFamily: "DMSerifDisplay-Regular",
+    width: 150,
+    height: 150,
+    fontSize: 30,
+    borderRadius: 150 / 2,
+    borderWidth: 1,
+    borderColor: "black",
+    color: "black",
+    lineHeight: 150,
+    textAlign: "center",
+    justifyContent: "center",
+    flexWrap: "wrap"
+  },
+  Or: {
+    fontFamily: "DMSerifDisplay-Regular",
+    lineHeight: 150
   }
 });
 

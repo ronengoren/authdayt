@@ -41,9 +41,11 @@ const MessageStack = createStackNavigator(
 
 const Tabs = createBottomTabNavigator(
   {
-    profile: Profile,
-    camera: Camera,
-    feed: MainFeed
+    // profile: Profile,
+    // camera: Camera,
+    feed: MainFeed,
+    day: DaysScreen,
+    dayts: DateTypes
 
     // Messages: MessageStack,
   },
@@ -78,11 +80,12 @@ const MainStack = authBoolean => {
   return createAppContainer(
     createSwitchNavigator(
       {
-        main: DateTypes,
-        login: DaysScreen
+        main: DaysScreen,
+        dayts: DateTypes,
+        login: Tabs
       },
       {
-        initialRouteName: "main"
+        initialRouteName: "dayts"
         // authBoolean ? "main" : "login"
       }
     )
