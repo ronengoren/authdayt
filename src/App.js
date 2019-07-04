@@ -20,6 +20,7 @@ import AsyncStorage from "@react-native-community/async-storage";
 import config from "./config";
 import UserDaytsIcons from "./components/container/UserDaytsIcons";
 import DaysScreen from "./screens/DaysScreen";
+import UserProfile from "./components/container/UserProfile";
 const MessageStack = createStackNavigator(
   {
     home: Messages,
@@ -44,6 +45,9 @@ const Tabs = createBottomTabNavigator(
     // profile: Profile,
     // camera: Camera,
     feed: MainFeed,
+
+    Profile: UserProfile,
+
     day: DaysScreen,
     dayts: DateTypes
 
@@ -85,7 +89,7 @@ const MainStack = authBoolean => {
         login: Tabs
       },
       {
-        initialRouteName: "dayts"
+        initialRouteName: "login"
         // authBoolean ? "main" : "login"
       }
     )
