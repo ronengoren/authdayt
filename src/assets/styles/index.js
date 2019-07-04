@@ -181,9 +181,15 @@ export default StyleSheet.create({
     backgroundColor: WHITE,
     paddingHorizontal: 10,
     paddingBottom: 25,
+<<<<<<< HEAD
     margin: 70,
     borderRadius: 8,
     // marginTop: -65,
+=======
+    margin: 20,
+    borderRadius: 8,
+    marginTop: -65,
+>>>>>>> added profile page
     shadowOpacity: 0.05,
     shadowRadius: 10,
     shadowColor: BLACK,
@@ -240,7 +246,11 @@ export default StyleSheet.create({
     height: DIMENSION_HEIGHT
   },
   top: {
+<<<<<<< HEAD
     paddingTop: 20,
+=======
+    paddingTop: 50,
+>>>>>>> added profile page
     marginHorizontal: 10,
     flexDirection: "row",
     justifyContent: "space-between",

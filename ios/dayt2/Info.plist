@@ -100,17 +100,15 @@
 		<string>Zocial.ttf</string>
 		<string>DMSerifDisplay-Italic.ttf</string>
 		<string>DMSerifDisplay-Regular.ttf</string>
-<<<<<<< HEAD
+
 		<string>tinderclone.ttf</string>
 		<string>dayt.ttf</string>
 		<string>FontAwesome5BrandsRegular.ttf</string>
 		<string>FontAwesome5ProLight.ttf</string>
 		<string>FontAwesome5ProSolid.ttf</string>
-=======
->>>>>>> added days and changed feed icons
+
 	</array>
-<<<<<<< HEAD
-=======
+
 	<key>NSCameraUsageDescription</key>
 	<string>do you allow dayt Camera Access</string>
 	<key>NSPhotoLibraryUsageDescription</key>

@@ -13,7 +13,6 @@
 	<string>AVKit</string>
 	<string>DVAssetLoaderDelegate</string>
 	<string>ImageIO</string>
-<<<<<<< HEAD
 	<string>StoreKit</string>
 	<string>WebImage</string>
 	<string>AssetsLibrary</string>
@@ -32,16 +31,19 @@
 	<string>AudioToolbox</string>
 	<string>Accelerate</string>
 	<string>CoreData</string>
-	<string>MobileCoreServices</string>
-	<string>Bolts</string>
-	<string>sys</string>
 	<string>arpa</string>
+	<string>MobileCoreServices</string>
+	<string>sys</string>
+	<string>Bolts</string>
 	<string>CoreTelephony</string>
 	<string>CoreMedia</string>
-	<string>StoreKit</string>
-	<string>netinet6</string>
 	<string>CoreServices</string>
+<<<<<<< HEAD
 >>>>>>> added days screen and added momentjs
+=======
+	<string>netinet6</string>
+	<string>StoreKit</string>
+>>>>>>> added profile page
 	<string>AdSupport</string>
 	<string>SDWebImage</string>
 	<string>AppKit</string>
@@ -87,14 +89,18 @@
 	<string>React</string>
 =======
 	<string>SystemConfiguration</string>
-	<string>jsi</string>
+	<string>folly</string>
 	<string>React</string>
 	<string>UIKit</string>
+<<<<<<< HEAD
 <<<<<<< HEAD
 	<string>jsi</string>
 >>>>>>> added days screen and added momentjs
 =======
 	<string>folly</string>
 >>>>>>> added days and changed feed icons
+=======
+	<string>jsi</string>
+>>>>>>> added profile page
 </array>
 </plist>
