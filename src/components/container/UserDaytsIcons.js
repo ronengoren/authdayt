@@ -14,25 +14,24 @@ class UserDaytsIcons extends Component {
     super();
     this.state = {
       userdayts: [
-        // require("../../assets/images/daytTypesIcons/daytIcon85.png"),
-        // require("../../assets/images/daytTypesIcons/daytIcon86.png"),
-        // require("../../assets/images/daytTypesIcons/daytIcon76.png"),
-        // require("../../assets/images/daytTypesIcons/daytIcon55.png"),
-        // require("../../assets/images/daytTypesIcons/daytIcon8.png")
-      ],
-      icon: []
+        require("../../assets/images/daytTypesIcons/daytIcon85.png"),
+        require("../../assets/images/daytTypesIcons/daytIcon86.png"),
+        require("../../assets/images/daytTypesIcons/daytIcon76.png"),
+        require("../../assets/images/daytTypesIcons/daytIcon55.png"),
+        require("../../assets/images/daytTypesIcons/daytIcon8.png")
+      ]
     };
   }
   render() {
-    var icon = this.props.active
-      ? require("../../assets/images/daytTypesIcons/daytIcon8.png")
-      : null;
-    <Image source={icon} />;
+    // var icon = this.props.active
+    //   ? require("../../assets/images/daytTypesIcons/daytIcon8.png")
+    //   : null;
+    // <Image source={icon} />;
     return (
       <View style={styles.userDaytsBar}>
         <FlatList
           // style={{ width: 100 + "%" }}
-          data={this.props.userdayts}
+          data={this.state.userdayts}
           renderItem={({ item }) => (
             <TouchableOpacity
               activeOpacity={0.5}
@@ -43,7 +42,7 @@ class UserDaytsIcons extends Component {
               <View style={styles.userDaytsImage}>
                 <Image
                   style={styles.UserImageThumbnail}
-                  source={icon}
+                  source={item}
                   resizeMode={"contain"}
                   horizontal={true}
                 />

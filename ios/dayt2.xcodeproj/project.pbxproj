@@ -5,7 +5,6 @@
 	};
 	objectVersion = 51;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00403F2E2926446EA541D0A4 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A2C38280BDB4B3B8F21F7C1 /* Entypo.ttf */; };
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
@@ -89,6 +88,7 @@
 		EA12E13B131144519B1844A6 /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFF067B4993147E588992319 /* Raleway-BoldItalic.ttf */; };
 		EB22BBE9FBCF405E87ED1531 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 962197EA611A48028D71702B /* AntDesign.ttf */; };
 		EB2808DF8E35428891DE4D1F /* DMSerifDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B32742BB08304CE8ADEDDC77 /* DMSerifDisplay-Italic.ttf */; };
+		18D16671ABE24289B62F2795 /* tinderclone.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3950CC13BCE14C5B8ED97A4C /* tinderclone.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -514,6 +514,7 @@
 		F42815FDF8394219BEF000B4 /* RCTRestart.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTRestart.xcodeproj; path = "../node_modules/react-native-restart/ios/RCTRestart.xcodeproj"; sourceTree = "<group>"; };
 		F8C5AD3FFDEB4DF587AD12BF /* Raleway-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-BlackItalic.ttf"; path = "../src/assets/fonts/Raleway-BlackItalic.ttf"; sourceTree = "<group>"; };
 		FE4BC9635EA147899116E5B1 /* DMSerifDisplay-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DMSerifDisplay-Regular.ttf"; path = "../src/assets/fonts/DMSerifDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		3950CC13BCE14C5B8ED97A4C /* tinderclone.ttf */ = {isa = PBXFileReference; name = "tinderclone.ttf"; path = "../src/assets/fonts/tinderclone.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -840,6 +841,7 @@
 				1A6D54D30C31472294C19BE6 /* Zocial.ttf */,
 				B32742BB08304CE8ADEDDC77 /* DMSerifDisplay-Italic.ttf */,
 				FE4BC9635EA147899116E5B1 /* DMSerifDisplay-Regular.ttf */,
+				3950CC13BCE14C5B8ED97A4C /* tinderclone.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1494,6 +1496,7 @@
 				66E40940172049CEA79DB021 /* Zocial.ttf in Resources */,
 				EB2808DF8E35428891DE4D1F /* DMSerifDisplay-Italic.ttf in Resources */,
 				90A1F1F3417741469100DBBF /* DMSerifDisplay-Regular.ttf in Resources */,
+				18D16671ABE24289B62F2795 /* tinderclone.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

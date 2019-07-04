@@ -21,7 +21,7 @@ class DateTypes extends Component {
     this.animatedValue = new Animated.Value(0);
     this.state = {
       liked: false,
-      testImage: [require("../assets/images/daytTypesIcons/daytIcon37.png")],
+      testImage: [require("../assets/images/daytTypesIcons/daytIcon12.png")],
       imagesTypeA: [
         require("../assets/images/daytTypesIcons/daytIcon1.png"),
         require("../assets/images/daytTypesIcons/daytIcon2.png"),

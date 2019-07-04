@@ -10,6 +10,7 @@ import {
   FlatList
 } from "react-native";
 import config from "../../config";
+import Demo from "../../assets/data/demo";
 
 class Post extends React.Component {
   constructor() {
@@ -47,21 +48,6 @@ class Post extends React.Component {
           width: 100 + "%"
         }}
       >
-        <View style={styles.userBar}>
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
-            <Image
-              style={styles.userPic}
-              source={{
-                uri:
-                  "https://lh3.googleusercontent.com/5iI7gI1MVawamRBI3g4eLZDFoiFpyUt5xuliYraZJDzoL_tCPUoqOaMav6jSLuWYMWi6ScScP7OGdBzMEzTpFaqxGw"
-              }}
-            />
-            <Text style={{ marginLeft: 10 }}> AriUWS </Text>
-          </View>
-          <View style={{ alignItems: "center" }}>
-            <Text style={{ fontSize: 30 }}> ... </Text>
-          </View>
-        </View>
         <View>
           <TouchableOpacity
             activeOpacity={0.7}
