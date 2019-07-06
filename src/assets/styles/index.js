@@ -182,6 +182,7 @@ export default StyleSheet.create({
     paddingHorizontal: 10,
     paddingBottom: 25,
 <<<<<<< HEAD
+<<<<<<< HEAD
     margin: 70,
     borderRadius: 8,
     // marginTop: -65,
@@ -190,6 +191,11 @@ export default StyleSheet.create({
     borderRadius: 8,
     marginTop: -65,
 >>>>>>> added profile page
+=======
+    margin: 70,
+    borderRadius: 8,
+    // marginTop: -65,
+>>>>>>> started welcome screen
     shadowOpacity: 0.05,
     shadowRadius: 10,
     shadowColor: BLACK,
@@ -247,10 +253,14 @@ export default StyleSheet.create({
   },
   top: {
 <<<<<<< HEAD
+<<<<<<< HEAD
     paddingTop: 20,
 =======
     paddingTop: 50,
 >>>>>>> added profile page
+=======
+    paddingTop: 20,
+>>>>>>> started welcome screen
     marginHorizontal: 10,
     flexDirection: "row",
     justifyContent: "space-between",
