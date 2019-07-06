@@ -6,6 +6,10 @@ import Register from "./Register";
 import Conversation from "./Conversation";
 import DateTypes from "./DateTypes";
 import DaysScreen from "./DaysScreen";
+import Home from "./Home";
+import Matches from "./Matches";
+import Welcome from "./Welcome";
+
 export {
   MainFeed,
   Login,
@@ -14,5 +18,8 @@ export {
   Register,
   Conversation,
   DateTypes,
-  DaysScreen
+  DaysScreen,
+  Home,
+  Matches,
+  Welcome
 };

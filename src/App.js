@@ -4,7 +4,7 @@ import Camera from "./screens/Camera";
 import Profile from "./screens/Profile";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
-import Messages from "./screens/Messages";
+// import Messages from "./screens/Messages";
 import Conversation from "./screens/Conversation";
 import DateTypes from "./screens/DateTypes";
 import Message from "./components/presentation/Message";
@@ -21,35 +21,42 @@ import config from "./config";
 import UserDaytsIcons from "./components/container/UserDaytsIcons";
 import DaysScreen from "./screens/DaysScreen";
 import UserProfile from "./components/container/UserProfile";
-const MessageStack = createStackNavigator(
-  {
-    home: Messages,
-    conversation: Conversation
-  },
-  {
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: "rgb(162,55,243)"
-      },
-      headerTitleStyle: {
-        fontWeight: "bold",
-        color: "rgb(255,255,255)"
-      },
-      headerTintColor: "rgb(255,255,255)"
-    }
-  }
-);
+import Home from "./screens/Home";
+import Matches from "./screens/Matches";
+import MessagesScreen from "./components/container/MessagesScreen";
+import Welcome from "./screens/Welcome";
+// const MessageStack = createStackNavigator(
+//   {
+//     home: Messages,
+//     conversation: Conversation
+//   },
+//   {
+//     defaultNavigationOptions: {
+//       headerStyle: {
+//         backgroundColor: "rgb(162,55,243)"
+//       },
+//       headerTitleStyle: {
+//         fontWeight: "bold",
+//         color: "rgb(255,255,255)"
+//       },
+//       headerTintColor: "rgb(255,255,255)"
+//     }
+//   }
+// );
 
 const Tabs = createBottomTabNavigator(
   {
     // profile: Profile,
     // camera: Camera,
-    feed: MainFeed,
+    dayts: DateTypes,
 
+    Home: Home,
     Profile: UserProfile,
 
-    day: DaysScreen,
-    dayts: DateTypes
+    Matches: Matches,
+    Messages: MessagesScreen
+
+    // day: DaysScreen,
 
     // Messages: MessageStack,
   },
@@ -57,9 +64,9 @@ const Tabs = createBottomTabNavigator(
     defaultNavigationOptions: ({ navigation }) => {
       const { routeName } = navigation.state;
       const icons = {
-        Messages: config.icons.message,
-        profile: config.icons.profile,
-        feed: config.icons.feed
+        // Messages: config.icons.message,
+        Profile: config.icons.profile,
+        Home: config.icons.feed
       };
       return {
         tabBarIcon: <Image source={icons[routeName]} />
@@ -77,8 +84,7 @@ const Tabs = createBottomTabNavigator(
 );
 
 const IntroStack = createStackNavigator({
-  login: Login,
-  register: Register
+  welcome: Welcome
 });
 const MainStack = authBoolean => {
   return createAppContainer(
@@ -86,10 +92,11 @@ const MainStack = authBoolean => {
       {
         main: DaysScreen,
         dayts: DateTypes,
-        login: Tabs
+        login: Tabs,
+        welcome: Welcome
       },
       {
-        initialRouteName: "login"
+        initialRouteName: "welcome"
         // authBoolean ? "main" : "login"
       }
     )

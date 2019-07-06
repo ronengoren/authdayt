@@ -181,9 +181,9 @@ export default StyleSheet.create({
     backgroundColor: WHITE,
     paddingHorizontal: 10,
     paddingBottom: 25,
-    margin: 20,
+    margin: 70,
     borderRadius: 8,
-    marginTop: -65,
+    // marginTop: -65,
     shadowOpacity: 0.05,
     shadowRadius: 10,
     shadowColor: BLACK,
@@ -240,7 +240,7 @@ export default StyleSheet.create({
     height: DIMENSION_HEIGHT
   },
   top: {
-    paddingTop: 50,
+    paddingTop: 20,
     marginHorizontal: 10,
     flexDirection: "row",
     justifyContent: "space-between",

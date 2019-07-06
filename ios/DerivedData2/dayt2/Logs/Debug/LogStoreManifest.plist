@@ -6,35 +6,6 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>3CE06353-A6BC-4242-AA0F-4EA8C5EB2434</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>3CE06353-A6BC-4242-AA0F-4EA8C5EB2434.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>S</string>
-			<key>schemeIdentifier-containerName</key>
-			<string>dayt2 project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>dayt2</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Debug dayt2</string>
-			<key>timeStartedRecording</key>
-			<real>583899665.58835495</real>
-			<key>timeStoppedRecording</key>
-			<real>583899885.33386505</real>
-			<key>title</key>
-			<string>Debug dayt2</string>
-			<key>uniqueIdentifier</key>
-			<string>3CE06353-A6BC-4242-AA0F-4EA8C5EB2434</string>
-		</dict>
 		<key>529C2E3F-27F0-453C-BB61-8DA0004AA0A9</key>
 		<dict>
 			<key>className</key>
@@ -64,7 +35,7 @@
 			<key>uniqueIdentifier</key>
 			<string>529C2E3F-27F0-453C-BB61-8DA0004AA0A9</string>
 		</dict>
-		<key>FA2C8AE1-0448-458B-A304-DFB3CF7CF3C4</key>
+		<key>D972B868-4DEB-4B89-B6C9-C20F856B8FD6</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -73,7 +44,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>FA2C8AE1-0448-458B-A304-DFB3CF7CF3C4.xcactivitylog</string>
+			<string>D972B868-4DEB-4B89-B6C9-C20F856B8FD6.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>S</string>
 			<key>schemeIdentifier-containerName</key>
@@ -85,13 +56,13 @@
 			<key>signature</key>
 			<string>Debug dayt2</string>
 			<key>timeStartedRecording</key>
-			<real>583544862.94554698</real>
+			<real>584119688.93434703</real>
 			<key>timeStoppedRecording</key>
-			<real>583545299.20368099</real>
+			<real>584125027.78204799</real>
 			<key>title</key>
 			<string>Debug dayt2</string>
 			<key>uniqueIdentifier</key>
-			<string>FA2C8AE1-0448-458B-A304-DFB3CF7CF3C4</string>
+			<string>D972B868-4DEB-4B89-B6C9-C20F856B8FD6</string>
 		</dict>
 	</dict>
 </dict>
