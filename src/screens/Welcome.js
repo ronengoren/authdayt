@@ -23,6 +23,7 @@ import images from "../assets/images";
 
 import { daytColors, uiConstants } from "../vars";
 import { screenNames } from "../vars/enums";
+import FastImage from "react-native-fast-image";
 
 const LOGO_MARGIN_TOP = hasNotch() ? 60 : 25;
 const SLIDER_MARGIN_TOP = hasNotch() ? 40 : 0;
