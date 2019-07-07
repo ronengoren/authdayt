@@ -10,7 +10,7 @@ import {
   uiConstants,
   commonStyles
 } from "../../vars";
-import { HomeisIcon, AwesomeIcon } from "../../assets/icons";
+import { DaytIcon, AwesomeIcon } from "../../assets/icons";
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -235,11 +235,80 @@ const TextButton = ({
   const spinnerColor =
     active || secondary ? daytColors.green : daytColors.white;
 
-  return (
-    <View>
-      <Text>TextButton5</Text>
-    </View>
-  );
+  const IconComponent = isAwesomeIcon ? AwesomeIcon : DaytIcon;
+  if (["big", "big50Height", "huge"].includes(size)) {
+    return (
+      <TouchableOpacity
+        style={bigButtonWrapperStylesArr}
+        accessible
+        accessibilityComponentType="button"
+        accessibilityTraits="button"
+        activeOpacity={busy || disabled ? 1 : 0.2}
+        onPress={busy || disabled ? null : onPress}
+        hitSlop={hitSlop}
+        {...props}
+      >
+        <View style={[containerStyles, style, containerStyle]}>
+          {iconName && (
+            <IconComponent
+              style={iconStyles}
+              name={iconName}
+              size={iconSize}
+              weight={iconWeight}
+            />
+          )}
+          <Text numberOfLines={1} style={textStyles}>
+            {children}
+          </Text>
+          {!!busy && (
+            <Spinner
+              style={[spinnerStyles, style]}
+              center
+              size="small"
+              color={spinnerColor}
+            />
+          )}
+        </View>
+      </TouchableOpacity>
+    );
+  } else {
+    return (
+      <View style={[styles.wrapper, style, fitToSize && commonStyles.flex1]}>
+        <TouchableOpacity
+          accessible
+          accessibilityComponentType="button"
+          accessibilityTraits="button"
+          activeOpacity={busy || disabled ? 1 : 0.2}
+          onPress={busy || disabled ? null : onPress}
+          hitSlop={hitSlop}
+          style={[containerStyle, fitToSize && commonStyles.flex1]}
+          {...props}
+        >
+          <View style={[containerStyles, containerStyle]}>
+            {iconName && (
+              <IconComponent
+                style={iconStyles}
+                name={iconName}
+                size={iconSize}
+                weight={iconWeight}
+              />
+            )}
+            <Text numberOfLines={1} style={textStyles}>
+              {children}
+            </Text>
+            {busy && (
+              <Spinner
+                style={spinnerStyles}
+                center
+                size="small"
+                color={spinnerColor}
+              />
+            )}
+          </View>
+        </TouchableOpacity>
+      </View>
+    );
+  }
 };
 
 TextButton.propTypes = {

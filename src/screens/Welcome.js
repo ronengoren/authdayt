@@ -45,7 +45,6 @@ class Welcome extends React.Component {
         <StatusBar translucent={false} barStyle="dark-content" />
         <Image style={styles.logo} source={images.welcome.dayts} />
 
-        <Text>HI Welcome</Text>
         <View style={styles.lowerSection}>
           <TextButton />
         </View>
