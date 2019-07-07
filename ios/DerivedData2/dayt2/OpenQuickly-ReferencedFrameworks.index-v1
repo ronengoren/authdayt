@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>Darwin</string>
-	<string>LocalAuthentication</string>
-	<string>AVFoundation</string>
 	<string>Cocoa</string>
-	<string>CommonCrypto</string>
+	<string>Darwin</string>
+	<string>AVFoundation</string>
 	<string>jsireact</string>
+	<string>CommonCrypto</string>
+	<string>LocalAuthentication</string>
 	<string>CoreLocation</string>
 	<string>ImageIO</string>
 	<string>cxxreact</string>
@@ -21,9 +21,9 @@
 	<string>arpa</string>
 	<string>CoreTelephony</string>
 	<string>CoreMedia</string>
-	<string>StoreKit</string>
-	<string>netinet6</string>
 	<string>CoreServices</string>
+	<string>netinet6</string>
+	<string>StoreKit</string>
 	<string>AdSupport</string>
 	<string>Accounts</string>
 	<string>libkern</string>
@@ -46,9 +46,9 @@
 	<string>yoga</string>
 	<string>CoreGraphics</string>
 	<string>SystemConfiguration</string>
-	<string>jsi</string>
+	<string>folly</string>
 	<string>React</string>
 	<string>UIKit</string>
-	<string>folly</string>
+	<string>jsi</string>
 </array>
 </plist>

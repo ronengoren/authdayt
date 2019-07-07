@@ -1,19 +1,18 @@
 import React from "react";
 import {
-  //   Text,
   StyleSheet,
   TouchableOpacity,
   Dimensions,
   Platform,
   StatusBar,
-  NativeModules,
-  Image
+  NativeModules
 } from "react-native";
 import {
   View,
   Text,
-  TextButton
-  // Text, TextButton, Image, TranslatedText
+  TextButton,
+  Image,
+  TranslatedText
 } from "../components/basicComponents";
 
 import PropTypes from "prop-types";

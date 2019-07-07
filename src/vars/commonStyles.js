@@ -12,8 +12,8 @@ const commonStyles = StyleSheet.create({
     textAlign: "center"
   },
   shadow: {
-    backgroundColor: homeisColors.white,
-    shadowColor: homeisColors.boxShadow,
+    backgroundColor: daytColors.white,
+    shadowColor: daytColors.boxShadow,
     shadowOffset: {
       width: 0,
       height: 5
@@ -23,7 +23,7 @@ const commonStyles = StyleSheet.create({
     elevation: 4
   },
   smallShadow: {
-    shadowColor: homeisColors.boxShadow,
+    shadowColor: daytColors.boxShadow,
     shadowRadius: 8,
     shadowOpacity: 1,
     shadowOffset: {
@@ -33,7 +33,7 @@ const commonStyles = StyleSheet.create({
     elevation: 3
   },
   tinyShadow: {
-    shadowColor: homeisColors.boxShadow,
+    shadowColor: daytColors.boxShadow,
     shadowRadius: 5,
     shadowOpacity: 1,
     shadowOffset: {
@@ -43,7 +43,7 @@ const commonStyles = StyleSheet.create({
     elevation: 2
   },
   textShadow: {
-    textShadowColor: homeisColors.boxShadow20,
+    textShadowColor: daytColors.boxShadow20,
     textShadowOffset: { width: 0, height: 3 },
     textShadowRadius: 5
   }
