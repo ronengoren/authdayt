@@ -29,7 +29,6 @@
 			<key>uniqueIdentifier</key>
 			<string>B11A30A0-C2F9-476A-9794-68C46F079F4C</string>
 		</dict>
-<<<<<<< HEAD
 		<key>B939AC48-FBC5-438C-B355-55E3333C246D</key>
 		<dict>
 			<key>className</key>
@@ -53,8 +52,6 @@
 			<key>uniqueIdentifier</key>
 			<string>B939AC48-FBC5-438C-B355-55E3333C246D</string>
 		</dict>
-=======
->>>>>>> added profile page
 	</dict>
 </dict>
 </plist>

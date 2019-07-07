@@ -88,6 +88,7 @@
 			<key>highLevelStatus</key>
 			<string>S</string>
 			<key>signature</key>
+<<<<<<< HEAD
 			<string>RNCAsyncStorage-bprvhdhcfbrdrvadkvewpebxwlll</string>
 			<key>timeStartedRecording</key>
 			<real>584119625.93586695</real>
@@ -99,6 +100,19 @@
 			<string>1147E463-AC17-44E9-A764-7D4581E5AE57</string>
 		</dict>
 		<key>12BDE9EA-BB31-4C75-AB97-9B7870DE64AD</key>
+=======
+			<string>RCTBlob-tvOS-bflonljefbddoqfyexpogylzjadi</string>
+			<key>timeStartedRecording</key>
+			<real>584169937.68450201</real>
+			<key>timeStoppedRecording</key>
+			<real>584169938.71921098</real>
+			<key>title</key>
+			<string>Build target RCTBlob-tvOS</string>
+			<key>uniqueIdentifier</key>
+			<string>1DDD87AE-5509-49B8-B221-86B8A26B859A</string>
+		</dict>
+		<key>2739698D-00AA-43E9-867B-10A0B3933F6E</key>
+>>>>>>> added icons and text button half
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -121,6 +135,7 @@
 			<key>uniqueIdentifier</key>
 			<string>12BDE9EA-BB31-4C75-AB97-9B7870DE64AD</string>
 		</dict>
+<<<<<<< HEAD
 		<key>150F7609-FAB6-4568-ADDE-93F3132C8E8D</key>
 		<dict>
 			<key>className</key>
@@ -145,6 +160,9 @@
 			<string>150F7609-FAB6-4568-ADDE-93F3132C8E8D</string>
 		</dict>
 		<key>15738C7E-3355-49BF-B38D-AEE4CEC05E54</key>
+=======
+		<key>353F3341-8340-4B04-9421-F925ACD1DE45</key>
+>>>>>>> added icons and text button half
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -190,7 +208,34 @@
 			<key>uniqueIdentifier</key>
 			<string>18B6AB36-5410-4481-B4E5-7E2475A0F3D5</string>
 		</dict>
+<<<<<<< HEAD
 		<key>19BF2001-7FEA-490A-A194-DC38BB95DFB9</key>
+=======
+		<key>4130AAAC-03D8-4719-A132-3BAC6E7DE045</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
+			<key>fileName</key>
+			<string>4130AAAC-03D8-4719-A132-3BAC6E7DE045.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>signature</key>
+			<string>React-tvOS-deuaawcjxubuapaugmdfxhwnstsk</string>
+			<key>timeStartedRecording</key>
+			<real>584206383.21349895</real>
+			<key>timeStoppedRecording</key>
+			<real>584206383.46204603</real>
+			<key>title</key>
+			<string>Build target React-tvOS</string>
+			<key>uniqueIdentifier</key>
+			<string>4130AAAC-03D8-4719-A132-3BAC6E7DE045</string>
+		</dict>
+		<key>4355E728-BCAC-45E6-8172-1CCE22F0C94C</key>
+>>>>>>> added icons and text button half
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -236,7 +281,34 @@
 			<key>uniqueIdentifier</key>
 			<string>22020163-C680-44B6-B2B8-3E1E13F989D2</string>
 		</dict>
+<<<<<<< HEAD
 		<key>29A6CAB8-611B-41DD-916A-A3BF4AB88913</key>
+=======
+		<key>462976E6-75CE-4B11-B518-D8FFAEB6D449</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
+			<key>fileName</key>
+			<string>462976E6-75CE-4B11-B518-D8FFAEB6D449.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>signature</key>
+			<string>React-deuaawcjxubuapaugmdfxhwnstsk</string>
+			<key>timeStartedRecording</key>
+			<real>584206378.23865902</real>
+			<key>timeStoppedRecording</key>
+			<real>584206378.62068999</real>
+			<key>title</key>
+			<string>Build target React</string>
+			<key>uniqueIdentifier</key>
+			<string>462976E6-75CE-4B11-B518-D8FFAEB6D449</string>
+		</dict>
+		<key>5976C0A1-BDC1-4B7E-A393-FF63E543E5A1</key>
+>>>>>>> added icons and text button half
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -328,6 +400,7 @@
 			<key>uniqueIdentifier</key>
 			<string>3BBD9145-A059-4B68-A546-8618D5C50E79</string>
 		</dict>
+<<<<<<< HEAD
 		<key>3EC28394-CC49-4088-ABD8-4320A6EC6159</key>
 		<dict>
 			<key>className</key>
@@ -352,6 +425,9 @@
 			<string>3EC28394-CC49-4088-ABD8-4320A6EC6159</string>
 		</dict>
 		<key>40CBE01E-E2DC-4E95-BB79-5C5A52BD4277</key>
+=======
+		<key>62831F4D-BCE4-403F-BC62-A216EEEF8870</key>
+>>>>>>> added icons and text button half
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -466,6 +542,7 @@
 			<key>uniqueIdentifier</key>
 			<string>4ACF7A7D-03B0-4EF2-91DF-9E20095E33F7</string>
 		</dict>
+<<<<<<< HEAD
 		<key>4F4153D1-838E-495C-BA76-091DDE36D2FB</key>
 		<dict>
 			<key>className</key>
@@ -490,6 +567,9 @@
 			<string>4F4153D1-838E-495C-BA76-091DDE36D2FB</string>
 		</dict>
 		<key>527F948C-4FEE-46A2-B19B-5BA86DB6D3E4</key>
+=======
+		<key>73A3C3FB-58D3-417E-BB4D-528A036E5088</key>
+>>>>>>> added icons and text button half
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -650,15 +730,20 @@
 			<key>uniqueIdentifier</key>
 			<string>67D12DBC-A14A-4044-8D5C-C2360D946508</string>
 		</dict>
+<<<<<<< HEAD
 		<key>71344919-42E2-407D-AE10-D814A2CCA585</key>
+=======
+		<key>8E095BEF-BEC3-4A1E-BC09-5E4C072B6C98</key>
+>>>>>>> added icons and text button half
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
 			<key>documentTypeString</key>
 			<string>&lt;nil&gt;</string>
 			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
+<<<<<<< HEAD
 			<string>71344919-42E2-407D-AE10-D814A2CCA585.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>W</string>
@@ -672,6 +757,21 @@
 			<string>Build target glog</string>
 			<key>uniqueIdentifier</key>
 			<string>71344919-42E2-407D-AE10-D814A2CCA585</string>
+=======
+			<string>8E095BEF-BEC3-4A1E-BC09-5E4C072B6C98.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>signature</key>
+			<string>dayt2-bacozsykmtairdfymobaijgqlilo</string>
+			<key>timeStartedRecording</key>
+			<real>584206378.75456798</real>
+			<key>timeStoppedRecording</key>
+			<real>584206381.90937698</real>
+			<key>title</key>
+			<string>Build target dayt2</string>
+			<key>uniqueIdentifier</key>
+			<string>8E095BEF-BEC3-4A1E-BC09-5E4C072B6C98</string>
+>>>>>>> added icons and text button half
 		</dict>
 		<key>719D37BB-0705-4E32-8669-790E48E51B0E</key>
 		<dict>
@@ -857,7 +957,34 @@
 			<key>uniqueIdentifier</key>
 			<string>C5C44E69-EE07-4D0F-899E-C784C9ED23CB</string>
 		</dict>
+<<<<<<< HEAD
 		<key>C6E1E027-8614-4FF3-8B60-F1D032914697</key>
+=======
+		<key>C7BECDF5-2D5D-4FC9-9102-03FC0738C377</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.target</string>
+			<key>fileName</key>
+			<string>C7BECDF5-2D5D-4FC9-9102-03FC0738C377.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>signature</key>
+			<string>dayt2Tests-bacozsykmtairdfymobaijgqlilo</string>
+			<key>timeStartedRecording</key>
+			<real>584206381.90941203</real>
+			<key>timeStoppedRecording</key>
+			<real>584206382.70578301</real>
+			<key>title</key>
+			<string>Build target dayt2Tests</string>
+			<key>uniqueIdentifier</key>
+			<string>C7BECDF5-2D5D-4FC9-9102-03FC0738C377</string>
+		</dict>
+		<key>CBF2FB6C-50B9-426B-8B3C-681E04D5E26B</key>
+>>>>>>> added icons and text button half
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -903,7 +1030,34 @@
 			<key>uniqueIdentifier</key>
 			<string>C72D80C2-4ABA-46A9-ACE8-4D30CEB207B9</string>
 		</dict>
+<<<<<<< HEAD
 		<key>CD9EF150-C151-42D9-816D-BB9EB1103318</key>
+=======
+		<key>D4852DCE-A738-42C7-9083-37C695BB8005</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
+			<key>fileName</key>
+			<string>D4852DCE-A738-42C7-9083-37C695BB8005.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>signature</key>
+			<string>jsinspector-deuaawcjxubuapaugmdfxhwnstsk</string>
+			<key>timeStartedRecording</key>
+			<real>584206301.52511203</real>
+			<key>timeStoppedRecording</key>
+			<real>584206301.55187094</real>
+			<key>title</key>
+			<string>Build target jsinspector</string>
+			<key>uniqueIdentifier</key>
+			<string>D4852DCE-A738-42C7-9083-37C695BB8005</string>
+		</dict>
+		<key>D5BAA4D1-1C60-4D51-8D46-04029988E91E</key>
+>>>>>>> added icons and text button half
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -949,7 +1103,34 @@
 			<key>uniqueIdentifier</key>
 			<string>D8AA5EC4-0815-4CE2-9494-92EAC706AA58</string>
 		</dict>
+<<<<<<< HEAD
 		<key>E9DE7180-3B21-43FE-90F4-6CCCDDBB6BC5</key>
+=======
+		<key>D6DEBBE4-0ED6-4066-97AE-1E04B09B457E</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
+			<key>fileName</key>
+			<string>D6DEBBE4-0ED6-4066-97AE-1E04B09B457E.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>signature</key>
+			<string>double-conversion-tvOS-deuaawcjxubuapaugmdfxhwnstsk</string>
+			<key>timeStartedRecording</key>
+			<real>584206382.710307</real>
+			<key>timeStoppedRecording</key>
+			<real>584206383.07923603</real>
+			<key>title</key>
+			<string>Build target double-conversion-tvOS</string>
+			<key>uniqueIdentifier</key>
+			<string>D6DEBBE4-0ED6-4066-97AE-1E04B09B457E</string>
+		</dict>
+		<key>DEE3F047-832E-4B85-9639-472C13E997E9</key>
+>>>>>>> added icons and text button half
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -1018,6 +1199,7 @@
 			<key>uniqueIdentifier</key>
 			<string>F7F6C4B5-34EF-4698-B505-AF59694B75C4</string>
 		</dict>
+<<<<<<< HEAD
 		<key>FF049115-421B-4FFC-8E46-37DF5DBC6878</key>
 		<dict>
 			<key>className</key>
@@ -1041,6 +1223,8 @@
 			<key>uniqueIdentifier</key>
 			<string>FF049115-421B-4FFC-8E46-37DF5DBC6878</string>
 		</dict>
+=======
+>>>>>>> added icons and text button half
 	</dict>
 	<key>preserveOldLogs</key>
 	<true/>

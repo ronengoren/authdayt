@@ -117,6 +117,7 @@
 	<string>do you allow dayt Photo Access</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>do you allow dayt Camera Role Access</string>
->>>>>>> added camera and saving to db
+
+	</array>
 </dict>
 </plist>
