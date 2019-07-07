@@ -11,7 +11,6 @@ import {
 } from "react-native";
 import AsyncStorage from "@react-native-community/async-storage";
 import config from "../config";
-import ImagePicker from "react-native-image-picker";
 
 class Profile extends Component {
   constructor() {

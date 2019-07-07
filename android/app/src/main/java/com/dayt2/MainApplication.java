@@ -3,8 +3,6 @@ package com.dayt2;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.imagepicker.ImagePickerPackage;
-import com.rnfs.RNFSPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import org.reactnative.camera.RNCameraPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
@@ -29,13 +27,9 @@ public class MainApplication extends Application implements ReactApplication {
 
     @Override
     protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(new MainReactPackage(),
-            new ImagePickerPackage(),
-            new RNFSPackage(),
-            new RNDeviceInfo(),
-            new RNCameraPackage(),
-            new AsyncStoragePackage(), new ReactNativeConfigPackage(),
-          new VectorIconsPackage(), new RNGestureHandlerPackage());
+      return Arrays.<ReactPackage>asList(new MainReactPackage(), new RNDeviceInfo(), new RNCameraPackage(),
+          new AsyncStoragePackage(), new ReactNativeConfigPackage(), new VectorIconsPackage(),
+          new RNGestureHandlerPackage());
     }
 
     @Override

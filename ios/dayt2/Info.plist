@@ -102,13 +102,6 @@
 		<string>DMSerifDisplay-Regular.ttf</string>
 		<string>tinderclone.ttf</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>do you allow dayt Camera Access</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>do you allow dayt Photo Library Access</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>do you allow dayt Photo Access</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>do you allow dayt Camera Role Access</string>
+
 </dict>
 </plist>
