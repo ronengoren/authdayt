@@ -101,7 +101,10 @@
 		<string>DMSerifDisplay-Italic.ttf</string>
 		<string>DMSerifDisplay-Regular.ttf</string>
 		<string>tinderclone.ttf</string>
+		<string>dayt.ttf</string>
+		<string>FontAwesome5BrandsRegular.ttf</string>
+		<string>FontAwesome5ProLight.ttf</string>
+		<string>FontAwesome5ProSolid.ttf</string>
 	</array>
-
 </dict>
 </plist>

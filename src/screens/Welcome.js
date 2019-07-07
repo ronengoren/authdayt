@@ -11,7 +11,8 @@ import {
 } from "react-native";
 import {
   View,
-  Text
+  Text,
+  TextButton
   // Text, TextButton, Image, TranslatedText
 } from "../components/basicComponents";
 
@@ -44,8 +45,10 @@ class Welcome extends React.Component {
         <StatusBar translucent={false} barStyle="dark-content" />
         <Image style={styles.logo} source={images.welcome.dayts} />
 
-        <Text>Welcome</Text>
-        <View style={styles.lowerSection} />
+        <Text>HI Welcome</Text>
+        <View style={styles.lowerSection}>
+          <TextButton />
+        </View>
       </View>
     );
   }
