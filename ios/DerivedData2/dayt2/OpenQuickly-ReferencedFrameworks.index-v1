@@ -21,15 +21,15 @@
 	<string>arpa</string>
 	<string>CoreTelephony</string>
 	<string>CoreMedia</string>
-	<string>CoreServices</string>
-	<string>netinet6</string>
 	<string>StoreKit</string>
+	<string>netinet6</string>
+	<string>CoreServices</string>
 	<string>AdSupport</string>
 	<string>Accounts</string>
 	<string>libkern</string>
-	<string>CoreText</string>
-	<string>WebKit</string>
 	<string>fishhook</string>
+	<string>WebKit</string>
+	<string>CoreText</string>
 	<string>FirebaseMLVision</string>
 	<string>CoreMotion</string>
 	<string>XCTest</string>

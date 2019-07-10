@@ -6,6 +6,7 @@ import {
   Platform,
   StatusBar,
   NativeModules
+  // Image
 } from "react-native";
 import {
   View,
@@ -22,7 +23,6 @@ import images from "../assets/images";
 
 import { daytColors, uiConstants } from "../vars";
 import { screenNames } from "../vars/enums";
-import FastImage from "react-native-fast-image";
 
 const LOGO_MARGIN_TOP = hasNotch() ? 60 : 25;
 const SLIDER_MARGIN_TOP = hasNotch() ? 40 : 0;
@@ -43,7 +43,7 @@ class Welcome extends React.Component {
     return (
       <View style={styles.container}>
         <StatusBar translucent={false} barStyle="dark-content" />
-        <Image style={styles.logo} source={images.welcome.dayts} />
+        {/* <Image style={styles.logo} source={images.welcome.dayts} /> */}
 
         <View style={styles.lowerSection}>
           <TextButton />
