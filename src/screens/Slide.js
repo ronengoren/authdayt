@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { StyleSheet, Dimensions } from "react-native";
 import { View, Video } from "../components/basicComponents";
-// import videos from "/assets/videos";
+import videos from "../assets/videos";
 import { daytColors, uiConstants } from "../vars";
 
 const styles = StyleSheet.create({
@@ -50,7 +50,7 @@ class Slide extends React.Component {
     return (
       <View style={[styles.wrapper, { width }]}>
         <View style={{ width: videoWidth, height: videoWidth / VIDEO_RATIO }}>
-          {/* <Video
+          <Video
             style={styles.video}
             source={this.videoSource}
             onRef={ref => {
@@ -68,7 +68,7 @@ class Slide extends React.Component {
             onProgress={null}
             onEnd={null}
             onError={null}
-          /> */}
+          />
         </View>
         {children}
       </View>
@@ -90,7 +90,7 @@ class Slide extends React.Component {
     }
   }
 
-  //   videoSource = videos.welcome[`video${this.props.slide + 1}`];
+  videoSource = videos.welcome[`video${this.props.slide + 1}`];
 
   setPaused = () => {
     const { slide } = this.props;

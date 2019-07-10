@@ -48,7 +48,6 @@ class Welcome extends React.Component {
 
         <View style={styles.lowerSection}>
           <TextButton />
-          <Video />
         </View>
       </View>
     );
