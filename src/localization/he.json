@@ -1,0 +1,587 @@
+{
+    "feed": {
+        "suggested_items": {
+            "pages_header": "עמודים נבחרים",
+            "posts_guide_header": "מדריכים מומלצים",
+            "posts_promotion_header": "עכשיו במבצע",
+            "posts_tipRequest_header": "שאלות בקהילה",
+            "posts_recommendation_header": "המלצות מהקהילה",
+            "posts_statusUpdate_header": "פוסטים אהובים",
+            "posts_job_header": "הצעות עבודה",
+            "posts_realEstate_sublet_header": "עכשיו בסאבלט",
+            "posts_realEstate_roommates_header": "דרושים שותפים",
+            "posts_realEstate_rent_header": "נכסים להשכרה",
+            "posts_giveAndTake_header": "מכירה/מסירה",
+            "events_header": "בקרוב בעיר!",
+            "groups_header": "ערוצים מומלצים",
+            "generic_header": "פוסטים מומלצים"
+        },
+        "single_post_feed": {
+            "recommendation": "המלצות מהקהילה",
+            "promotion": "מבצעים בקהילה",
+            "tipRequest": "שאלות בקהילה",
+            "package": "חבילות בקהילה"
+        },
+        "header_buttons": {
+            "tipRequest": "שאלות",
+            "guide": "מדריכים",
+            "job": "עבודות",
+            "realEstate": "דירות",
+            "giveAndTake": "קח/תן",
+            "promotion": "מבצעים",
+            "pages": "בעלי מקצוע",
+            "lists": "רשימות",
+            "recommendation": "המלצות"
+        }
+    },
+    "onboarding": {
+        "new_user_welcome_message": "ברוכים הבאים הביתה!",
+        "welcome_people": "Israelis",
+        "set_user_details": {
+            "title": "יש! ברוכים הבאים הביתה"
+        },
+        "add_friends": {
+            "title": "Here are some Israelis you might\nknow. Add them as friends"
+        }
+    },
+    "postTypes": {
+        "job": {
+            "offering": "הצעת עבודה",
+            "seeking": "חיפוש עבודה"
+        },
+        "realEstate": {
+            "generic_header": "דירות",
+            "offering": {
+                "rent": "הצעת נכס להשכרה",
+                "buy/sell": "הצעת נכס למכירה",
+                "sublet": "הצעת סאבלט",
+                "roommates": "הזדמנות לשותפים",
+                "commercial": "הצעת נכס מסחרי"
+            },
+            "seeking": {
+                "rent": "חיפוש נכס להשכרה",
+                "buy/sell": "חיפוש נכס למכירה",
+                "sublet": "חיפוש סאבלט",
+                "roommates": "חיפוש לשותפים",
+                "commercial": "חיפוש נכס מסחרי"
+            }
+        },
+        "giveAndTake": {
+            "generic_header": "קח/תן",
+            "offering": {
+                "free": "למסירה",
+                "for sale": "למכירה"
+            },
+            "seeking": "מעוניין/ת לקנות"
+        },
+        "tipRequest": "יש לי שאלה",
+        "package": "משלוח חבילה",
+        "promotion": "עכשיו במבצע",
+        "recommendation": "יש לי המלצה",
+        "guide": "מדריך",
+        "homeNostalgic": "געגועים לבית",
+        "meeting": "בואו נפגש",
+        "groupAnnouncement": "הודעות קבוצתיות",
+        "titles": {
+            "statusUpdate": "עדכון כללי",
+            "tipRequest": "שאלות",
+            "recommendation": "המלצות",
+            "meeting": "בואו נפגש",
+            "homeNostalgic": "מתגעגעים הביתה",
+            "package": "חבילות",
+            "guide": "מדריכים",
+            "entityShare": "שיתוף",
+            "promotion": "מבצעים",
+            "job": "הצעת עבודה",
+            "realEstate": "הצעת דירה",
+            "giveAndTake": "קח/תן",
+            "groupAnnouncement": "שלחו הודעה לכולם"
+        }
+    },
+    "people": {
+        "invite_friends": {
+            "share_download_link": "או העתיקו ושתפו את הלינק הבא",
+            "screen_header": "הזמינו חברים",
+            "invitation": "היוש!\nשמעת על הומיז? רשת חברתית שנבנתה במיוחד בשביל ישראלים ב-{{cityName}}, הנה לינק להורדה!\n\n{{downloadLink}}"
+        },
+        "header": "אנשים בעיר",
+        "subheader": "מצאו חברים שגרים בעיר",
+        "invite_friends_button": "הזמינו חברים",
+        "referral_program_invite_annotation": {
+            "title": "הזמינו חברים ותרוויחו עד ${{sum}}",
+            "desc_line": "יש לכם חברים שעדיין לא שמעו על הומיז? הנה\nההזדמנות שלכם לעשות להם טוב ולהרוויח!",
+            "explanation_link": "איך זה עובד?"
+        },
+        "referral_explanation": {
+            "title": "איך זה עובד?",
+            "description": "מעתיקים את הלינק המצורף ושולחים אותו לחברים שלכם בכל דרך שתבחרו (חוץ מיונת דואר)\n\nעל כל חבר שנרשם דרך הלינק ששלחתם (במידה ואין לו משתמש קיים בהומיז) תקבלו ${{sumPerUser}} למימוש באמזון! בום!\n\nכל קופון שווה ${{maxRedeem}} אז תצטרכו להזמין לפחות 5 חברים כדי לממש את הזכיה"
+        },
+        "referral_status_button": "ראו את רשימת החברים שהצטרפו"
+    },
+    "communication_center": {
+        "sub_tabs": {
+            "sub_tab_1": "עדכונים",
+            "sub_tab_2": "הודעות"
+        },
+        "conversations": {
+            "input_placeholder": "חפשו אנשים בעיר"
+        }
+    },
+    "select_users": {
+        "search_input_placeholder": "חפשו חברים"
+    },
+    "city": {
+        "city_sub_header": {
+            "job": {
+                "sub_header_tab_1": "דרושים",
+                "sub_header_tab_2": "מחפשי עבודה"
+            },
+            "realEstate": {
+                "sub_header_tab_1": "דירות מוצעות",
+                "sub_header_tab_2": "מחפשי דירות"
+            },
+            "giveAndTake": {
+                "sub_header_tab_1": "הצעות",
+                "sub_header_tab_2": "בקשות"
+            }
+        },
+        "page_headers": {
+            "job": "לוח משרות",
+            "realEstate": "לוח דירות",
+            "giveAndTake": "לוח קח תן",
+            "tipRequest": "שאלות",
+            "recommendation": "המלצות",
+            "promotion": "מבצעים",
+            "package": "חבילות",
+            "groupAnnouncement": "שלחו הודעה לכולם",
+            "job_subheader": "משרות שוות בעיר",
+            "realEstate_subheader": "כל הדירות שפורסמו בקהילה",
+            "giveAndTake_subheader": "החלפה ומכירה של מוצרים",
+            "tipRequest_subheader": "כל השאלות מהקהילה",
+            "recommendation_subheader": "כל ההמלצות מהקהילה"
+        }
+    },
+    "page": {
+        "main_form": {
+            "create_page_button": "עמוד חדש"
+        },
+        "view": {
+            "modals": {
+                "page_created": {
+                    "header": "Mazal Tov\nYou've created a page!",
+                    "body": "Now it’s the perfect time to add information that will help the community to get to know you better.",
+                    "button": "Let's go"
+                }
+            },
+            "sub_tab_2": {
+                "CTA": {
+                    "text": "ביקרתם כאן כבר? היה שווה?\nבואו שתפו אותנו בחוויה שלכם, שנדע אם כדאי"
+                }
+            }
+        }
+    },
+    "profile": {
+        "settings": {
+            "notifications": {
+                "header": "עדכונים"
+            }
+        }
+    },
+    "groups": {
+        "sub_tabs": {
+            "sub_tab_1": "ערוצים מומלצים",
+            "sub_tab_2": "הערוצים שלי"
+        },
+        "create": {
+            "screen_header": "ערוץ חדש"
+        },
+        "view": {
+            "created_modal": {
+                "header": "Mazal Tov!\nYou've created a channel",
+                "text": "Now it’s the perfect time to post and say hi to everyone.",
+                "button": "Let's go"
+            }
+        },
+        "create_button": "ערוץ חדש"
+    },
+    "events": {
+        "sub_tabs": {
+            "sub_tab_1": "אירועים מומלצים"
+        },
+        "create": {
+            "screen_header": "אירוע חדש"
+        },
+        "create_button": "אירוע חדש",
+        "header": "אירועים",
+        "subheader": "אירועים שאסור לפספס"
+    },
+    "tab_names": {
+        "home": "בית",
+        "people": "אנשים",
+        "groups": "ערוצים",
+        "activity": "עדכונים",
+        "city": {
+            "neighbourhood": "פרופיל",
+            "city": "פרופיל"
+        }
+    },
+    "post_editor": {
+        "real_estate": {
+            "type_labels": {
+                "offering": "פרסום דירה",
+                "seeking": "חיפוש דירה"
+            },
+            "tag_labels": {
+                "buy": "לקנייה",
+                "sell": "למכירה",
+                "rent": "להשכרה",
+                "sublet": "סאבלט",
+                "roommates": "שותפים",
+                "commercial": "מסחרי",
+                "swap": "להחלפה"
+            },
+            "placeholders": {
+                "mandatory_title": "כותרת",
+                "price_and_symbol": "מחיר ($)",
+                "size_and_symbol": "שטח (sqft)",
+                "rooms": "חדרים",
+                "location": "מיקום",
+                "mandatory_description": "תארו את הנכס",
+                "start_date": "תאריך התחלה",
+                "end_date": "תאריך סיום"
+            },
+            "values": {
+                "size": "{{size}} sqft",
+                "rooms": {
+                    "one": "חדר",
+                    "other": " {{count}} חדרים"
+                }
+            },
+            "rooms_picker_title": "כמה חדרים?"
+        },
+        "give_take": {
+            "type_labels": {
+                "offering": "פרסום מוצר",
+                "seeking": "חיפוש מוצר"
+            },
+            "tag_labels": {
+                "free": "בחינם!",
+                "price": "בתשלום"
+            },
+            "placeholders": {
+                "mandatory_title": "כותרת",
+                "price_and_symbol": "מחיר ($)",
+                "mandatory_description": "תיאור"
+            }
+        },
+        "job": {
+            "offering_label": "פרסום עבודה",
+            "looking_label": "חיפוש עבודה",
+            "title_placeholder": "הגדרת התפקיד",
+            "company_placeholder": "חברה (לא חובה)",
+            "location_placeholder": "מיקום (גם לא חובה)",
+            "offering_placeholder": "ספרו בכמה מלים מה התפקיד דורש",
+            "looking_placeholder": "ספרו בכמה מלים על עצמכם ועל מה אתם מחפשים",
+            "categories": {
+                "tech": "Tech",
+                "food": "מזון ומשקאות",
+                "babysitter": "בייביסיטר",
+                "realEstate": "דירות",
+                "finance": "כספים",
+                "sales": "מכירות",
+                "production": "הפקה",
+                "administration": "אדמיניסטרציה",
+                "education": "חינוך",
+                "services": "בעלי מקצוע",
+                "other": "אחר"
+            }
+        },
+        "post_placeholders": {
+            "statusUpdate": "Ma Hamatzav? Talk to us.",
+            "package": "Somebody is on the TLV-NYC route?",
+            "homeNostalgic": "Aww, we feel you!",
+            "meeting": "Levad is sad. Together is forever :)",
+            "recommendation": "Share it with our community. We trust you!",
+            "tipRequest": "We’re all Israelis here. Ask for help.",
+            "groupAnnouncement": "Type your announcement",
+            "guide": "Share your insights.",
+            "entityShare": "Say something about this...",
+            "promotion": "Got anything to promote?"
+        },
+        "post_type_definitions": {
+            "statusUpdate": {
+                "text": "עדכון סטטוס"
+            },
+            "tipRequest": {
+                "text": "יש לי שאלה"
+            },
+            "recommendation": {
+                "text": "יש לי המלצה"
+            },
+            "meeting": {
+                "text": "בואו ניפגש"
+            },
+            "guide": {
+                "text": "כתבו מדריך"
+            },
+            "homeNostalgic": {
+                "text": "געגועים הביתה"
+            },
+            "package": {
+                "text": "חבילה"
+            },
+            "entityShare": {
+                "text": "עדכון סטטוס"
+            },
+            "promotion": {
+                "text": "פרסמו מבצע"
+            },
+            "job": {
+                "text": "עבודה"
+            },
+            "realEstate": {
+                "text": "דירות"
+            },
+            "giveAndTake": {
+                "text": "קח/תן"
+            },
+            "list": {
+                "text": "רשימה"
+            },
+            "event": {
+                "text": "ארוע"
+            }
+        }
+    },
+    "tags": {
+        "server_tags": {
+            "buy": "קנייה",
+            "buy/sell": "קנייה/מכירה",
+            "City & Gov": "עיר וממשל",
+            "commercial": "מסחרי",
+            "Education": "חינוך",
+            "Entertainment": "בידור ותרבות",
+            "Essentials": "שירותים חיוניים",
+            "Family & Kids": "משפחה וילדים",
+            "Finance": "כספים",
+            "Food": "אוכל",
+            "for sale": "למכירה",
+            "free": "בחינם",
+            "Health": "בריאות",
+            "Insurance": "ביטוח",
+            "Legal": "משפטי",
+            "Real Estate": "דירות",
+            "Religion": "דת",
+            "Relocation": "רילוקיישן",
+            "rent": "להשכרה",
+            "roommates": "שותפים",
+            "sublet": "סאבלט",
+            "Sublets": "סאבלטים",
+            "Travel": "טיולים",
+            "הומיז": "הומיז",
+            "Other": "אחר",
+            "tech": "Tech",
+            "food": "מזון ומשקאות",
+            "babysitter": "בייביסיטר",
+            "realEstate": "דירות",
+            "finance": "כספים",
+            "sales": "מכירות",
+            "production": "הפקה",
+            "administration": "אדמיניסטרציה",
+            "education": "חינוך"
+        },
+        "real_estate": "נדל\"ן",
+        "give_take": "קח/תן",
+        "jobs": "עבודות",
+        "recommendation": "המלצות",
+        "events": "אירועים",
+        "groups": "ערוצים"
+    },
+    "moment": {
+        "relativeTime": {
+            "future": "בעוד %s",
+            "past": "לפני %s",
+            "s": "כמה שניות",
+            "ss": "%d sec",
+            "m": "דקה",
+            "mm": "%d דקות",
+            "h": "שעה",
+            "hh": "%d שעות",
+            "d": "יום",
+            "dd": "%d ימים",
+            "M": "חודש",
+            "MM": "%d חודשים",
+            "y": "שנה",
+            "yy": "%d שנים"
+        },
+        "years_old": "years old"
+    },
+    "list": {
+        "list_of_lists": {
+            "create_button": "רשימה חדשה"
+        },
+        "view": {
+            "items_list_footer": "מרגישים שחסר משהו ברשימה זו? \nשתפו מנסיונכם והוסיפו את ההמלצה לרשימה זו"
+        }
+    },
+    "themes": {
+        "family": "משפחה וילדים",
+        "health": "גוף ונפש",
+        "legal": "משפטי ופיננסי",
+        "travel": "טיולים",
+        "lifestyle": "לייף סטייל",
+        "essentials": "שירותים חיוניים",
+        "eatDrink": "אוכל ושתייה",
+        "other": "אחר",
+        "suggested": "מומלצים",
+        "all": "הכל",
+        "myhood": {
+            "neighbourhood": "השכונה שלי",
+            "city": "העיר שלי"
+        }
+    },
+    "home": {
+        "boards": {
+            "job": "עבודות",
+            "events": "אירועים",
+            "realEstate": "דירות",
+            "giveAndTake": "קח תן"
+        },
+        "post_button_text": "מה חדש בעיר?",
+        "user_greeting": "{{name}} אהלן",
+        "morning": "בוקר טוב!",
+        "afternoon": "צהריים טובים!",
+        "evening": "ערב טוב!",
+        "search_placeholder": "חפשו אנשים, מסעדות, בעלי מקצוע…"
+    },
+    "theme_view": {
+        "options": {
+            "default": "תוכן",
+            "group": "ערוצים",
+            "event": "אירועים",
+            "all": "Featured",
+            "list": "רשימות",
+            "page": "המלצות",
+            "realEstate": "נדל״ן",
+            "giveAndTake": "קח תן"
+        }
+    },
+    "filters": {
+        "price": {
+            "header": "מחיר"
+        },
+        "rooms": {
+            "header": "חדרים"
+        },
+        "dates": {
+            "search": "Select Dates",
+            "picker_title": "Select dates",
+            "header": "תאריכים",
+            "from": "From",
+            "to": "To"
+        },
+        "genders": {
+            "header": "ג׳נדר",
+            "0": "Man",
+            "1": "Woman",
+            "2": "Other",
+            "3": "Unknown"
+        },
+        "age": {
+            "header": "גיל"
+        },
+        "title": "סנן לפי",
+        "ok_button": "סנן",
+        "more": "נוספים",
+        "neighborhoodsIds": {
+            "header": "מיקום",
+            "search": "Search"
+        },
+        "friendshipStatuses": {
+            "header": "חברים בהומיז",
+            "0": "Not friends",
+            "1": "My friends"
+        },
+        "relationshipStatuses": {
+            "header": "סטטוס זוגי",
+            "0": "Single",
+            "1": "In relationship",
+            "2": "Engaged",
+            "3": "Married",
+            "4": "Divorced",
+            "5": "Widowed",
+            "6": "It's complicated",
+            "7": "Unknown"
+        },
+        "tags": {
+            "header": "סוג"
+        },
+        "recentlyJoined": {
+            "header": "מצטרפים חדשים"
+        }
+    },
+    "posts": {
+        "introduction": {
+            "screen_header": "Edit Post",
+            "header": {
+                "first_line": "ספרו קצת על עצמכם",
+                "second_line": "שתפו במסע המהמם שלכם, אנחנו סקרנים."
+            },
+            "sub_header": "אהלן הומיז, כיף להיות פה!\nקוראים לי <azure>{{name}}</azure>",
+            "picture_placeholder": "קדימה, תנו \nבסלפי",
+            "origin_text": "במקור אני מ-",
+            "current_text": "היום אני גר/ה ב-",
+            "arrival_date_text": "עברתי",
+            "select": "בחירה",
+            "about_placeholder": "+ ספרו עוד על עצמכם",
+            "post_action": "עדכנו",
+            "post_text": "במקור אני מ-{{origin}}. היום אני גר/ה ב-{{currentlyLiveIn}}. עברתי {{arrivedDate}}.",
+            "welcome_btn": "Welcome",
+            "welcomed_btn": "Welcomed",
+            "when": "מתי?"
+        },
+        "header": {
+            "today": "היום",
+            "weeks": {
+                "one": "השבוע",
+                "other": "לפני {{count}} שבועות"
+            }
+        },
+        "activation": {
+            "post_actor_header": "מאת {{name}}",
+            "see_more": {
+                "one": "צפו בעוד אנשים שכתבו על:",
+                "other": "צפו בעוד {{count}} אנשים שכתבו על:"
+            },
+            "published_in": "פורסם בערוץ"
+        },
+        "instagram": {
+            "connect_header": "שתפו את הגלריה המהממת שלכם",
+            "connect_cta": "חברו את חשבון האינסטגרם"
+        }
+    },
+    "common": {
+        "natives_name": {
+            "israelis": "ישראלים",
+            "french": "צרפתים",
+            "expats": "expats"
+        }
+    },
+    "add_list_item": {
+        "added_modal": {
+            "title": "בחירה מצוינת {{name}}!",
+            "text": "רוצים לראות מה אחרים הוסיפו לרשימה? פרגנו ודרגו את המקומות שאהבתם",
+            "view_list_button": "כניסה לתוצאות",
+            "dismiss_button": "אולי אחר כך"
+        }
+    },
+    "category_picker": {
+        "action": "Select a Category"
+    },
+    "neighborhood_view": {
+        "users_title": "הומיז בשכונה",
+        "hood_subtitle": "גלו את כל מה שקורה בשכונה",
+        "my_hood_subtitle": "גלו מה חדש בשכונה שלכם",
+        "post_button_text": "מה חדש בשכונה?"
+    }
+}

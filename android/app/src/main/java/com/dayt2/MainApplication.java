@@ -3,6 +3,7 @@ package com.dayt2;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.reactcommunity.rnlocalize.RNLocalizePackage;
 import com.brentvatne.react.ReactVideoPackage;
 import com.dylanvann.fastimage.FastImageViewPackage;
 import com.rnfs.RNFSPackage;
@@ -31,6 +32,7 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(new MainReactPackage(),
+            new RNLocalizePackage(),
             new ReactVideoPackage(),
             new FastImageViewPackage(),
             new RNFSPackage(), new RNDeviceInfo(), new RNCameraPackage(),

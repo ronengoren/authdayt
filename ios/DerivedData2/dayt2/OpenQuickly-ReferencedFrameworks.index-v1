@@ -2,17 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>Cocoa</string>
 	<string>Darwin</string>
+	<string>LocalAuthentication</string>
 	<string>AVFoundation</string>
 	<string>jsireact</string>
 	<string>CommonCrypto</string>
-	<string>LocalAuthentication</string>
+	<string>Cocoa</string>
 	<string>CoreLocation</string>
-	<string>ImageIO</string>
+	<string>AudioToolbox</string>
 	<string>cxxreact</string>
 	<string>objc</string>
-	<string>AudioToolbox</string>
+	<string>ImageIO</string>
 	<string>Accelerate</string>
 	<string>CoreData</string>
 	<string>MobileCoreServices</string>
@@ -21,15 +21,15 @@
 	<string>arpa</string>
 	<string>CoreTelephony</string>
 	<string>CoreMedia</string>
-	<string>StoreKit</string>
-	<string>netinet6</string>
 	<string>CoreServices</string>
+	<string>netinet6</string>
+	<string>StoreKit</string>
 	<string>AdSupport</string>
 	<string>Accounts</string>
 	<string>libkern</string>
-	<string>fishhook</string>
-	<string>WebKit</string>
 	<string>CoreText</string>
+	<string>WebKit</string>
+	<string>fishhook</string>
 	<string>FirebaseMLVision</string>
 	<string>CoreMotion</string>
 	<string>XCTest</string>
@@ -37,8 +37,8 @@
 	<string>Foundation</string>
 	<string>mach</string>
 	<string>QuartzCore</string>
-	<string>Security</string>
 	<string>os</string>
+	<string>Security</string>
 	<string>AppKit</string>
 	<string>netinet</string>
 	<string>AssetsLibrary</string>
@@ -46,9 +46,9 @@
 	<string>yoga</string>
 	<string>CoreGraphics</string>
 	<string>SystemConfiguration</string>
-	<string>folly</string>
+	<string>jsi</string>
 	<string>React</string>
 	<string>UIKit</string>
-	<string>jsi</string>
+	<string>folly</string>
 </array>
 </plist>
