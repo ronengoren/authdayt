@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   StyleSheet,
   TouchableOpacity,
@@ -6,17 +7,17 @@ import {
   Platform,
   StatusBar,
   NativeModules
-  // Image
 } from "react-native";
 import {
   View,
   Text,
   TextButton,
   Image,
-  TranslatedText
+  TranslatedText,
+  Video
 } from "../components/basicComponents";
+import Slide from "./Slide";
 
-import PropTypes from "prop-types";
 import { hasNotch } from "../infra/utils/deviceUtils";
 
 import images from "../assets/images";
@@ -47,6 +48,7 @@ class Welcome extends React.Component {
 
         <View style={styles.lowerSection}>
           <TextButton />
+          <Video />
         </View>
       </View>
     );

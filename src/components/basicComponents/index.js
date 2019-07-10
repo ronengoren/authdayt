@@ -4,3 +4,4 @@ export { default as Spinner } from "./Spinner";
 export { default as View } from "./View";
 export { default as Image } from "./Image";
 export { default as TranslatedText } from "./TranslatedText";
+export { default as Video } from "./Video";
