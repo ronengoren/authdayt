@@ -17,6 +17,7 @@ import {
   Video
 } from "../components/basicComponents";
 import Slide from "./Slide";
+import I18n from "../infra/localization";
 
 import { hasNotch } from "../infra/utils/deviceUtils";
 
@@ -24,6 +25,8 @@ import images from "../assets/images";
 
 import { daytColors, uiConstants } from "../vars";
 import { screenNames } from "../vars/enums";
+import { isObject } from "../infra/utils";
+import { misc as miscLocalStorage } from "../infra/localStorage";
 
 const LOGO_MARGIN_TOP = hasNotch() ? 60 : 25;
 const SLIDER_MARGIN_TOP = hasNotch() ? 40 : 0;
@@ -48,6 +51,7 @@ class Welcome extends React.Component {
 
         <View style={styles.lowerSection}>
           <TextButton />
+          <Text>Welcome</Text>
         </View>
       </View>
     );

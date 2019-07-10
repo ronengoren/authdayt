@@ -1,0 +1,2631 @@
+{
+    "chat": {
+        "action_sheet": {
+            "view_profile": "View profile",
+            "block_user": "Block messages",
+            "unblock_user": "Unblock messages"
+        },
+        "form_input_placeholder": "Type a message",
+        "disabled_chat_toast_message": "This user has disabled the chat option.",
+        "blocked_user_toast_message": "This user won't be able to message you anymore.",
+        "unblock_user_button": "Unblock",
+        "empty_state": "Say hello to {{participantName}}.",
+        "send_button": "Send",
+        "sending_image_text": "Sending photo",
+        "failed_message_warning": "<b>Message not delivered.</b> Click here to try again.",
+        "upload_image_error": "Failed to send photo.",
+        "image_fallback_message": "We love photos, but we couldn’t show you this one. Update your Homeis app to view it.\nhttps://www.homeis.com/downloads",
+        "block": {
+            "message": "<b>{{participantFullName}}</b> wants to send you a message.\nDo you want to let {{participantFullName}} send you messages from now on?",
+            "decline_button": "Decline",
+            "allow_button": "Allow"
+        }
+    },
+    "common": {
+        "buttons": {
+            "add_a_post": "Add a Post",
+            "edit_profile": "Edit Profile",
+            "friends": "Friends",
+            "request_sent": "Request Sent",
+            "respond": "Respond",
+            "add_friend": "Add Friend",
+            "unfriend": "Unfriend",
+            "message": "Message",
+            "update": "Update",
+            "cancel": "Cancel",
+            "set": "Set",
+            "save": "Save",
+            "translate": {
+                "see_translation": "SEE TRANSLATION",
+                "loading": "LOADING...",
+                "see_original": "SEE ORIGINAL",
+                "error": "NO TRANSLATION FOR YOU"
+            },
+            "done": "Done"
+        },
+        "form": {
+            "first_name": "First Name",
+            "last_name": "Last Name",
+            "email": "Email",
+            "password": "Password",
+            "password_min_chars": "Password should contain at least {{minChars}} characters.",
+            "min_chars": "Minimum {{minChars}} characters",
+            "required_field": "Required field"
+        },
+        "share": {
+            "share_externally": "Share Via...",
+            "share_internally": "Share on Homeis"
+        },
+        "natives_name": {
+            "israelis": "israelis",
+            "french": "french",
+            "expats": "expats"
+        }
+    },
+    "feed": {
+        "suggested_items": {
+            "pages_header": "Selected Pages",
+            "posts_guide_header": "Recommended Guides",
+            "posts_promotion_header": "On Sale!",
+            "posts_tipRequest_header": "Community Questions",
+            "posts_recommendation_header": "Recommendations",
+            "posts_statusUpdate_header": "Loved Posts",
+            "posts_job_header": "Job Offers",
+            "posts_realEstate_sublet_header": "Sublets!",
+            "posts_realEstate_roommates_header": "Roommate Seekers",
+            "posts_realEstate_rent_header": "Properties for Rent",
+            "posts_giveAndTake_header": "Buy/Sell",
+            "events_header": "Coming Soon!",
+            "groups_header": "Recommended Channels",
+            "generic_header": "Recommended Posts",
+            "see_all": "See all",
+            "lists_header": "Recommended Lists"
+        },
+        "suggested_event": {
+            "interested": "Interested"
+        },
+        "suggested_group": {
+            "pending": "Pending...",
+            "join": "Join",
+            "joined": "Joined",
+            "members": {
+                "one": "{{count}} Member",
+                "other": "{{count}} Members"
+            }
+        },
+        "suggested_page": {
+            "following": "Following",
+            "follow": "Follow",
+            "followed": {
+                "one": "{{count}} Follower",
+                "other": "{{count}} Followers"
+            }
+        },
+        "suggested_post": {
+            "free": "Free",
+            "rooms": {
+                "one": "{{count}} Room",
+                "other": "{{count}} Rooms"
+            },
+            "comments": {
+                "one": "{{count}} Comment",
+                "other": "{{count}} Comments"
+            },
+            "likes": {
+                "one": "{{count}} Like",
+                "other": "{{count}} Likes"
+            },
+            "by": "By"
+        },
+        "single_post_feed": {
+            "recommendation": "Recommendations",
+            "promotion": "Community Promotions",
+            "tipRequest": "Community Questions",
+            "package": "Community Packages"
+        },
+        "post_header": {
+            "friendship_button": {
+                "add_friend": "Add Friend",
+                "pending": "Pending"
+            },
+            "posted_in": " posted in "
+        },
+        "header_buttons": {
+            "tipRequest": "Questions",
+            "guide": "Guides",
+            "job": "Jobs",
+            "realEstate": "Real Estate",
+            "giveAndTake": "Give/Take",
+            "promotion": "Promotions",
+            "pages": "Services",
+            "lists": "Lists",
+            "recommendation": "Recommendations",
+            "events": "Events",
+            "list": "Lists",
+            "event": "Events"
+        },
+        "suggested_list": {
+            "by": "By",
+            "saved": {
+                "one": "Saved",
+                "other": "Saved"
+            }
+        }
+    },
+    "onboarding": {
+        "welcome": {
+            "slide1": "<b>Living abroad</b> feels like having two homes. Time to bring them together!",
+            "slide2": "Join a community of <b>locals</b> who share the <b>same homeland</b> as you",
+            "slide3": "Share your <b>culture, interest,</b> and <b>needs</b> with friends nearby.",
+            "slide4": "<b>Discover your city</b> based on community wisdom and trust.",
+            "button": "Join your homeis",
+            "have_account_button": "Sign In",
+            "have_account": "Already have an account?"
+        },
+        "sign_in": {
+            "page_header": "Welcome Back",
+            "facebook_button": "Continue with Facebook",
+            "methods_separator": "Or",
+            "submit_button": "Sign In",
+            "password_recovery_button": "Forgot your password?",
+            "no_account_button": "Sign Up",
+            "no_account": "Don't have an account?"
+        },
+        "reset_password": {
+            "page_header": "Reset Password",
+            "button": "Send",
+            "explanation": "We'll send you an email to reset your password."
+        },
+        "password_reset_modal": {
+            "title": "We've sent you an email",
+            "description_before_email": "We've sent an email to ",
+            "description_after_email": "Please check your email and follow the instructions to reset your password.",
+            "dismiss_button": "Back to Sign In"
+        },
+        "sign_up": {
+            "page_header": "Sign Up",
+            "facebook_button": "Continue with Facebook",
+            "methods_separator": "Or Sign Up with Email",
+            "submit_button": "Get Started",
+            "legal": {
+                "agreement": "By signing up, you agree to our",
+                "terms_link": "Terms & Conditions",
+                "conjunction": "and",
+                "privacy_policy": "Privacy Policy"
+            },
+            "have_account": "Already have an account?"
+        },
+        "set_birthday_date": {
+            "page_header": "Set your profile",
+            "picker_header": "What is your date of birth?",
+            "picker_subheader": "Date of Birth",
+            "submit_button": "Next"
+        },
+        "add_friends": {
+            "page_header": "Add Friends",
+            "continue_button": "Next",
+            "fb_friends_button": "Find friends already using Homeis.",
+            "list_title": "Suggested",
+            "title": "Here are some people you might\nknow. Add them as friends"
+        },
+        "allow_notifications": {
+            "title": "Turn on notifications?",
+            "description": "Want us to let you know when someone messages you, adds you as a friend, and other important account activity?",
+            "approve_button": "Yes, let me know",
+            "decline_button": "Maybe later"
+        },
+        "new_user_welcome_message": "Welcome Home!",
+        "welcome_people": "We",
+        "search_country": {
+            "no_country": "'{{searchTerm}}' cannot be found.",
+            "suggested_title": "Popular countries",
+            "suggested_countries": {
+                "israel": "Israel",
+                "india": "India",
+                "france": "France",
+                "belgium": "Belgium"
+            }
+        },
+        "discover_pages": {
+            "page_header": "Discover",
+            "continue_button": "Done",
+            "title": "Follow interesting channels and \n feel right at home from the get go.",
+            "unfollow_all_button": "Unfollow All",
+            "follow_all_button": "Follow All",
+            "error_title": "You must select at least 2 interests"
+        },
+        "new_user_city": {
+            "nyc_us": "New York",
+            "philly_us": "Philadelphia",
+            "toronto_ca": "Toronto"
+        },
+        "set_user_community": {
+            "origin_field": {
+                "label": "Where are you from originally?",
+                "label_empty_field": "Where are you from <pinkishRed>originally?</pinkishRed>",
+                "placeholder": "Search a country"
+            },
+            "destination_field": {
+                "label": "Where do you live now?",
+                "label_empty_field": "Where do you live <pinkishRed>now?</pinkishRed>",
+                "placeholder": "Search a city/town"
+            },
+            "page_header": "Set Your Profile",
+            "facebook_import_button": "Import from Facebook",
+            "submit_button": "Next",
+            "confirmation": {
+                "title": "Hey don’t be a stranger",
+                "explanation": "Our community is built on trust, let people know who you are. Sure you want to continue without a profile picture?",
+                "submit_button": "Continue",
+                "add_a_photo": "Add a photo"
+            },
+            "no_image_title": "Add your profile picture",
+            "has_image_title": "Oh, that’s a nice one",
+            "explanation": "Having a profile picture helps you get discovered by your friends",
+            "search_city_suggestions_title": "Popular cities",
+            "next": "Next"
+        },
+        "set_user_details": {
+            "title": "Welcome to Homeis!",
+            "community": "<b>{{originCountry}}</b> - <b>{{destinationCity}}</b>",
+            "change_community_button": "Change",
+            "origin_city_field": {
+                "label": "Where in {{originCountry}} are you from?",
+                "placeholder": "Search a city"
+            },
+            "destination_neighbourhood_field": {
+                "label": "Where do you live in {{destinationCity}}?",
+                "placeholder": "Search a neighborhood"
+            },
+            "destination_city_field": {
+                "placeholder": "Search a city"
+            },
+            "arrival_date_field": {
+                "label": "When did you move to {{destinationCity}}?",
+                "placeholder": "Select a date"
+            },
+            "submit_button": "Next"
+        },
+        "set_arrival_date": {
+            "title": "Arrival Date"
+        },
+        "no_community": {
+            "title": "Woooops",
+            "subtitle": "There isn't an active community for <b>{{originCountry}} - {{destinationCity}}</b>",
+            "description": "We are working on opening as many communities as possible. We will let you know as soon as we do!",
+            "suggested_communities_title": "You can join any of these active communities for {{originCountry}}",
+            "change_community_button": "Change Community",
+            "suggested_community_name": "{{originCountry}} - <b>{{destinationCity}}</b>",
+            "suggested_community_button": "Join",
+            "suggested_communities_change_community_header": "Not what you're looking for?"
+        },
+        "set_user_gender": {
+            "header": "Select Your Gender",
+            "next": "Next",
+            "im_a": ["I'm a", "I'm a"]
+        },
+        "user_profile_header": {
+            "title": "Hey {{firstName}}",
+            "subtitle": "We’re super happy to have you here! Let’s get to know one another.",
+            "picture_placeholder": "Add profile\nphoto"
+        },
+        "set_user_email": {
+            "title": "Hey {{firstName}}",
+            "subTitle": "We need to verify your email address",
+            "email_field": {
+                "label": "What's your email address?",
+                "placeholder": "Email"
+            },
+            "next": "Next"
+        }
+    },
+    "posts": {
+        "group": {
+            "groups": "Channels",
+            "private_group": "Private Channel",
+            "public_group": "Public Channel"
+        },
+        "comment": {
+            "like_button": "Like",
+            "reply_button": "Reply",
+            "likes": {
+                "one": "1 Like",
+                "other": "{{count}} Likes"
+            }
+        },
+        "action_sheets": {
+            "delete": "Delete Post",
+            "delete_title": "Are you sure you want to delete this post?",
+            "delete_confirm": "Yes",
+            "edit": "Edit Post",
+            "pin_post": {
+                "group": "Pin Post in Channel",
+                "page": "Pin Post in Page"
+            },
+            "unpin_post": {
+                "group": "Unpin Post from Channel",
+                "page": "Unpin Post from Page"
+            },
+            "report": {
+                "button": "Report Post",
+                "spam": "Spam",
+                "inappropriate": "Inappropriate"
+            },
+            "hide": "Hide Post",
+            "highlight_post": {
+                "group": "Highlight Post in Channel",
+                "page": "Highlight Post in Page"
+            },
+            "dehighlight_post": {
+                "group": "Remove from Channel Highlights",
+                "page": "Remove from Page Highlights"
+            }
+        },
+        "cta_button": "Read All",
+        "real_estate": {
+            "size": "{{size}} sqft",
+            "rooms": {
+                "one": "1 room",
+                "other": "{{count}} rooms"
+            },
+            "number_of_nights": "{{nights}} nights"
+        },
+        "header": {
+            "shared": {
+                "shared": " shared",
+                "group": " a channel",
+                "event": " an event",
+                "guide": " {{name}}'s guide",
+                "post": " {{name}}'s post",
+                "list": " a list",
+                "created": " created",
+                "to_entity": " to the {{entityType}} ",
+                "in_entity": " in the {{entityType}} ",
+                "page": " a city page",
+                "in": " in "
+            },
+            "posted": {
+                "in_group": " posted in ",
+                "in_event": " posted in the event ",
+                "in_neighborhood": " posted in "
+            },
+            "published": "published a new ",
+            "guide": "guide",
+            "edited_post": " edited",
+            "pinned_post": " pinned post",
+            "added_list_item": " added an item to ",
+            "today": "Today",
+            "weeks": {
+                "one": "This week",
+                "other": "{{count}} weeks ago"
+            },
+            "scheduled_to": "Scheduled to {{scheduledDate}}",
+            "connect_instagram": "Connected instagram account"
+        },
+        "footer": {
+            "likes": " Likes",
+            "comments": {
+                "one": "1 Comment",
+                "other": "{{count}} Comments"
+            },
+            "comment_button": "Comment",
+            "share_button": "Share",
+            "inactive": {
+                "realEstate": "Sorry, this property was sold!",
+                "job": "Sorry, this position has been taken!",
+                "giveAndTake": "Sorry, this item was sold!"
+            }
+        },
+        "content": {
+            "not_available_share": {
+                "header": "This content is currently unavailable.",
+                "text": "It may have been removed, the link may have expired, or you may not have permission to view it."
+            }
+        },
+        "events": "Events",
+        "users_list": {
+            "recommendation": {
+                "empty_state": "Be the first to save!",
+                "text": {
+                    "one": "Saved",
+                    "other": "Saved"
+                }
+            },
+            "guide": {
+                "empty_state": "Be the first to save!",
+                "text": {
+                    "one": "Saved",
+                    "other": "Saved"
+                }
+            },
+            "statusUpdate": {
+                "empty_state": "Be the first to say thanks!",
+                "text": {
+                    "one": "Thanked",
+                    "other": "Thanked"
+                }
+            },
+            "groupAnnouncement": {
+                "empty_state": "Be the first to say thanks!",
+                "text": {
+                    "one": "Thanked",
+                    "other": "Thanked"
+                }
+            },
+            "group": {
+                "empty_state": "Be the first to join!",
+                "text": {
+                    "one": "Joined",
+                    "other": "Joined"
+                }
+            },
+            "page": {
+                "empty_state": "Be the first to follow!",
+                "text": {
+                    "one": "Following",
+                    "other": "Following"
+                },
+                "savers_text": "Saved",
+                "savers_empty_state": "Be the first to save!"
+            },
+            "event": {
+                "text": {
+                    "one": "Interested",
+                    "other": "Interested"
+                },
+                "empty_state": "Go and have fun!"
+            },
+            "promotion": {
+                "empty_state": "Be the first to say thanks!",
+                "text": {
+                    "one": "Thanked",
+                    "other": "Thanked"
+                }
+            },
+            "list": {
+                "empty_state": "Be the first to save!",
+                "text": {
+                    "one": "Saved",
+                    "other": "Saved"
+                }
+            },
+            "listitem": {
+                "empty_state": "Be the first to save!",
+                "text": {
+                    "one": "Saved",
+                    "other": "Saved"
+                }
+            },
+            "activation": {
+                "empty_state": "Be the first to say thanks!",
+                "text": {
+                    "one": "Thanked",
+                    "other": "Thanked"
+                }
+            },
+            "passive_instagram": {
+                "empty_state": "Be the first to say thanks!",
+                "text": {
+                    "one": "Thanked",
+                    "other": "Thanked"
+                }
+            }
+        },
+        "actions": {
+            "thanks": "Thanks",
+            "thanked": "Thanked",
+            "message": "Send a message",
+            "save": "Save",
+            "saved": "Saved",
+            "answer": "Answer",
+            "answer_action_placeholder": "Add an answer...",
+            "interested": "Interested",
+            "join": "Join",
+            "pending": "Pending",
+            "joined": "Joined",
+            "follow": "Follow",
+            "following": "Following",
+            "message_short": "Message",
+            "share": "Share"
+        },
+        "video": {
+            "encoding_error": {
+                "header": "Oops, the video isn't working."
+            },
+            "encoding_progress": {
+                "header": "Video Uploading..."
+            }
+        },
+        "image": {
+            "general_error": {
+                "header": "Can't load image."
+            }
+        },
+        "introduction": {
+            "screen_header": "Edit Post",
+            "header": {
+                "first_line": "Introduce Yourself",
+                "second_line": "Help people get to know you a bit better!"
+            },
+            "sub_header": "Hey, homeis! Nice to meet you all. \nMy name is <azure>{{name}}</azure>.",
+            "picture_placeholder": "Add profile\nphoto",
+            "origin_text": "I'm originally from",
+            "current_text": "Now I live in",
+            "arrival_date_text": "I arrived here",
+            "select": "Select",
+            "about_placeholder": "+ Add your own text",
+            "post_action": "Update",
+            "post_text": "I'm originally from {{origin}}. Now I live in {{currentlyLiveIn}}. I arrived here {{arrivedDate}}.",
+            "welcome_btn": "Welcome",
+            "welcomed_btn": "Welcomed",
+            "when": "When"
+        },
+        "activation": {
+            "post_actor_header": "By {{name}}",
+            "see_more": {
+                "one": "Watch {{count}} more member who wrote on:",
+                "other": "Watch {{count}} more members who wrote on:"
+            },
+            "published_in": "Published in"
+        },
+        "list_poll": {
+            "see_more": "View More",
+            "voters": {
+                "0": "No votes yet",
+                "1": "1 Vote",
+                "default": "{{count}} Votes"
+            }
+        },
+        "community_joined": {
+            "welcome_btn": "Welcome",
+            "welcomed_btn": "Welcomed",
+            "view_all": "View All"
+        },
+        "instagram": {
+            "connect_header": "Share your beautiful gallery",
+            "connect_cta": "Connect your instagram account"
+        }
+    },
+    "postTypes": {
+        "job": {
+            "offering": "Offering Job",
+            "seeking": "Seeking Job"
+        },
+        "realEstate": {
+            "generic_header": "Real Estate",
+            "offering": {
+                "rent": "For Rent",
+                "buy/sell": "For Sale",
+                "sublet": "Sublet",
+                "roommates": "Roommates",
+                "commercial": "Commercial Real Estate"
+            },
+            "seeking": {
+                "rent": "Looking For Rent",
+                "buy/sell": "Looking To Buy/Sell",
+                "sublet": "Seeking Sublet",
+                "roommates": "Seeking Roommates",
+                "commercial": "Seeking Commercial Real Estate"
+            }
+        },
+        "giveAndTake": {
+            "generic_header": "Give/Take",
+            "offering": {
+                "free": "For Free",
+                "for sale": "For Sale"
+            },
+            "seeking": "Looking To Buy"
+        },
+        "tipRequest": "I have a question",
+        "package": "Sending a Package",
+        "promotion": "Promotion",
+        "recommendation": "I have a recommendation",
+        "guide": "Guide",
+        "homeNostalgic": "I miss home.",
+        "meeting": "Let's Meet",
+        "groupAnnouncement": "Channel Announcement",
+        "titles": {
+            "statusUpdate": "Status Update",
+            "tipRequest": "Questions",
+            "recommendation": "Recommendations",
+            "meeting": "Lets Meet!",
+            "homeNostalgic": "I'm homesick",
+            "package": "Packages",
+            "guide": "Guides",
+            "entityShare": "Share",
+            "promotion": "Sales",
+            "job": "Job Offer",
+            "realEstate": "Real Estate",
+            "giveAndTake": "Give/Take",
+            "groupAnnouncement": "Channel Announcements",
+            "activation": "Activation"
+        }
+    },
+    "profile": {
+        "view": {
+            "image_placeholder": "Upload profile picture",
+            "time_of_arrival": "Arrived {{timeSince}} ago",
+            "bio_placeholder": "Tell us a bit about yourself...",
+            "friends": "Friends",
+            "city": "Profile",
+            "date_of_birth_placeholder": "+ Date of Birth",
+            "relationship_placeholder": "+ Relationship Status",
+            "workplace_placeholder": "+ Workplace",
+            "groups": "Channels",
+            "pages": "Pages",
+            "details_title": {
+                "mine": "About Me",
+                "others": "About {{firstName}}"
+            },
+            "workplace": "{{title}} at {{place}}",
+            "activity_header": {
+                "mine": "My Activity",
+                "others": "Recent Activity"
+            },
+            "action_sheet": {
+                "edit": "Edit Profile",
+                "settings": "App Settings"
+            },
+            "owner_of": "Owner of:",
+            "owner_of_pages": "{{count}} Pages:",
+            "more_pages": "+{{count}} more",
+            "create_a_business": "+ Create a business page",
+            "instagram": {
+                "my_title": "My Instagram",
+                "others_title": "{{name}}'s Instagram",
+                "connect_btn": "Connect Your Instagram"
+            },
+            "carousels_all_btn": "See all",
+            "saved_items_title": "My Saved Items",
+            "journey": {
+                "view": {
+                    "from": {
+                        "title": "Originally from",
+                        "placeholder": "Originally?"
+                    },
+                    "to": {
+                        "title": "Now lives in",
+                        "placeholder": "Now?"
+                    }
+                },
+                "edit": {
+                    "from": {
+                        "title": "Where are you from",
+                        "placeholder": "Originally?"
+                    },
+                    "to": {
+                        "title": "Where do you live",
+                        "placeholder": "Now?"
+                    }
+                }
+            }
+        },
+        "edit": {
+            "basic_info": "Basic Info",
+            "first_name_placeholder": "First Name",
+            "last_name_placeholder": "Last Name",
+            "date_of_birth": {
+                "title": "Date of Birth",
+                "placeholder": "Add date of birth",
+                "picker_header": "What is your date of birth?",
+                "picker_subheader": "Date of Birth"
+            },
+            "relationship": {
+                "title": "Relationship",
+                "placeholder": "Add Relationship Status",
+                "checkboxes_title": "What is your relationship status?",
+                "kids_checkboxes_title": "Got Kids?",
+                "have_kids": "Yes, I do.",
+                "privacy_toggle_label": "Show this on my profile.",
+                "options": ["Single", "In relationship", "Engaged", "Married", "Divorced", "Widowed", "It`s complicated"]
+            },
+            "gender": {
+                "title": "Gender",
+                "placeholder": "Add your gender",
+                "checkboxes_title": "What is your gender?"
+            },
+            "work": {
+                "title_placeholder": "Title",
+                "place_placeholder": "Place of Work"
+            },
+            "my_journey": {
+                "title": "My Journey",
+                "origin_label": "I'm originally from",
+                "current_label": "I currently live in",
+                "arrival_picker_header": "When did you arrive?",
+                "arrival_picker_subheader": "Date of Arrival",
+                "arrival_date_header": "I arrived in"
+            },
+            "bio": {
+                "title": "About Myself",
+                "placeholder": "Add a short bio about yourself so your community can know you better."
+            },
+            "date_privacy_toggle_label": "Show this on my profile.",
+            "generic_header": "Edit Profile",
+            "kid_selector_modal": {
+                "header": "How many kids?",
+                "ok_button": "Set",
+                "cancel_button": "Cancel"
+            },
+            "instagram": {
+                "title": "Instagram Photos",
+                "disconnect_btn": "Disconnect",
+                "connect_btn": "Connect"
+            }
+        },
+        "friends_list": {
+            "removed_friend": "{{userName}} removed from friends.",
+            "no_friends_message": "You are a very lonely person...",
+            "search_friends_button": "Search Friends"
+        },
+        "saved_pages": {
+            "my_pages": {
+                "empty_state_title": "You haven’t saved any pages yet.",
+                "empty_state": "Your saved pages will be displayed here."
+            },
+            "others_pages": {
+                "empty_state_title": "{{entityFirstName}} hasn’t saved any pages yet.",
+                "empty_state": "Once {{entityFirstName}} saves pages, they will be shown here."
+            },
+            "header": "{{name}} Saved Pages"
+        },
+        "gender": ["Male", "Female", "Other"],
+        "edit_profile_relationship": {
+            "header": "Edit Profile"
+        },
+        "others_friends_list": {
+            "header": "{{name}} Friends",
+            "sub_tabs": {
+                "sub_tab_1": "Mutual",
+                "sub_tab_2": "All Friends"
+            }
+        },
+        "profile_groups_list": {
+            "header": "{{name}} Channels",
+            "own_header": "My Channels"
+        },
+        "profile_pages_list": {
+            "header": "{{name}} Pages",
+            "own_header": "My Pages"
+        },
+        "entities_in_location": {
+            "from_header": "From {{name}}",
+            "around_header": "Around {{name}}"
+        },
+        "settings": {
+            "screen_header": "Settings",
+            "general": {
+                "header": "General",
+                "email": "E-mail",
+                "password": "Password",
+                "language": "Language",
+                "email_verification": {
+                    "verified": "Verified",
+                    "non_verified": "Verify email",
+                    "verification_sent": "Email verification sent"
+                }
+            },
+            "notifications": {
+                "header": "Notifications",
+                "likes": "Likes",
+                "comments": "Comments",
+                "friend_requests": "Friend Requests",
+                "ongoing_updates": "Ongoing Updates",
+                "messages": "Messages",
+                "group_updates": "Channel Updates",
+                "list_updates": "List Updates"
+            },
+            "connected_accounts": {
+                "header": "Connected Accounts",
+                "connect_button": "Connect",
+                "users_button": "Users",
+                "spoof": "Spoof"
+            },
+            "legal": {
+                "header": "Legal",
+                "privacy_policy": "Privacy Policy",
+                "terms_of_service": "Terms of Service"
+            },
+            "feature_flags": {
+                "header": "Feature Flags (Admins only)",
+                "lists": "Lists",
+                "view_count": "View Count",
+                "referral_program": "Referral Program",
+                "community_feed": "Show Community Feed"
+            },
+            "app_version": "App Version",
+            "build_version": "Build Version",
+            "contact_us_button": "Contact Us",
+            "sign_out_button": "Sign Out",
+            "app_sounds": "App Sounds",
+            "delete_account_button": "Delete Account",
+            "emailNotifications": {
+                "header": "Emails",
+                "friend_requests": "Friend Requests",
+                "messages": "Chat messages",
+                "inactive_posts": "Inactive Posts"
+            }
+        },
+        "action_sheets": {
+            "unfriend": "Unfriend {{userName}}",
+            "report": {
+                "button": "Report {{userName}}",
+                "title": "Why are you reporting this user?",
+                "inappropriate": "Inappropriate or Offensive",
+                "scam": "A Scam or Fake"
+            },
+            "cancel_friend_request": "Cancel Friend Request",
+            "confirm_friend_request": "Confirm Friend",
+            "delete_friend_request": "Delete Request"
+        },
+        "connected_users_list": {
+            "header": "Connected Accounts"
+        },
+        "profile_relationship": {
+            "0": {
+                "0": "Single",
+                "default": "Single +{{count}}"
+            },
+            "1": {
+                "0": "In relationship",
+                "default": "In relationship +{{count}}"
+            },
+            "2": {
+                "0": "Engaged",
+                "default": "Engaged +{{count}}"
+            },
+            "3": {
+                "0": "Married",
+                "default": "Married +{{count}}"
+            },
+            "4": {
+                "0": "Divorced",
+                "default": "Divorced +{{count}}"
+            },
+            "5": {
+                "0": "Widowed",
+                "default": "Widowed +{{count}}"
+            },
+            "6": {
+                "0": "It`s complicated",
+                "default": "It`s complicated +{{count}}"
+            },
+            "default": {
+                "0": " ",
+                "default": " "
+            }
+        }
+    },
+    "people": {
+        "sub_tabs": {
+            "sub_tab_1": "Discover People",
+            "sub_tab_2": "Friend Requests"
+        },
+        "invite_button": "Invite",
+        "invite_friends": {
+            "header": "Celebrate our community and\ninvite your friends to join.",
+            "invitation_method": {
+                "messenger": "Via Messenger",
+                "whatsapp": "Via Whatsapp",
+                "text": "Via SMS",
+                "email": "Via Email",
+                "more": "More"
+            },
+            "share_download_link": "Or copy and share this link.",
+            "copied_download_link": "Link copied to clipboard.",
+            "screen_header": "Invite Friends",
+            "invitation": "Hi!\nHave you heard of homeis? Crafted specifically for expats in {{cityName}}, homeis is a social network that brings people together. Interested? Download our app!\n\n{{downloadLink}}"
+        },
+        "friends_list": {
+            "header": "{{name}} Friends"
+        },
+        "entities_in_location": {
+            "from_header": "From {{name}}",
+            "around_header": "Around {{name}}"
+        },
+        "friendship_request_approved": "You and {{name}} are now friends.",
+        "friendship_request_declined": "Friend Request Declined",
+        "friendship_request": {
+            "mutual_friends": {
+                "one": "{{count}} Mutual Friend",
+                "other": "{{count}} Mutual Friends"
+            },
+            "empty_state": "No Mutual Friends",
+            "approve": "Approve"
+        },
+        "decline_friendship_modal": {
+            "ok_button": "Decline",
+            "cancel_button": "Cancel",
+            "header": "Don't wanna be friends?",
+            "explanation": "Are you sure you want to decline this\nfriend suggestion?"
+        },
+        "header": "Our Community",
+        "subheader": "Discover new homeis near you.",
+        "invite_friends_button": "Invite Friends",
+        "referral_program_invite_annotation": {
+            "title": "Invite friends and earn up to ${{sum}}",
+            "desc_line": "Got friends you think will enjoy homeis? \nHere's your chance to help them while earning some cash!",
+            "explanation_link": "How does it work?"
+        },
+        "referral_explanation": {
+            "title": "How does it work?",
+            "description": "Every homeis user has their own unique referral link. This link will be attached to every invitation you send via whatsapp, facebook, email, cellular message, or copy link.\n\nFor every user who registers from your link, you will earn ${{sumPerUser}} for use on Amazon. \n\nYou may also withdraw your earned money after 5 users join homeis through your link."
+        },
+        "referral_status_button": "View Redeem Status"
+    },
+    "groups": {
+        "member_data": {
+            "joined": "Joined at {{joinedAtDate}}",
+            "pending": "Pending since {{joinedAtDate}}"
+        },
+        "edit": {
+            "manage_group_members": {
+                "group_announcement_button": "Channel Announcement",
+                "member_removed": "Member removed.",
+                "member_declined": "Member request declined.",
+                "member_joined": "{{name}} joined your channel.",
+                "requests": {
+                    "empty_state": {
+                        "header": "No pending membership requests.",
+                        "text": "Any new requests will appear here."
+                    }
+                }
+            },
+            "screen_header": "Edit Channel",
+            "basic_details": {
+                "header": "Basic Details",
+                "name_input_label": "Channel Name (Up to 50 characters)",
+                "description_input_label": "Channel Description",
+                "rules_input_label": "Channel Rules"
+            },
+            "group_type": {
+                "header": "Channel Type",
+                "public_group_checkbox": "Public Channel",
+                "public_group_checkbox_label": "Everyone can see this channel, its members, and content. Anyone can join.",
+                "private_group_checkbox": "Closed Channel",
+                "private_group_checkbox_label": "Only members can view this content. Everyone can invite new members, however, only the channels manager can approves new members."
+            },
+            "save_button": "Save",
+            "action_sheets": {
+                "remove": {
+                    "header": "Are you sure you want to remove {{role}}?",
+                    "action": "Yes, remove {{role}}",
+                    "member": "member",
+                    "admin": "admin"
+                },
+                "view_profile": "View User Profile",
+                "remove_admin": "Remove Admin",
+                "make_admin": "Make Admin",
+                "remove_member": "Remove Member"
+            },
+            "hide_members_list": {
+                "label": "Show Channel Members",
+                "text": "Members can be seen by people who haven't joined the channel yet."
+            },
+            "header_items": {
+                "header": "Channel Boards",
+                "sub_header": "Check the boards you’d like to show (max 6).",
+                "selection_limit_modal": {
+                    "header": "Limit Reached",
+                    "body": "You can choose up to 6 boards.",
+                    "ok_button": "OK"
+                }
+            },
+            "group_posts": {
+                "header": "Channel Posts",
+                "sub_header": "Select what type of posts members can publish.",
+                "selection_limit_modal": {
+                    "header": "Limit Reached",
+                    "body": "You must select at least one post type.",
+                    "ok_button": "OK"
+                }
+            }
+        },
+        "sub_tabs": {
+            "sub_tab_1": "Discover Channels",
+            "sub_tab_2": "My Channels"
+        },
+        "group_list_item": {
+            "joined_button": "Joined",
+            "pending_button": "Pending",
+            "join_button": "Join",
+            "member_count": {
+                "one": "1 Member",
+                "other": "{{count}} Members"
+            },
+            "mutual_friends_count": {
+                "one": "1 friend is a member.",
+                "other": "{{count}} friends are members"
+            }
+        },
+        "create": {
+            "screen_header": "Create Channel",
+            "group_name_input_placeholder": "Channel Name",
+            "continue_button": "Continue",
+            "image_placeholder": "Add a cover image",
+            "update_image_button": "Update",
+            "closed_group": "Closed Channel",
+            "type_selector": "Visible only to channel members",
+            "description": "Description",
+            "description_placeholder": "What's this channel about?"
+        },
+        "view": {
+            "created_modal": {
+                "header": "Well done!\nYou've created a channel!",
+                "text": "Now is the perfect time to post and say hello to everyone!",
+                "button": "Let's Go"
+            },
+            "members_info": {
+                "manage_members": "Manage Members"
+            },
+            "manager_info": {
+                "title": "Admin"
+            },
+            "activity_empty_states": {
+                "member": {
+                    "header": "It’s awfully quiet here.",
+                    "text": "Be the first to share something with this channel."
+                },
+                "private_group": {
+                    "header": "Sorry, this is a closed channel.",
+                    "text": "Only members can post and see activity in this channel."
+                },
+                "public_group": {
+                    "header": "It’s awfully quiet here.",
+                    "text": "Join and be the first to share something with this channel."
+                }
+            },
+            "action_buttons": {
+                "post": "Post",
+                "edit": "Edit",
+                "pending_approval": "Pending Approval",
+                "join": "Join Channel",
+                "rules": "Rules",
+                "accept_invite": "Accept Invitation"
+            },
+            "action_sheets": {
+                "edit_group": "Edit Channel",
+                "share_group": "Share Channel",
+                "delete_group": "Delete Channel",
+                "leave_group": "Leave Channel",
+                "report_group": "Report Channel",
+                "report": {
+                    "header": "Why are you reporting this channel?",
+                    "inappropriate": "Inappropriate or Offensive",
+                    "scam": "A Scam or Fake",
+                    "duplicate": "Duplicated Channel",
+                    "not_relevant": "Not Relevant/Closed"
+                },
+                "add_members": "Add Members"
+            },
+            "delete_modal": {
+                "header": "Are you sure?",
+                "body": "This will delete all the channels content for good. There’s no way back."
+            },
+            "description_placeholder": "+  Describe what your channel is all about.",
+            "add_members_button": "+ Add",
+            "awaiting_approvals": "Awaiting Approvals",
+            "highlights": {
+                "header": "Channel Highlights",
+                "explanation": "Click on the 3-dotted icon and select <b>Highlight</b>.",
+                "entities": {
+                    "page": "Page",
+                    "group": "Channel",
+                    "event": "Event",
+                    "list": "List",
+                    "post": {
+                        "guide": "Guide",
+                        "promotion": "Sale",
+                        "tipRequest": "Question",
+                        "recommendation": "Recommendation",
+                        "statusUpdate": "Post",
+                        "job": "Job Offer",
+                        "realEstate": "Real Estate",
+                        "giveAndTake": "Buy/Sell",
+                        "groupAnnouncement": "Announcement"
+                    }
+                },
+                "dehighlight_modal": {
+                    "header": "Remove post from highlights?",
+                    "body": "Item will still be shown on channel feed."
+                }
+            },
+            "private_group_label": {
+                "one": "Closed Channel · 1 member",
+                "other": "Closed Channel · {{count}} members"
+            },
+            "public_group_label": {
+                "one": "Public Channel · 1 member",
+                "other": "Public Channel · {{count}} members"
+            },
+            "topic_label": {
+                "one": "1 follower",
+                "other": "{{count}} followers"
+            },
+            "publish_in_topic": "Publish in {{name}}...",
+            "unfollow_modal": {
+                "confirmText": "Yes",
+                "cancelText": "No",
+                "headerText": "Do you want to unfollow this channel?"
+            },
+            "follow_button": "Follow",
+            "unfollow_button": "Following"
+        },
+        "invite_members": {
+            "screen_header": "Add Members",
+            "edit_mode_button": "Invite",
+            "create_mode_button": "Create"
+        },
+        "group_category": {
+            "screen_header": "Pick a Category",
+            "header": "This channel is for people interested in",
+            "edit_button": "Set Channel Category",
+            "continue_button": "Continue"
+        },
+        "group_members": {
+            "screen_header": "Channel Members",
+            "sub_tabs": {
+                "sub_tab_1": "Everyone",
+                "sub_tab_2": "Awaiting approval"
+            }
+        },
+        "my_groups": {
+            "empty_state": {
+                "header": "You haven’t joined any channels yet.",
+                "text": "Browse our suggested channels and join some!"
+            }
+        },
+        "rules": {
+            "header": "Channel Rules",
+            "accept_button": "Accept",
+            "cancel_button": "Cancel"
+        },
+        "highlights_explanation_guide": "You can <b>Highlight Post</b> from the 3 dots menu. <green>Got It</green>!",
+        "create_button": "Create"
+    },
+    "communication_center": {
+        "title": "Inbox",
+        "sub_tabs": {
+            "sub_tab_1": "Notifications",
+            "sub_tab_2": "Messages"
+        },
+        "notifications": {
+            "turn_on_notifications_cta": {
+                "header": "Don't stay behind.",
+                "text": "Never miss an important update from your \nfriends and community.",
+                "button": "Turn on Notifications"
+            },
+            "aggregated_comments": {
+                "default": " commented on your post.",
+                "post": " commented on your post.",
+                "followed": " commented on a post you follow.",
+                "mentioned": " mentioned you in a comment.",
+                "listitem": " commented on an item in your list.",
+                "comment": " replied to your {{entityType}}."
+            },
+            "aggregated_posts": {
+                "default": " mentioned you in a post.",
+                "mentioned": " mentioned you in a post.",
+                "tipRequest": " asked a question, can you help?",
+                "groupAnnounce": " posted a channel announcement.",
+                "saved": " saved your post.",
+                "inactive": {
+                    "one": " is currently inactive",
+                    "other": " {{postType}} listings are currently inactive"
+                }
+            },
+            "aggregated_likes": {
+                "default": " thanked you for your post.",
+                "post": " thanked you for your post.",
+                "comment": " liked your comment on a post.",
+                "welcomed": " welcomed you to Homeis"
+            },
+            "aggregated_friendships": {
+                "default": " sent you a friend request.",
+                "request": " sent you a friend request.",
+                "approved": " approved your friend request."
+            },
+            "aggregated_groups": {
+                "default": " added you to the channel, <b>{{entityName}}</b>.",
+                "request": " requested to join the channel, <b>{{entityName}}</b>.",
+                "invited": " invited you to join the channel, <b>{{entityName}}</b>.",
+                "joinedByOther": " added you to the channel, <b>{{entityName}}</b>.",
+                "joinedBySelf": " joined your channel, <b>{{entityName}}</b>.",
+                "postInGroup": " posted in your channel, <b>{{entityName}}</b>.",
+                "approved": " approved your request to join the channel, <b>{{entityName}}</b>.",
+                "isAdmin": " added you as an admin to the channel, <b>{{entityName}}</b>.",
+                "frndPost": " posted in the channel, <b>{{entityName}}</b>. "
+            },
+            "aggregated_events": {
+                "invited": " invited you to the event, <b>{{entityName}}</b>.",
+                "upcomingTMR": "Remember that event you wanted to go to? <b>{{entityName}}</b> is coming up tomorrow!"
+            },
+            "aggregated_pages": {
+                "default": " started following your page <b>{{entityName}}</b> ",
+                "follow": " started following your page, <b>{{entityName}}</b>.",
+                "invited": " invited you to follow the page, <b>{{entityName}}</b>."
+            },
+            "empty_state": "No recent notifications.",
+            "aggregated_lists": {
+                "itemAdded": {
+                    "one": " added 1 item to your list, <b>{{entityName}}</b>. ",
+                    "other": " added {{activitiesCount}} items to your list, <b>{{entityName}}</b>."
+                },
+                "saved": " saved your list, <b>{{entityName}}</b>."
+            },
+            "aggregated_listitems": {
+                "saved": " saved your list item, <b>{{entityName}}</b>.",
+                "itemVoted": " voted for your item, <b>{{entityName}}</b>."
+            },
+            "aggregated_neighborhoods": {
+                "neighbourhood": {
+                    "default": "default",
+                    "joined": "<b>{{prefix}}</b> people from your neighborhood <b>{{entityName}}</b> had joined Homeis in the past week"
+                },
+                "city": {
+                    "default": "default",
+                    "joined": "<b>{{prefix}}</b> people from your city <b>{{entityName}}</b> had joined Homeis in the past week"
+                }
+            },
+            "notifications_permission_reason": "receive notifications",
+            "actors": {
+                "0": "<b>{{name}}</b>",
+                "1": "<b>{{name}}</b> and <b>1 other</b>",
+                "default": "<b>{{name}}</b> and <b>{{count}} others</b>"
+            },
+            "activities": {
+                "one": "<b>{{title}}</b>",
+                "other": "<b>{{title}}</b> and <b>{{count}} more</b>"
+            }
+        },
+        "conversations": {
+            "empty_state": {
+                "header": "No incoming messages.",
+                "text": "Send messages to your friends and let them know what's on your mind.",
+                "button": "Send a message"
+            },
+            "my_message": "You: ",
+            "image_message": "Image",
+            "input_placeholder": "Search People"
+        }
+    },
+    "select_users": {
+        "search_input_placeholder": "Search Friends",
+        "empty_state": "Couldn't find anyone...",
+        "user_status_type": {
+            "1": "Invited",
+            "2": "Pending",
+            "3": "Member",
+            "4": "Following"
+        }
+    },
+    "city": {
+        "city_sub_header": {
+            "job": {
+                "sub_header_tab_1": "Openings",
+                "sub_header_tab_2": "Seekers"
+            },
+            "realEstate": {
+                "sub_header_tab_1": "Listings",
+                "sub_header_tab_2": "Looking"
+            },
+            "giveAndTake": {
+                "sub_header_tab_1": "Offering",
+                "sub_header_tab_2": "Looking"
+            }
+        },
+        "city_filtered_results": {
+            "empty_states": {
+                "job": {
+                    "header": "No Jobs Yet",
+                    "text": "There are no jobs right now.\nCheck back later or post one yourself."
+                },
+                "realEstate": {
+                    "header": "No Listings Yet",
+                    "text": "There are no listings right now.\nCheck back later or post one yourself."
+                },
+                "giveAndTake": {
+                    "header": "No Listings Yet",
+                    "text": "There are no listings right now.\nCheck back later or post one yourself."
+                }
+            }
+        },
+        "saved_posts": {
+            "empty_state": {
+                "header": "You haven’t saved any posts yet.",
+                "text": "Browse feed and save your favorite posts."
+            }
+        },
+        "page_headers": {
+            "job": "Jobs",
+            "realEstate": "Apartments",
+            "giveAndTake": "Give and Take",
+            "tipRequest": "Questions",
+            "recommendation": "Recommendations",
+            "promotion": "Promotions",
+            "package": "Packages",
+            "groupAnnouncement": "Channel Announcements",
+            "job_subheader": "All jobs in the city.",
+            "realEstate_subheader": "All the apartments from your community.",
+            "giveAndTake_subheader": "Trade and sell your items.",
+            "tipRequest_subheader": "Q&A from your community.",
+            "recommendation_subheader": "Your community favorites."
+        },
+        "create_button": {
+            "job": "Create",
+            "realEstate": "Create",
+            "giveAndTake": "Create",
+            "recommendation": "Create",
+            "tipRequest": "Ask",
+            "guide": "Create"
+        }
+    },
+    "page": {
+        "main_form": {
+            "basic_details_section": "Basic Details",
+            "contact_details_section": "Contact Details",
+            "opening_hours_details_section": "Opening Hours",
+            "page_name_input_label": "Page Name",
+            "page_description_input_label": "Page Description",
+            "address_line_1_input_label": "Address Line 1",
+            "address_line_2_input_label": "Address Line 2 (floor, apt. etc.)",
+            "phone_number_input_label": "Phone Number",
+            "website_input_label": "Website URL",
+            "owner_checkbox": "I am the owner",
+            "create_page_button": "Create Page",
+            "edit_opening_hours_cta": "Edit your opening hours."
+        },
+        "edit": {
+            "header": "Edit Page",
+            "save_button": "Save"
+        },
+        "opening_hours_selector": {
+            "header": "Edit Opening Hours",
+            "monday": "Monday",
+            "tuesday": "Tuesday",
+            "wednesday": "Wednesday",
+            "thursday": "Thursday",
+            "friday": "Friday",
+            "saturday": "Saturday",
+            "sunday": "Sunday",
+            "from": "From",
+            "to": "To",
+            "done_button": "Done"
+        },
+        "view": {
+            "sub_tab_1": {
+                "header": "Recent Activity",
+                "owner_empty_state": {
+                    "header": "Hey, don't be shy.",
+                    "text": "Share something with your community so they can get to know you."
+                },
+                "visitor_empty_state": {
+                    "header": "Spread the word.",
+                    "text": "Invite friends from your community to follow this page.",
+                    "invite_friends_button": "Invite Friends"
+                }
+            },
+            "sub_tab_2": {
+                "header": "Reviews",
+                "empty_state": "This page hasn't received\nany reviews yet.",
+                "CTA": {
+                    "text": "Been here before? Worth mentioning?\nShare your experience so we can know if it's worthwhile!",
+                    "action": "Write a review"
+                }
+            },
+            "confirm_delete_modal": {
+                "header": "Delete Page?",
+                "body": "By deleting this page, all content will be erased and cannot be restored. Would you like to proceed?"
+            },
+            "description_cta": "+ Describe what your page is all about",
+            "post_button": "Post",
+            "edit_button": "Edit",
+            "saved_button": "Saved",
+            "save_button": "Save",
+            "following_button": "Following",
+            "follow_button": "Follow",
+            "action_sheet": {
+                "edit_page_info": "Edit Page Information",
+                "owner_invite_followers": "Invite New Followers",
+                "share_page": "Share Page",
+                "delete_page": "Delete Page",
+                "visitor_invite_followers": "Invite Friends to Follow",
+                "claim_page": "Claim Ownership",
+                "report_page": {
+                    "action_name": "Report Page",
+                    "header": "Why are you reporting this page?",
+                    "report_option_1": "Inappropriate or Offensive",
+                    "report_option_2": "A Scam or Fake",
+                    "report_option_3": "Duplicated Page",
+                    "report_option_4": "Not Relevant/Closed"
+                },
+                "unsave": "Remove from Saved Pages",
+                "unfollow": "Unfollow Page",
+                "delete_review": "Delete Review"
+            },
+            "invite_followers": {
+                "header": "Invite New Followers",
+                "invite_button": "Invite"
+            },
+            "saved_by": {
+                "header": "Saved By"
+            },
+            "cover_image": {
+                "update_button": "Update",
+                "add_image_cta": "Add a cover image."
+            },
+            "review_item": {
+                "see_more": "See More"
+            },
+            "modals": {
+                "page_created": {
+                    "header": "Well done!\nYou've created a page!",
+                    "body": "Now is the perfect time to add information about yourself!",
+                    "button": "Let's Go"
+                }
+            },
+            "location_cta": "+ Location",
+            "opening_hours_cta": "+ Opening Hours",
+            "phone_cta": "+ Phone Number",
+            "link_cta": "+ URL",
+            "saved_count": "{{count}} Saved",
+            "followers_count": "{{count}} Followers",
+            "opening_hours": {
+                "closed": "Closed",
+                "closed_full": "Closed Now",
+                "opens": "Opens {{nextOpenTime}}",
+                "open": "Open",
+                "open_until": "Open Until {{nextCloseTime}}",
+                "days": {
+                    "sunday": "Sunday",
+                    "monday": "Monday",
+                    "tuesday": "Tuesday",
+                    "wednesday": "Wednesday",
+                    "thursday": "Thursday",
+                    "friday": "Friday",
+                    "saturday": "Saturday"
+                }
+            },
+            "reviews": {
+                "list_name_prefix": "From the list:",
+                "comment_button": "Comment",
+                "comments": {
+                    "one": "{{count}} Comment",
+                    "other": "{{count}} Comments"
+                },
+                "comment_input_placeholder": "Add a comment..."
+            }
+        },
+        "all_pages": {
+            "create_button": "Create",
+            "top_header": "My Pages",
+            "bottom_header": "Discover Pages"
+        },
+        "create": {
+            "screen_header": "Page Creation",
+            "part2": {
+                "go_back": "Back",
+                "existing_page_disclaimer": "Seems like this page already exists in homeis. Are you the owner?",
+                "claim_ownership": "Claim Ownership",
+                "address_placeholder": "+ Address",
+                "website_placeholder": "+ URL",
+                "phone_number_placeholder": "+ Phone",
+                "save_button": "Save",
+                "submit_button": {
+                    "page": "Create",
+                    "recommendation": "Publish",
+                    "list_item": "Add"
+                },
+                "description": {
+                    "header": "What do you like about it?",
+                    "placeholder": "Is it tasty, special, cheap, or great for kids?"
+                }
+            },
+            "part1": {
+                "page": {
+                    "header": "What page would you like to create?",
+                    "placeholder": "Your Page Title"
+                },
+                "recommendation": {
+                    "header": "What would you like to recommend?",
+                    "placeholder": "Search for places, products, etc..."
+                },
+                "list_item": {
+                    "header": "header",
+                    "placeholder": "Search for places, products, etc..."
+                }
+            }
+        },
+        "claim_modal": {
+            "header": "Claim Ownership",
+            "submit_button": "Submit",
+            "cancel_button": "Cancel",
+            "input_placeholder": "Please provide evidence of your ownership, such as email, phone number, and any other relevant details. We will contact you to validate this information shortly.",
+            "done_header": "Thanks!",
+            "done_explanation": "We will contact you to validate this information shortly.",
+            "done_button": "I'm Done"
+        }
+    },
+    "neighborhoods": {
+        "empty_state": {
+            "header": "OMG, nobody's here!",
+            "text": "Share Homeis with your neighborhood friends."
+        }
+    },
+    "category_selector": {
+        "input_placeholder": "Enter your profession. For example, Dentist.",
+        "frequently_used_header": "Frequently Used"
+    },
+    "events": {
+        "sub_tabs": {
+            "sub_tab_1": "Discover Events",
+            "sub_tab_2": "My Events"
+        },
+        "display_component": {
+            "invited": "<b>{{invitedByName}}</b> invited you to an event.",
+            "invitation_elapsed_time": "{{invitationElapsedTime}} ago",
+            "public_event_details": "Public Event",
+            "private_event_details": "Private Event",
+            "no_rsvps": "No RSVP's yet",
+            "interested": "Interested",
+            "rsvps_count": {
+                "one": "1 person is interested.",
+                "other": "{{count}} people are interested."
+            }
+        },
+        "create": {
+            "name_input_label": "Event Name",
+            "starts_on_button": "Starts On",
+            "date_and_time_button": "Date and Time",
+            "ends_on_button": "Ends On",
+            "location_button": "Location",
+            "type_selector_header": "Private Event",
+            "type_selector": "Visible only to people who were invited.",
+            "update_image_button": "Update",
+            "add_image": "Add a cover photo.",
+            "hosted_by": "Hosted by",
+            "screen_header": "Create Event",
+            "description": "Description",
+            "description_placeholder": "What's this event about?",
+            "publish_button": "Publish",
+            "publish_date": "Publish Date"
+        },
+        "view": {
+            "post_button": "Post Something",
+            "recent_activity_header": "Recent Activity",
+            "private_event": "Private Event · ",
+            "hosted_by": "Hosted by ",
+            "description_cta": "+ Add more color, dive into any specifics that matter",
+            "delete_event_modal_header": "Delete Event?",
+            "invitees_info": {
+                "no_rsvp": "No RSVP's yet",
+                "going": "{{yes}} Going · ",
+                "interested": "{{maybe}} Interested",
+                "invited": " · {{invited}} Invited"
+            },
+            "details": {
+                "ends": "Ends {{endsOnTime}}"
+            },
+            "cover_image": {
+                "update_button": "Update",
+                "add_cover_image_cta": "Add a cover image"
+            },
+            "activity": {
+                "empty_state": {
+                    "header": "It’s awfully quiet here.",
+                    "text": "Be the first to promote this event."
+                }
+            },
+            "action_buttons": {
+                "invite_guests": "Invite Guests",
+                "edit_event": "Edit Event",
+                "going": "I'm In",
+                "interested": "Interested",
+                "not_going": "Busy"
+            },
+            "action_sheets": {
+                "edit_button": "Edit Event",
+                "share_button": "Share Event",
+                "delete_button": "Delete Event",
+                "invite_friends_button": "Invite Friends",
+                "report": {
+                    "button": "Report Event",
+                    "header": "Why are you reporting this event?",
+                    "inappropriate": "Inappropriate or Offensive",
+                    "scam": "A Scam or Fake",
+                    "duplicate": "Duplicated Event",
+                    "not_relevant": "Not Relevant/Closed"
+                }
+            }
+        },
+        "edit": {
+            "screen_header": "Edit Event",
+            "basic_info": {
+                "header": "Basic Info",
+                "name_input_placeholder": "Event Name (Up to 50 characters)",
+                "website_input_placeholder": "Website URL"
+            },
+            "starts_on": "Starts on",
+            "ends_on": "Ends on",
+            "location": "Location",
+            "category": "Event Category",
+            "more_details": "More Details",
+            "private_event_explanation_header": "This is a private event.",
+            "private_event_explanation": "Visible only to people who were invited.",
+            "delete_event_modal": {
+                "header": "Delete Event?",
+                "body": "By removing this event, all its content will be deleted. Would you like to continue?"
+            },
+            "description_placeholder": "Who should join and what will you do?"
+        },
+        "event_host": {
+            "screen_header": "Change Event Host"
+        },
+        "invite_guests": {
+            "screen_header": "Invite Guests",
+            "members": "{{name}} Members",
+            "send_invites": "Send"
+        },
+        "invitees_list": {
+            "screen_header": "Guest List",
+            "going": "{{yes}} Going",
+            "maybe": "{{maybe}}  Interested",
+            "invited": "{{invited}} Invited",
+            "no": "{{no}} Not Going",
+            "frienship_sent_button": "Pending"
+        },
+        "date_time_editor": {
+            "screen_header": "Edit Date and Time",
+            "starts_on": "Starts on",
+            "ends_on": "Ends on"
+        },
+        "create_button": "Create",
+        "header": "Events",
+        "subheader": "Events you can't miss!"
+    },
+    "tab_names": {
+        "home": "Home",
+        "people": "People",
+        "groups": "Channels",
+        "activity": "Activity",
+        "city": {
+            "neighbourhood": "My City",
+            "city": "Profile"
+        }
+    },
+    "home": {
+        "sub_tabs": {
+            "sub_tab_1": "My Feed",
+            "sub_tab_2": "Community",
+            "sub_tab_3": "Scheduled"
+        },
+        "post_button": "Post",
+        "boards": {
+            "job": "Jobs",
+            "events": "Events",
+            "realEstate": "Real Estate",
+            "giveAndTake": "Give / Take"
+        },
+        "post_button_text": "What's new in the city?",
+        "user_greeting": "Hey {{name}}",
+        "morning": "Good morning!",
+        "afternoon": "Good afternoon!",
+        "evening": "Good evening!",
+        "search_placeholder": "Find People, Restaurants, Services...",
+        "scheduled_empty_state": {
+            "header": "No scheduled posts yet."
+        }
+    },
+    "image_picker": {
+        "permission_error": {
+            "header": "Permission not granted.",
+            "body": "Photo Library permissions is needed.\nGo to settings and enable access to continue.",
+            "button": "Ok"
+        },
+        "video_picker": {
+            "title": "Video Picker",
+            "button": "Take Video"
+        },
+        "options": {
+            "gallery": "Choose from Library",
+            "video_camera": "Take a Video",
+            "image_camera": "Take a Photo"
+        }
+    },
+    "error_boundaries": {
+        "connection": {
+            "title": "No internet connection.",
+            "body": "Please try refreshing this page."
+        },
+        "default": {
+            "title": "Oops, something went wrong...",
+            "body": "We're sorry for the inconvenience. Please try again later."
+        },
+        "feed": {
+            "title": "Can't load feed",
+            "body": "Please try refreshing this page."
+        },
+        "go_back": {
+            "title": "Oops, something went wrong...",
+            "body": "Please try to go back."
+        },
+        "members_only": {
+            "title": "Members Only.",
+            "body": "Sorry, only members can view this page."
+        },
+        "not_found": {
+            "title": "Oops, we seem to be lost!",
+            "body": "Sorry for the inconvenience. We couldn't find this page."
+        }
+    },
+    "header": {
+        "cancel_button": "Cancel",
+        "update_button": "Update",
+        "search": "Search",
+        "online_toast": "And we're back!",
+        "offline_toast": "No internet connection.",
+        "search_inactive": "People, Places, Events..."
+    },
+    "modals": {
+        "after_report": {
+            "title": "Thank you for your report",
+            "body": "This item will be reviewed by our team. If it violates our community standards, it will be removed.",
+            "button": "OK"
+        },
+        "delete": {
+            "delete_button": "Delete",
+            "cancel_button": "Cancel"
+        },
+        "error": {
+            "title": "Oops, something went wrong...",
+            "body": "We're sorry for the inconvenience. Please try again later.",
+            "button": "Dismiss"
+        },
+        "settings": {
+            "text": "To {{actionText}}, Homeis needs access to your phone's {{permissionText}}.",
+            "with_go_to_setting_button_text": "Tap settings to allow {{permissionText}}",
+            "without_go_to_setting_button_text": "Go to settings and allow {{permissionText}}",
+            "dismiss_button": "Close",
+            "settings_button": "Settings",
+            "permission_types": {
+                "location": "location"
+            }
+        },
+        "permission_restricted": "{{permissionText}} is restricted on your phone"
+    },
+    "image_upload": {
+        "header": "Uploading...",
+        "cancel_button": "Cancel",
+        "save_button": "Save",
+        "uploading": "Uploading"
+    },
+    "search_address": {
+        "not_found": "We couldn't find anything for {{query}}.",
+        "search_neighborhood_placeholder": "Search for a neighborhood or town.",
+        "search_address_placeholder": "Search for a place or an address."
+    },
+    "search": {
+        "empty_state": "No recent searches",
+        "result": {
+            "num_of_items": {
+                "one": "1 Item",
+                "other": "{{count}} Items"
+            },
+            "num_of_members": {
+                "one": "1 Member",
+                "other": "{{count}} Members"
+            }
+        },
+        "suggestions_popular": "Popular Searches",
+        "suggestions_recent": "Recent Searches",
+        "results_topics": "Related Channels",
+        "results_searches": "Search Results"
+    },
+    "search_result": {
+        "empty_state": "We couldn't find anything for {{query}}."
+    },
+    "change_password": {
+        "header": "Change Password",
+        "old_password_label": "Old Password",
+        "new_password_label": "New Password",
+        "new_password_error": "Password must contain at least 8 characters.",
+        "repeat_new_password_label": "Repeat New Password",
+        "repeat_new_password_error": "Passwords do not match.",
+        "save_button": "Save",
+        "error": "Failed to reset password.",
+        "error_modal": {
+            "header": "Error",
+            "body": "That reset link has expired or isn’t valid.",
+            "button": "Dismiss"
+        }
+    },
+    "guide_post_editor": {
+        "titlePlaceholder": "Add a Clear Title",
+        "textPlaceholder": "Write something."
+    },
+    "post_editor": {
+        "real_estate": {
+            "type_labels": {
+                "offering": "New Listing",
+                "seeking": "Looking"
+            },
+            "tag_labels": {
+                "buy": "Buy",
+                "sell": "Sell",
+                "rent": "Rent",
+                "sublet": "Sublet",
+                "roommates": "Roommates",
+                "commercial": "Commercial",
+                "swap": "Swap"
+            },
+            "placeholders": {
+                "mandatory_title": "Title *",
+                "price_and_symbol": "Price ($)",
+                "size_and_symbol": "Size (sqft)",
+                "rooms": "Rooms",
+                "location": "Location",
+                "mandatory_description": "Describe Your Listing *",
+                "start_date": "Start date",
+                "end_date": "End date"
+            },
+            "values": {
+                "size": "{{size}} (sqft)",
+                "rooms": {
+                    "one": "1 Room",
+                    "other": "{{count}} Rooms"
+                }
+            },
+            "rooms_picker_title": "How many rooms?"
+        },
+        "give_take": {
+            "type_labels": {
+                "offering": "Give",
+                "seeking": "Take"
+            },
+            "tag_labels": {
+                "free": "Free",
+                "price": "For Sale"
+            },
+            "placeholders": {
+                "mandatory_title": "Title",
+                "price_and_symbol": "Price ($)",
+                "mandatory_description": "Description"
+            }
+        },
+        "job": {
+            "offering_label": "Offering",
+            "looking_label": "Looking",
+            "title_placeholder": "Job Title",
+            "company_placeholder": "Company (optional)",
+            "location_placeholder": "Location (optional)",
+            "offering_placeholder": "Please describe what you're looking for.",
+            "looking_placeholder": "Describe your skills that fit the job you're looking for.",
+            "categories": {
+                "tech": "Tech",
+                "food": "F&B",
+                "babysitter": "Babysitting",
+                "realEstate": "Real Estate",
+                "finance": "Finance",
+                "sales": "Sales",
+                "production": "Production",
+                "administration": "Administration",
+                "education": "Education"
+            }
+        },
+        "titled_post": {
+            "title_label": "Title"
+        },
+        "bottom_section": {
+            "post_button": "Post",
+            "save_button": "Save",
+            "cancel_button": "Cancel"
+        },
+        "post_placeholders": {
+            "statusUpdate": "What's up? Talk to us.",
+            "package": "Somebody is available?",
+            "homeNostalgic": "Aww, we feel you!",
+            "meeting": "Alone is sad. Together is forever :)",
+            "recommendation": "Share it with our community. We trust you!",
+            "tipRequest": "We’re all expats here. Ask for help.",
+            "groupAnnouncement": "Type your announcement.",
+            "guide": "Share your insights.",
+            "entityShare": "Say something about this...",
+            "promotion": "Got anything to promote?",
+            "list": "Explain why you've created this list.",
+            "event": "Spread the word about your new event..."
+        },
+        "upload_header": "Uploading",
+        "category_selector_header": "Select Categories",
+        "post_type_definitions": {
+            "statusUpdate": {
+                "text": "Status Update"
+            },
+            "tipRequest": {
+                "text": "Question",
+                "disclaimer": "This post will be shown to everyone."
+            },
+            "recommendation": {
+                "text": "Recommend"
+            },
+            "meeting": {
+                "text": "Meeting"
+            },
+            "guide": {
+                "text": "Guide"
+            },
+            "homeNostalgic": {
+                "text": "Home Nostalgic"
+            },
+            "package": {
+                "text": "Package",
+                "disclaimer": "This post will be shown to everyone."
+            },
+            "entityShare": {
+                "text": "Share"
+            },
+            "promotion": {
+                "text": "Promotion"
+            },
+            "job": {
+                "text": "Job"
+            },
+            "realEstate": {
+                "text": "Real Estate"
+            },
+            "giveAndTake": {
+                "text": "Give/Take"
+            },
+            "groupAnnouncement": {
+                "text": "Channel Announcement",
+                "disclaimer": "Members will be notified and the post will be pinned."
+            },
+            "list": {
+                "text": "List"
+            },
+            "event": {
+                "text": "Event"
+            }
+        },
+        "preview_section": {
+            "cta_title": "Add a cover image",
+            "action_sheets": {
+                "delete_preview": "Delete Preview"
+            },
+            "shared": {
+                "public_group": "Public Channel",
+                "private_group": "Private Channel",
+                "list": "By {{name}}",
+                "group_members": {
+                    "one": "1 member",
+                    "other": "{{count}} members"
+                }
+            }
+        },
+        "discard_modal": {
+            "header": "Really? Are you sure?",
+            "delete_button": "Delete",
+            "discard_button": "Discard",
+            "cancel_button": "Cancel",
+            "keep_button": "Keep",
+            "delete_explanation": "Your post will be deleted.",
+            "discard_explanation": "Your changes will be discarded."
+        },
+        "share_to": "Share to",
+        "post_in": "Post in",
+        "list": {
+            "placeholders": {
+                "mandatory_title": "List Title",
+                "mandatory_description": "List Description"
+            },
+            "update_image_button": "Update",
+            "add_image": "Add cover image",
+            "collaboration_switch": "Other users can add items.",
+            "create_action": "Publish",
+            "edit_action": "Save",
+            "add_items_link": "Add Items",
+            "delete_modal": {
+                "header": "Really? Are you sure?",
+                "body": "Your item will be deleted."
+            },
+            "view_type": "List View Type"
+        },
+        "image_upload_error": {
+            "toast": {
+                "one": "{{count}} image couldn't be uploaded.",
+                "other": "{{count}} images couldn't be uploaded"
+            },
+            "image_cover": "This image could not be uploaded."
+        },
+        "category_selector_submit": "I'm done.",
+        "dates_editor": {
+            "header": "Dates",
+            "save_button": "Save",
+            "starts_on": "Starts on",
+            "ends_on": "Ends on",
+            "schedule_post_header": "Schedule Post"
+        },
+        "post_button": "Publish",
+        "post_as": "Post as {{publisherName}}",
+        "context_slider": {
+            "change": "Change",
+            "show_all_chip": "Show All"
+        },
+        "publish_now_modal": {
+            "header": "Really? Are you sure?",
+            "proceed_button": "Proceed",
+            "cancel_button": "Cancel",
+            "proceed_explanation": "Your scheduled post will be published now."
+        },
+        "active_switch": {
+            "header": "Active",
+            "sub_header": "Select if you want this post to be visible"
+        },
+        "publish_date_header": "Publish Date"
+    },
+    "post_page": {
+        "input_placeholder": "Add a comment...",
+        "button": "Post"
+    },
+    "comment": {
+        "title": "Edit Comment",
+        "action_sheets": {
+            "edit": "Edit Comment",
+            "report": "Report Comment",
+            "delete": {
+                "header": "Are you sure about it?",
+                "button": "Delete Comment",
+                "confirm": "Yes"
+            }
+        },
+        "comment_placholder": "Add a comment...",
+        "reply_placholder": "Write a reply.",
+        "reply_header": "Replying to <b>{{name}}</b>."
+    },
+    "entity_type_to_name": {
+        "user": "People",
+        "page": "Page",
+        "post": "Guide",
+        "group": "Channel",
+        "category": "City",
+        "event": "Event",
+        "list": "List",
+        "neighborhood": "Neighborhood",
+        "topic": "Channel"
+    },
+    "tags": {
+        "server_tags": {
+            "buy": "Buy",
+            "buy/sell": "Buy/Sell",
+            "City & Gov": "City & Gov",
+            "commercial": "Commercial",
+            "Education": "Education",
+            "Entertainment": "Entertainment",
+            "Essentials": "Essential",
+            "Family & Kids": "Family & Kids",
+            "Finance": "Finance",
+            "Food": "Food",
+            "for sale": "For Sale",
+            "free": "Free",
+            "Health": "Health",
+            "Insurance": "Insurance",
+            "Legal": "Legal",
+            "Real Estate": "Real Estate",
+            "Religion": "Religion",
+            "Relocation": "Relocation",
+            "rent": "Rent",
+            "roommates": "Roommates",
+            "sublet": "Sublet",
+            "Sublets": "Sublets",
+            "Travel": "Travel",
+            "הומיז": "הומיז",
+            "Other": "Other",
+            "tech": "Tech",
+            "food": "F&B",
+            "babysitter": "Babysitting",
+            "realEstate": "Real Estate",
+            "finance": "Finance",
+            "sales": "Sales",
+            "production": "Production",
+            "administration": "Administration",
+            "education": "Education"
+        },
+        "real_estate": "Real Estate",
+        "give_take": "Give and Take",
+        "jobs": "Jobs",
+        "recommendation": "Recommendations",
+        "events": "Events",
+        "groups": "Channels",
+        "pages": "Pages"
+    },
+    "moment": {
+        "relativeTime": {
+            "future": "in %s",
+            "past": "%s ago",
+            "s": "a few sec",
+            "ss": "%d sec",
+            "m": "a min",
+            "mm": "%d min",
+            "h": "an hr",
+            "hh": "%d hrs",
+            "d": "a day",
+            "dd": "%d days",
+            "M": "a month",
+            "MM": "%d months",
+            "y": "a year",
+            "yy": "%d years"
+        },
+        "years_old": "years old"
+    },
+    "list": {
+        "display_component": {
+            "by": " By ",
+            "saved_button": "Saved",
+            "save_button": "Save",
+            "share_button": "Share",
+            "edit": "Edit",
+            "items": {
+                "one": "Item",
+                "other": "Items"
+            },
+            "votes": {
+                "one": "Vote",
+                "other": "Votes"
+            },
+            "contributors": {
+                "one": "Contributor",
+                "other": "Contributors"
+            },
+            "total_saves": {
+                "empty_state": "Be the first to save it!",
+                "text": "Saved"
+            },
+            "saves_count": "{{totalSaves}} Saved",
+            "vote_btn": "UPVOTE",
+            "voted_btn": "VOTED",
+            "sort": {
+                "title": "Sort by",
+                "votes": "Popularity",
+                "distance": "Near me"
+            }
+        },
+        "list_of_lists": {
+            "create_button": "Create",
+            "screen_header": {
+                "one": "   List (1)",
+                "other": "   Lists ({{count}})"
+            }
+        },
+        "add_item": {
+            "add_header": "Add Item",
+            "edit_header": "Edit Item"
+        },
+        "view": {
+            "save_button": "Save",
+            "add_button": "Add",
+            "add_item": "Add item",
+            "footer_text": "Feel like something is missing from this list?\nAdd something of your own!",
+            "action_sheets": {
+                "save": "Save List",
+                "unsave": "Unsave List",
+                "edit": "Edit List",
+                "delete": {
+                    "header": "Are you sure you want to delete this list?",
+                    "delete_button": "Delete List",
+                    "confirm": "Yes"
+                }
+            },
+            "items_list_footer": "Want to add something?\nShare your experience and add recommendations to this list.",
+            "actor_prefix": "By",
+            "location_request_reason": "sort by your location"
+        },
+        "item": {
+            "view": {
+                "view_page": "See Page",
+                "created_by": "By <green>{{name}}</green>",
+                "save_button": "Save",
+                "saved_button": "Saved",
+                "index": {
+                    "other": "th",
+                    "1": "st",
+                    "2": "nd",
+                    "3": "rd"
+                },
+                "out_of": "Out of {{totalItems}}",
+                "total_voters": {
+                    "one": "Voter",
+                    "other": "Voters"
+                },
+                "comment": "Comment",
+                "no_voters": "Be the first to vote!",
+                "recommended_by_you": {
+                    "text": "Thanks for your review!",
+                    "recommendation_button": "See Review"
+                }
+            },
+            "action_sheets": {
+                "save": "Save Item",
+                "unsave": "Unsave Item",
+                "edit": "Edit Item",
+                "delete": {
+                    "header": "Are you sure you want to delete this item?",
+                    "delete_button": "Delete Item",
+                    "confirm": "Yes"
+                }
+            }
+        },
+        "contributors_list": {
+            "header": {
+                "one": "1 Contributor",
+                "other": "{{count}} Contributors"
+            }
+        },
+        "savers_list": {
+            "header": "{{totalSaves}} Saved"
+        },
+        "voters_list": {
+            "header": {
+                "one": "1 Voter",
+                "other": "{{count}} Voters"
+            }
+        },
+        "map_carousel": {
+            "savers": "{{totalSaves}} Saved"
+        },
+        "map": {
+            "user_location_error": "Cannot access your location"
+        }
+    },
+    "action_sheets": {
+        "cancel": "Cancel"
+    },
+    "carousels": {
+        "post_type_names": {
+            "statusUpdate": "Status Update",
+            "tipRequest": "Question",
+            "recommendation": "Recommendation",
+            "meeting": "Meeting",
+            "guide": "Guide",
+            "homeNostalgic": "Home Nostalgic",
+            "package": "Package",
+            "promotion": "Promotion",
+            "job": "Job",
+            "realEstate": "Real Estate",
+            "giveAndTake": "Give/Take",
+            "groupAnnouncement": "Announcement",
+            "page": "Page",
+            "entityShare": "Shared Entity"
+        },
+        "entity_type_names": {
+            "list": "List",
+            "group": "Channel",
+            "page": "Page",
+            "event": "Event"
+        }
+    },
+    "entity_lists": {
+        "thankers": "Thankers",
+        "likers": "Likers",
+        "savers": "Savers",
+        "welcomes": "Welcomes",
+        "voters": "Voters"
+    },
+    "searchable_form": {
+        "placeholders": {
+            "title": "Search an item or add a title.",
+            "url": "URL (Optional)",
+            "description": "Describe why you like this item."
+        },
+        "preview": {
+            "header": "Item Preview",
+            "title": "Title",
+            "actor_prefix": "By",
+            "description": "Your description will show up here."
+        },
+        "add_button": "Add",
+        "post_button": "Post",
+        "edit_button": "Save",
+        "add": "Add",
+        "suggestions_header": "You can use our suggestions.",
+        "suggestions_empty_title": "No Suggestions",
+        "suggestions_empty_text": "You can use your own title or try typing something else.",
+        "edit": "Edit",
+        "use": "Use",
+        "remove": "Remove",
+        "no_address": "No Address",
+        "create": "Create"
+    },
+    "user_entity_component": {
+        "add_button": "Add",
+        "undo_button": "Undo",
+        "mutual_friends": {
+            "one": "<b>1</b> Mutual",
+            "other": "<b>{{count}}</b> Mutual"
+        },
+        "friends": "Friends",
+        "arrival_date": "Arrived {{arrivalDate}} ago",
+        "empty_state": "You don't have any mutual friends.",
+        "pending_button": "Pending"
+    },
+    "post_lists": {
+        "screen_header": {
+            "guide": "Community Guides",
+            "guide_in_context": "Guides",
+            "recommendation": "Recommendations",
+            "recommendation_in_context": "Recommendation"
+        },
+        "top_sub_header": {
+            "guide": "Saved Guides",
+            "recommendation": "Saved Recommendations"
+        },
+        "bottom_sub_header": {
+            "guide": "Discover Guides",
+            "recommendation": "Discover Recommendations"
+        }
+    },
+    "themes": {
+        "family": "Family & Kids",
+        "health": "Health & Wellness",
+        "legal": "Legal & Finance",
+        "travel": "Travel",
+        "lifestyle": "Lifestyle",
+        "essentials": "Essential",
+        "eatDrink": "Eat & Drink",
+        "other": "Other",
+        "suggested": "Suggested",
+        "all": "All",
+        "myhood": {
+            "neighbourhood": "My Hood",
+            "city": "My City"
+        }
+    },
+    "save_modal": {
+        "header": "Save to",
+        "subheader": "Select at least one collection.",
+        "saved_header": "Saved!",
+        "saved_subheader": "Item saved to these collections:",
+        "submit_button": "Save"
+    },
+    "profile_entities_list": {
+        "create_button": "Create",
+        "groups": {
+            "suggested_title": "Suggested Channels",
+            "admin_title": "Channel Admin",
+            "membered_title": "Member In"
+        },
+        "pages": {
+            "suggested_title": "Suggested Pages",
+            "owner_title": "Page Owner",
+            "following_title": "Following"
+        }
+    },
+    "theme_view": {
+        "myTheme": {
+            "top_section_sub_header": "Recommended for You",
+            "bottom_section_sub_header": "My Saved Items"
+        },
+        "othersTheme": {
+            "bottom_section_sub_header": "Browse By"
+        },
+        "all_items": {
+            "bottom_section_sub_header": "Explore By"
+        },
+        "options": {
+            "default": "Content",
+            "group": "Channels",
+            "event": "Events",
+            "all": "Featured",
+            "list": "Lists",
+            "page": "Recommendations",
+            "realEstate": "Real Estate",
+            "giveAndTake": "Give & Take",
+            "feed": "Feed"
+        }
+    },
+    "entity_recommended_by": {
+        "recommended_by": "Recommended By",
+        "from_list": "From the list"
+    },
+    "empty_states": {
+        "event": {
+            "header": "No events yet.",
+            "body": "Select a different category or create a new event."
+        },
+        "group": {
+            "header": "No channels yet.",
+            "body": "Select a different category or create a new channel."
+        },
+        "guide": {
+            "header": "No guides yet.",
+            "body": "Select a different category or create a new guide by yourself"
+        },
+        "othersTheme": {
+            "header": "No items yet.",
+            "body": "{{userName}} hasn't saved any item to this collection. "
+        },
+        "profile": {
+            "header": "Looks kinda quiet here.",
+            "body": {
+                "visitor": "When {{name}} will publish something it will appear here.",
+                "owner": "Share something with your friends and community so they can get to know you."
+            }
+        },
+        "myTheme": {
+            "saved": {
+                "header": "It’s kinda lonely here.",
+                "body": "Save things you love or just wanna read later. Come on, try it!"
+            },
+            "explore": {
+                "header": "No items here yet.",
+                "body": "Select a different category or create a new item."
+            }
+        },
+        "page": {
+            "header": "No pages here yet.",
+            "body": "Select a different category or create a new page."
+        },
+        "users": {
+            "header": "Couldn't find any people.",
+            "body": "Try to readjust or clear your filters selections"
+        }
+    },
+    "savers_and_followers": {
+        "title": "Savers & Followers",
+        "tabs": {
+            "savers": "Saved",
+            "followers": "Followers"
+        }
+    },
+    "referral_program_status": {
+        "screen_header": "Joined Friends",
+        "redeemed_users_title": "Already Redeemed",
+        "redeem_button": "Redeem ${{sum}}",
+        "unverified_mail_modal": {
+            "title": "Hey, one more thing",
+            "text": "We need to verify your email address just to make sure you’ll get it.",
+            "cancel_button": "Cancel",
+            "confirm_button": "Verify Email"
+        },
+        "redeem_button_disabled_messages": {
+            "processing": "Your reward will be available after processing your request.",
+            "min_users": "You may redeem your reward after 5 friends join homeis."
+        },
+        "empty_state": {
+            "title": "No one has joined yet!",
+            "body": "Once your friends join,\nyou will see them here."
+        }
+    },
+    "referral_redeemed": {
+        "title": "Yeaaaa, baby!",
+        "text": "Congrats! You’ve just earned ${{redeemSum}} to spend on Amazon! It can take up to 48 hours to recive an email with your coupon code.",
+        "action_summary": "A coupon will be sent to {{email}}."
+    },
+    "neighborhood_view": {
+        "neighbourhood": {
+            "users_title": "Homeis in the Hood",
+            "users_total": "View All ({{count}})",
+            "my_hood_subtitle": "Discover what's new in your hood",
+            "hood_subtitle": "Discover what's good in the hood",
+            "view_all_card": "View All homeis",
+            "tabs": {
+                "explore": "Explore",
+                "saved": "Saved Items"
+            },
+            "in_hood": "In your hood",
+            "number_in_other_hood": "{{count}} In {{hoodName}}",
+            "number_in_hood": "{{count}} in your hood"
+        },
+        "city": {
+            "users_title": "Homeis in the City",
+            "users_total": "View All ({{count}})",
+            "my_hood_subtitle": "Discover what's new in your city",
+            "hood_subtitle": "Discover what's good in the city",
+            "view_all_card": "View All homeis",
+            "tabs": {
+                "explore": "Explore",
+                "saved": "Saved Items"
+            },
+            "in_hood": "In your city",
+            "number_in_other_hood": "{{count}} In {{hoodName}}",
+            "number_in_hood": "{{count}} in your city"
+        },
+        "feed_error_state": {
+            "title": "Something went wrong...",
+            "text": "Select a different category or refresh the feed"
+        },
+        "post_button_text": "What's new around?"
+    },
+    "no_hood_view": {
+        "neighbourhood": {
+            "add_hood_button": "Add Your Hood",
+            "title": "My Hood",
+            "subtitle": "Find places, things to do and other homeis from your hood!",
+            "cancel": "Cancel"
+        },
+        "city": {
+            "add_hood_button": "Add Your City",
+            "title": "My City",
+            "subtitle": "Find places, things to do and other homeis from your city!",
+            "cancel": "Cancel"
+        }
+    },
+    "filters": {
+        "price": {
+            "header": "Price"
+        },
+        "rooms": {
+            "header": "Rooms"
+        },
+        "dates": {
+            "search": "Select Dates",
+            "picker_title": "Select dates",
+            "header": "Dates",
+            "from": "From",
+            "to": "To"
+        },
+        "genders": {
+            "header": "Gender",
+            "0": "Man",
+            "1": "Woman",
+            "2": "Other",
+            "3": "Unknown"
+        },
+        "age": {
+            "header": "Age"
+        },
+        "title": "Filter by",
+        "ok_button": "Filter",
+        "more": "more",
+        "neighborhoodsIds": {
+            "header": "Location",
+            "search": "Search"
+        },
+        "friendshipStatuses": {
+            "header": "Friendship",
+            "0": "Not friends",
+            "1": "My friends"
+        },
+        "relationshipStatuses": {
+            "header": "Relationship Status",
+            "0": "Single",
+            "1": "In relationship",
+            "2": "Engaged",
+            "3": "Married",
+            "4": "Divorced",
+            "5": "Widowed",
+            "6": "It's complicated",
+            "7": "Unknown"
+        },
+        "tags": {
+            "header": "Category"
+        },
+        "recentlyJoined": {
+            "header": "Recently joined"
+        }
+    },
+    "context_picker": {
+        "title": "Post In",
+        "entity_types": {
+            "topic": "Channel",
+            "group": "Channel",
+            "group_admin": "Channel (Admin)"
+        }
+    },
+    "publisher_picker": {
+        "title": "Post As"
+    },
+    "category_picker": {
+        "placeholder": "Select Categories"
+    },
+    "category_selector_header": "Select Categories",
+    "map": {
+        "external_map_button": "Open in Maps."
+    },
+    "add_list_item": {
+        "added_modal": {
+            "title": "Great choice {{name}}!",
+            "text": "You can view what others added to the list and vote for the best!",
+            "view_list_button": "View List",
+            "dismiss_button": "Maybe later"
+        }
+    }
+}
