@@ -8,8 +8,12 @@
 	<dict>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 		<key>069839B6-B265-4ED3-B916-871790E2A3BD</key>
+=======
+		<key>1C4F76AA-C5E6-444F-852E-785742B742DA</key>
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 =======
 		<key>1C4F76AA-C5E6-444F-852E-785742B742DA</key>
 >>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
@@ -19,6 +23,7 @@
 			<key>documentTypeString</key>
 			<string>&lt;nil&gt;</string>
 			<key>domainType</key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
 			<key>fileName</key>
@@ -59,6 +64,8 @@
 			<key>uniqueIdentifier</key>
 			<string>13426BA4-3AB0-4E5D-BE38-A95C48A43259</string>
 =======
+=======
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.target</string>
 			<key>fileName</key>
 			<string>1C4F76AA-C5E6-444F-852E-785742B742DA.xcactivitylog</string>
@@ -74,6 +81,9 @@
 			<string>Build target dayt2Tests</string>
 			<key>uniqueIdentifier</key>
 			<string>1C4F76AA-C5E6-444F-852E-785742B742DA</string>
+<<<<<<< HEAD
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
+=======
 >>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 		</dict>
 >>>>>>> dev
@@ -100,6 +110,7 @@
 			<key>uniqueIdentifier</key>
 			<string>2402D4C9-C4BF-448D-88C3-A647169D04DA</string>
 		</dict>
+<<<<<<< HEAD
 <<<<<<< HEAD
 		<key>2915CD9F-4213-44B5-9DD4-4E186BE8177E</key>
 		<dict>
@@ -128,6 +139,8 @@
 =======
 =======
 >>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
+=======
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 		<key>317BFF4C-848A-4B10-8FC1-D30D526849D2</key>
 		<dict>
 			<key>className</key>
@@ -152,7 +165,11 @@
 			<string>317BFF4C-848A-4B10-8FC1-D30D526849D2</string>
 		</dict>
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<key>3342147C-9939-491D-9646-19D0E95675F0</key>
+=======
+		<key>37AEDDA4-75FC-45F0-A8F7-7B14904EB43C</key>
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 =======
 		<key>37AEDDA4-75FC-45F0-A8F7-7B14904EB43C</key>
 >>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
@@ -193,12 +210,16 @@
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
 			<string>407A6F0E-B35B-4DD1-8E5E-E7FD43C67C69.xcactivitylog</string>
+<<<<<<< HEAD
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
+=======
 >>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 			<key>highLevelStatus</key>
 			<string>S</string>
 			<key>signature</key>
 			<string>dayt2-bacozsykmtairdfymobaijgqlilo</string>
 			<key>timeStartedRecording</key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 			<real>584509369.43803203</real>
 			<key>timeStoppedRecording</key>
@@ -207,6 +228,15 @@
 			<string>Build target dayt2</string>
 			<key>uniqueIdentifier</key>
 			<string>3342147C-9939-491D-9646-19D0E95675F0</string>
+=======
+			<real>584422878.533764</real>
+			<key>timeStoppedRecording</key>
+			<real>584422881.407377</real>
+			<key>title</key>
+			<string>Build target dayt2</string>
+			<key>uniqueIdentifier</key>
+			<string>407A6F0E-B35B-4DD1-8E5E-E7FD43C67C69</string>
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 =======
 			<real>584422878.533764</real>
 			<key>timeStoppedRecording</key>
@@ -265,6 +295,7 @@
 			<string>484581A1-1DBF-4D7D-B400-B3A43483D7C1</string>
 		</dict>
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<key>4EF6C3C7-CCDC-467E-8693-F8C90B4F2245</key>
 		<dict>
 			<key>className</key>
@@ -290,6 +321,8 @@
 		</dict>
 		<key>4FF2BD72-41D5-4B52-9F56-3413BAC2BEEC</key>
 =======
+=======
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 		<key>5BDCB211-7DA5-4AC0-B8B4-257BBA5D85B1</key>
 >>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 		<dict>
@@ -314,6 +347,7 @@
 			<key>uniqueIdentifier</key>
 			<string>4FF2BD72-41D5-4B52-9F56-3413BAC2BEEC</string>
 		</dict>
+<<<<<<< HEAD
 <<<<<<< HEAD
 		<key>55B70CBC-C5F9-4A37-AA61-B5472D8F13D6</key>
 		<dict>
@@ -388,6 +422,8 @@
 		</dict>
 =======
 >>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
+=======
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 		<key>66E4E165-7DAB-4D35-A69A-30E9A3F7D3E4</key>
 		<dict>
 			<key>className</key>
@@ -459,7 +495,10 @@
 			<string>6B9DC44B-30F0-4DC2-A2FB-C8B48E555CDF</string>
 		</dict>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 		<key>7917170B-42F7-4EAC-9863-C273A558916B</key>
 		<dict>
 			<key>className</key>
@@ -554,7 +593,10 @@
 			<string>A29D4055-A8F9-44EC-85FC-BEF103426396</string>
 		</dict>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 		<key>AE152802-B555-4C20-BC50-8F035153BF18</key>
 		<dict>
 			<key>className</key>
@@ -605,6 +647,7 @@
 			<string>B7BEB54B-E933-46B8-BC7A-46052461DF43</string>
 		</dict>
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<key>CF59A509-743F-4115-A403-931FD1204A7C</key>
 >>>>>>> dev
 =======
@@ -634,6 +677,9 @@
 			<string>CF59A509-743F-4115-A403-931FD1204A7C</string>
 		</dict>
 		<key>E049973B-4832-48B9-9D9D-F2877CD97C82</key>
+=======
+		<key>D65F92F1-0074-484C-B03F-E3216345A0A6</key>
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -642,6 +688,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
 			<key>fileName</key>
+<<<<<<< HEAD
 			<string>E049973B-4832-48B9-9D9D-F2877CD97C82.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>S</string>
@@ -708,6 +755,12 @@
 			<key>highLevelStatus</key>
 			<string>S</string>
 			<key>signature</key>
+=======
+			<string>D65F92F1-0074-484C-B03F-E3216345A0A6.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>signature</key>
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 			<string>React-deuaawcjxubuapaugmdfxhwnstsk</string>
 			<key>timeStartedRecording</key>
 			<real>584422878.12227201</real>
@@ -717,6 +770,9 @@
 			<string>Build target React</string>
 			<key>uniqueIdentifier</key>
 			<string>D65F92F1-0074-484C-B03F-E3216345A0A6</string>
+<<<<<<< HEAD
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
+=======
 >>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 		</dict>
 >>>>>>> dev
@@ -744,6 +800,7 @@
 			<string>EBE8F155-16F3-4271-A90E-E88D70AFDBC3</string>
 		</dict>
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<key>EC42CA92-798D-4F28-B3BE-2DA0511A841D</key>
 		<dict>
 			<key>className</key>
@@ -767,6 +824,8 @@
 			<key>uniqueIdentifier</key>
 			<string>EC42CA92-798D-4F28-B3BE-2DA0511A841D</string>
 		</dict>
+=======
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 =======
 >>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 	</dict>

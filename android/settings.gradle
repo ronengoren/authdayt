@@ -1,7 +1,10 @@
 rootProject.name = 'dayt2'
 <<<<<<< HEAD
+<<<<<<< HEAD
 include ':@react-native-community_viewpager'
 project(':@react-native-community_viewpager').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-community/viewpager/android')
+=======
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 =======
 >>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 include ':react-native-localize'

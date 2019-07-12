@@ -4,7 +4,10 @@ import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
+=======
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 =======
 >>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 import com.reactcommunity.rnlocalize.RNLocalizePackage;
@@ -37,7 +40,10 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(new MainReactPackage(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             new RNCViewPagerPackage(),
+=======
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 =======
 >>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
             new RNLocalizePackage(),

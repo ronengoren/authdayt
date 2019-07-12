@@ -7,7 +7,11 @@
 	<key>logs</key>
 	<dict>
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<key>342DAB37-1594-4FFD-A854-02C6A6E447D0</key>
+=======
+		<key>48E0C98B-E4E8-4B7F-8ADA-BB4FF535B7BB</key>
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 =======
 		<key>48E0C98B-E4E8-4B7F-8ADA-BB4FF535B7BB</key>
 >>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
@@ -20,7 +24,11 @@
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
 <<<<<<< HEAD
+<<<<<<< HEAD
 			<string>342DAB37-1594-4FFD-A854-02C6A6E447D0.xcactivitylog</string>
+=======
+			<string>48E0C98B-E4E8-4B7F-8ADA-BB4FF535B7BB.xcactivitylog</string>
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 =======
 			<string>48E0C98B-E4E8-4B7F-8ADA-BB4FF535B7BB.xcactivitylog</string>
 >>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
@@ -35,6 +43,7 @@
 			<key>signature</key>
 			<string>Debug dayt2</string>
 			<key>timeStartedRecording</key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 			<real>584423878.88648701</real>
 			<key>timeStoppedRecording</key>
@@ -217,6 +226,15 @@
 			<string>Debug dayt2</string>
 			<key>uniqueIdentifier</key>
 			<string>F67EFCF3-E471-4F7F-BD6B-93C41DB7E3E8</string>
+=======
+			<real>584422479.35978603</real>
+			<key>timeStoppedRecording</key>
+			<real>584422798.43642604</real>
+			<key>title</key>
+			<string>Debug dayt2</string>
+			<key>uniqueIdentifier</key>
+			<string>48E0C98B-E4E8-4B7F-8ADA-BB4FF535B7BB</string>
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 =======
 			<real>584422479.35978603</real>
 			<key>timeStoppedRecording</key>
