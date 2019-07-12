@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>9</integer>
+	<key>logs</key>
+	<dict>
+		<key>342DAB37-1594-4FFD-A854-02C6A6E447D0</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>342DAB37-1594-4FFD-A854-02C6A6E447D0.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>dayt2 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>dayt2</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug dayt2</string>
+			<key>timeStartedRecording</key>
+			<real>584423878.88648701</real>
+			<key>timeStoppedRecording</key>
+			<real>584426122.81504798</real>
+			<key>title</key>
+			<string>Debug dayt2</string>
+			<key>uniqueIdentifier</key>
+			<string>342DAB37-1594-4FFD-A854-02C6A6E447D0</string>
+		</dict>
+		<key>5AB1A3B5-06E4-4ABD-823E-A328ECF3A771</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5AB1A3B5-06E4-4ABD-823E-A328ECF3A771.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>dayt2 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>dayt2</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug dayt2</string>
+			<key>timeStartedRecording</key>
+			<real>584505210.91011703</real>
+			<key>timeStoppedRecording</key>
+			<real>584508265.42313802</real>
+			<key>title</key>
+			<string>Debug dayt2</string>
+			<key>uniqueIdentifier</key>
+			<string>5AB1A3B5-06E4-4ABD-823E-A328ECF3A771</string>
+		</dict>
+		<key>946AA13D-6DDA-4FED-8E01-A02D88B2CB44</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>946AA13D-6DDA-4FED-8E01-A02D88B2CB44.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>dayt2 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>dayt2</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug dayt2</string>
+			<key>timeStartedRecording</key>
+			<real>584508834.94856799</real>
+			<key>timeStoppedRecording</key>
+			<real>584509163.45484102</real>
+			<key>title</key>
+			<string>Debug dayt2</string>
+			<key>uniqueIdentifier</key>
+			<string>946AA13D-6DDA-4FED-8E01-A02D88B2CB44</string>
+		</dict>
+		<key>B1EAA7E0-CD62-438D-B0A2-86F2F6AE3F0B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B1EAA7E0-CD62-438D-B0A2-86F2F6AE3F0B.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>dayt2 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>dayt2</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug dayt2</string>
+			<key>timeStartedRecording</key>
+			<real>584509175.03143203</real>
+			<key>timeStoppedRecording</key>
+			<real>584509276.81180501</real>
+			<key>title</key>
+			<string>Debug dayt2</string>
+			<key>uniqueIdentifier</key>
+			<string>B1EAA7E0-CD62-438D-B0A2-86F2F6AE3F0B</string>
+		</dict>
+		<key>CD92CD98-0BFA-407E-8D37-7C266A63F664</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>CD92CD98-0BFA-407E-8D37-7C266A63F664.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>dayt2 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>dayt2</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug dayt2</string>
+			<key>timeStartedRecording</key>
+			<real>584509278.19779897</real>
+			<key>timeStoppedRecording</key>
+			<real>584509368.11487198</real>
+			<key>title</key>
+			<string>Debug dayt2</string>
+			<key>uniqueIdentifier</key>
+			<string>CD92CD98-0BFA-407E-8D37-7C266A63F664</string>
+		</dict>
+		<key>F67EFCF3-E471-4F7F-BD6B-93C41DB7E3E8</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F67EFCF3-E471-4F7F-BD6B-93C41DB7E3E8.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>dayt2 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>dayt2</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug dayt2</string>
+			<key>timeStartedRecording</key>
+			<real>584508282.68774498</real>
+			<key>timeStoppedRecording</key>
+			<real>584508819.91437197</real>
+			<key>title</key>
+			<string>Debug dayt2</string>
+			<key>uniqueIdentifier</key>
+			<string>F67EFCF3-E471-4F7F-BD6B-93C41DB7E3E8</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

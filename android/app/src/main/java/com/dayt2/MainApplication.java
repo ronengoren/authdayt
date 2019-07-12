@@ -3,7 +3,6 @@ package com.dayt2;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-
 import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
 import com.reactcommunity.rnlocalize.RNLocalizePackage;
 import com.brentvatne.react.ReactVideoPackage;
