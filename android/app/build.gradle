@@ -144,6 +144,11 @@ android {
 }
 
 dependencies {
+<<<<<<< HEAD
+    implementation project(':@react-native-community_viewpager')
+=======
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
+    implementation project(':react-native-localize')
     implementation project(':react-native-video')
     implementation project(':react-native-fast-image')
     implementation project(':react-native-fs')

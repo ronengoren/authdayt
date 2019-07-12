@@ -3,7 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>LastAccessedDate</key>
-	<date>2019-07-10T02:15:52Z</date>
+<<<<<<< HEAD
+	<date>2019-07-11T04:00:27Z</date>
+=======
+	<date>2019-07-10T03:41:14Z</date>
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 	<key>WorkspacePath</key>
 	<string>/Users/ronengoren/Desktop/wekalb/dayt/ios/dayt2.xcworkspace</string>
 </dict>

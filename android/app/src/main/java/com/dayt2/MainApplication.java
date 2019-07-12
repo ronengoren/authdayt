@@ -3,6 +3,11 @@ package com.dayt2;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+<<<<<<< HEAD
+import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
+=======
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
+import com.reactcommunity.rnlocalize.RNLocalizePackage;
 import com.brentvatne.react.ReactVideoPackage;
 import com.dylanvann.fastimage.FastImageViewPackage;
 import com.rnfs.RNFSPackage;
@@ -31,6 +36,11 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(new MainReactPackage(),
+<<<<<<< HEAD
+            new RNCViewPagerPackage(),
+=======
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
+            new RNLocalizePackage(),
             new ReactVideoPackage(),
             new FastImageViewPackage(),
             new RNFSPackage(), new RNDeviceInfo(), new RNCameraPackage(),

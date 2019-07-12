@@ -17,6 +17,11 @@ import {
   Video
 } from "../components/basicComponents";
 import Slide from "./Slide";
+import I18n from "../infra/localization";
+<<<<<<< HEAD
+import { Screen, persistentAuth, Slider } from "../components";
+=======
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
 
 import { hasNotch } from "../infra/utils/deviceUtils";
 
@@ -24,30 +29,121 @@ import images from "../assets/images";
 
 import { daytColors, uiConstants } from "../vars";
 import { screenNames } from "../vars/enums";
+import { isObject } from "../infra/utils";
+import { misc as miscLocalStorage } from "../infra/localStorage";
 
 const LOGO_MARGIN_TOP = hasNotch() ? 60 : 25;
 const SLIDER_MARGIN_TOP = hasNotch() ? 40 : 0;
+const NUMBER_OF_SLIDES = 4;
 
 class Welcome extends React.Component {
-  navigateToSignUp = () => {
-    this.props.navigation.navigate({
-      routeName: "login"
-    });
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      autoPlay: true
+    };
+  }
 
   render() {
+    const { autoPlay } = this.state;
+
     const { navigate } = this.props.navigation;
     const { width: screenWidth, height: screenHeight } = Dimensions.get(
       "window"
     );
+    const smallScreen =
+      screenHeight <=
+      uiConstants.NORMAL_DEVICE_HEIGHT +
+        Platform.select({ android: 100, ios: 0 });
 
     return (
       <View style={styles.container}>
         <StatusBar translucent={false} barStyle="dark-content" />
-        {/* <Image style={styles.logo} source={images.welcome.dayts} /> */}
+        <Slider
+          withAndroidIntervals
+          numberOfSlides={NUMBER_OF_SLIDES}
+          autoPlay={autoPlay}
+          style={styles.slider}
+          showBullets
+          sliderWidth={screenWidth}
+        >
+          {slideProps => [
+            <View key={0}>
+              <Slide key={0} slide={0} {...slideProps}>
+                <TranslatedText
+                  style={[
+                    styles.subTitle,
+                    smallScreen && styles.subTitleSmallScreen
+                  ]}
+                  textStyle={[
+                    styles.subTitleText,
+                    smallScreen && styles.subTitleSmallScreen
+                  ]}
+                >
+                  {I18n.t("onboarding.welcome.slide1")}
+                </TranslatedText>
+              </Slide>
+            </View>,
+            <View key={1}>
+              <Slide key={1} slide={1} {...slideProps}>
+                <TranslatedText
+                  style={[
+                    styles.subTitle,
+                    smallScreen && styles.subTitleSmallScreen
+                  ]}
+                  textStyle={[
+                    styles.subTitleText,
+                    smallScreen && styles.subTitleSmallScreen
+                  ]}
+                >
+                  {I18n.t("onboarding.welcome.slide2")}
+                </TranslatedText>
+              </Slide>
+            </View>,
+            <View key={2}>
+              <Slide key={2} slide={2} {...slideProps}>
+                <TranslatedText
+                  style={[
+                    styles.subTitle,
+                    smallScreen && styles.subTitleSmallScreen,
+                    styles.subTitle1
+                  ]}
+                  textStyle={[
+                    styles.subTitleText,
+                    smallScreen && styles.subTitleSmallScreen
+                  ]}
+                >
+                  {I18n.t("onboarding.welcome.slide3")}
+                </TranslatedText>
+              </Slide>
+            </View>,
+            <View key={3}>
+              <Slide key={3} slide={3} {...slideProps}>
+                <TranslatedText
+                  style={[
+                    styles.subTitle,
+                    smallScreen && styles.subTitleSmallScreen,
+                    styles.subTitle1
+                  ]}
+                  textStyle={[
+                    styles.subTitleText,
+                    smallScreen && styles.subTitleSmallScreen
+                  ]}
+                >
+                  {I18n.t("onboarding.welcome.slide4")}
+                </TranslatedText>
+              </Slide>
+            </View>
+          ]}
+        </Slider>
 
         <View style={styles.lowerSection}>
           <TextButton />
+<<<<<<< HEAD
+          <Text>Welcome9</Text>
+=======
+          <Text>Welcome</Text>
+>>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
         </View>
       </View>
     );

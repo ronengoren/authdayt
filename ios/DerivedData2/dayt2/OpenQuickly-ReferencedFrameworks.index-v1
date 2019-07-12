@@ -2,53 +2,60 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>Darwin</string>
-	<string>LocalAuthentication</string>
-	<string>AVFoundation</string>
-	<string>jsireact</string>
-	<string>CommonCrypto</string>
-	<string>Cocoa</string>
-	<string>CoreLocation</string>
-	<string>AudioToolbox</string>
-	<string>cxxreact</string>
-	<string>objc</string>
-	<string>ImageIO</string>
-	<string>Accelerate</string>
-	<string>CoreData</string>
-	<string>MobileCoreServices</string>
-	<string>Bolts</string>
-	<string>sys</string>
-	<string>arpa</string>
-	<string>CoreTelephony</string>
-	<string>CoreMedia</string>
-	<string>CoreServices</string>
 	<string>netinet6</string>
-	<string>StoreKit</string>
-	<string>AdSupport</string>
-	<string>Accounts</string>
+	<string>MapKit</string>
+	<string>Bolts</string>
 	<string>libkern</string>
-	<string>CoreText</string>
 	<string>WebKit</string>
+	<string>folly</string>
+	<string>FLAnimatedImage</string>
+	<string>CoreLocation</string>
+	<string>AVKit</string>
+	<string>DVAssetLoaderDelegate</string>
+	<string>ImageIO</string>
+	<string>StoreKit</string>
+	<string>WebImage</string>
+	<string>AssetsLibrary</string>
+	<string>yoga</string>
+	<string>CoreServices</string>
+	<string>jsi</string>
+	<string>mach</string>
+	<string>AVFoundation</string>
+	<string>os</string>
+	<string>MobileCoreServices</string>
+	<string>WatchKit</string>
+	<string>CoreText</string>
+	<string>AdSupport</string>
+	<string>SDWebImage</string>
+	<string>AppKit</string>
+	<string>FBSDKCoreKit</string>
+	<string>cxxreact</string>
+	<string>jsireact</string>
+	<string>Cocoa</string>
+	<string>Accounts</string>
+	<string>XCTest</string>
+	<string>netinet</string>
+	<string>CoreData</string>
+	<string>Accelerate</string>
+	<string>CommonCrypto</string>
+	<string>arpa</string>
+	<string>CoreMotion</string>
 	<string>fishhook</string>
 	<string>FirebaseMLVision</string>
-	<string>CoreMotion</string>
-	<string>XCTest</string>
-	<string>WatchKit</string>
-	<string>Foundation</string>
-	<string>mach</string>
 	<string>QuartzCore</string>
-	<string>os</string>
-	<string>Security</string>
-	<string>AppKit</string>
-	<string>netinet</string>
-	<string>AssetsLibrary</string>
-	<string>FBSDKCoreKit</string>
-	<string>yoga</string>
-	<string>CoreGraphics</string>
+	<string>AudioToolbox</string>
 	<string>SystemConfiguration</string>
-	<string>jsi</string>
-	<string>React</string>
+	<string>Security</string>
+	<string>LocalAuthentication</string>
+	<string>CoreGraphics</string>
+	<string>objc</string>
+	<string>CoreMedia</string>
 	<string>UIKit</string>
-	<string>folly</string>
+	<string>webp</string>
+	<string>CoreTelephony</string>
+	<string>Foundation</string>
+	<string>Darwin</string>
+	<string>sys</string>
+	<string>React</string>
 </array>
 </plist>
