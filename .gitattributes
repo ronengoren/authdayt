@@ -1,4 +1,2 @@
 *.pbxproj -text
-*.mbd filter=lfs diff=lfs merge=lfs -text
 *.mdb filter=lfs diff=lfs merge=lfs -text
-data.mdb filter=lfs diff=lfs merge=lfs -text
