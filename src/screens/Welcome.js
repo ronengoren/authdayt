@@ -18,10 +18,7 @@ import {
 } from "../components/basicComponents";
 import Slide from "./Slide";
 import I18n from "../infra/localization";
-<<<<<<< HEAD
-import { Screen, persistentAuth, Slider } from "../components";
-=======
->>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
+
 
 import { hasNotch } from "../infra/utils/deviceUtils";
 
@@ -139,11 +136,7 @@ class Welcome extends React.Component {
 
         <View style={styles.lowerSection}>
           <TextButton />
-<<<<<<< HEAD
-          <Text>Welcome9</Text>
-=======
-          <Text>Welcome</Text>
->>>>>>> 5c7378d7838db95f5365cf3244fec949f7bb5297
+
         </View>
       </View>
     );
