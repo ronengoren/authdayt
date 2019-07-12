@@ -27,6 +27,7 @@ import images from "../assets/images";
 import { daytColors, uiConstants } from "../vars";
 import { screenNames } from "../vars/enums";
 import { isObject } from "../infra/utils";
+
 import { misc as miscLocalStorage } from "../infra/localStorage";
 
 const LOGO_MARGIN_TOP = hasNotch() ? 60 : 25;
