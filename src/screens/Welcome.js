@@ -18,6 +18,7 @@ import {
 } from "../components/basicComponents";
 import Slide from "./Slide";
 import I18n from "../infra/localization";
+import { Screen, persistentAuth, Slider } from "../components";
 
 import { Screen, persistentAuth, Slider } from "../components";
 
