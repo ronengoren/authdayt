@@ -19,6 +19,9 @@ import {
 import Slide from "./Slide";
 import I18n from "../infra/localization";
 
+import { Screen, persistentAuth, Slider } from "../components";
+
+
 import { hasNotch } from "../infra/utils/deviceUtils";
 
 import images from "../assets/images";
@@ -136,6 +139,9 @@ class Welcome extends React.Component {
 
         <View style={styles.lowerSection}>
           <TextButton />
+
+          <Text>Welcome9</Text>
+
         </View>
       </View>
     );

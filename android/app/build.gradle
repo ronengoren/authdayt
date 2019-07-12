@@ -147,6 +147,7 @@ dependencies {
 
     implementation project(':@react-native-community_viewpager')
 
+
     implementation project(':react-native-localize')
     implementation project(':react-native-video')
     implementation project(':react-native-fast-image')
