@@ -1,7 +1,7 @@
 import { createSwitchNavigator, createAppContainer } from "react-navigation";
 import { daytColors } from "../vars";
 import { screenGroupNames } from "../vars/enums";
-// import MiddleSection from './app';
+// import MiddleSection from "./app";
 import authentication from "./authentication";
 
 // const AppTopNavigation = createSwitchNavigator(

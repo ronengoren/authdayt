@@ -13,10 +13,10 @@
 	<string>AVKit</string>
 	<string>DVAssetLoaderDelegate</string>
 	<string>ImageIO</string>
+	<string>yoga</string>
 	<string>StoreKit</string>
 	<string>WebImage</string>
 	<string>AssetsLibrary</string>
-	<string>yoga</string>
 	<string>CoreServices</string>
 	<string>jsi</string>
 	<string>mach</string>
