@@ -20,9 +20,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: daytColors.green,
+    backgroundColor: daytColors.pinkyDate,
     borderWidth: 1,
-    borderColor: daytColors.green,
+    borderColor: daytColors.pinkyDate,
     overflow: "hidden"
   },
   defaultText: {
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     backgroundColor: daytColors.white
   },
   secondaryText: {
-    color: daytColors.green
+    color: daytColors.pinkyDate
   },
   secondaryNewDesign: {
     backgroundColor: daytColors.white,
@@ -215,7 +215,8 @@ const TextButton = ({
     secondary && styles.secondaryText,
     secondaryNewDesign && styles.secondaryNewDesignText,
     active && styles.activeText,
-    active && secondaryNewDesign && { color: activeColor || daytColors.green },
+    active &&
+      secondaryNewDesign && { color: activeColor || daytColors.pinkyDate },
     disabled && !secondary && styles.disabledText,
     disabled && secondary && styles.secondaryDisabledText,
     roundedDesign && styles.roundedDesignText,
@@ -233,7 +234,7 @@ const TextButton = ({
     bigButtonWrapperStylesArr.push(styles.footerButtonWrapper);
   }
   const spinnerColor =
-    active || secondary ? daytColors.green : daytColors.white;
+    active || secondary ? daytColors.pinkyDate : daytColors.white;
 
   const IconComponent = isAwesomeIcon ? AwesomeIcon : DaytIcon;
   if (["big", "big50Height", "huge"].includes(size)) {

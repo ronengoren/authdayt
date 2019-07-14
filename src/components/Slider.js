@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     backgroundColor: daytColors.disabledGrey
   },
   swipeButtonActive: {
-    backgroundColor: daytColors.green
+    backgroundColor: daytColors.pinkyDate
   }
 });
 

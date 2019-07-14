@@ -35,17 +35,17 @@ class TranslatedText extends Component {
       } else if (node.slice(0, 7) === "<green>") {
         return {
           text: node.slice(7, -8),
-          props: { color: daytColors.green }
+          props: { color: homeisColors.green }
         };
       } else if (node.slice(0, 7) === "<azure>") {
         return {
           text: node.slice(7, -8),
-          props: { color: daytColors.azure }
+          props: { color: homeisColors.azure }
         };
       } else if (node.slice(0, 12) === "<pinkishRed>") {
         return {
           text: node.slice(12, -13),
-          props: { color: daytColors.pinkishRed }
+          props: { color: homeisColors.pinkishRed }
         };
       }
       const match = node.match(/%\d+%/g);

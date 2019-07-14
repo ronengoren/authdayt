@@ -90,7 +90,8 @@ const daytColors = {
   boxShadow30: "rgba(0, 0, 0, 0.3)",
   boxShadow20: "rgba(0, 0, 0, 0.3)",
   boxShadow: "rgba(0, 0, 0, 0.1)",
-  paleGreyFour: "rgba(242, 247, 250, 1.0)"
+  paleGreyFour: "rgba(242, 247, 250, 1.0)",
+  pinkyDate: "#FCBFAD"
 };
 
 export { daytColors }; // eslint-disable-line import/prefer-default-export
