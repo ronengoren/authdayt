@@ -33,19 +33,13 @@ class TranslatedText extends Component {
       if (node.slice(0, 3) === "<b>") {
         return { text: node.slice(3, -4), props: { bold: true } };
       } else if (node.slice(0, 7) === "<green>") {
-        return {
-          text: node.slice(7, -8),
-          props: { color: homeisColors.green }
-        };
+        return { text: node.slice(7, -8), props: { color: daytColors.green } };
       } else if (node.slice(0, 7) === "<azure>") {
-        return {
-          text: node.slice(7, -8),
-          props: { color: homeisColors.azure }
-        };
+        return { text: node.slice(7, -8), props: { color: daytColors.azure } };
       } else if (node.slice(0, 12) === "<pinkishRed>") {
         return {
           text: node.slice(12, -13),
-          props: { color: homeisColors.pinkishRed }
+          props: { color: daytColors.pinkishRed }
         };
       }
       const match = node.match(/%\d+%/g);

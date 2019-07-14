@@ -8,7 +8,6 @@ import { updateMomentLocale } from "../../infra/utils/dateTimeUtils";
 class Localization {
   init() {
     I18n.fallbacks = true;
-
     const translations = {
       en: { ...en, shared: sharedEn },
       fr: { ...fr, shared: sharedFr },
