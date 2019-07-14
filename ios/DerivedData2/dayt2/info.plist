@@ -3,32 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>LastAccessedDate</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 	<date>2019-07-11T03:42:48Z</date>
-=======
 	<date>2019-06-29T02:09:11Z</date>
->>>>>>> added days screen and added momentjs
-=======
+
 	<date>2019-06-29T23:47:39Z</date>
->>>>>>> added days and changed feed icons
-=======
+
 	<date>2019-07-04T02:24:46Z</date>
->>>>>>> added profile page
-=======
+
 	<date>2019-07-06T15:23:02Z</date>
->>>>>>> started welcome screen
-=======
+
 	<date>2019-07-07T15:32:57Z</date>
->>>>>>> added icons and text button half
-=======
-	<date>2019-07-07T16:06:03Z</date>
->>>>>>> added react native fast image
 	<key>WorkspacePath</key>
 	<string>/Users/ronengoren/Desktop/wekalb/dayt/ios/dayt2.xcworkspace</string>
 </dict>
