@@ -2,7 +2,28 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
+<<<<<<< HEAD
 	<string>Cocoa</string>
+=======
+	<string>netinet6</string>
+	<string>MapKit</string>
+	<string>Bolts</string>
+	<string>libkern</string>
+	<string>WebKit</string>
+	<string>folly</string>
+	<string>FLAnimatedImage</string>
+	<string>CoreLocation</string>
+	<string>AVKit</string>
+	<string>DVAssetLoaderDelegate</string>
+	<string>ImageIO</string>
+	<string>yoga</string>
+	<string>StoreKit</string>
+	<string>WebImage</string>
+	<string>AssetsLibrary</string>
+	<string>CoreServices</string>
+	<string>jsi</string>
+	<string>mach</string>
+>>>>>>> dev
 	<string>AVFoundation</string>
 	<string>jsireact</string>
 	<string>CommonCrypto</string>
