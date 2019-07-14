@@ -19,21 +19,80 @@ import {
 import Slide from "./Slide";
 import I18n from "../../infra/localization";
 import { Screen, persistentAuth, Slider } from "../../components";
-
 import { hasNotch } from "../../infra/utils/deviceUtils";
-
+import { navigationService } from "../../infra/navigation";
 import images from "../../assets/images";
-
 import { daytColors, uiConstants } from "../../vars";
 import { screenNames } from "../../vars/enums";
 import { isObject } from "../../infra/utils";
-
 import { misc as miscLocalStorage } from "../../infra/localStorage";
 
 const LOGO_MARGIN_TOP = hasNotch() ? 60 : 25;
 const SLIDER_MARGIN_TOP = hasNotch() ? 40 : 0;
-const NUMBER_OF_SLIDES = 4;
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: uiConstants.PHONE_BAR_HEIGHT
+  },
+  lowerSection: {
+    height: 80,
+    marginBottom: 20 + uiConstants.FOOTER_MARGIN_BOTTOM,
+    paddingHorizontal: 15
+  },
+  footerInnerWrapper: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "flex-end"
+  },
+  footerText: {
+    fontSize: 13,
+    textAlign: "center",
+    lineHeight: 20,
+    letterSpacing: 0.2,
+    color: daytColors.placeholderGrey
+  },
+  footerLink: {
+    fontSize: 13,
+    textAlign: "center",
+    lineHeight: 20,
+    letterSpacing: 0.2,
+    color: daytColors.black
+  },
+  logo: {
+    alignSelf: "center",
+    width: 130,
+    height: 30,
+    marginTop: LOGO_MARGIN_TOP,
+    marginBottom: 30
+  },
+  slider: {
+    marginTop: SLIDER_MARGIN_TOP
+  },
+  subTitle: {
+    marginTop: 20,
+    paddingHorizontal: 30,
+    alignSelf: "center",
+    width: "100%",
+    textAlign: "center"
+  },
+  subTitleText: {
+    fontSize: 19,
+    lineHeight: 30,
+    color: daytColors.black
+  },
+  subTitleSmallScreen: {
+    paddingHorizontal: 15,
+    fontSize: 17,
+    lineHeight: 22
+  },
+  subTitle1: {
+    paddingHorizontal: 15
+  }
+});
+
+const NUMBER_OF_SLIDES = 4;
 class Welcome extends React.Component {
   constructor(props) {
     super(props);
@@ -51,11 +110,8 @@ class Welcome extends React.Component {
       I18n.setLocale(locale);
     }
   }
-
   render() {
     const { autoPlay } = this.state;
-
-    const { navigate } = this.props.navigation;
     const { width: screenWidth, height: screenHeight } = Dimensions.get(
       "window"
     );
@@ -63,10 +119,10 @@ class Welcome extends React.Component {
       screenHeight <=
       uiConstants.NORMAL_DEVICE_HEIGHT +
         Platform.select({ android: 100, ios: 0 });
-
     return (
       <View style={styles.container}>
         <StatusBar translucent={false} barStyle="dark-content" />
+        <Image style={styles.logo} source={images.welcome.dayt} />
         <Slider
           withAndroidIntervals
           numberOfSlides={NUMBER_OF_SLIDES}
@@ -144,7 +200,6 @@ class Welcome extends React.Component {
             </View>
           ]}
         </Slider>
-
         <View style={styles.lowerSection}>
           <TextButton
             size="big50Height"
@@ -172,70 +227,8 @@ class Welcome extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: uiConstants.PHONE_BAR_HEIGHT
-  },
-  lowerSection: {
-    height: 80,
-    marginBottom: 20 + uiConstants.FOOTER_MARGIN_BOTTOM,
-    paddingHorizontal: 15
-  },
-  footerInnerWrapper: {
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "flex-end"
-  },
-  footerText: {
-    fontSize: 13,
-    textAlign: "center",
-    lineHeight: 20,
-    letterSpacing: 0.2,
-    color: daytColors.placeholderGrey
-  },
-  footerLink: {
-    fontSize: 13,
-    textAlign: "center",
-    lineHeight: 20,
-    letterSpacing: 0.2,
-    color: daytColors.black
-  },
-  logo: {
-    alignSelf: "center",
-    width: 130,
-    height: 30,
-    marginTop: LOGO_MARGIN_TOP,
-    marginBottom: 30
-  },
-  slider: {
-    marginTop: SLIDER_MARGIN_TOP
-  },
-  subTitle: {
-    marginTop: 20,
-    paddingHorizontal: 30,
-    alignSelf: "center",
-    width: "100%",
-    textAlign: "center"
-  },
-  subTitleText: {
-    fontSize: 19,
-    lineHeight: 30,
-    color: daytColors.black
-  },
-  subTitleSmallScreen: {
-    paddingHorizontal: 15,
-    fontSize: 17,
-    lineHeight: 22
-  },
-  subTitle1: {
-    paddingHorizontal: 15
-  }
-});
-
-Welcome.propTypes = {
-  navigation: PropTypes.object
-};
+// Welcome.propTypes = {
+//   navigation: PropTypes.object
+// };
 
 export default Welcome;

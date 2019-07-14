@@ -1,5 +1,5 @@
 export default {
   welcome: {
-    dayts: require("./logo.png")
+    dayt: require("./dayt3x.png")
   }
 };
