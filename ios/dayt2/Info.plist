@@ -100,15 +100,12 @@
 		<string>Zocial.ttf</string>
 		<string>DMSerifDisplay-Italic.ttf</string>
 		<string>DMSerifDisplay-Regular.ttf</string>
-
 		<string>tinderclone.ttf</string>
 		<string>dayt.ttf</string>
 		<string>FontAwesome5BrandsRegular.ttf</string>
 		<string>FontAwesome5ProLight.ttf</string>
 		<string>FontAwesome5ProSolid.ttf</string>
-
 	</array>
-
 	<key>NSCameraUsageDescription</key>
 	<string>do you allow dayt Camera Access</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -117,6 +114,5 @@
 	<string>do you allow dayt Photo Access</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>do you allow dayt Camera Role Access</string>
-
 </dict>
 </plist>
