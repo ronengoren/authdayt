@@ -118,6 +118,5 @@
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>do you allow dayt Camera Role Access</string>
 
-	</array>
 </dict>
 </plist>
