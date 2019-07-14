@@ -5,65 +5,6 @@
 	<key>logFormatVersion</key>
 	<integer>9</integer>
 	<key>logs</key>
-	<dict>
-		<key>529C2E3F-27F0-453C-BB61-8DA0004AA0A9</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>529C2E3F-27F0-453C-BB61-8DA0004AA0A9.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>S</string>
-			<key>schemeIdentifier-containerName</key>
-			<string>dayt2 project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>dayt2</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Debug dayt2</string>
-			<key>timeStartedRecording</key>
-			<real>583899890.38397801</real>
-			<key>timeStoppedRecording</key>
-			<real>583899914.59213996</real>
-			<key>title</key>
-			<string>Debug dayt2</string>
-			<key>uniqueIdentifier</key>
-			<string>529C2E3F-27F0-453C-BB61-8DA0004AA0A9</string>
-		</dict>
-		<key>D972B868-4DEB-4B89-B6C9-C20F856B8FD6</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>D972B868-4DEB-4B89-B6C9-C20F856B8FD6.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>S</string>
-			<key>schemeIdentifier-containerName</key>
-			<string>dayt2 project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>dayt2</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Debug dayt2</string>
-			<key>timeStartedRecording</key>
-			<real>584119688.93434703</real>
-			<key>timeStoppedRecording</key>
-			<real>584125027.78204799</real>
-			<key>title</key>
-			<string>Debug dayt2</string>
-			<key>uniqueIdentifier</key>
-			<string>D972B868-4DEB-4B89-B6C9-C20F856B8FD6</string>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
