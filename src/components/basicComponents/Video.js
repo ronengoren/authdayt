@@ -24,7 +24,9 @@ Video.propTypes = {
     }),
     PropTypes.node
   ]),
-  onRef: PropTypes.func
+  onRef: PropTypes.func,
+  playInBackground: PropTypes.bool,
+  ignoreSilentSwitch: PropTypes.oneOf(["ignore", "obey"])
 };
 
 export default Video;
