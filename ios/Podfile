@@ -5,6 +5,7 @@ target 'dayt2' do
     pod 'FBSDKCoreKit', '~> 4.9'
     pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
     pod 'React', :path => '../node_modules/react-native'
+    pod 'RNLocalize', :path => '../node_modules/react-native-localize'
 
     pod 'React', :path => '../node_modules/react-native', :subspecs => [
         'Core',
