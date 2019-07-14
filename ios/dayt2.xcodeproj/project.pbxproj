@@ -5,6 +5,7 @@
 	};
 	objectVersion = 51;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00403F2E2926446EA541D0A4 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A2C38280BDB4B3B8F21F7C1 /* Entypo.ttf */; };
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
@@ -1066,6 +1067,11 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = LNN269VGPG;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;

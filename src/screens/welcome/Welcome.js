@@ -13,8 +13,7 @@ import {
   Text,
   TextButton,
   Image,
-  TranslatedText,
-  Video
+  TranslatedText
 } from "../../components/basicComponents";
 import Slide from "./Slide";
 import I18n from "../../infra/localization";

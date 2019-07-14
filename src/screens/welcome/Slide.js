@@ -58,16 +58,18 @@ class Slide extends React.Component {
             }}
             rate={1.0}
             volume={0}
-            muted
+            muted={true}
             paused={paused}
             resizeMode="contain"
             repeat
             progressUpdateInterval={10000}
+            playInBackground={true}
             onLoadStart={null}
             onLoad={this.setPaused}
             onProgress={null}
             onEnd={null}
             onError={null}
+            ignoreSilentSwitch={"ignore"}
           />
         </View>
         {children}
