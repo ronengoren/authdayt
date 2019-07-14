@@ -11,10 +11,10 @@
 	<string>cxxreact</string>
 	<string>objc</string>
 	<string>CoreData</string>
-	<string>MobileCoreServices</string>
-	<string>Bolts</string>
-	<string>sys</string>
 	<string>arpa</string>
+	<string>MobileCoreServices</string>
+	<string>sys</string>
+	<string>Bolts</string>
 	<string>CoreTelephony</string>
 	<string>CoreServices</string>
 	<string>netinet6</string>
