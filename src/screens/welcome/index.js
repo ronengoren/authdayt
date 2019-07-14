@@ -1,3 +1,1 @@
-import Welcome from "./Welcome";
-
-export { Welcome };
+export { default as Welcome } from "./Welcome";

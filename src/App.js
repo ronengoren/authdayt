@@ -6,7 +6,7 @@ import {
   createStackNavigator
 } from "react-navigation";
 
-import Welcome from "./screens/Welcome";
+import Welcome from "./screens/welcome/Welcome";
 
 const IntroStack = createStackNavigator({
   welcome: Welcome
