@@ -1,7 +1,7 @@
 import { createSwitchNavigator, createAppContainer } from "react-navigation";
-import { daytColors } from "../../vars";
-import { screenGroupNames } from "../../vars/enums";
-import MiddleSection from "./app";
+import { daytColors } from "../vars";
+import { screenGroupNames } from "../vars/enums";
+// import MiddleSection from './app';
 import authentication from "./authentication";
 
 // const AppTopNavigation = createSwitchNavigator(
@@ -21,9 +21,9 @@ import authentication from "./authentication";
 //   },
 //   {
 //     initialRouteName: screenGroupNames.AUTHENTICATION,
-//     headerMode: "screen",
+//     headerMode: 'screen',
 //     cardStyle: {
-//       backgroundColor: daytColors.white
+//       backgroundColor: homeisColors.white
 //     }
 //   }
 // );

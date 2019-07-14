@@ -3,6 +3,7 @@ package com.dayt2;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.github.yamill.orientation.OrientationPackage;
 import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
 import com.reactcommunity.rnlocalize.RNLocalizePackage;
 import com.brentvatne.react.ReactVideoPackage;
@@ -32,7 +33,8 @@ public class MainApplication extends Application implements ReactApplication {
 
     @Override
     protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(new MainReactPackage(), new RNCViewPagerPackage(), new RNLocalizePackage(),
+      return Arrays.<ReactPackage>asList(new MainReactPackage(),
+            new OrientationPackage(), new RNCViewPagerPackage(), new RNLocalizePackage(),
           new ReactVideoPackage(), new FastImageViewPackage(), new RNFSPackage(), new RNDeviceInfo(),
           new RNCameraPackage(), new AsyncStoragePackage(), new ReactNativeConfigPackage(), new VectorIconsPackage(),
           new RNGestureHandlerPackage());
