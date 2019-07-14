@@ -1,5 +1,5 @@
 import I18n from "i18n-js";
-// import * as RNLocalize from "react-native-localize";
+import * as RNLocalize from "react-native-localize";
 // import { en, he, fr, es } from "../../localization";
 // import { sharedEn, sharedHe, sharedFr } from "../../localization/shared";
 // import { user as userLocalStorage } from "../../infra/localStorage";

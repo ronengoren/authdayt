@@ -31,14 +31,6 @@ PODS:
   - glog (0.3.5)
   - React (0.59.8):
     - React/Core (= 0.59.8)
-  - react-native-camera (2.11.0):
-    - React
-    - react-native-camera/RCT (= 2.11.0)
-    - react-native-camera/RN (= 2.11.0)
-  - react-native-camera/RCT (2.11.0):
-    - React
-  - react-native-camera/RN (2.11.0):
-    - React
   - React/Core (0.59.8):
     - yoga (= 0.59.8.React)
   - React/CxxBridge (0.59.8):
@@ -81,6 +73,8 @@ PODS:
     - React/RCTBlob
   - RNCAsyncStorage (1.5.0):
     - React
+  - RNLocalize (1.1.4):
+    - React
   - RNVectorIcons (6.5.0):
     - React
   - yoga (0.59.8.React)
@@ -92,7 +86,6 @@ DEPENDENCIES:
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - React (from `../node_modules/react-native`)
-  - react-native-camera (from `../node_modules/react-native-camera`)
   - React/Core (from `../node_modules/react-native`)
   - React/CxxBridge (from `../node_modules/react-native`)
   - React/DevSupport (from `../node_modules/react-native`)
@@ -101,6 +94,7 @@ DEPENDENCIES:
   - React/RCTText (from `../node_modules/react-native`)
   - React/RCTWebSocket (from `../node_modules/react-native`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
+  - RNLocalize (from `../node_modules/react-native-localize`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -120,10 +114,10 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
   React:
     :path: "../node_modules/react-native"
-  react-native-camera:
-    :path: "../node_modules/react-native-camera"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-community/async-storage"
+  RNLocalize:
+    :path: "../node_modules/react-native-localize"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
   yoga:
@@ -138,11 +132,11 @@ SPEC CHECKSUMS:
   Folly: de497beb10f102453a1afa9edbf8cf8a251890de
   glog: aefd1eb5dda2ab95ba0938556f34b98e2da3a60d
   React: 76e6aa2b87d05eb6cccb6926d72685c9a07df152
-  react-native-camera: 37580137d13b0f2fabd631e4217eb11f0e4d5764
   RNCAsyncStorage: 63407ea82f1b5ac8fc53a0b8c569b08e0516a9e0
+  RNLocalize: a91e036a6abc46e656a989456701182e0e228c7a
   RNVectorIcons: f6cf608dee5b2cb5726ff3b629a5258586d5677b
   yoga: 92b2102c3d373d1a790db4ab761d2b0ffc634f64
 
-PODFILE CHECKSUM: 1ba2050ecdf8ab4c63ea9f6da41eae6545a58ef1
+PODFILE CHECKSUM: d2c7ccc6c6ae3da6770ea4f969718482acf63e79
 
 COCOAPODS: 1.7.2

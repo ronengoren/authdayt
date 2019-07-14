@@ -40,6 +40,16 @@ class Welcome extends React.Component {
     this.state = {
       autoPlay: true
     };
+    let locale;
+    if (Platform.OS === "ios") {
+      locale = NativeModules.SettingsManager.settings.AppleLocale;
+    } else {
+      locale = NativeModules.I18nManager.localeIdentifier;
+    }
+    if (locale) {
+      locale = locale.substr(0, 2);
+      I18n.setLocale(locale);
+    }
   }
 
   render() {
@@ -136,8 +146,26 @@ class Welcome extends React.Component {
         </Slider>
 
         <View style={styles.lowerSection}>
-          <TextButton />
-          <Text>Welcome9</Text>
+          <TextButton
+            size="big50Height"
+            onPress={this.navigateToSignUp}
+            testID="signupBtn"
+          >
+            {I18n.t("onboarding.welcome.button")}
+          </TextButton>
+          <TouchableOpacity
+            activeOpacity={1}
+            onPress={this.navigateToSignIn}
+            testID="signinBtn"
+            style={styles.footerInnerWrapper}
+          >
+            <Text style={styles.footerText} medium>
+              {I18n.t("onboarding.welcome.have_account")}{" "}
+            </Text>
+            <Text style={styles.footerLink} medium>
+              {I18n.t("onboarding.welcome.have_account_button")}
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -209,4 +237,5 @@ const styles = StyleSheet.create({
 Welcome.propTypes = {
   navigation: PropTypes.object
 };
+
 export default Welcome;
