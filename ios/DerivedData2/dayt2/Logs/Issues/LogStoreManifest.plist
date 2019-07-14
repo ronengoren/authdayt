@@ -282,29 +282,6 @@
 			<key>uniqueIdentifier</key>
 			<string>9FC4DCA0-96C5-4C46-8AB7-949F25AF6B69</string>
 		</dict>
-		<key>AB4E8601-E3BF-4DF5-9C82-F1A8DC6A4BF4</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
-			<key>fileName</key>
-			<string>AB4E8601-E3BF-4DF5-9C82-F1A8DC6A4BF4.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>S</string>
-			<key>signature</key>
-			<string>React-deuaawcjxubuapaugmdfxhwnstsk</string>
-			<key>timeStartedRecording</key>
-			<real>584776113.08396995</real>
-			<key>timeStoppedRecording</key>
-			<real>584776113.30727601</real>
-			<key>title</key>
-			<string>Build target React</string>
-			<key>uniqueIdentifier</key>
-			<string>AB4E8601-E3BF-4DF5-9C82-F1A8DC6A4BF4</string>
-		</dict>
 		<key>B1308492-7438-47C8-A9C6-72647676862E</key>
 		<dict>
 			<key>className</key>
@@ -373,6 +350,29 @@
 			<string>Build target SDWebImage iOS static</string>
 			<key>uniqueIdentifier</key>
 			<string>E0A68688-33C1-47E2-952E-CDF138EDC19C</string>
+		</dict>
+		<key>EDCD4BA3-9D98-4229-B9B3-E9C135EA54CC</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
+			<key>fileName</key>
+			<string>EDCD4BA3-9D98-4229-B9B3-E9C135EA54CC.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>A</string>
+			<key>signature</key>
+			<string>yoga-deuaawcjxubuapaugmdfxhwnstsk</string>
+			<key>timeStartedRecording</key>
+			<real>584776300.29112506</real>
+			<key>timeStoppedRecording</key>
+			<real>584776341.40609503</real>
+			<key>title</key>
+			<string>Build target yoga</string>
+			<key>uniqueIdentifier</key>
+			<string>EDCD4BA3-9D98-4229-B9B3-E9C135EA54CC</string>
 		</dict>
 		<key>EE88F2CC-4BBB-470B-9D02-C1596662DE24</key>
 		<dict>
