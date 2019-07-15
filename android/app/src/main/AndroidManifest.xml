@@ -9,7 +9,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+   
 
     <application
       android:name=".MainApplication"
@@ -19,6 +20,15 @@
       android:allowBackup="true"
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
+      <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
       <service android:name="org.eclipse.paho.android.service.MqttService" />
       <activity
         android:name=".MainActivity"

@@ -22,14 +22,14 @@ const SignUpWizard = createStackNavigator({
       header: null,
       gesturesEnabled: false
     }
+  },
+  [screenNames.SetUserEmail]: {
+    screen: screens.SetUserEmail,
+    navigationOptions: () => ({
+      header: null,
+      gesturesEnabled: false
+    })
   }
-  //     [screenNames.SetUserEmail]: {
-  //       screen: screens.SetUserEmail,
-  //       navigationOptions: () => ({
-  //         header: null,
-  //         gesturesEnabled: false
-  //       })
-  //     },
   //     [screenNames.SetUserCommunity]: {
   //       screen: screens.SetUserCommunity,
   //       navigationOptions: () => ({

@@ -113,6 +113,7 @@ android {
         versionName "1.0"
         multiDexEnabled true
         missingDimensionStrategy 'react-native-camera', 'general'
+        vectorDrawables.useSupportLibrary = true
     }
     splits {
         abi {
@@ -144,6 +145,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-image-crop-picker')
     implementation project(':react-native-orientation')
     implementation project(':@react-native-community_viewpager')
     implementation project(':react-native-localize')
