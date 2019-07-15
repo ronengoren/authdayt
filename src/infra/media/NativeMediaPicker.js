@@ -1,8 +1,8 @@
-// import ImagePicker from "react-native-image-crop-picker";
-// import { Alert } from "react-native";
-// import I18n from "../../infra/localization";
-// import { openActionSheet } from "../../redux/controllers/actions";
-// import { mediaTypes } from "../../vars/enums";
+import ImagePicker from "react-native-image-crop-picker";
+import { Alert } from "react-native";
+import I18n from "../../infra/localization";
+import { openActionSheet } from "../../redux/controllers/actions";
+import { mediaTypes } from "../../vars/enums";
 
 // const mapMediaTypes = {
 //   image: "photo",
