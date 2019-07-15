@@ -2,55 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-<<<<<<< HEAD
 	<string>Cocoa</string>
 	<string>jsireact</string>
-=======
-	<string>netinet6</string>
-	<string>MapKit</string>
-	<string>Photos</string>
-	<string>Bolts</string>
-	<string>libkern</string>
-	<string>WebKit</string>
-	<string>folly</string>
-	<string>FLAnimatedImage</string>
-	<string>CoreLocation</string>
-	<string>AVKit</string>
-	<string>DVAssetLoaderDelegate</string>
-	<string>QBImagePickerController</string>
-	<string>ImageIO</string>
-	<string>StoreKit</string>
-	<string>AssetsLibrary</string>
-	<string>yoga</string>
-	<string>WebImage</string>
-	<string>CoreServices</string>
-	<string>jsi</string>
-	<string>RSKImageCropper</string>
-	<string>mach</string>
->>>>>>> dev
 	<string>AVFoundation</string>
-<<<<<<< HEAD
 	<string>CommonCrypto</string>
 	<string>CoreLocation</string>
 	<string>AudioToolbox</string>
-=======
-	<string>os</string>
-	<string>MobileCoreServices</string>
-	<string>WatchKit</string>
-	<string>CoreText</string>
-	<string>AdSupport</string>
-	<string>SDWebImage</string>
-	<string>QBImagePicker</string>
-	<string>AppKit</string>
-	<string>FBSDKCoreKit</string>
->>>>>>> dev
 	<string>cxxreact</string>
 	<string>objc</string>
+	<string>QBImagePicker</string>
 	<string>CoreData</string>
-	<string>MobileCoreServices</string>
-	<string>Bolts</string>
-	<string>sys</string>
 	<string>arpa</string>
+	<string>MobileCoreServices</string>
+	<string>sys</string>
+	<string>Bolts</string>
 	<string>CoreTelephony</string>
 	<string>CoreServices</string>
 	<string>netinet6</string>
@@ -66,6 +31,7 @@
 	<string>mach</string>
 	<string>QuartzCore</string>
 	<string>Security</string>
+	<string>Photos</string>
 	<string>os</string>
 	<string>AppKit</string>
 	<string>netinet</string>
