@@ -120,7 +120,7 @@ class Welcome extends React.Component {
         Platform.select({ android: 100, ios: 0 });
     return (
       <View style={styles.container}>
-        <StatusBar translucent={false} barStyle="dark-content" />
+        <StatusBar translucent={false} barStyle="light-content" />
         <Image style={styles.logo} source={images.welcome.dayt} />
         <Slider
           withAndroidIntervals
@@ -232,8 +232,9 @@ class Welcome extends React.Component {
   };
 }
 
-// Welcome.propTypes = {
-//   navigation: PropTypes.object
-// };
+Welcome.propTypes = {
+  navigation: PropTypes.object
+};
+// Welcome = Screen({ modalError: true })(Welcome);
 
 export default Welcome;
