@@ -16,9 +16,9 @@
 	<string>QBImagePickerController</string>
 	<string>ImageIO</string>
 	<string>StoreKit</string>
-	<string>AssetsLibrary</string>
-	<string>yoga</string>
 	<string>WebImage</string>
+	<string>yoga</string>
+	<string>AssetsLibrary</string>
 	<string>CoreServices</string>
 	<string>jsi</string>
 	<string>RSKImageCropper</string>
