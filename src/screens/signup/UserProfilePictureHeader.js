@@ -26,7 +26,7 @@ import { daytColors, uiConstants, commonStyles } from "../../vars";
 import { entityTypes, mediaTypes, screenNames } from "../../vars/enums";
 import { get } from "../../infra/utils";
 import { getFirstName } from "../../infra/utils/stringUtils";
-// import { NativeMediaPicker } from "../../infra/media";
+import { NativeMediaPicker } from "../../infra/media";
 // import { navigationService } from '/infra/navigation';
 
 // const styles = StyleSheet.create({

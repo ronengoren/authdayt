@@ -4,6 +4,7 @@
 <array>
 	<string>netinet6</string>
 	<string>MapKit</string>
+	<string>Photos</string>
 	<string>Bolts</string>
 	<string>libkern</string>
 	<string>WebKit</string>
@@ -12,13 +13,15 @@
 	<string>CoreLocation</string>
 	<string>AVKit</string>
 	<string>DVAssetLoaderDelegate</string>
+	<string>QBImagePickerController</string>
 	<string>ImageIO</string>
 	<string>StoreKit</string>
-	<string>WebImage</string>
 	<string>AssetsLibrary</string>
 	<string>yoga</string>
+	<string>WebImage</string>
 	<string>CoreServices</string>
 	<string>jsi</string>
+	<string>RSKImageCropper</string>
 	<string>mach</string>
 	<string>AVFoundation</string>
 	<string>os</string>
@@ -27,6 +30,7 @@
 	<string>CoreText</string>
 	<string>AdSupport</string>
 	<string>SDWebImage</string>
+	<string>QBImagePicker</string>
 	<string>AppKit</string>
 	<string>FBSDKCoreKit</string>
 	<string>cxxreact</string>
