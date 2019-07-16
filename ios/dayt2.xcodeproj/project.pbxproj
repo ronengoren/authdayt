@@ -5,7 +5,6 @@
 	};
 	objectVersion = 51;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00403F2E2926446EA541D0A4 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A2C38280BDB4B3B8F21F7C1 /* Entypo.ttf */; };
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
@@ -101,6 +100,7 @@
 		EB22BBE9FBCF405E87ED1531 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 962197EA611A48028D71702B /* AntDesign.ttf */; };
 		EB2808DF8E35428891DE4D1F /* DMSerifDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B32742BB08304CE8ADEDDC77 /* DMSerifDisplay-Italic.ttf */; };
 		F8360B57DA74496E8366397B /* FontAwesome5ProLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19EE3257B1904FB98653FA13 /* FontAwesome5ProLight.ttf */; };
+		6016A551F18C4AB69996AEFB /* dayt.woff in Resources */ = {isa = PBXBuildFile; fileRef = 529D23518A1C4AA9AAB32BB9 /* dayt.woff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -571,6 +571,7 @@
 		F19117629B494690BE06C98E /* Raleway-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-Bold.ttf"; path = "../src/assets/fonts/Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		F8C5AD3FFDEB4DF587AD12BF /* Raleway-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-BlackItalic.ttf"; path = "../src/assets/fonts/Raleway-BlackItalic.ttf"; sourceTree = "<group>"; };
 		FE4BC9635EA147899116E5B1 /* DMSerifDisplay-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DMSerifDisplay-Regular.ttf"; path = "../src/assets/fonts/DMSerifDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		529D23518A1C4AA9AAB32BB9 /* dayt.woff */ = {isa = PBXFileReference; name = "dayt.woff"; path = "../src/assets/fonts/dayt/font/dayt.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -915,6 +916,7 @@
 				532F6EF50EAF452ABE16CBA9 /* FontAwesome5BrandsRegular.ttf */,
 				19EE3257B1904FB98653FA13 /* FontAwesome5ProLight.ttf */,
 				EAEF7F5E56E04D5580C52D00 /* FontAwesome5ProSolid.ttf */,
+				529D23518A1C4AA9AAB32BB9 /* dayt.woff */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1661,6 +1663,7 @@
 				632A167DBC4F406AA39E8D90 /* FontAwesome5BrandsRegular.ttf in Resources */,
 				F8360B57DA74496E8366397B /* FontAwesome5ProLight.ttf in Resources */,
 				87F35D9BAB0C4B2F8A4EC99C /* FontAwesome5ProSolid.ttf in Resources */,
+				6016A551F18C4AB69996AEFB /* dayt.woff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

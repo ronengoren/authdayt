@@ -123,28 +123,28 @@
 			<key>uniqueIdentifier</key>
 			<string>381AEBEA-29CA-4DC1-BB51-1C2473E5B5E0</string>
 		</dict>
-		<key>4FCC07F9-5E56-4294-9C3A-97FE78A617B4</key>
+		<key>43A9973C-B669-4102-8245-5D3ED4D13C8B</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
 			<key>documentTypeString</key>
 			<string>&lt;nil&gt;</string>
 			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
 			<key>fileName</key>
-			<string>4FCC07F9-5E56-4294-9C3A-97FE78A617B4.xcactivitylog</string>
+			<string>43A9973C-B669-4102-8245-5D3ED4D13C8B.xcactivitylog</string>
 			<key>highLevelStatus</key>
-			<string>W</string>
+			<string>S</string>
 			<key>signature</key>
-			<string>React-deuaawcjxubuapaugmdfxhwnstsk</string>
+			<string>QBImagePicker-eozhjioxokjqjddwyrzxxsyxxsem</string>
 			<key>timeStartedRecording</key>
-			<real>584862348.73429203</real>
+			<real>584930959.46530497</real>
 			<key>timeStoppedRecording</key>
-			<real>584862348.981812</real>
+			<real>584930959.59036195</real>
 			<key>title</key>
-			<string>Build target React</string>
+			<string>Build target QBImagePicker</string>
 			<key>uniqueIdentifier</key>
-			<string>4FCC07F9-5E56-4294-9C3A-97FE78A617B4</string>
+			<string>43A9973C-B669-4102-8245-5D3ED4D13C8B</string>
 		</dict>
 		<key>5021BF85-AADD-420F-BA2B-7F547C64C82D</key>
 		<dict>
@@ -168,29 +168,6 @@
 			<string>Build target Folly</string>
 			<key>uniqueIdentifier</key>
 			<string>5021BF85-AADD-420F-BA2B-7F547C64C82D</string>
-		</dict>
-		<key>5BDF6E7E-AB7A-4C85-A5DE-F543DF79DADC</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
-			<key>fileName</key>
-			<string>5BDF6E7E-AB7A-4C85-A5DE-F543DF79DADC.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>W</string>
-			<key>signature</key>
-			<string>double-conversion-tvOS-deuaawcjxubuapaugmdfxhwnstsk</string>
-			<key>timeStartedRecording</key>
-			<real>584862349.61184895</real>
-			<key>timeStoppedRecording</key>
-			<real>584862349.63464797</real>
-			<key>title</key>
-			<string>Build target double-conversion-tvOS</string>
-			<key>uniqueIdentifier</key>
-			<string>5BDF6E7E-AB7A-4C85-A5DE-F543DF79DADC</string>
 		</dict>
 		<key>74772BCE-DA12-4641-9A5A-8F42120C6428</key>
 >>>>>>> dev
@@ -216,6 +193,7 @@
 			<key>uniqueIdentifier</key>
 			<string>74772BCE-DA12-4641-9A5A-8F42120C6428</string>
 		</dict>
+<<<<<<< HEAD
 		<key>7E4EB341-8856-424F-A6E3-C2879504E41B</key>
 		<dict>
 			<key>className</key>
@@ -242,6 +220,8 @@
 <<<<<<< HEAD
 		<key>5021BF85-AADD-420F-BA2B-7F547C64C82D</key>
 =======
+=======
+>>>>>>> dev
 		<key>82D5F859-C93B-420B-B73A-D4D523B9342B</key>
 		<dict>
 			<key>className</key>
@@ -265,6 +245,7 @@
 			<key>uniqueIdentifier</key>
 			<string>82D5F859-C93B-420B-B73A-D4D523B9342B</string>
 		</dict>
+<<<<<<< HEAD
 		<key>A2C1628B-9694-4F68-8847-A7DD6A9D7DEE</key>
 >>>>>>> dev
 		<dict>
@@ -292,6 +273,8 @@
 <<<<<<< HEAD
 		<key>74772BCE-DA12-4641-9A5A-8F42120C6428</key>
 =======
+=======
+>>>>>>> dev
 		<key>AEC02A00-1557-44B6-BBFB-9AF38E28420B</key>
 >>>>>>> dev
 		<dict>
@@ -333,6 +316,7 @@
 			<key>uniqueIdentifier</key>
 			<string>AEC02A00-1557-44B6-BBFB-9AF38E28420B</string>
 		</dict>
+<<<<<<< HEAD
 		<key>C74BF664-65C4-497E-A6F5-92DFA7C4C537</key>
 >>>>>>> dev
 		<dict>
@@ -444,6 +428,8 @@
 			<key>uniqueIdentifier</key>
 			<string>D72DBE6B-6D34-4585-B6A7-5A208A222D71</string>
 		</dict>
+=======
+>>>>>>> dev
 		<key>D9149B33-0DC3-48EC-A91B-A8FAF71975D2</key>
 		<dict>
 			<key>className</key>
@@ -517,6 +503,7 @@
 <<<<<<< HEAD
 =======
 		</dict>
+<<<<<<< HEAD
 		<key>FE561322-FEEE-48A9-916D-E3FE6933A3B0</key>
 		<dict>
 			<key>className</key>
@@ -541,6 +528,8 @@
 			<string>FE561322-FEEE-48A9-916D-E3FE6933A3B0</string>
 >>>>>>> dev
 		</dict>
+=======
+>>>>>>> dev
 	</dict>
 	<key>preserveOldLogs</key>
 	<true/>

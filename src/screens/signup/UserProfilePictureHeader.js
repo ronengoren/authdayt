@@ -1,33 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { initSearchAddress } from "../../redux/searchAddress/actions";
+// import { initSearchAddress } from "../../redux/searchAddress/actions";
 import { StyleSheet, TouchableOpacity } from "react-native";
 import I18n from "../../infra/localization";
 import { connect } from "react-redux";
-import {
-  editImages,
-  setCommunity,
-  updateUserLanguage,
-  addToWaitingList,
-  updateUserDestinationNeighborhood
-} from "../../redux/auth/actions";
-import { apiCommand } from "../../redux/apiCommands/actions";
-// import { analytics } from '/infra/reporting';
+// import {
+//   editImages,
+//   setCommunity,
+//   updateUserLanguage,
+//   addToWaitingList,
+//   updateUserDestinationNeighborhood
+// } from "../../redux/auth/actions";
+// import { apiCommand } from "../../redux/apiCommands/actions";
+// // import { analytics } from '/infra/reporting';
 import {
   Image,
   ImagePlaceholder,
   Text,
   View
 } from "../../components/basicComponents";
-import { Screen } from "../../components";
+// import { Screen } from "../../components";
 import { AwesomeIcon } from "../../assets/icons";
 import images from "../../assets/images";
 import { daytColors, uiConstants, commonStyles } from "../../vars";
-import { entityTypes, mediaTypes, screenNames } from "../../vars/enums";
+// import { entityTypes, mediaTypes, screenNames } from "../../vars/enums";
 import { get } from "../../infra/utils";
 import { getFirstName } from "../../infra/utils/stringUtils";
-import { NativeMediaPicker } from "../../infra/media";
-import { navigationService } from "../../infra/navigation";
+// import { NativeMediaPicker } from "../../infra/media";
+// import { navigationService } from "../../infra/navigation";
 
 const styles = StyleSheet.create({
   mainContent: {
@@ -115,7 +115,7 @@ class UserProfilePictureHeader extends React.Component {
 
   renderHeader() {
     const { user, title, subTitle } = this.props;
-    const firstName = getFirstName(user.name);
+    // const firstName = getFirstName(user.name);
     return (
       <View style={styles.header}>
         <View style={commonStyles.flexDirectionRow}>
@@ -126,8 +126,8 @@ class UserProfilePictureHeader extends React.Component {
             color={daytColors.white}
             style={styles.headerText}
           >
-            {title ||
-              I18n.t("onboarding.user_profile_header.title", { firstName })}
+            {/* {title ||
+              I18n.t("onboarding.user_profile_header.title", { firstName })} */}
           </Text>
           <Image source={images.chat.hey} style={styles.headerIcon} />
         </View>
@@ -148,94 +148,86 @@ class UserProfilePictureHeader extends React.Component {
     return (
       <View style={[commonStyles.shadow, styles.profileImageWrapper]}>
         <TouchableOpacity activeOpacity={1} onPress={this.handleAddImage}>
-          {profileImage ? (
-            <Image source={{ uri: profileImage }} style={styles.userImage} />
-          ) : (
-            <ImagePlaceholder
-              isAwesomeIcon
-              type="circle"
-              size="medium"
-              iconName="camera"
-              iconSize={34}
-              text={I18n.t(
-                "onboarding.user_profile_header.picture_placeholder"
-              )}
-              color={daytColors.b30}
-              textStyle={styles.addYouPhotoText}
+          <Image source={{ uri: profileImage }} style={styles.userImage} />
+          <ImagePlaceholder
+            isAwesomeIcon
+            type="circle"
+            size="medium"
+            iconName="camera"
+            iconSize={34}
+            text={I18n.t("onboarding.user_profile_header.picture_placeholder")}
+            color={daytColors.b30}
+            textStyle={styles.addYouPhotoText}
+          />
+          <View activeOpacity={1} style={styles.addImageButton}>
+            <AwesomeIcon
+              name="camera"
+              weight="solid"
+              size={18}
+              color={daytColors.white}
+              onPress={this.handleAddImage}
+              style={styles.addImageBtn}
             />
-          )}
-
-          {profileImage ? (
-            <View activeOpacity={1} style={styles.addImageButton}>
-              <AwesomeIcon
-                name="camera"
-                weight="solid"
-                size={18}
-                color={daytColors.white}
-                onPress={this.handleAddImage}
-                style={styles.addImageBtn}
-              />
-            </View>
-          ) : null}
+          </View>
         </TouchableOpacity>
       </View>
     );
   }
 
-  handleAddImage = async () => {
-    const { editImages, apiCommand, user } = this.props;
-    analytics.actionEvents
-      .onboardingClickedUploadPicture({ userId: user.id, source: "Browse" })
-      .dispatch();
-    const res = await NativeMediaPicker.show({ mediaType: mediaTypes.IMAGE });
-    if (!res) return;
-    const { localUri, fileName } = res;
+  //   handleAddImage = async () => {
+  //     const { editImages, apiCommand, user } = this.props;
+  //     analytics.actionEvents
+  //       .onboardingClickedUploadPicture({ userId: user.id, source: "Browse" })
+  //       .dispatch();
+  //     const res = await NativeMediaPicker.show({ mediaType: mediaTypes.IMAGE });
+  //     if (!res) return;
+  //     const { localUri, fileName } = res;
 
-    navigationService.navigate(screenNames.ImageUpload, {
-      localUri,
-      fileName,
-      entityType: entityTypes.PROFILE,
-      onComplete: ({ mediaUrl: profileImage }) => {
-        this.setState({ profileImage });
-        editImages({
-          media: { thumbnail: profileImage, profile: profileImage },
-          newUser: true
-        });
-        apiCommand("profile.editImage", {
-          imageUrl: profileImage,
-          userId: user.id
-        });
-      }
-    });
-  };
+  //     navigationService.navigate(screenNames.ImageUpload, {
+  //       localUri,
+  //       fileName,
+  //       entityType: entityTypes.PROFILE,
+  //       onComplete: ({ mediaUrl: profileImage }) => {
+  //         this.setState({ profileImage });
+  //         editImages({
+  //           media: { thumbnail: profileImage, profile: profileImage },
+  //           newUser: true
+  //         });
+  //         apiCommand("profile.editImage", {
+  //           imageUrl: profileImage,
+  //           userId: user.id
+  //         });
+  //       }
+  //     });
+  //   };
 }
 
-UserProfilePictureHeader.propTypes = {
-  title: PropTypes.string,
-  subTitle: PropTypes.string,
-  user: PropTypes.object,
-  editImages: PropTypes.func,
-  apiCommand: PropTypes.func
-};
+// UserProfilePictureHeader.propTypes = {
+//   title: PropTypes.string,
+//   subTitle: PropTypes.string,
+//   user: PropTypes.object,
+//   editImages: PropTypes.func,
+//   apiCommand: PropTypes.func
+// };
 
-const mapStateToProps = state => ({
-  user: state.auth.user,
-  communities: state.auth.communities
-});
+// const mapStateToProps = state => ({
+//   user: state.auth.user,
+//   communities: state.auth.communities
+// });
 
-const mapDispatchToProps = {
-  editImages,
-  initSearchAddress,
-  setCommunity,
-  updateUserLanguage,
-  addToWaitingList,
-  updateUserDestinationNeighborhood,
-  apiCommand
-};
+// const mapDispatchToProps = {
+//   editImages,
+//   initSearchAddress,
+//   setCommunity,
+//   updateUserLanguage,
+//   addToWaitingList,
+//   updateUserDestinationNeighborhood,
+//   apiCommand
+// };
 
-UserProfilePictureHeader = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(UserProfilePictureHeader);
+// UserProfilePictureHeader = connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(UserProfilePictureHeader);
 // export default Screen({ modalError: true })(UserProfilePictureHeader);
 export default UserProfilePictureHeader;

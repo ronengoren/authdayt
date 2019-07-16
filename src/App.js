@@ -26,7 +26,7 @@ import { navigationService, screenTrackingService } from "./infra/navigation";
 import { AppTopNavigation } from "./navigators";
 
 import Welcome from "./screens/welcome/Welcome";
-
+import SetUserGender from "./screens/signup/SetUserGender";
 const IntroStack = createStackNavigator({
   welcome: Welcome
 });
@@ -34,10 +34,11 @@ const MainStack = () => {
   return createAppContainer(
     createSwitchNavigator(
       {
-        welcome: Welcome
+        welcome: Welcome,
+        setUserGender: SetUserGender
       },
       {
-        initialRouteName: "welcome"
+        initialRouteName: "setUserGender"
         // authBoolean ? "main" : "login"
       }
     )
