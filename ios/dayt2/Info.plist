@@ -40,7 +40,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>do you allow dayt Camera Access</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>do you allow dayt Photo Access</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
@@ -99,6 +99,7 @@
 		<string>FontAwesome5BrandsRegular.ttf</string>
 		<string>FontAwesome5ProLight.ttf</string>
 		<string>FontAwesome5ProSolid.ttf</string>
+		<string>dayt.woff</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

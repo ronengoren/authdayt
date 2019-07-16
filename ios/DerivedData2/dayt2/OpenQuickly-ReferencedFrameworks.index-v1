@@ -17,8 +17,8 @@
 	<string>ImageIO</string>
 	<string>StoreKit</string>
 	<string>WebImage</string>
-	<string>yoga</string>
 	<string>AssetsLibrary</string>
+	<string>yoga</string>
 	<string>CoreServices</string>
 	<string>jsi</string>
 	<string>RSKImageCropper</string>
@@ -31,8 +31,8 @@
 	<string>AdSupport</string>
 	<string>SDWebImage</string>
 	<string>QBImagePicker</string>
-	<string>AppKit</string>
 	<string>FBSDKCoreKit</string>
+	<string>AppKit</string>
 	<string>cxxreact</string>
 	<string>jsireact</string>
 	<string>Cocoa</string>

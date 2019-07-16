@@ -7,3 +7,5 @@ export { default as Image } from "./Image";
 export { default as TranslatedText } from "./TranslatedText";
 export { default as Video } from "./Video";
 export { default as IconButton } from "./IconButton";
+export { default as ScrollView } from "./ScrollView";
+export { default as ImagePlaceholder } from "./ImagePlaceholder";

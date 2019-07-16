@@ -117,4 +117,4 @@ const SignUpWizard = createStackNavigator({
   //     transitionConfig: preventRouteTransition
 });
 
-// export default SignUpWizard;
+export default SignUpWizard;
