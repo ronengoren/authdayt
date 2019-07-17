@@ -20,9 +20,9 @@
 	<string>QBImagePickerController</string>
 	<string>ImageIO</string>
 	<string>StoreKit</string>
-	<string>WebImage</string>
-	<string>AssetsLibrary</string>
 	<string>yoga</string>
+	<string>AssetsLibrary</string>
+	<string>WebImage</string>
 	<string>CoreServices</string>
 	<string>jsi</string>
 	<string>RSKImageCropper</string>
@@ -41,8 +41,11 @@
 	<string>AdSupport</string>
 	<string>SDWebImage</string>
 	<string>QBImagePicker</string>
-	<string>FBSDKCoreKit</string>
 	<string>AppKit</string>
+<<<<<<< HEAD
+>>>>>>> dev
+=======
+	<string>FBSDKCoreKit</string>
 >>>>>>> dev
 	<string>cxxreact</string>
 	<string>objc</string>

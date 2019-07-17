@@ -35,7 +35,7 @@
 			<key>uniqueIdentifier</key>
 			<string>3581B0BB-17BD-4AED-BC4C-2B8939E6CEA2</string>
 		</dict>
-		<key>3F7C669E-771C-45EB-A39E-E39895AD4727</key>
+		<key>B226CA2B-7CB2-4F6F-ADC4-900A24DAFCD8</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -44,7 +44,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>3F7C669E-771C-45EB-A39E-E39895AD4727.xcactivitylog</string>
+			<string>B226CA2B-7CB2-4F6F-ADC4-900A24DAFCD8.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>S</string>
 			<key>schemeIdentifier-containerName</key>
@@ -56,12 +56,13 @@
 			<key>signature</key>
 			<string>Debug dayt2</string>
 			<key>timeStartedRecording</key>
-			<real>584930961.62071896</real>
+			<real>585019775.72902095</real>
 			<key>timeStoppedRecording</key>
-			<real>584932002.23597896</real>
+			<real>585022187.09134996</real>
 			<key>title</key>
 			<string>Debug dayt2</string>
 			<key>uniqueIdentifier</key>
+<<<<<<< HEAD
 			<string>3F7C669E-771C-45EB-A39E-E39895AD4727</string>
 		</dict>
 <<<<<<< HEAD
@@ -397,6 +398,9 @@
 			<string>Debug dayt2</string>
 			<key>uniqueIdentifier</key>
 			<string>F9C43FF8-50B1-4BCD-93DB-6E0EED6C084A</string>
+=======
+			<string>B226CA2B-7CB2-4F6F-ADC4-900A24DAFCD8</string>
+>>>>>>> dev
 		</dict>
 	</dict>
 </dict>
