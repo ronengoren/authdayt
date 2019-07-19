@@ -121,29 +121,6 @@
 			<key>uniqueIdentifier</key>
 			<string>381AEBEA-29CA-4DC1-BB51-1C2473E5B5E0</string>
 		</dict>
-		<key>5021BF85-AADD-420F-BA2B-7F547C64C82D</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
-			<key>fileName</key>
-			<string>5021BF85-AADD-420F-BA2B-7F547C64C82D.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>W</string>
-			<key>signature</key>
-			<string>Folly-bprvhdhcfbrdrvadkvewpebxwlll</string>
-			<key>timeStartedRecording</key>
-			<real>584778504.10027003</real>
-			<key>timeStoppedRecording</key>
-			<real>584778509.882581</real>
-			<key>title</key>
-			<string>Build target Folly</string>
-			<key>uniqueIdentifier</key>
-			<string>5021BF85-AADD-420F-BA2B-7F547C64C82D</string>
-		</dict>
 		<key>74772BCE-DA12-4641-9A5A-8F42120C6428</key>
 		<dict>
 			<key>className</key>
@@ -213,29 +190,6 @@
 			<key>uniqueIdentifier</key>
 			<string>AEC02A00-1557-44B6-BBFB-9AF38E28420B</string>
 		</dict>
-		<key>D9149B33-0DC3-48EC-A91B-A8FAF71975D2</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
-			<key>fileName</key>
-			<string>D9149B33-0DC3-48EC-A91B-A8FAF71975D2.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>W</string>
-			<key>signature</key>
-			<string>glog-bprvhdhcfbrdrvadkvewpebxwlll</string>
-			<key>timeStartedRecording</key>
-			<real>584778501.75244999</real>
-			<key>timeStoppedRecording</key>
-			<real>584778504.10606396</real>
-			<key>title</key>
-			<string>Build target glog</string>
-			<key>uniqueIdentifier</key>
-			<string>D9149B33-0DC3-48EC-A91B-A8FAF71975D2</string>
-		</dict>
 		<key>DA4F7BAE-6CE5-467F-AA66-FE52313B635D</key>
 		<dict>
 			<key>className</key>
@@ -281,29 +235,6 @@
 			<string>Build target yoga</string>
 			<key>uniqueIdentifier</key>
 			<string>F52AEC68-984C-4EC5-92D1-B5B097FF3D12</string>
-		</dict>
-		<key>F777773A-EA57-46D7-B25A-B2422323C0B9</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
-			<key>fileName</key>
-			<string>F777773A-EA57-46D7-B25A-B2422323C0B9.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>S</string>
-			<key>signature</key>
-			<string>QBImagePicker-eozhjioxokjqjddwyrzxxsyxxsem</string>
-			<key>timeStartedRecording</key>
-			<real>585202617.79692996</real>
-			<key>timeStoppedRecording</key>
-			<real>585202617.907408</real>
-			<key>title</key>
-			<string>Build target QBImagePicker</string>
-			<key>uniqueIdentifier</key>
-			<string>F777773A-EA57-46D7-B25A-B2422323C0B9</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>
