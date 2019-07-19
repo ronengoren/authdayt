@@ -833,11 +833,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				94EF66C322DAF96C00BB73A7 /* Default-568h@2x.png */,
-=======
-				941E7F8E22DAF655006A360A /* Default-568h@2x.png */,
->>>>>>> dev
 				13B07FAE1A68108700A75B9A /* dayt2 */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* dayt2Tests */,
@@ -1652,11 +1648,7 @@
 				18D16671ABE24289B62F2795 /* tinderclone.ttf in Resources */,
 				4E52AD03670248C3AB9E6F93 /* dayt.ttf in Resources */,
 				632A167DBC4F406AA39E8D90 /* FontAwesome5BrandsRegular.ttf in Resources */,
-<<<<<<< HEAD
 				94EF66F422DAF96C00BB73A7 /* Default-568h@2x.png in Resources */,
-=======
-				941E7FBF22DAF655006A360A /* Default-568h@2x.png in Resources */,
->>>>>>> dev
 				F8360B57DA74496E8366397B /* FontAwesome5ProLight.ttf in Resources */,
 				87F35D9BAB0C4B2F8A4EC99C /* FontAwesome5ProSolid.ttf in Resources */,
 				4E52AD03670248C3AB9E6F93 /* dayt.ttf in Resources */,
