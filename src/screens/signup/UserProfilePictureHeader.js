@@ -116,6 +116,7 @@ class UserProfilePictureHeader extends React.Component {
   renderHeader() {
     const { user, title, subTitle } = this.props;
     // const firstName = getFirstName(user.name);
+    const firstName = "Ronen";
     return (
       <View style={styles.header}>
         <View style={commonStyles.flexDirectionRow}>
@@ -126,8 +127,8 @@ class UserProfilePictureHeader extends React.Component {
             color={daytColors.white}
             style={styles.headerText}
           >
-            {/* {title ||
-              I18n.t("onboarding.user_profile_header.title", { firstName })} */}
+            {title ||
+              I18n.t("onboarding.user_profile_header.title", { firstName })}
           </Text>
           <Image source={images.chat.hey} style={styles.headerIcon} />
         </View>
@@ -148,27 +149,35 @@ class UserProfilePictureHeader extends React.Component {
     return (
       <View style={[commonStyles.shadow, styles.profileImageWrapper]}>
         <TouchableOpacity activeOpacity={1} onPress={this.handleAddImage}>
-          <Image source={{ uri: profileImage }} style={styles.userImage} />
-          <ImagePlaceholder
-            isAwesomeIcon
-            type="circle"
-            size="medium"
-            iconName="camera"
-            iconSize={34}
-            text={I18n.t("onboarding.user_profile_header.picture_placeholder")}
-            color={daytColors.b30}
-            textStyle={styles.addYouPhotoText}
-          />
-          <View activeOpacity={1} style={styles.addImageButton}>
-            <AwesomeIcon
-              name="camera"
-              weight="solid"
-              size={18}
-              color={daytColors.white}
-              onPress={this.handleAddImage}
-              style={styles.addImageBtn}
+          {profileImage ? (
+            <Image source={{ uri: profileImage }} style={styles.userImage} />
+          ) : (
+            <ImagePlaceholder
+              isAwesomeIcon
+              type="circle"
+              size="medium"
+              iconName="camera"
+              iconSize={34}
+              text={I18n.t(
+                "onboarding.user_profile_header.picture_placeholder"
+              )}
+              color={daytColors.b30}
+              textStyle={styles.addYouPhotoText}
             />
-          </View>
+          )}
+
+          {profileImage ? (
+            <View activeOpacity={1} style={styles.addImageButton}>
+              <AwesomeIcon
+                name="camera"
+                weight="solid"
+                size={18}
+                color={daytColors.white}
+                onPress={this.handleAddImage}
+                style={styles.addImageBtn}
+              />
+            </View>
+          ) : null}
         </TouchableOpacity>
       </View>
     );

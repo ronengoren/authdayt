@@ -27,9 +27,9 @@ import { navigationService, screenTrackingService } from "./infra/navigation";
 
 import Welcome from "./screens/welcome/Welcome";
 import SetUserGender from "./screens/signup/SetUserGender";
-// import Signup from "./screens/signup/Signup";
 import Signup from "./screens/signup/Signup";
-
+import SignIn from "./screens/signIn/SignIn";
+import OnBoardingDiscover from "./screens/OnBoardingDiscover/OnBoardingDiscover";
 const IntroStack = createStackNavigator({
   welcome: Welcome
 });
@@ -39,10 +39,12 @@ const MainStack = () => {
       {
         welcome: Welcome,
         setUserGender: SetUserGender,
-        signup: Signup
+        signup: Signup,
+        signin: SignIn,
+        onBoardingDiscover: OnBoardingDiscover
       },
       {
-        initialRouteName: "signup"
+        initialRouteName: "onBoardingDiscover"
         // authBoolean ? "main" : "login"
       }
     )

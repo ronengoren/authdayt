@@ -9,6 +9,26 @@ const authentication = createStackNavigator({
     screen: screens.Welcome,
     navigationOptions: {
       header: null
+    },
+    [screenNames.SignIn]: {
+      screen: screens.SignIn,
+      navigationOptions: {
+        header: null
+      }
+    },
+    [screenNames.SignUp]: {
+      screen: screens.SignUp,
+      navigationOptions: {
+        header: null,
+        gesturesEnabled: false
+      }
+    },
+    [screenGroupNames.SIGN_UP_WIZARD]: {
+      screen: SignUpWizard,
+      navigationOptions: {
+        header: null,
+        gesturesEnabled: false
+      }
     }
   },
   initialRouteName: screenNames.Welcome,

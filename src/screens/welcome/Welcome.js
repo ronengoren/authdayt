@@ -61,10 +61,10 @@ const styles = StyleSheet.create({
   },
   logo: {
     alignSelf: "center",
-    width: 130,
-    height: 30,
-    marginTop: LOGO_MARGIN_TOP,
-    marginBottom: 30
+    width: 100,
+    height: 100,
+    marginTop: LOGO_MARGIN_TOP
+    // marginBottom: 30
   },
   slider: {
     marginTop: SLIDER_MARGIN_TOP

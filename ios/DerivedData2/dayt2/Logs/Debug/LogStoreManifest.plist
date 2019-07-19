@@ -6,7 +6,7 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>3581B0BB-17BD-4AED-BC4C-2B8939E6CEA2</key>
+		<key>845A4374-CD37-4D53-9BFD-E9282DB72613</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>3581B0BB-17BD-4AED-BC4C-2B8939E6CEA2.xcactivitylog</string>
+			<string>845A4374-CD37-4D53-9BFD-E9282DB72613.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>S</string>
 			<key>schemeIdentifier-containerName</key>
@@ -27,15 +27,15 @@
 			<key>signature</key>
 			<string>Debug dayt2</string>
 			<key>timeStartedRecording</key>
-			<real>584937633.68927801</real>
+			<real>585203729.99762499</real>
 			<key>timeStoppedRecording</key>
-			<real>584937724.17464805</real>
+			<real>585205056.01126504</real>
 			<key>title</key>
 			<string>Debug dayt2</string>
 			<key>uniqueIdentifier</key>
-			<string>3581B0BB-17BD-4AED-BC4C-2B8939E6CEA2</string>
+			<string>845A4374-CD37-4D53-9BFD-E9282DB72613</string>
 		</dict>
-		<key>B226CA2B-7CB2-4F6F-ADC4-900A24DAFCD8</key>
+		<key>87323DC3-3F72-486D-9500-88AEEABF624F</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -44,7 +44,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>B226CA2B-7CB2-4F6F-ADC4-900A24DAFCD8.xcactivitylog</string>
+			<string>87323DC3-3F72-486D-9500-88AEEABF624F.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>S</string>
 			<key>schemeIdentifier-containerName</key>
@@ -56,13 +56,71 @@
 			<key>signature</key>
 			<string>Debug dayt2</string>
 			<key>timeStartedRecording</key>
-			<real>585019775.72902095</real>
+			<real>585203567.44368398</real>
 			<key>timeStoppedRecording</key>
-			<real>585022187.09134996</real>
+			<real>585203728.47051001</real>
 			<key>title</key>
 			<string>Debug dayt2</string>
 			<key>uniqueIdentifier</key>
-			<string>B226CA2B-7CB2-4F6F-ADC4-900A24DAFCD8</string>
+			<string>87323DC3-3F72-486D-9500-88AEEABF624F</string>
+		</dict>
+		<key>C3E0C9E0-2E34-4666-9A23-C74540751BFF</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C3E0C9E0-2E34-4666-9A23-C74540751BFF.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>dayt2 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>dayt2</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug dayt2</string>
+			<key>timeStartedRecording</key>
+			<real>585202621.92338395</real>
+			<key>timeStoppedRecording</key>
+			<real>585203562.02592504</real>
+			<key>title</key>
+			<string>Debug dayt2</string>
+			<key>uniqueIdentifier</key>
+			<string>C3E0C9E0-2E34-4666-9A23-C74540751BFF</string>
+		</dict>
+		<key>E6A3F3EB-5D56-481B-A5A5-AF5515DA514D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E6A3F3EB-5D56-481B-A5A5-AF5515DA514D.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>dayt2 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>dayt2</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug dayt2</string>
+			<key>timeStartedRecording</key>
+			<real>585030242.60286295</real>
+			<key>timeStoppedRecording</key>
+			<real>585037302.96510303</real>
+			<key>title</key>
+			<string>Debug dayt2</string>
+			<key>uniqueIdentifier</key>
+			<string>E6A3F3EB-5D56-481B-A5A5-AF5515DA514D</string>
 		</dict>
 	</dict>
 </dict>
