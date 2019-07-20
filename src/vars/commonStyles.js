@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { daytColors } from "./vars";
+import { daytColors } from "../vars";
 
 const commonStyles = StyleSheet.create({
   flex1: {

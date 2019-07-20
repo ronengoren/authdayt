@@ -37,16 +37,6 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>NSCameraUsageDescription</key>
-	<string>do you allow dayt Camera Access</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>do you allow dayt Photo Access</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>do you allow dayt Camera Role Access</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>do you allow dayt Photo Library Access</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Lato-Black.ttf</string>

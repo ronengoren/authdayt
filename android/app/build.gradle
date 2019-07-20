@@ -89,12 +89,12 @@ apply from: "../../node_modules/react-native/react.gradle"
  * Upload all the APKs to the Play Store and people will download
  * the correct one based on the CPU architecture of their device.
  */
-def enableSeparateBuildPerCPUArchitecture = false
+def enableSeparateBuildPerCPUArchitecture = true
 
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
  */
-def enableProguardInReleaseBuilds = false
+def enableProguardInReleaseBuilds = true
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -112,7 +112,7 @@ android {
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
-        missingDimensionStrategy 'react-native-camera', 'general'
+        vectorDrawables.useSupportLibrary = true
     }
     splits {
         abi {
@@ -151,7 +151,6 @@ dependencies {
     implementation project(':react-native-fast-image')
     implementation project(':react-native-fs')
     implementation project(':react-native-device-info')
-    implementation project(':react-native-camera')
     implementation project(':@react-native-community_async-storage')
     implementation project(':react-native-config')
     implementation project(':react-native-vector-icons')

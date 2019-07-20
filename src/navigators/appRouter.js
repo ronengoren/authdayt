@@ -4,28 +4,23 @@ import { screenGroupNames } from "../vars/enums";
 // import MiddleSection from "./app";
 import authentication from "./authentication";
 
-// const AppTopNavigation = createSwitchNavigator(
-//   {
-//     [screenGroupNames.AUTHENTICATION]: {
-//       screen: authentication,
-//       navigationOptions: {
-//         header: null
-//       }
-//     },
-//     [screenGroupNames.SIGNED_IN]: {
-//       screen: MiddleSection,
-//       navigationOptions: {
-//         header: null
-//       }
-//     }
-//   },
-//   {
-//     initialRouteName: screenGroupNames.AUTHENTICATION,
-//     headerMode: 'screen',
-//     cardStyle: {
-//       backgroundColor: homeisColors.white
-//     }
-//   }
-// );
+const AppTopNavigation = createSwitchNavigator({
+  [screenGroupNames.AUTHENTICATION]: {
+    screen: authentication,
+    navigationOptions: {
+      header: null
+    }
+  },
+  //     [screenGroupNames.SIGNED_IN]: {
+  //       screen: MiddleSection,
+  //       navigationOptions: {
+  //         header: null
+  //       }
+  //     }
+  //   },
+  //   {
+  initialRouteName: screenGroupNames.AUTHENTICATION,
+  headerMode: "screen"
+});
 
-// export default createAppContainer(AppTopNavigation);
+export default createAppContainer(AppTopNavigation);

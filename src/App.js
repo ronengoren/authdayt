@@ -23,9 +23,11 @@ import {
 } from "./vars/enums";
 import { get } from "./infra/utils";
 import { navigationService, screenTrackingService } from "./infra/navigation";
-import { AppTopNavigation } from "./navigators";
+// import { AppTopNavigation } from "./navigators";
 
 import Welcome from "./screens/welcome/Welcome";
+import SetUserGender from "./screens/signup/SetUserGender";
+import Signup from "./screens/signup/Signup";
 
 const IntroStack = createStackNavigator({
   welcome: Welcome
@@ -34,10 +36,12 @@ const MainStack = () => {
   return createAppContainer(
     createSwitchNavigator(
       {
-        welcome: Welcome
+        welcome: Welcome,
+        setUserGender: SetUserGender,
+        signup: Signup
       },
       {
-        initialRouteName: "welcome"
+        initialRouteName: "setUserGender"
         // authBoolean ? "main" : "login"
       }
     )

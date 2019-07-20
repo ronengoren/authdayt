@@ -29,55 +29,55 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
-  - React (0.59.8):
-    - React/Core (= 0.59.8)
-  - React/Core (0.59.8):
-    - yoga (= 0.59.8.React)
-  - React/CxxBridge (0.59.8):
+  - React (0.59.10):
+    - React/Core (= 0.59.10)
+  - React/Core (0.59.10):
+    - yoga (= 0.59.10.React)
+  - React/CxxBridge (0.59.10):
     - Folly (= 2018.10.22.00)
     - React/Core
     - React/cxxreact
     - React/jsiexecutor
-  - React/cxxreact (0.59.8):
+  - React/cxxreact (0.59.10):
     - boost-for-react-native (= 1.63.0)
     - DoubleConversion
     - Folly (= 2018.10.22.00)
     - glog
     - React/jsinspector
-  - React/DevSupport (0.59.8):
+  - React/DevSupport (0.59.10):
     - React/Core
     - React/RCTWebSocket
-  - React/fishhook (0.59.8)
-  - React/jsi (0.59.8):
+  - React/fishhook (0.59.10)
+  - React/jsi (0.59.10):
     - DoubleConversion
     - Folly (= 2018.10.22.00)
     - glog
-  - React/jsiexecutor (0.59.8):
+  - React/jsiexecutor (0.59.10):
     - DoubleConversion
     - Folly (= 2018.10.22.00)
     - glog
     - React/cxxreact
     - React/jsi
-  - React/jsinspector (0.59.8)
-  - React/RCTAnimation (0.59.8):
+  - React/jsinspector (0.59.10)
+  - React/RCTAnimation (0.59.10):
     - React/Core
-  - React/RCTBlob (0.59.8):
+  - React/RCTBlob (0.59.10):
     - React/Core
-  - React/RCTNetwork (0.59.8):
+  - React/RCTNetwork (0.59.10):
     - React/Core
-  - React/RCTText (0.59.8):
+  - React/RCTText (0.59.10):
     - React/Core
-  - React/RCTWebSocket (0.59.8):
+  - React/RCTWebSocket (0.59.10):
     - React/Core
     - React/fishhook
     - React/RCTBlob
-  - RNCAsyncStorage (1.5.0):
+  - RNCAsyncStorage (1.5.1):
     - React
   - RNLocalize (1.1.4):
     - React
-  - RNVectorIcons (6.5.0):
+  - RNVectorIcons (6.6.0):
     - React
-  - yoga (0.59.8.React)
+  - yoga (0.59.10.React)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -131,12 +131,12 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: a823ae35bdb60ebb8d7a7e51abe7c5d87d2bfced
   Folly: de497beb10f102453a1afa9edbf8cf8a251890de
   glog: aefd1eb5dda2ab95ba0938556f34b98e2da3a60d
-  React: 76e6aa2b87d05eb6cccb6926d72685c9a07df152
-  RNCAsyncStorage: 63407ea82f1b5ac8fc53a0b8c569b08e0516a9e0
+  React: 36d0768f9e93be2473b37e7fa64f92c1d5341eef
+  RNCAsyncStorage: 2808c378f6a70f22f66eeb6c11a8d69f326dd795
   RNLocalize: a91e036a6abc46e656a989456701182e0e228c7a
-  RNVectorIcons: f6cf608dee5b2cb5726ff3b629a5258586d5677b
-  yoga: 92b2102c3d373d1a790db4ab761d2b0ffc634f64
+  RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
+  yoga: 684513b14b03201579ba3cee20218c9d1298b0cc
 
-PODFILE CHECKSUM: d2c7ccc6c6ae3da6770ea4f969718482acf63e79
+PODFILE CHECKSUM: 19c9150f72accc602d9957fbe520db99a081f085
 
 COCOAPODS: 1.7.2

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>netinet6</string>
+	<string>MapKit</string>
+	<string>Bolts</string>
+	<string>libkern</string>
+	<string>WebKit</string>
+	<string>folly</string>
+	<string>FLAnimatedImage</string>
+	<string>CoreLocation</string>
+	<string>AVKit</string>
+	<string>DVAssetLoaderDelegate</string>
+	<string>ImageIO</string>
+	<string>StoreKit</string>
+	<string>WebImage</string>
+	<string>yoga</string>
+	<string>CoreServices</string>
+	<string>jsi</string>
+	<string>mach</string>
+	<string>AVFoundation</string>
+	<string>os</string>
+	<string>MobileCoreServices</string>
+	<string>WatchKit</string>
+	<string>CoreText</string>
+	<string>AdSupport</string>
+	<string>SDWebImage</string>
+	<string>AppKit</string>
+	<string>FBSDKCoreKit</string>
+	<string>cxxreact</string>
+	<string>jsireact</string>
+	<string>Cocoa</string>
+	<string>Accounts</string>
+	<string>XCTest</string>
+	<string>netinet</string>
+	<string>CoreData</string>
+	<string>Accelerate</string>
+	<string>CommonCrypto</string>
+	<string>arpa</string>
+	<string>fishhook</string>
+	<string>QuartzCore</string>
+	<string>AudioToolbox</string>
+	<string>SystemConfiguration</string>
+	<string>Security</string>
+	<string>LocalAuthentication</string>
+	<string>CoreGraphics</string>
+	<string>objc</string>
+	<string>UIKit</string>
+	<string>webp</string>
+	<string>CoreTelephony</string>
+	<string>Foundation</string>
+	<string>Darwin</string>
+	<string>sys</string>
+	<string>React</string>
+</array>
+</plist>
