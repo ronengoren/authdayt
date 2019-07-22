@@ -4,7 +4,6 @@ import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
-import com.reactnative.ivpusic.imagepicker.PickerPackage;
 import com.github.yamill.orientation.OrientationPackage;
 import com.reactcommunity.rnlocalize.RNLocalizePackage;
 import com.brentvatne.react.ReactVideoPackage;
