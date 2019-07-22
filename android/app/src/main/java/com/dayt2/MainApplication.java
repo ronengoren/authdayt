@@ -3,6 +3,7 @@ package com.dayt2;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.reactnative.ivpusic.imagepicker.PickerPackage;
 import com.github.yamill.orientation.OrientationPackage;
 import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
 import com.reactcommunity.rnlocalize.RNLocalizePackage;

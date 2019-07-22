@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@react-native-community/async-storage": "^1.5.0",
+    "@react-native-community/async-storage": "^1.5.1",
     "@react-native-community/viewpager": "^1.1.7",
     "autolinker": "^3.1.0",
     "fs": "0.0.1-security",
@@ -23,9 +23,10 @@
     "react-native-config": "^0.11.7",
     "react-native-device-info": "^2.2.2",
     "react-native-elements": "^1.1.0",
-    "react-native-fast-image": "^5.1.2",
+    "react-native-fast-image": "^5.4.2",
     "react-native-fs": "^2.13.3",
     "react-native-gesture-handler": "^1.2.1",
+    "react-native-image-crop-picker": "^0.25.0",
     "react-native-localize": "^1.1.4",
     "react-native-orientation": "^3.1.3",
     "react-native-paper": "^2.16.0",
@@ -35,7 +36,7 @@
     "react-navigation-material-bottom-tabs": "^1.0.0",
     "react-redux": "^7.0.3",
     "react-router-native": "^5.0.1",
-    "redux": "^4.0.3",
+    "redux": "^4.0.4",
     "redux-persist": "^5.10.0",
     "redux-thunk": "^2.3.0",
     "subscriptions-transport-ws": "^0.9.16",
@@ -52,10 +53,5 @@
   },
   "jest": {
     "preset": "react-native"
-  },
-  "rnpm": {
-    "assets": [
-      "./src/assets/fonts"
-    ]
   }
 }
