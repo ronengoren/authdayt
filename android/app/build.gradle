@@ -144,6 +144,7 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.work:work-runtime:2.0.1-rc01'
     implementation project(':react-native-image-crop-picker')
     implementation project(':react-native-orientation')
     implementation project(':@react-native-community_viewpager')

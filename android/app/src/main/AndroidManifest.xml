@@ -16,7 +16,7 @@
       android:allowBackup="true"
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
-      <!-- <provider
+      <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.provider"
             android:exported="false"
@@ -24,7 +24,7 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths"/>
-        </provider> -->
+        </provider>
       <service android:name="org.eclipse.paho.android.service.MqttService" />
       <activity
         android:name=".MainActivity"
