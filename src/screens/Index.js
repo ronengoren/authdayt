@@ -1,2 +1,7 @@
 export { Welcome } from "./welcome";
-export { SignUp, SetUserGender, SetUserEmail } from "./signup";
+export {
+  SignUp,
+  SetUserGender,
+  SetUserEmail,
+  OnBoardingDiscover
+} from "./signup";

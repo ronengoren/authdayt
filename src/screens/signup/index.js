@@ -4,3 +4,4 @@ export { default as SetUserEmail } from "./SetUserEmail";
 export {
   default as UserProfilePictureHeader
 } from "./UserProfilePictureHeader";
+export { OnBoardingDiscover } from "./OnBoardingDiscover";

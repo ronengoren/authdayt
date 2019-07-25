@@ -227,9 +227,9 @@
             }
         },
         "discover_pages": {
-            "page_header": "Discover",
+            "page_header": "Days",
             "continue_button": "Done",
-            "title": "Follow interesting channels and \n feel right at home from the get go.",
+            "title": "When are you available?",
             "unfollow_all_button": "Unfollow All",
             "follow_all_button": "Follow All",
             "error_title": "You must select at least 2 interests"
