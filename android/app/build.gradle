@@ -1,6 +1,5 @@
 apply plugin: "com.android.application"
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
-apply plugin: 'com.amazonaws.appsync'
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
 import com.android.build.OutputFile
@@ -158,8 +157,6 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    implementation 'com.amazonaws:aws-android-sdk-core:2.13.+'
-    implementation 'com.amazonaws:aws-android-sdk-appsync:2.8.+'
     implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
     implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
 

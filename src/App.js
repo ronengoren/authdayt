@@ -45,7 +45,7 @@ const MainStack = () => {
         suggestedTopicItem: SuggestedTopicItem
       },
       {
-        initialRouteName: "onBoardingDiscover"
+        initialRouteName: "setUserGender"
         // authBoolean ? "main" : "login"
       }
     )

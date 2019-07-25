@@ -20,6 +20,8 @@ import { get } from "src/infra/utils";
 import { daytColors, uiConstants, commonStyles } from "../../../vars";
 import { screenNames } from "src/vars/enums";
 import SuggestedTopicItem from "./SuggestedTopicItem";
+import { SharedElement } from "react-native-motion";
+import { TranslateYAndOpacity } from "react-native-motion";
 
 const styles = StyleSheet.create({
   container: {
@@ -80,7 +82,7 @@ class OnBoardingDiscover extends React.Component {
           <Text
             size={16}
             lineHeight={30}
-            color={daytColors.green}
+            color={daytColors.black}
             //   onPress={this.onDoneButtonPress}
             hitslop={HIT_SLOP}
             bold
@@ -192,7 +194,6 @@ class OnBoardingDiscover extends React.Component {
         media: "something@gmail.com"
       }
     ];
-    const numbers = [1, 2, 3, 4, 5];
     const { topics } = this.props;
     const { selectedTopics } = this.state;
     return theData.map((topic, index) => (

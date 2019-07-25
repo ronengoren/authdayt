@@ -1,6 +1,3 @@
 {
-    "java.configuration.updateBuildConfiguration": "disabled",
-    "files.exclude": {
-        "**/node_modules": true
-    }
+    "java.configuration.updateBuildConfiguration": "disabled"
 }
