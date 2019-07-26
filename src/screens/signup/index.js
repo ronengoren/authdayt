@@ -5,3 +5,5 @@ export {
   default as UserProfilePictureHeader
 } from "./UserProfilePictureHeader";
 export { OnBoardingDiscover } from "./OnBoardingDiscover";
+export { default as SetUserCommunity } from "./SetUserCommunity";
+export { default as SetUserDetails } from "./SetUserDetails";

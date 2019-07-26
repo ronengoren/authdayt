@@ -23,7 +23,7 @@ import {
 } from "./vars/enums";
 import { get } from "./infra/utils";
 import { navigationService, screenTrackingService } from "./infra/navigation";
-// import { AppTopNavigation } from "./navigators";
+import { AppTopNavigation } from "./navigators";
 
 import Welcome from "./screens/welcome/Welcome";
 import SetUserGender from "./screens/signup/SetUserGender";
@@ -45,7 +45,7 @@ const MainStack = () => {
         suggestedTopicItem: SuggestedTopicItem
       },
       {
-        initialRouteName: "setUserGender"
+        initialRouteName: "onBoardingDiscover"
         // authBoolean ? "main" : "login"
       }
     )
@@ -55,6 +55,6 @@ const MainStack = () => {
 export default class App extends Component {
   render() {
     const Switch = MainStack();
-    return <Switch />;
+    return <AppTopNavigation />;
   }
 }

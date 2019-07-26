@@ -230,6 +230,11 @@ class Welcome extends React.Component {
     this.setState({ autoPlay: false });
     navigationService.navigate(screenNames.SignUp, {}, { noPush: true });
   };
+  navigateToSignUp = () => {
+    const { currentSlide } = this.state;
+    this.setState({ autoPlay: false });
+    navigationService.navigate(screenNames.SignUp, {}, { noPush: true });
+  };
 }
 
 Welcome.propTypes = {

@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import {
   Keyboard,
   StyleSheet,
@@ -8,26 +10,28 @@ import {
   Alert,
   PanResponder
 } from "react-native";
-import { daytColors, uiConstants } from "../../vars";
+import { daytColors, uiConstants } from "src/vars";
 import {
   // Screen,
   ApiCommandTextButton,
   FormInput
-} from "../../components";
+} from "src/components";
 
-import { View, Text, TextButton } from "../../components/basicComponents";
+import { View, Text, TextButton } from "src/components/basicComponents";
 import { connect } from "react-redux";
-import I18n from "../../infra/localization";
-import { get } from "../../infra/utils";
-import { DaytIcon } from "../../assets/icons";
+import I18n from "src/infra/localization";
+import { get } from "src/infra/utils";
+import { DaytIcon } from "src/assets/icons";
+import { navigationService } from "src/infra/navigation";
+
 import {
   screenNames,
   screenGroupNames,
   signUpMethodTypes,
   authErrors,
   downloadLinks
-} from "../../vars/enums";
-import { getRelevantOnboardingScreen } from "../../infra/utils/onboardingUtils";
+} from "src/vars/enums";
+import { getRelevantOnboardingScreen } from "src/infra/utils/onboardingUtils";
 
 const hitSlop = { left: 40, right: 40, top: 40, bottom: 40 };
 const slidingDistance = 110;
@@ -143,7 +147,7 @@ const styles = StyleSheet.create({
 class Signup extends React.Component {
   constructor(props) {
     super(props);
-    // this.registerPanResponder();
+    this.registerPanResponder();
     this.state = {
       slidedUp: false,
       translateY: new Animated.Value(0),
@@ -167,6 +171,9 @@ class Signup extends React.Component {
       lastName,
       password
     } = this.state;
+    const submitDisabled = Object.keys(this.state).some(
+      key => this.state[key].isValid === false
+    );
 
     return (
       <View style={styles.container}>
@@ -212,29 +219,29 @@ class Signup extends React.Component {
               </Text>
               <View style={styles.separatorLine} />
             </View>
-            <View
-            //  {...this.panResponder.panHandlers}
-            >
+            <View {...this.panResponder.panHandlers}>
               <View style={styles.nameAndLastNameInputs}>
                 <FormInput
                   label={I18n.t("common.form.first_name")}
                   autoCapitalize={"words"}
-                  // onChange={this.handleChangeHandlerWrapper("firstName")}
-                  // onFocus={this.handleInputFocus}
+                  onChange={this.handleChangeHandlerWrapper("firstName")}
+                  onFocus={this.handleInputFocus}
                   value={firstName.value}
                   errorText={firstName.errorText}
-                  // validations={[
-                  //   {
-                  //     type: "minLength",
-                  //     value: 2,
-                  //     errorText: I18n.t("common.form.min_chars", { minChars: 2 })
-                  //   }
-                  // ]}
+                  validations={[
+                    {
+                      type: "minLength",
+                      value: 2,
+                      errorText: I18n.t("common.form.min_chars", {
+                        minChars: 2
+                      })
+                    }
+                  ]}
                   required
                   returnKeyType={"next"}
-                  // onSubmitEditing={() => {
-                  //   this.lastNameInput.focus();
-                  // }}
+                  onSubmitEditing={() => {
+                    this.lastNameInput.focus();
+                  }}
                   autoCorrect={false}
                   testID="signupFirstNamelInput"
                 />
@@ -242,7 +249,7 @@ class Signup extends React.Component {
                 <FormInput
                   label={I18n.t("common.form.last_name")}
                   autoCapitalize={"words"}
-                  //   onChange={this.handleChangeHandlerWrapper("lastName")}
+                  onChange={this.handleChangeHandlerWrapper("lastName")}
                   onFocus={this.handleInputFocus}
                   value={lastName.value}
                   errorText={lastName.errorText}
@@ -271,7 +278,7 @@ class Signup extends React.Component {
                 label={I18n.t("common.form.email")}
                 keyboardType={"email-address"}
                 autoCapitalize={"none"}
-                // onChange={this.handleChangeHandlerWrapper('email')}
+                onChange={this.handleChangeHandlerWrapper("email")}
                 onFocus={this.handleInputFocus}
                 value={email.value}
                 validations={["email"]}
@@ -291,7 +298,7 @@ class Signup extends React.Component {
                 label={I18n.t("common.form.password")}
                 autoCapitalize={"none"}
                 secureTextEntry
-                // onChange={this.handleChangeHandlerWrapper('password')}
+                onChange={this.handleChangeHandlerWrapper("password")}
                 onFocus={this.handleInputFocus}
                 value={password.value}
                 validations={[
@@ -352,6 +359,85 @@ class Signup extends React.Component {
       </View>
     );
   }
+  registerPanResponder() {
+    if (Platform.OS === "android") {
+      this.panResponder = { panHandlers: {} };
+    } else {
+      this.panResponder = PanResponder.create({
+        onStartShouldSetPanResponder: () => true,
+        onMoveShouldSetPanResponder: () => true,
+        onPanResponderRelease: this.handlePanResponderEnd,
+        onPanResponderTerminate: this.handlePanResponderEnd
+      });
+    }
+  }
+  handleChangeHandlerWrapper = field => changes => {
+    this.setState(state => ({
+      [field]: {
+        ...state[field],
+        ...changes
+      }
+    }));
+  };
+  handlePanResponderEnd = (evt, gestureState) => {
+    const { vy, dx, dy } = gestureState;
+    if (Math.abs(vy) > 0.3 && Math.abs(dx) < 50) {
+      dy > 0
+        ? this.state.slidedUp && this.onBackButtonPress()
+        : this.handleInputFocus();
+    }
+  };
+  toggleSlideUpFlag = () => {
+    this.setState({ slidedUp: !this.state.slidedUp });
+  };
+  onBackButtonPress = () => {
+    const { slidedUp } = this.state;
+    if (!slidedUp) {
+      navigationService.goBack();
+    } else {
+      Keyboard.dismiss(); // blur the input in case of showing the full page
+      Animated.timing(this.state.translateY, {
+        toValue: 0,
+        duration: 300,
+        useNativeDriver: true
+      }).start(this.toggleSlideUpFlag);
+    }
+  };
+  handleInputFocus = () => {
+    const { slidedUp } = this.state;
+    if (!slidedUp) {
+      Animated.timing(this.state.translateY, {
+        toValue: -slidingDistance,
+        duration: 300,
+        useNativeDriver: true
+      }).start(this.toggleSlideUpFlag);
+      if (!this.reportedRegularSignUp) {
+        this.reportedRegularSignUp = true;
+        analytics.viewEvents
+          .entityView({
+            screenName: "OB - Email Sign-up",
+            origin: "OB - Welcome "
+          })
+          .dispatch();
+      }
+    }
+    return true;
+  };
+  navigateToTermsAndConditions = () => {
+    navigationService.navigate(screenNames.WebView, {
+      title: " ",
+      url: "https://www.ronengoren.com"
+    });
+  };
+  navigateToPrivacyPolicy = () => {
+    navigationService.navigate(screenNames.WebView, {
+      title: " ",
+      url: "https://www.ronengoren.com"
+    });
+  };
+  navigateToSignIn = () => {
+    navigationService.navigate(screenNames.SignIn, {}, { noPush: true });
+  };
 }
 
 export default Signup;
