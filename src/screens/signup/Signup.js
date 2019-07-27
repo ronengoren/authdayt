@@ -10,19 +10,19 @@ import {
   Alert,
   PanResponder
 } from "react-native";
-import { daytColors, uiConstants } from "src/vars";
+import { daytColors, uiConstants } from "/vars";
 import {
   // Screen,
   ApiCommandTextButton,
   FormInput
-} from "src/components";
+} from "/components";
 
-import { View, Text, TextButton } from "src/components/basicComponents";
+import { View, Text, TextButton } from "/components/basicComponents";
 import { connect } from "react-redux";
-import I18n from "src/infra/localization";
-import { get } from "src/infra/utils";
-import { DaytIcon } from "src/assets/icons";
-import { navigationService } from "src/infra/navigation";
+import I18n from "/infra/localization";
+import { get } from "/infra/utils";
+import { DaytIcon } from "/assets/icons";
+import { navigationService } from "/infra/navigation";
 
 import {
   screenNames,
@@ -30,8 +30,8 @@ import {
   signUpMethodTypes,
   authErrors,
   downloadLinks
-} from "src/vars/enums";
-import { getRelevantOnboardingScreen } from "src/infra/utils/onboardingUtils";
+} from "/vars/enums";
+import { getRelevantOnboardingScreen } from "/infra/utils/onboardingUtils";
 
 const hitSlop = { left: 40, right: 40, top: 40, bottom: 40 };
 const slidingDistance = 110;

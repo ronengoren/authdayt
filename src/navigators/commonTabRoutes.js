@@ -4,7 +4,7 @@
 // import { Header } from "../components";
 // import { possesify } from "../infra/utils/stringUtils";
 // import { daytColors } from "../vars";
-// import { screenGroupNames, screenNames, locationTypes } from "src/vars/enums";
+// import { screenGroupNames, screenNames, locationTypes } from "/vars/enums";
 // import Post from "./post";
 // import sharedListsRoutes from "./lists";
 // import sharedEventsRoutes from "./events";

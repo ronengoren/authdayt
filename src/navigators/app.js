@@ -6,7 +6,7 @@ import {
 import * as screens from "../screens";
 import I18n from "../infra/localization";
 import { screenGroupNames, screenNames } from "../vars/enums";
-import { Header, CustomTabBar } from "src/components";
+import { Header, CustomTabBar } from "../components";
 
 import { daytColors } from "../vars";
 import { get } from "../infra/utils";

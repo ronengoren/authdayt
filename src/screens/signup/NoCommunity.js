@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import I18n from "src/infra/localization";
+import I18n from "/infra/localization";
 import { connect } from "react-redux";
 // import { setCommunity, updateUserLanguage } from "/redux/auth/actions";
 import { StyleSheet, Dimensions, TouchableOpacity } from "react-native";
@@ -12,7 +12,7 @@ import {
   //   NewTextButton,
   //   TextInLine,
   //   ScrollView
-} from "src/components/basicComponents";
+} from "/components/basicComponents";
 // import { Screen } from "/components";
 // import { AwesomeIcon } from "/assets/icons";
 // import images from "/assets/images";

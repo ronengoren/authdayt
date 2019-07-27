@@ -22,7 +22,7 @@ import { Screen } from "src/components";
 import images from "src/assets/images";
 import { daytColors, uiConstants, commonStyles } from "src/vars";
 import { screenNames, destinationPartitionLevel } from "src/vars/enums";
-// import { analytics } from '/infra/reporting';
+// import { analytics } from 'src/infra/reporting';
 import { get, isEmpty } from "src/infra/utils";
 import { translateDate } from "src/infra/utils/dateTimeUtils";
 import { navigationService } from "src/infra/navigation";

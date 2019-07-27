@@ -1,7 +1,7 @@
 import React from "react";
 import { Animated, Easing } from "react-native";
-import I18n from "../infra/localization";
-import * as screens from "../screens";
+import I18n from "src/infra/localization";
+import * as screens from "src/screens";
 import { daytColors } from "../vars";
 import { screenNames } from "../vars/enums";
 import { Header } from "../components";

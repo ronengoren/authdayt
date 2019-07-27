@@ -1,6 +1,6 @@
 import { NavigationActions, StackActions } from "react-navigation";
-import { screenNames, screenGroupNames } from "src/vars/enums";
-import { isEqual } from "src/infra/utils";
+import { screenNames, screenGroupNames } from "/vars/enums";
+import { isEqual } from "/infra/utils";
 import { getCurrentRouteName as getCurrentRouteNameUtil } from "./utils";
 
 const NON_RESETTABLE_SCREENS = {

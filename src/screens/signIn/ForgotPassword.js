@@ -10,7 +10,7 @@ import { View, Text, TextButton } from "src/components/basicComponents";
 import { DaytIcon } from "src/assets/icons";
 import { daytColors, uiConstants } from "src/vars";
 import { get } from "src/infra/utils";
-// import { navigationService } from '/infra/navigation';
+// import { navigationService } from 'src/infra/navigation';
 import EmailSentModal from "./EmailSentModal";
 
 const hitSlop = { left: 15, right: 5, top: 5, bottom: 5 };

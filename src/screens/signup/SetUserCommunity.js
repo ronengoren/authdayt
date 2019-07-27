@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   StatusBar
 } from "react-native";
-import I18n from "src/infra/localization";
+import I18n from "/infra/localization";
 import { connect } from "react-redux";
 // import {
 //   setCommunity,
@@ -18,19 +18,19 @@ import { connect } from "react-redux";
 // } from "/redux/auth/actions";
 // import { apiCommand } from "/redux/apiCommands/actions";
 // import { analytics } from "/infra/reporting";
-import { Image, Text, View, ScrollView } from "src/components/basicComponents";
-import { Screen } from "src/components";
-import { DaytIcon } from "src/assets/icons";
-import { daytColors, uiConstants, commonStyles } from "src/vars";
+import { Image, Text, View, ScrollView } from "/components/basicComponents";
+import { Screen } from "/components";
+import { DaytIcon } from "/assets/icons";
+import { daytColors, uiConstants, commonStyles } from "/vars";
 import {
   screenNames,
   destinationPartitionLevel,
   communityTypes
-} from "src/vars/enums";
-import { UserProfilePictureHeader } from "src/screens/signup";
-import { get, uniqBy, intersectionBy } from "src/infra/utils";
-import { transparentize } from "src/infra/utils/stringUtils";
-import { navigationService } from "src/infra/navigation";
+} from "/vars/enums";
+import { UserProfilePictureHeader } from "/screens/signup";
+import { get, uniqBy, intersectionBy } from "/infra/utils";
+import { transparentize } from "/infra/utils/stringUtils";
+import { navigationService } from "/infra/navigation";
 // import googlePlacesService from "/infra/google/googlePlacesService";
 import OnboardingInputField from "./OnboardingInputField";
 // import {

@@ -1,24 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StyleSheet, Platform } from "react-native";
-import I18n from "src/infra/localization";
+import I18n from "/infra/localization";
 import { connect } from "react-redux";
-import { apiCommand } from "src/redux/apiCommands/actions";
+import { apiCommand } from "/redux/apiCommands/actions";
 // import { followPages } from '/redux/pages/actions';
 // import { finishedOnBoarding } from '/redux/auth/actions';
 // import { register } from '/infra/pushNotifications';
-import { Screen } from "src/components";
+import { Screen } from "/components";
 import {
   View,
   Text,
   ScrollView,
   IconButton
-} from "src/components/basicComponents";
+} from "/components/basicComponents";
 // import { analytics } from '/infra/reporting';
 // import { navigationService } from '/infra/navigation';
-import { get } from "src/infra/utils";
+import { get } from "/infra/utils";
 import { daytColors, uiConstants, commonStyles } from "../../../vars";
-import { screenNames } from "src/vars/enums";
+import { screenNames } from "/vars/enums";
 import SuggestedTopicItem from "./SuggestedTopicItem";
 import { SharedElement } from "react-native-motion";
 import { TranslateYAndOpacity } from "react-native-motion";

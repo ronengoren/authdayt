@@ -6,9 +6,9 @@ import {
   View,
   Text,
   TranslatedText
-} from "src/components/basicComponents";
+} from "/components/basicComponents";
 import { DaytIcon, AwesomeIcon } from "src/assets/icons";
-import { daytColors, commonStyles } from "src/vars";
+import { daytColors, commonStyles } from "/vars";
 
 const LEFT_PADDING = 16;
 const styles = StyleSheet.create({
