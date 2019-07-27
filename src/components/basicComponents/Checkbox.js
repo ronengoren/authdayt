@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StyleSheet, TouchableOpacity } from "react-native";
-import { View } from "/components/basicComponents";
-import { AwesomeIcon } from "/assets/icons";
-import { daytColors } from "/vars";
-import { stylesScheme } from "/schemas";
+import { View } from "src/components/basicComponents";
+import { AwesomeIcon } from "src/assets/icons";
+import { daytColors } from "src/vars";
+import { stylesScheme } from "src/schemas";
 import Text from "./Text";
 
 const styles = StyleSheet.create({

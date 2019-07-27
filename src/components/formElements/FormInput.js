@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { TextInput, Animated, Platform, StyleSheet } from "react-native";
-import I18n from "/src/infra/localization";
-import { View } from "/src/components/basicComponents";
+import I18n from "src/infra/localization";
+import { View } from "src/components/basicComponents";
 import { daytColors, daytFonts, daytFontWeights } from "src/vars";
 import { stylesScheme } from "src/schemas";
 

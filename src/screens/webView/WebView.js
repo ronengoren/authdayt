@@ -9,16 +9,16 @@ import {
   Linking
 } from "react-native";
 import Orientation from "react-native-orientation";
-import { Screen } from "/components";
+import { Screen } from "src/components";
 import {
   Text,
   IconButton,
   ProgressBar,
   Spinner
-} from "/components/basicComponents";
-import { get } from "/infra/utils";
-import { navigationService } from "/infra/navigation";
-import { uiConstants, daytColors } from "/vars";
+} from "src/components/basicComponents";
+import { get } from "src/infra/utils";
+import { navigationService } from "src/infra/navigation";
+import { uiConstants, daytColors } from "src/vars";
 
 const styles = StyleSheet.create({
   container: {

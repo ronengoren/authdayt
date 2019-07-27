@@ -1,7 +1,7 @@
 import { createStackNavigator } from "react-navigation";
 import * as screens from "../screens";
-import { screenNames } from "/vars/enums";
-import { daytColors } from "/vars";
+import { screenNames } from "src/vars/enums";
+import { daytColors } from "src/vars";
 import commonTabRoutes from "./commonTabRoutes";
 
 const Home = createStackNavigator(

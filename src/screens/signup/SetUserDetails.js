@@ -8,9 +8,9 @@ import {
 } from "react-native";
 import I18n from "src/infra/localization";
 import { connect } from "react-redux";
-// import { initSearchAddress } from '/redux/searchAddress/actions';
-// import { updateProfile } from '/redux/profile/actions';
-// import { joinedCommunity } from '/redux/auth/actions';
+// import { initSearchAddress } from 'src/redux/searchAddress/actions';
+// import { updateProfile } from 'src/redux/profile/actions';
+// import { joinedCommunity } from 'src/redux/auth/actions';
 import {
   Image,
   Text,

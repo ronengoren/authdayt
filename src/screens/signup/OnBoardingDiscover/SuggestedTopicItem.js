@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StyleSheet, TouchableOpacity } from "react-native";
-import { Text, Checkbox, Image } from "/components/basicComponents";
-import { daytColors } from "/vars";
+import { Text, Checkbox, Image } from "src/components/basicComponents";
+import { daytColors } from "src/vars";
 
 const styles = StyleSheet.create({
   container: {

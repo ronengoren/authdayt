@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Modal, StyleSheet } from "react-native";
-import { View, IconButton } from "/components/basicComponents";
-import { daytColors } from "/vars";
-import { uiConstants } from "/vars/uiConstants";
+import { View, IconButton } from "src/components/basicComponents";
+import { daytColors } from "src/vars";
+import { uiConstants } from "src/vars/uiConstants";
 
 const styles = StyleSheet.create({
   modal: {
