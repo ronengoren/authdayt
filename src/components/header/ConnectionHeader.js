@@ -3,7 +3,7 @@
 // import { Platform, StyleSheet, StatusBar, NetInfo, LayoutAnimation } from 'react-native';
 // import I18n from '/infra/localization';
 // import { View, Text, IconButton } from '/components/basicComponents';
-// import { homeisColors } from '/vars';
+// import { daytColors } from '/vars';
 // import config from '/config';
 // import { screenNames, screenGroupNames } from '/vars/enums';
 // import { uiConstants } from '/vars/uiConstants';
@@ -23,14 +23,14 @@
 //     right: 0,
 //     zIndex: 100,
 //     alignItems: 'center',
-//     backgroundColor: homeisColors.white,
+//     backgroundColor: daytColors.white,
 //     width: '100%',
 //     flexDirection: 'row',
 //     justifyContent: 'space-between',
 //     paddingHorizontal: 15
 //   },
 //   text: {
-//     color: homeisColors.white,
+//     color: daytColors.white,
 //     letterSpacing: 0.2
 //   }
 // });
@@ -54,7 +54,7 @@
 //     const shouldAddStatusBarHeight = Platform.OS === 'android' && [screenGroupNames.MY_CITY, screenNames.Profile].includes(navigationService.getCurrentRouteName());
 //     const height = shouldAddStatusBarHeight ? NAVBAR_HEIGHT + StatusBar.currentHeight : NAVBAR_HEIGHT;
 //     const paddingTop = shouldAddStatusBarHeight ? STATUS_BAR_HEIGHT + StatusBar.currentHeight : STATUS_BAR_HEIGHT;
-//     const backgroundColor = isConnected ? homeisColors.green : homeisColors.red;
+//     const backgroundColor = isConnected ? daytColors.green : daytColors.red;
 
 //     return (
 //       <View style={[styles.wrapper, { backgroundColor, height, paddingTop }]}>

@@ -95,38 +95,39 @@ class SetUserDetails extends Component {
           barStyle="light-content"
           backgroundColor="transparent"
         />
-        {/* {this.renderBackground()}
-        {this.renderHeader()} */}
+        {this.renderBackground()}
+        {this.renderHeader()}
         <Animated.View
           style={[
             styles.mainContent,
             { opacity: fieldsOpacity, marginTop: fieldsMarginTop }
           ]}
         >
-          {/* {this.renderOriginCityField()}
+          {this.renderOriginCityField()}
           {this.renderDestinationNeighborhoodField()}
-          {this.renderArrivalDateField()} */}
+          {this.renderArrivalDateField()}
         </Animated.View>
         {/* {!!isShownFields && this.renderSubmitButton()} */}
+        {this.renderSubmitButton()}
       </ScrollView>
     );
   }
 
-  //   componentDidMount() {
-  //     const { user } = this.props;
-  //     analytics.viewEvents
-  //       .entityView({
-  //         screenName: 'OB - Set Profile',
-  //         origin: 'OB - Choose Community',
-  //         entityId: user.id,
-  //         entityName: user.name
-  //       })
-  //       .dispatch();
+  componentDidMount() {
+    // const { user } = this.props;
+    // analytics.viewEvents
+    //   .entityView({
+    //     screenName: 'OB - Set Profile',
+    //     origin: 'OB - Choose Community',
+    //     entityId: user.id,
+    //     entityName: user.name
+    //   })
+    //   .dispatch();
 
-  //     if (this.shouldShowFields()) {
-  //       this.animateContentFields();
-  //     }
-  //   }
+    // if (this.shouldShowFields()) {
+    this.animateContentFields();
+    // }
+  }
 
   //   componentDidUpdate(prevProps) {
   //     const { community, neighborhood } = this.props;
@@ -136,32 +137,57 @@ class SetUserDetails extends Component {
   //     }
   //   }
 
-  //   renderBackground() {
-  //     return <Image source={images.onboarding.steps_header_bg} style={styles.headerBackground} resizeMode="stretch" />;
-  //   }
+  renderBackground() {
+    return (
+      <Image
+        source={images.onboarding.steps_header_bg}
+        style={styles.headerBackground}
+        resizeMode="stretch"
+      />
+    );
+  }
 
-  //   renderHeader() {
-  //     const { originCountryName, cityName, community } = this.props;
-  //     const { originCountryMedia, destinationMedia } = community;
-  //     const originCountryThumbnail = get(originCountryMedia, 'thumbnail');
-  //     const destinationThumbnail = get(destinationMedia, 'thumbnail');
-  //     const showCommunityImages = !!(originCountryThumbnail && destinationThumbnail);
+  renderHeader() {
+    const { originCountryName, cityName, community } = this.props;
+    //     const { originCountryMedia, destinationMedia } = community;
+    //     const originCountryThumbnail = get(originCountryMedia, 'thumbnail');
+    //     const destinationThumbnail = get(destinationMedia, 'thumbnail');
+    //     const showCommunityImages = !!(originCountryThumbnail && destinationThumbnail);
 
-  //     return (
-  //       <View style={styles.header}>
-  //         <Text bold size={32} lineHeight={42} color={daytColors.white} style={commonStyles.textAlignCenter}>
-  //           {I18n.t('onboarding.set_user_details.title')}
-  //         </Text>
-  //         <TranslatedText size={20} lineHeight={30} color={daytColors.white} style={commonStyles.textAlignCenter}>
-  //           {I18n.t('onboarding.set_user_details.community', { originCountry: originCountryName, destinationCity: cityName })}
-  //         </TranslatedText>
-  //         {showCommunityImages && this.renderCommunityImages({ originCountryThumbnail, destinationThumbnail })}
-  //         <Text size={16} lineHeight={19} color={daytColors.white} onPress={this.onChangeCommunityPress}>
-  //           {I18n.t('onboarding.set_user_details.change_community_button')}
-  //         </Text>
-  //       </View>
-  //     );
-  //   }
+    return (
+      <View style={styles.header}>
+        <Text
+          bold
+          size={32}
+          lineHeight={42}
+          color={daytColors.white}
+          style={commonStyles.textAlignCenter}
+        >
+          {I18n.t("onboarding.set_user_details.title")}
+        </Text>
+        <TranslatedText
+          size={20}
+          lineHeight={30}
+          color={daytColors.white}
+          style={commonStyles.textAlignCenter}
+        >
+          {I18n.t("onboarding.set_user_details.community", {
+            originCountry: originCountryName,
+            destinationCity: cityName
+          })}
+        </TranslatedText>
+        {/* {showCommunityImages && this.renderCommunityImages({ originCountryThumbnail, destinationThumbnail })} */}
+        <Text
+          size={16}
+          lineHeight={19}
+          color={daytColors.white}
+          onPress={this.onChangeCommunityPress}
+        >
+          {I18n.t("onboarding.set_user_details.change_community_button")}
+        </Text>
+      </View>
+    );
+  }
 
   //   renderCommunityImages = ({ originCountryThumbnail, destinationThumbnail }) => (
   //     <View style={styles.communityImages}>
@@ -170,68 +196,111 @@ class SetUserDetails extends Component {
   //     </View>
   //   );
 
-  //   renderOriginCityField() {
-  //     const { originCity } = this.state;
-  //     const { navigation, originCountryName } = this.props;
-  //     const adjustedOriginCountryName = get(navigation, 'state.params.originCountry.name', originCountryName);
-  //     const value = originCity && originCity.name;
-  //     return (
-  //       <OnboardingInputField
-  //         label={I18n.t('onboarding.set_user_details.origin_city_field.label', { originCountry: adjustedOriginCountryName })}
-  //         placeholderText={I18n.t('onboarding.set_user_details.origin_city_field.placeholder')}
-  //         placeholderIconName="search"
-  //         onPress={this.navigateToCityPicker}
-  //         value={value}
-  //         isDummy
-  //       />
-  //     );
-  //   }
+  renderOriginCityField() {
+    const { originCity } = this.state;
+    const { navigation, originCountryName } = this.props;
+    const adjustedOriginCountryName = get(
+      navigation,
+      "state.params.originCountry.name",
+      originCountryName
+    );
+    const value = originCity && originCity.name;
+    return (
+      <OnboardingInputField
+        label={I18n.t("onboarding.set_user_details.origin_city_field.label", {
+          originCountry: adjustedOriginCountryName
+        })}
+        placeholderText={I18n.t(
+          "onboarding.set_user_details.origin_city_field.placeholder"
+        )}
+        placeholderIconName="search"
+        onPress={this.navigateToCityPicker}
+        value={value}
+        isDummy
+      />
+    );
+  }
 
-  //   renderDestinationNeighborhoodField() {
-  //     const { destinationNeighborhood } = this.state;
-  //     const { navigation, cityName, community, neighborhood } = this.props;
-  //     const destinationCityName = get(navigation, 'state.params.destinationCity.name', cityName);
-  //     const value = destinationNeighborhood && destinationNeighborhood.name;
+  renderDestinationNeighborhoodField() {
+    const { destinationNeighborhood } = this.state;
+    const { navigation, cityName, community, neighborhood } = this.props;
+    const destinationCityName = get(
+      navigation,
+      "state.params.destinationCity.name",
+      cityName
+    );
+    const value = destinationNeighborhood && destinationNeighborhood.name;
 
-  //     if (community.destinationPartitionLevel === destinationPartitionLevel.CITY && neighborhood && !isEmpty(neighborhood)) {
-  //       return null;
-  //     }
+    // if (
+    //   community.destinationPartitionLevel === destinationPartitionLevel.CITY &&
+    //   neighborhood &&
+    //   !isEmpty(neighborhood)
+    // ) {
+    //   return null;
+    // }
 
-  //     return (
-  //       <OnboardingInputField
-  //         label={I18n.t('onboarding.set_user_details.destination_neighbourhood_field.label', { destinationCity: destinationCityName })}
-  //         placeholderText={I18n.t(`onboarding.set_user_details.destination_${get(community, 'destinationPartitionLevel', 'neighbourhood')}_field.placeholder`)}
-  //         placeholderIconName="search"
-  //         onPress={this.navigateToNeighborhoodPicker}
-  //         value={value}
-  //         isDummy
-  //       />
-  //     );
-  //   }
+    return (
+      <OnboardingInputField
+        label={I18n.t(
+          "onboarding.set_user_details.destination_neighbourhood_field.label",
+          { destinationCity: destinationCityName }
+        )}
+        placeholderText={I18n.t(
+          `onboarding.set_user_details.destination_${get(
+            community,
+            "destinationPartitionLevel",
+            "neighbourhood"
+          )}_field.placeholder`
+        )}
+        placeholderIconName="search"
+        onPress={this.navigateToNeighborhoodPicker}
+        value={value}
+        isDummy
+      />
+    );
+  }
 
-  //   renderArrivalDateField() {
-  //     const { arrivalDate } = this.state;
-  //     const { navigation, cityName } = this.props;
-  //     const destinationCity = get(navigation, 'state.params.destinationCity.name', cityName);
-  //     return (
-  //       <OnboardingInputField
-  //         label={I18n.t('onboarding.set_user_details.arrival_date_field.label', { destinationCity })}
-  //         placeholderText={I18n.t('onboarding.set_user_details.arrival_date_field.placeholder')}
-  //         placeholderIconName="calendar"
-  //         onPress={this.navigateToDatePicker}
-  //         value={translateDate(arrivalDate)}
-  //         isDummy
-  //       />
-  //     );
-  //   }
+  renderArrivalDateField() {
+    const { arrivalDate } = this.state;
+    const { navigation, cityName } = this.props;
+    const destinationCity = get(
+      navigation,
+      "state.params.destinationCity.name",
+      cityName
+    );
+    return (
+      <OnboardingInputField
+        label={I18n.t("onboarding.set_user_details.arrival_date_field.label", {
+          destinationCity
+        })}
+        placeholderText={I18n.t(
+          "onboarding.set_user_details.arrival_date_field.placeholder"
+        )}
+        placeholderIconName="calendar"
+        onPress={this.navigateToDatePicker}
+        value={translateDate(arrivalDate)}
+        isDummy
+      />
+    );
+  }
 
-  //   renderSubmitButton = () => (
-  //     <TouchableOpacity activeOpacity={0.5} onPress={!this.isSubmitting ? this.submit : null} testID="setUserDetailsSubmitButton">
-  //       <Text bold size={16} lineHeight={19} color={daytColors.green} style={styles.submitButton}>
-  //         {I18n.t('onboarding.set_user_details.submit_button')}
-  //       </Text>
-  //     </TouchableOpacity>
-  //   );
+  renderSubmitButton = () => (
+    <TouchableOpacity
+      activeOpacity={0.5}
+      onPress={!this.isSubmitting ? this.submit : null}
+      testID="setUserDetailsSubmitButton"
+    >
+      <Text
+        bold
+        size={16}
+        lineHeight={19}
+        color={daytColors.black}
+        style={styles.submitButton}
+      >
+        {I18n.t("onboarding.set_user_details.submit_button")}
+      </Text>
+    </TouchableOpacity>
+  );
 
   //   onChangeCommunityPress = () => {
   //     const { user } = this.props;
@@ -328,10 +397,13 @@ class SetUserDetails extends Component {
   //     await updateProfile({ userId: user.id, delta: { ...dataToSend } });
   //   }
 
-  //   animateContentFields = () => {
-  //     const { fieldsMarginTop, fieldsOpacity } = this.state;
-  //     Animated.parallel([Animated.timing(fieldsMarginTop, { toValue: 30, duration: 1000 }), Animated.timing(fieldsOpacity, { toValue: 1, duration: 1000 })]).start();
-  //   };
+  animateContentFields = () => {
+    const { fieldsMarginTop, fieldsOpacity } = this.state;
+    Animated.parallel([
+      Animated.timing(fieldsMarginTop, { toValue: 30, duration: 1000 }),
+      Animated.timing(fieldsOpacity, { toValue: 1, duration: 1000 })
+    ]).start();
+  };
 
   //   shouldShowFields = () => {
   //     const { community, user, navigation } = this.props;

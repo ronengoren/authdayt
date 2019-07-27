@@ -10,7 +10,7 @@
 // } from "/components/basicComponents";
 // import { AwesomeIcon } from "/assets/icons";
 // import { isRTL } from "/infra/utils/stringUtils";
-// import { homeisColors } from "/vars";
+// import { daytColors } from "/vars";
 
 // const styles = StyleSheet.create({
 //   container: {
@@ -18,18 +18,18 @@
 //     marginTop: 7,
 //     marginBottom: 10,
 //     borderRadius: 10,
-//     backgroundColor: homeisColors.veryLightPink
+//     backgroundColor: daytColors.veryLightPink
 //   },
 //   inputWrapper: {
 //     width: "100%",
 //     height: 38,
 //     borderRadius: 10,
 //     borderWidth: 1,
-//     borderColor: homeisColors.transparent
+//     borderColor: daytColors.transparent
 //   },
 //   inputWrapperFocused: {
-//     backgroundColor: homeisColors.white,
-//     borderColor: homeisColors.azure
+//     backgroundColor: daytColors.white,
+//     borderColor: daytColors.azure
 //   },
 //   input: {
 //     width: "100%",
@@ -39,7 +39,7 @@
 //     paddingLeft: 11,
 //     fontSize: 16,
 //     lineHeight: 19,
-//     color: homeisColors.b30,
+//     color: daytColors.b30,
 //     borderRadius: 10,
 //     textAlign: "left"
 //   },
@@ -108,7 +108,7 @@
 //             autoCapitalize={"none"}
 //             value={value}
 //             placeholder={searchMode ? I18n.t("header.search") : ""}
-//             placeholderTextColor={homeisColors.b60}
+//             placeholderTextColor={daytColors.b60}
 //             autoFocus={searchMode}
 //             autoCorrect={false}
 //             onFocus={() => !isFocused && this.setState({ isFocused: true })}
@@ -120,7 +120,7 @@
 //           {searchMode && !!value && (
 //             <QueryCancelIcon
 //               onPress={onCancel}
-//               iconColor={homeisColors.b60}
+//               iconColor={daytColors.b60}
 //               style={styles.cancelIcon}
 //             />
 //           )}
@@ -128,14 +128,14 @@
 //             <AwesomeIcon
 //               name="search"
 //               size={16}
-//               color={homeisColors.b60}
+//               color={daytColors.b60}
 //               weight="solid"
 //               style={isRTLText ? styles.searchIconRTL : styles.searchIcon}
 //               key="icon"
 //             />,
 //             <Text
 //               size={16}
-//               color={homeisColors.b60}
+//               color={daytColors.b60}
 //               style={[
 //                 styles.inputPlaceholder,
 //                 isRTLText && styles.inputPlaceholderRTL

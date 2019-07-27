@@ -9,3 +9,10 @@ export {
   ScreenErrorBoundary,
   ScrollItemErrorBoundary
 } from "./errorBoundaries";
+export { default as CustomTabBar } from "./CustomTabBar";
+export {
+  Header,
+  ConnectionHeader,
+  SimpleHeader,
+  HeaderSearchInput
+} from "./header";

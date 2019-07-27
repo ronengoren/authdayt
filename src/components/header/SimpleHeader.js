@@ -4,7 +4,7 @@
 // import I18n from '/infra/localization';
 // import { View, Text, IconButton } from '/components/basicComponents';
 // import { navigationService } from '/infra/navigation';
-// import { homeisColors } from '/vars';
+// import { daytColors } from '/vars';
 // import { uiConstants } from '/vars/uiConstants';
 // import { debounce } from '/infra/utils';
 
@@ -15,9 +15,9 @@
 //     height: uiConstants.NAVBAR_HEIGHT,
 //     paddingTop: uiConstants.PHONE_BAR_HEIGHT_TRANSLUCENT,
 //     paddingHorizontal: 15,
-//     backgroundColor: homeisColors.paleGreyTwo,
+//     backgroundColor: daytColors.paleGreyTwo,
 //     borderBottomWidth: 1,
-//     borderBottomColor: homeisColors.b90
+//     borderBottomColor: daytColors.b90
 //   },
 //   cancelButton: {
 //     position: 'absolute',
@@ -64,16 +64,16 @@
 //           (hasBackBtn ? (
 //             this.renderBackButton()
 //           ) : (
-//             <Text size={16} lineHeight={30} color={homeisColors.azure} onPress={cancelAction} style={styles.cancelButton}>
+//             <Text size={16} lineHeight={30} color={daytColors.azure} onPress={cancelAction} style={styles.cancelButton}>
 //               {adjustedCancelText}
 //             </Text>
 //           ))}
 //         <View style={styles.textWrapper}>
-//           <Text size={16} lineHeight={30} color={homeisColors.b30} style={styles.title} bold>
+//           <Text size={16} lineHeight={30} color={daytColors.b30} style={styles.title} bold>
 //             {title}
 //           </Text>
 //           {!!subTitle && (
-//             <Text size={13} lineHeight={15} color={homeisColors.b60} style={styles.subTitle}>
+//             <Text size={13} lineHeight={15} color={daytColors.b60} style={styles.subTitle}>
 //               {subTitle}
 //             </Text>
 //           )}
@@ -81,7 +81,7 @@
 //         <Text
 //           size={16}
 //           lineHeight={30}
-//           color={isDoneBtnActive ? homeisColors.azure : homeisColors.b70}
+//           color={isDoneBtnActive ? daytColors.azure : daytColors.b70}
 //           onPress={isDoneBtnActive ? debounce(doneAction, 400, { leading: true, trailing: false }) : () => {}}
 //           bold
 //           testID={testID}

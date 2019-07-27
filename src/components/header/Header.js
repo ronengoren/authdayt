@@ -8,7 +8,7 @@
 // } from "react-native";
 // import I18n from "/infra/localization";
 // import { View, Text, IconButton } from "/components/basicComponents";
-// import { homeisColors, uiConstants, commonStyles } from "/vars";
+// import { daytColors, uiConstants, commonStyles } from "/vars";
 // import { screenNames } from "/vars/enums";
 // import { navigationService } from "/infra/navigation";
 // import HeaderSearch from "./HeaderSearch";
@@ -26,7 +26,7 @@
 //   },
 //   wrapperBorder: {
 //     borderBottomWidth: 1,
-//     borderBottomColor: homeisColors.b90
+//     borderBottomColor: daytColors.b90
 //   },
 //   left: {
 //     height: "100%",
@@ -161,7 +161,7 @@
 //             {title}
 //           </Text>
 //           {!!subTitle && (
-//             <Text numberOfLines={1} size={12} color={homeisColors.b60}>
+//             <Text numberOfLines={1} size={12} color={daytColors.b60}>
 //               {subTitle}
 //             </Text>
 //           )}
@@ -220,7 +220,7 @@
 //     <Text
 //       size={16}
 //       lineHeight={30}
-//       color={homeisColors.azure}
+//       color={daytColors.azure}
 //       onPress={this.handleSearchCancelPress}
 //     >
 //       {I18n.t("header.cancel_button")}
@@ -309,8 +309,8 @@
 //   withBorderBottom: true,
 //   backIconName: "back-arrow",
 //   testIdPrefix: "",
-//   backgroundColor: homeisColors.white,
-//   titleColor: homeisColors.b30,
+//   backgroundColor: daytColors.white,
+//   titleColor: daytColors.b30,
 //   buttonColor: "b30"
 // };
 

@@ -6,9 +6,10 @@ import {
 import * as screens from "../screens";
 import I18n from "../infra/localization";
 import { screenGroupNames, screenNames } from "../vars/enums";
+import { Header, CustomTabBar } from "src/components";
+
 import { daytColors } from "../vars";
 import { get } from "../infra/utils";
-import Home from "./home";
 
 const screenInterpolator = sceneProps => {
   const transitions = {};
@@ -50,179 +51,18 @@ const screenInterpolator = sceneProps => {
   return transitions;
 };
 
-// const TabSection = createBottomTabNavigator(
-//   {
-//     [screenGroupNames.HOME_TAB]: {
-//       screen: Home
-//     },
-//     [screenGroupNames.PEOPLE_TAB]: {
-//       screen: People
-//     },
-//     [screenGroupNames.MY_CITY]: {
-//       screen: MyCity,
-//       navigationOptions: {
-//         tabBarTestID: 'cityTabBtn'
-//       }
-//     },
-//     [screenGroupNames.GROUPS_TAB]: {
-//       screen: Groups,
-//       navigationOptions: {
-//         tabBarTestID: 'groupsTabBtn'
-//       }
-//     },
-//     [screenGroupNames.COMMUNICATIONS]: {
-//       screen: Communications
-//     }
-//   },
-//   {
-//     initialRouteName: screenGroupNames.HOME_TAB,
-//     tabBarComponent: CustomTabBar,
-//     lazy: true,
-//     animationEnabled: false,
-//     swipeEnabled: false
+// const TabSection = createBottomTabNavigator({
+//   [screenGroupNames.HOME_TAB]: {
+//     screen: Home
 //   }
-// );
+// });
 
-// const MiddleSection = createStackNavigator(
-//   {
-//     [screenGroupNames.TABS]: {
-//       screen: TabSection,
-//       navigationOptions: {
-//         header: null
-//       }
-//     },
-//     [screenNames.WebView]: {
-//       screen: screens.WebView,
-//       navigationOptions: {
-//         header: null
-//       }
-//     },
-//     [screenNames.PostEditor]: {
-//       screen: screens.PostEditor,
-//       navigationOptions: {
-//         header: null,
-//         gesturesEnabled: false
-//       }
-//     },
-//     [screenNames.DatesPicker]: {
-//       screen: screens.DatesPicker,
-//       navigationOptions: ({ navigation }) => {
-//         const title = get(navigation, 'state.params.title');
-//         const color = get(navigation, 'state.params.color');
-
-//         return {
-//           header: <Header hasBackButton title={title} backgroundColor={color} />
-//         };
-//       }
-//     },
-//     [screenNames.AddPageDetails]: {
-//       screen: screens.AddPageDetails,
-//       navigationOptions: {
-//         header: null
-//       }
-//     },
-//     [screenNames.AddDescription]: {
-//       screen: screens.AddDescription,
-//       navigationOptions: {
-//         header: null
-//       }
-//     },
-//     [screenGroupNames.CREATE_EVENT_MODAL]: {
-//       screen: CreateEvent,
-//       navigationOptions: {
-//         header: null,
-//         gesturesEnabled: false
-//       }
-//     },
-//     [screenGroupNames.CREATE_PAGE_MODAL]: {
-//       screen: CreatePage,
-//       navigationOptions: {
-//         header: null,
-//         gesturesEnabled: false
-//       }
-//     },
-//     [screenNames.AddListItem]: {
-//       screen: screens.AddListItem,
-//       navigationOptions: ({ navigation }) => {
-//         const item = get(navigation, 'state.params.item', null);
-//         const title = item ? I18n.t('list.add_item.edit_header') : I18n.t('list.add_item.add_header');
-//         return {
-//           header: <Header title={title} hasBackButton backgroundColor={homeisColors.paleGreyTwo} titleColor={homeisColors.b30} buttonColor={homeisColors.b30} />
-//         };
-//       }
-//     },
-//     [screenNames.CategoryPicker]: {
-//       screen: screens.CategoryPicker,
-//       navigationOptions: {
-//         header: null
-//       }
-//     },
-//     [screenNames.SearchAddress]: {
-//       screen: screens.SearchAddress,
-//       navigationOptions: {
-//         header: <Header searchMode searchAddressMode />
-//       }
-//     },
-//     [screenNames.HookedEntitiesList]: {
-//       screen: screens.HookedEntitiesList,
-//       navigationOptions: () => {
-//         const title = I18n.t('publisher_picker.title');
-//         return {
-//           header: <Header hasBackButton title={title} backgroundColor={homeisColors.paleGreyTwo} buttonColor={homeisColors.b30} titleColor={homeisColors.b30} />
-//         };
-//       }
-//     },
-//     [screenNames.ContextPicker]: {
-//       screen: screens.ContextPicker,
-//       navigationOptions: () => {
-//         const title = I18n.t('context_picker.title');
-//         return {
-//           header: <Header hasBackButton title={title} backgroundColor={homeisColors.paleGreyTwo} buttonColor={homeisColors.b30} titleColor={homeisColors.b30} />
-//         };
-//       }
-//     },
-//     [screenNames.Medias]: {
-//       screen: screens.Medias,
-//       navigationOptions: {
-//         header: <Header hasBackButton isHideSearch />
-//       }
-//     },
-//     [screenNames.PostVideoModal]: {
-//       screen: screens.PostVideoModal,
-//       navigationOptions: {
-//         header: null
-//       }
-//     },
-//     [screenNames.MediaModal]: {
-//       screen: screens.MediaModal,
-//       navigationOptions: {
-//         header: null
-//       }
-//     },
-//     [screenNames.MediaGalleryModal]: {
-//       screen: screens.MediaGalleryModal,
-//       navigationOptions: {
-//         header: null
-//       }
-//     },
-//     [screenNames.ImageUpload]: {
-//       screen: screens.ImageUpload,
-//       navigationOptions: {
-//         header: null,
-//         gesturesEnabled: false
-//       }
+// const MiddleSection = createStackNavigator({
+//   [screenNames.WebView]: {
+//     screen: screens.WebView,
+//     navigationOptions: {
+//       header: null
 //     }
-//   },
-//   {
-//     initialRouteName: screenGroupNames.TABS,
-//     cardStyle: {
-//       backgroundColor: homeisColors.white
-//     },
-//     mode: 'modal',
-//     transitionConfig: () => ({
-//       screenInterpolator
-//     })
 //   }
-// );
-
+// });
 // export default MiddleSection;

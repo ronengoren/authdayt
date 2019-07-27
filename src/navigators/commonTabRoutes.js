@@ -1,13 +1,13 @@
-import React from "react";
-import * as screens from "../screens";
-import I18n from "../infra/localization";
-import { Header } from "../components";
-import { possesify } from "../infra/utils/stringUtils";
-import { daytColors } from "../vars";
-import { screenGroupNames, screenNames, locationTypes } from "/vars/enums";
-import Post from "./post";
-import sharedListsRoutes from "./lists";
-import sharedEventsRoutes from "./events";
+// import React from "react";
+// import * as screens from "../screens";
+// import I18n from "../infra/localization";
+// import { Header } from "../components";
+// import { possesify } from "../infra/utils/stringUtils";
+// import { daytColors } from "../vars";
+// import { screenGroupNames, screenNames, locationTypes } from "src/vars/enums";
+// import Post from "./post";
+// import sharedListsRoutes from "./lists";
+// import sharedEventsRoutes from "./events";
 
 // const commonTabRoutes = {
 //   [screenGroupNames.POST]: {
@@ -78,7 +78,7 @@ import sharedEventsRoutes from "./events";
 //     navigationOptions: ({ navigation }) => {
 //       const title = navigation.state.params.pageName || I18n.t('savers_and_followers.title');
 //       return {
-//         header: <Header hasBackButton title={title} backgroundColor={homeisColors.blueberry} titleColor={homeisColors.white} buttonColor="white" />
+//         header: <Header hasBackButton title={title} backgroundColor={daytColors.blueberry} titleColor={daytColors.white} buttonColor="white" />
 //       };
 //     }
 //   },

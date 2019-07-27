@@ -123,7 +123,7 @@ class OnboardingInputField extends Component {
       //     <AwesomeIcon
       //       name="check-circle"
       //       size={20}
-      //       color={homeisColors.green}
+      //       color={daytColors.green}
       //       weight="solid"
       //       style={styles.valueIcon}
       //       key="icon"

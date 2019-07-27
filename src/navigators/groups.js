@@ -3,7 +3,7 @@
 // import * as screens from '../screens';
 // import { Header } from '../components';
 // import { screenGroupNames, screenNames } from '../vars/enums';
-// import { homeisColors } from '../vars';
+// import { daytColors } from '../vars';
 // import CreateGroup from './createGroup';
 // import commonTabRoutes from './commonTabRoutes';
 
@@ -34,7 +34,7 @@
 //     initialRouteName: screenNames.GroupsTab,
 //     headerMode: 'screen',
 //     cardStyle: {
-//       backgroundColor: homeisColors.white
+//       backgroundColor: daytColors.white
 //     }
 //   }
 // );

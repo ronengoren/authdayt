@@ -266,7 +266,7 @@
             "next": "Next"
         },
         "set_user_details": {
-            "title": "Welcome to Homeis!",
+            "title": "Welcome to Dayt!",
             "community": "<b>{{originCountry}}</b> - <b>{{destinationCity}}</b>",
             "change_community_button": "Change",
             "origin_city_field": {
