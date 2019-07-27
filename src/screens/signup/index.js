@@ -8,3 +8,4 @@ export { OnBoardingDiscover } from "./OnBoardingDiscover";
 export { default as SetUserCommunity } from "./SetUserCommunity";
 export { default as SetUserDetails } from "./SetUserDetails";
 export { default as NoCommunity } from "./NoCommunity";
+export { OnBoardingAddFriends } from "./OnBoardingAddFriends";

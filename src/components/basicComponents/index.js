@@ -10,3 +10,4 @@ export { default as IconButton } from "./IconButton";
 export { default as ScrollView } from "./ScrollView";
 export { default as ImagePlaceholder } from "./ImagePlaceholder";
 export { default as Checkbox } from "./Checkbox";
+export { default as PlaceholderRectangle } from "./PlaceholderRectangle";

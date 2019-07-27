@@ -16,3 +16,4 @@ export {
   SimpleHeader,
   HeaderSearchInput
 } from "./header";
+export { default as InfiniteScroll } from "./InfiniteScroll";

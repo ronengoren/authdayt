@@ -81,13 +81,13 @@ const SignUpWizard = createStackNavigator(
     //     header: <Header searchMode searchAddressMode />
     //   }
     // },
-    // [screenNames.OnBoardingAddFriends]: {
-    //   screen: screens.OnBoardingAddFriends,
-    //   navigationOptions: {
-    //     header: null,
-    //     gesturesEnabled: false
-    //   }
-    // },
+    [screenNames.OnBoardingAddFriends]: {
+      screen: screens.OnBoardingAddFriends,
+      navigationOptions: {
+        header: null,
+        gesturesEnabled: false
+      }
+    },
     [screenNames.OnBoardingDiscover]: {
       screen: screens.OnBoardingDiscover,
       navigationOptions: {
@@ -110,7 +110,7 @@ const SignUpWizard = createStackNavigator(
     // }
   },
   {
-    initialRouteName: screenNames.SetUserDetails,
+    initialRouteName: screenNames.OnBoardingAddFriends,
     cardStyle: {
       backgroundColor: daytColors.white
     },
