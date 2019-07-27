@@ -94,7 +94,7 @@ const SignUpWizard = createStackNavigator(
         header: null,
         gesturesEnabled: false
       }
-    }
+    },
     // [screenNames.AllowNotifications]: {
     //   screen: screens.AllowNotifications,
     //   navigationOptions: {
@@ -102,15 +102,15 @@ const SignUpWizard = createStackNavigator(
     //     gesturesEnabled: false
     //   }
     // }
-    // [screenNames.WebView]: {
-    //   screen: screens.WebView,
-    //   navigationOptions: {
-    //     header: null
-    //   }
-    // }
+    [screenNames.WebView]: {
+      screen: screens.WebView,
+      navigationOptions: {
+        header: null
+      }
+    }
   },
   {
-    initialRouteName: screenNames.OnBoardingAddFriends,
+    initialRouteName: screenNames.WebView,
     cardStyle: {
       backgroundColor: daytColors.white
     },

@@ -16,6 +16,7 @@ import {
   ProgressBar,
   Spinner
 } from "src/components/basicComponents";
+
 import { get } from "src/infra/utils";
 import { navigationService } from "src/infra/navigation";
 import { uiConstants, daytColors } from "src/vars";
@@ -60,27 +61,20 @@ const styles = StyleSheet.create({
 });
 
 class WebView extends Component {
-  //   state = {
-  //     navStepsCounter: 0,
-  //     maxNavStepsCounter: 0,
-  //     canGoBack: false,
-  //     canGoForward: false,
-  //     shouldUpdateNavCounter: true,
-  //     currentUrl: this.props.navigation.state.params.url,
-  //     title: get(this.props.navigation, "state.params.title", null),
-  //     subtitle: get(this.props.navigation, "state.params.subtitle", null)
-  //   };
-
+  state = {
+    // navStepsCounter: 0,
+    // maxNavStepsCounter: 0,
+    // canGoBack: false,
+    // canGoForward: false,
+    // shouldUpdateNavCounter: true,
+    // currentUrl: this.props.navigation.state.params.url,
+    title: get(this.props.navigation, "state.params.title", null)
+    // subtitle: get(this.props.navigation, 'state.params.subtitle', null)
+  };
   render() {
     const { title, subtitle, canGoBack, canGoForward, progress } = this.state;
-    const {
-      navigation: {
-        state: {
-          params: { url }
-        }
-      }
-    } = this.props;
     const isIOS = Platform.OS === "ios";
+    const { url } = "this.state";
 
     return (
       <View style={styles.container}>
@@ -93,7 +87,7 @@ class WebView extends Component {
               numberOfLines={1}
               style={styles.titleText}
             >
-              {title || " "}
+              {title || " no title"}
             </Text>
             <Text
               size={11}
@@ -102,14 +96,14 @@ class WebView extends Component {
               bold
               numberOfLines={1}
             >
-              {subtitle || " "}
+              {subtitle || "subtitle "}
             </Text>
             <IconButton
               name="close"
               style={styles.closeIcon}
               iconColor="b70"
               iconSize={23}
-              //   onPress={() => navigationService.goBack()}
+              onPress={() => navigationService.goBack()}
             />
           </View>
         </View>
@@ -124,7 +118,7 @@ class WebView extends Component {
           source={{ uri: url }}
           renderLoading={() => <Spinner />}
           startInLoadingState
-          //   onNavigationStateChange={this.handleNavStateChange}
+          // onNavigationStateChange={this.handleNavStateChange}
         />
         <View style={styles.footer}>
           <IconButton
@@ -133,7 +127,7 @@ class WebView extends Component {
             disabled={!canGoBack}
             iconSize={24}
             isAwesomeIcon
-            // onPress={this.webViewGoBack}
+            onPress={this.webViewGoBack}
           />
           <IconButton
             name="angle-right"
@@ -141,148 +135,32 @@ class WebView extends Component {
             disabled={!canGoForward}
             iconSize={24}
             isAwesomeIcon
-            // onPress={this.webViewGoForward}
+            onPress={this.webViewGoForward}
           />
           <IconButton
             name="share-alt"
             iconColor="realBlack"
             iconSize={20}
             isAwesomeIcon
-            // onPress={this.openNativeShare}
+            onPress={this.openNativeShare}
           />
           <IconButton
             name="globe"
             iconColor="realBlack"
             iconSize={20}
             isAwesomeIcon
-            // onPress={this.openLinkInDefaultBrowser}
+            onPress={this.openLinkInDefaultBrowser}
           />
         </View>
       </View>
     );
   }
-
-  //   componentDidMount() {
-  //     Orientation.unlockAllOrientations();
-  //   }
-
-  //   componentWillUnmount() {
-  //     Orientation.lockToPortrait();
-  //   }
-
-  handleNavStateChange = e => {
-    const {
-      currentUrl,
-      shouldUpdateNavCounter,
-      navStepsCounter,
-      title: currentTitle,
-      subtitle: currentSubTitle
-    } = this.state;
-    const { onUrlChange } = this.props.navigation.state.params;
-    const { title, url } = e;
-    const newState = { navStepsCounter };
-
-    if (onUrlChange && url !== currentUrl) {
-      onUrlChange(url);
-    }
-
-    if (url !== currentUrl && shouldUpdateNavCounter) {
-      newState.navStepsCounter = navStepsCounter + 1;
-      newState.maxNavStepsCounter = newState.navStepsCounter;
-    }
-    if (!currentTitle) {
-      newState.title = title;
-    }
-    if (!currentSubTitle) {
-      const match = (url && url.match(/(?:\w+\.)+\w+/i)) || [];
-      newState.subtitle = match[0];
-    }
-
-    this.setState({
-      currentUrl: url,
-      shouldUpdateNavCounter: true,
-      ...newState,
-      canGoBack: newState.navStepsCounter > 0
-    });
-  };
-
-  webViewGoBack = () => {
-    const { navStepsCounter } = this.state;
-    this.webView.goBack();
-    this.setState({
-      navStepsCounter: navStepsCounter - 1,
-      canGoBack: navStepsCounter - 1 > 0,
-      canGoForward: true,
-      shouldUpdateNavCounter: false
-    });
-  };
-
-  webViewGoForward = () => {
-    const { navStepsCounter, maxNavStepsCounter } = this.state;
-    this.webView.goForward();
-    this.setState({
-      navStepsCounter: navStepsCounter + 1,
-      canGoBack: true,
-      canGoForward: navStepsCounter + 1 < maxNavStepsCounter,
-      shouldUpdateNavCounter: false
-    });
-  };
-
-  handleProgress = progress => {
-    this.setState({ progress });
-  };
-
-  openNativeShare = () => {
-    const {
-      navigation: {
-        state: {
-          params: { url }
-        }
-      }
-    } = this.props;
-    Share.share(
-      {
-        ...Platform.select({
-          ios: {
-            message: "",
-            url
-          },
-          android: {
-            message: url
-          }
-        }),
-        title: ""
-      },
-      {
-        dialogTitle: `Share : `
-      }
-    );
-  };
-
-  openLinkInDefaultBrowser = () => {
-    const {
-      navigation: {
-        state: {
-          params: { url }
-        }
-      }
-    } = this.props;
-    Linking.openURL(url);
-  };
+  componentDidMount() {
+    Orientation.unlockAllOrientations();
+  }
+  componentWillUnmount() {
+    Orientation.lockToPortrait();
+  }
 }
 
-WebView.propTypes = {
-  navigation: PropTypes.shape({
-    state: PropTypes.shape({
-      params: PropTypes.shape({
-        url: PropTypes.string,
-        title: PropTypes.string,
-        subtitle: PropTypes.string,
-        onUrlChange: PropTypes.func
-      })
-    })
-  })
-};
-
-// WebView = Screen()(WebView);
 export default WebView;
