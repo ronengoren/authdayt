@@ -10,6 +10,7 @@ import { Header, CustomTabBar } from "../components";
 
 import { daytColors } from "../vars";
 import { get } from "../infra/utils";
+// import Home from "./home";
 
 const screenInterpolator = sceneProps => {
   const transitions = {};
@@ -57,12 +58,19 @@ const screenInterpolator = sceneProps => {
 //   }
 // });
 
-// const MiddleSection = createStackNavigator({
-//   [screenNames.WebView]: {
-//     screen: screens.WebView,
-//     navigationOptions: {
-//       header: null
-//     }
-//   }
-// });
-// export default MiddleSection;
+const MiddleSection = createStackNavigator({
+  [screenNames.PostEditor]: {
+    screen: screens.PostEditor,
+    navigationOptions: {
+      header: null,
+      gesturesEnabled: false
+    }
+  },
+  [screenNames.WebView]: {
+    screen: screens.WebView,
+    navigationOptions: {
+      header: null
+    }
+  }
+});
+export default MiddleSection;

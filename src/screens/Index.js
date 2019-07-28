@@ -30,3 +30,4 @@ export {
   // ProfilePagesList
   EditProfileDate
 } from "./profile";
+export { PostEditor } from "./post";
