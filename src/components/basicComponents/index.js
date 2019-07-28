@@ -18,3 +18,5 @@ export { default as QueryCancelIcon } from "./QueryCancelIcon";
 export { default as TextInput } from "./TextInput";
 export { default as BoldedText } from "./BoldedText";
 export { default as HTMLView } from "./HTMLView";
+export { default as NewTextButton } from "./NewTextButton";
+export { default as TextInLine } from "./TextInLine";

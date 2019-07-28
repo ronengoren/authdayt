@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { StyleSheet, Dimensions } from "react-native";
 import I18n from "src/infra/localization";
 import { connect } from "react-redux";
-import { upload, cancelUpload } from "src/redux/uploads/actions";
-import { apiCommand } from "src/redux/apiCommands/actions";
+// import { upload, cancelUpload } from "src/redux/uploads/actions";
+// import { apiCommand } from "src/redux/apiCommands/actions";
 import { Screen, Header } from "src/components";
 import { View, Text, Image, ProgressBar } from "src/components/basicComponents";
 import { getFilePathFromLocalUri } from "src/infra/utils";
@@ -53,25 +53,7 @@ class ImageUpload extends Component {
     activeUploadId: null,
     screenStateUploading: true
   };
-
-  static renderProgress({ progress }) {
-    return (
-      <View style={styles.progressContainer}>
-        <Text style={styles.progressText} medium>
-          {I18n.t("image_upload.uploading")}
-        </Text>
-        <ProgressBar progress={progress} style={styles.progressBar} />
-      </View>
-    );
-  }
-
   render() {
-    const { activeUploadId, screenStateUploading } = this.state;
-    const { uploads, navigation } = this.props;
-    // const { params } = navigation.state;
-    const { width } = Dimensions.get("window");
-    const upload = uploads[activeUploadId];
-
     return (
       <View style={styles.container}>
         <Header
@@ -80,32 +62,14 @@ class ImageUpload extends Component {
           backAction={this.cancelUploading}
           rightComponent={this.renderHeaderBtn()}
         />
-        <View style={styles.innerContainer}>
-          <Image
-            // source={{ uri: params.localUri }}
-            style={[styles.image, { width }]}
-            resizeMode="contain"
-          />
-          {/* {upload &&
-            screenStateUploading &&
-            ImageUpload.renderProgress({ progress: upload.progress })} */}
-        </View>
+        <View style={styles.innerContainer} />
+
+        <Text style={styles.progressText} medium>
+          {I18n.t("image_upload.uploading")}
+        </Text>
       </View>
     );
   }
-
-  //   componentDidMount() {
-  //     this.upload();
-  //   }
-
-  //   componentWillUnmount() {
-  //     const { activeUploadId } = this.state;
-
-  //     if (activeUploadId) {
-  //       cancelUpload({ uploadId: activeUploadId });
-  //     }
-  //   }
-
   renderHeaderBtn = () => {
     const btnText = this.state.screenStateUploading
       ? I18n.t("image_upload.cancel_button")
@@ -121,75 +85,6 @@ class ImageUpload extends Component {
       </Text>
     );
   };
-
-  //   upload = async () => {
-  //     const { upload, navigation } = this.props;
-  //     const { localUri, fileName, entityType } = navigation.state.params;
-
-  //     const filePath = getFilePathFromLocalUri(localUri);
-  //     const { url } = await upload({
-  //       entityType,
-  //       fileName,
-  //       filePath,
-  //       onStart: id => this.setState({ activeUploadId: id }),
-  //       onFinish: () => this.setState({ activeUploadId: null })
-  //     });
-
-  //     if (url) {
-  //       this.setState({ mediaUrl: url });
-
-  //       if (this.state.screenStateUploading) {
-  //         this.saveFile();
-  //       }
-  //     }
-  //   };
-
-  handleHeaderBtnClick = () => {
-    this.state.screenStateUploading ? this.cancelUploading() : this.saveFile();
-  };
-
-  async saveFile() {
-    const { activeUploadId, mediaUrl } = this.state;
-    const { navigation } = this.props;
-    const { onComplete } = navigation.state.params;
-
-    if (activeUploadId) {
-      this.setState({ screenStateUploading: true });
-    } else {
-      await onComplete({ mediaUrl });
-      navigationService.goBack();
-    }
-  }
-
-  cancelUploading = () => {
-    const { activeUploadId } = this.state;
-    const { cancelUpload } = this.props;
-
-    if (activeUploadId) {
-      cancelUpload({ uploadId: activeUploadId });
-    }
-    navigationService.goBack();
-  };
 }
-
-ImageUpload.propTypes = {
-  navigation: PropTypes.shape({
-    state: PropTypes.object
-  }),
-  cancelUpload: PropTypes.func,
-  uploads: PropTypes.object
-};
-
-// const mapStateToProps = state => ({
-//   uploads: state.uploads
-// });
-
-// const mapDispatchToProps = { upload, cancelUpload, apiCommand };
-
-// ImageUpload = connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(ImageUpload);
-// ImageUpload = Screen({ modalError: true })(ImageUpload);
 
 export default ImageUpload;

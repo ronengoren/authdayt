@@ -45,20 +45,20 @@ const SignUpWizard = createStackNavigator(
         gesturesEnabled: false
       }
     },
-    // [screenNames.NoCommunity]: {
-    //   screen: screens.NoCommunity,
-    //   navigationOptions: {
-    //     header: null,
-    //     gesturesEnabled: false
-    //   }
-    // },
-    // [screenNames.ImageUpload]: {
-    //   screen: screens.ImageUpload,
-    //   navigationOptions: {
-    //     header: null,
-    //     gesturesEnabled: false
-    //   }
-    // },
+    [screenNames.NoCommunity]: {
+      screen: screens.NoCommunity,
+      navigationOptions: {
+        header: null,
+        gesturesEnabled: false
+      }
+    },
+    [screenNames.ImageUpload]: {
+      screen: screens.ImageUpload,
+      navigationOptions: {
+        header: null,
+        gesturesEnabled: false
+      }
+    },
     [screenNames.SearchCountry]: {
       screen: screens.SearchCountry,
       navigationOptions: {
@@ -110,7 +110,7 @@ const SignUpWizard = createStackNavigator(
     }
   },
   {
-    initialRouteName: screenNames.SearchCountry,
+    initialRouteName: screenNames.NoCommunity,
     cardStyle: {
       backgroundColor: daytColors.white
     },
