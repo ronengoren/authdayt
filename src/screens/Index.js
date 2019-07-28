@@ -12,7 +12,7 @@ export {
   SearchCountry
 } from "./signup";
 export { SignIn, ForgotPassword } from "./signIn";
-// export { HomeTab } from "./homeTab";
+export { HomeTab } from "./homeTab";
 export { WebView } from "./webView";
 export { SearchAddress } from "./searchAddress";
 export { ImageUpload } from "./imageUpload";

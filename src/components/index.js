@@ -26,3 +26,5 @@ export {
   HeaderSearchInput
 } from "./header";
 export { default as InfiniteScroll } from "./InfiniteScroll";
+export { Feed } from "./feed";
+// export { Post } from "./posts";

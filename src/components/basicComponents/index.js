@@ -20,3 +20,7 @@ export { default as BoldedText } from "./BoldedText";
 export { default as HTMLView } from "./HTMLView";
 export { default as NewTextButton } from "./NewTextButton";
 export { default as TextInLine } from "./TextInLine";
+export { default as PostButton } from "./PostButton";
+export { default as Avatar } from "./Avatar";
+export { default as Chip } from "./Chip";
+export { default as FloatingHeader } from "./FloatingHeader";

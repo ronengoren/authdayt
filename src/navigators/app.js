@@ -10,7 +10,7 @@ import { Header, CustomTabBar } from "../components";
 
 import { daytColors } from "../vars";
 import { get } from "../infra/utils";
-// import Home from "./home";
+import Home from "./home";
 
 const screenInterpolator = sceneProps => {
   const transitions = {};
@@ -52,13 +52,19 @@ const screenInterpolator = sceneProps => {
   return transitions;
 };
 
-// const TabSection = createBottomTabNavigator({
-//   [screenGroupNames.HOME_TAB]: {
-//     screen: Home
-//   }
-// });
+const TabSection = createBottomTabNavigator({
+  [screenGroupNames.HOME_TAB]: {
+    screen: Home
+  }
+});
 
 const MiddleSection = createStackNavigator({
+  [screenGroupNames.TABS]: {
+    screen: TabSection,
+    navigationOptions: {
+      header: null
+    }
+  },
   [screenNames.PostEditor]: {
     screen: screens.PostEditor,
     navigationOptions: {
