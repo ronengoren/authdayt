@@ -7,8 +7,25 @@ export {
   SetUserCommunity,
   SetUserDetails,
   NoCommunity,
-  OnBoardingAddFriends
+  OnBoardingAddFriends,
+  AllowNotifications
 } from "./signup";
 export { SignIn, ForgotPassword } from "./signIn";
 // export { HomeTab } from "./homeTab";
 export { WebView } from "./webView";
+export { SearchAddress } from "./searchAddress";
+// export { ImageUpload } from "./imageUpload";
+export {
+  // Profile,
+  // EditProfile,
+  // EditProfileRelationship,
+  // EditProfileGender,
+  // EditProfileDate,
+  // ConnectedUsersList,
+  // OthersFriendsList,
+  // Settings,
+  // ChangeEmail,
+  // ProfileGroupsList,
+  // ProfilePagesList
+  EditProfileDate
+} from "./profile";

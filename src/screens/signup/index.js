@@ -9,3 +9,4 @@ export { default as SetUserCommunity } from "./SetUserCommunity";
 export { default as SetUserDetails } from "./SetUserDetails";
 export { default as NoCommunity } from "./NoCommunity";
 export { OnBoardingAddFriends } from "./OnBoardingAddFriends";
+export { default as AllowNotifications } from "./AllowNotifications";

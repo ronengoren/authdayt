@@ -66,21 +66,21 @@ const SignUpWizard = createStackNavigator(
     //     gesturesEnabled: false
     //   }
     // },
-    // [screenNames.EditProfileDate]: {
-    //   screen: screens.EditProfileDate,
-    //   navigationOptions: () => {
-    //     const title = I18n.t("onboarding.set_arrival_date.title");
-    //     return {
-    //       header: <Header hasBackButton title={title} />
-    //     };
-    //   }
-    // },
-    // [screenNames.SearchAddress]: {
-    //   screen: screens.SearchAddress,
-    //   navigationOptions: {
-    //     header: <Header searchMode searchAddressMode />
-    //   }
-    // },
+    [screenNames.EditProfileDate]: {
+      screen: screens.EditProfileDate,
+      navigationOptions: () => {
+        const title = I18n.t("onboarding.set_arrival_date.title");
+        return {
+          header: <Header hasBackButton title={title} />
+        };
+      }
+    },
+    [screenNames.SearchAddress]: {
+      screen: screens.SearchAddress,
+      navigationOptions: {
+        header: <Header searchMode searchAddressMode />
+      }
+    },
     [screenNames.OnBoardingAddFriends]: {
       screen: screens.OnBoardingAddFriends,
       navigationOptions: {
@@ -95,13 +95,13 @@ const SignUpWizard = createStackNavigator(
         gesturesEnabled: false
       }
     },
-    // [screenNames.AllowNotifications]: {
-    //   screen: screens.AllowNotifications,
-    //   navigationOptions: {
-    //     header: null,
-    //     gesturesEnabled: false
-    //   }
-    // }
+    [screenNames.AllowNotifications]: {
+      screen: screens.AllowNotifications,
+      navigationOptions: {
+        header: null,
+        gesturesEnabled: false
+      }
+    },
     [screenNames.WebView]: {
       screen: screens.WebView,
       navigationOptions: {
@@ -110,7 +110,7 @@ const SignUpWizard = createStackNavigator(
     }
   },
   {
-    initialRouteName: screenNames.WebView,
+    initialRouteName: screenNames.EditProfileDate,
     cardStyle: {
       backgroundColor: daytColors.white
     },

@@ -12,3 +12,5 @@ export { default as ImagePlaceholder } from "./ImagePlaceholder";
 export { default as Checkbox } from "./Checkbox";
 export { default as PlaceholderRectangle } from "./PlaceholderRectangle";
 export { default as ProgressBar } from "./ProgressBar";
+export { default as Separator } from "./Separator";
+export { default as Switch } from "./Switch";

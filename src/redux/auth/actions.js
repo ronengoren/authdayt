@@ -365,11 +365,11 @@ import { apiQuery } from "../../redux/apiQuery/actions";
 //   await dispatch(getAppSettings());
 // };
 
-// export const finishedOnBoarding = () => dispatch => {
-//   dispatch({ type: TURN_ON_NEW_USER_WELCOME });
-//   dispatch({ type: SIGN_IN_SUCCESS });
-//   navigationService.navigate(screenGroupNames.SIGNED_IN, {}, { noPush: true });
-// };
+export const finishedOnBoarding = () => dispatch => {
+  dispatch({ type: TURN_ON_NEW_USER_WELCOME });
+  dispatch({ type: SIGN_IN_SUCCESS });
+  navigationService.navigate(screenGroupNames.SIGNED_IN, {}, { noPush: true });
+};
 
 // export const turnOffNewUserWelcome = () => ({
 //   type: TURN_OFF_NEW_USER_WELCOME
