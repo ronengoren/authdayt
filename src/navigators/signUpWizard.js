@@ -59,13 +59,13 @@ const SignUpWizard = createStackNavigator(
     //     gesturesEnabled: false
     //   }
     // },
-    // [screenNames.SearchCountry]: {
-    //   screen: screens.SearchCountry,
-    //   navigationOptions: {
-    //     header: null,
-    //     gesturesEnabled: false
-    //   }
-    // },
+    [screenNames.SearchCountry]: {
+      screen: screens.SearchCountry,
+      navigationOptions: {
+        header: null,
+        gesturesEnabled: false
+      }
+    },
     [screenNames.EditProfileDate]: {
       screen: screens.EditProfileDate,
       navigationOptions: () => {
@@ -110,7 +110,7 @@ const SignUpWizard = createStackNavigator(
     }
   },
   {
-    initialRouteName: screenNames.EditProfileDate,
+    initialRouteName: screenNames.SearchCountry,
     cardStyle: {
       backgroundColor: daytColors.white
     },

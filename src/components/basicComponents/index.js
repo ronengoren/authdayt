@@ -14,3 +14,7 @@ export { default as PlaceholderRectangle } from "./PlaceholderRectangle";
 export { default as ProgressBar } from "./ProgressBar";
 export { default as Separator } from "./Separator";
 export { default as Switch } from "./Switch";
+export { default as QueryCancelIcon } from "./QueryCancelIcon";
+export { default as TextInput } from "./TextInput";
+export { default as BoldedText } from "./BoldedText";
+export { default as HTMLView } from "./HTMLView";
