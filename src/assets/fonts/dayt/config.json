@@ -61,7 +61,7 @@
     },
     {
       "uid": "a1d4b614f12cfe2b5aa66313ad88c90c",
-      "css": "friends-",
+      "css": "people-2",
       "code": 59413,
       "src": "typicons"
     },
@@ -361,13 +361,13 @@
     },
     {
       "uid": "7aa8cc552d9d6d19815750fc339cf090",
-      "css": "groups-",
+      "css": "groups-fill",
       "code": 62023,
       "src": "fontawesome"
     },
     {
       "uid": "d7271d490b71df4311e32cdacae8b331",
-      "css": "home",
+      "css": "home-fill",
       "code": 59441,
       "src": "fontawesome"
     },

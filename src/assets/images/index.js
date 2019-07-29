@@ -15,5 +15,18 @@ export default {
   },
   chat: {
     hey: require("./chat/meet3x.png")
+  },
+  tabsFooter: {
+    background: require("./tabsFooter/tabs_footer.png"),
+    profile_mask: require("./tabsFooter/profile_mask.png"),
+    profile_mask_focused: require("./tabsFooter/profile_mask_focused.png"),
+    profile_placeholder: require("./tabsFooter/profile_placeholder.png")
+  },
+  people: {
+    main: require("./people/people1080p.png"),
+    people: require("./people/people.png"),
+    referral_program_people: require("./people/referral_program_people.png"),
+    avatar_mask: require("./people/avatar_mask.png"),
+    referral_redeemed_people: require("./people/referral_redeemed_people.png")
   }
 };

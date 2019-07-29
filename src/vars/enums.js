@@ -822,9 +822,56 @@ const filterTypes = {
   AGE: "age",
   FRIENDSHIP_STATUS: "friendshipStatuses",
   LISTING_TYPE: "tags",
-  RECENTLY_JOINED: "recentlyJoined"
+  RECENTLY_JOINED: "recentlyJoined",
+  PEOPLE_SEARCH: "peopleSearch",
+  POST_SUB_TYPE: "postSubType"
 };
-
+const filtersUiDefinitions = {
+  [filterTypes.PEOPLE_SEARCH]: {
+    iconName: "search"
+  },
+  [filterTypes.GENDER]: {
+    iconName: "venus-mars"
+  },
+  [filterTypes.AGE]: {
+    iconName: "birthday-cake"
+  },
+  [filterTypes.RELATIONSHIP_STATUS]: {
+    iconName: "heart-circle"
+  },
+  [filterTypes.HOODS]: {
+    iconName: "search-location"
+  },
+  [filterTypes.FRIENDSHIP_STATUS]: {
+    iconName: "user-check"
+  },
+  [filterTypes.PRICE]: {
+    iconName: "badge-dollar"
+  },
+  [filterTypes.ROOMS]: {
+    iconName: "door-closed"
+  },
+  [filterTypes.POST_SUB_TYPE]: {
+    iconName: "list-alt"
+  },
+  [filterTypes.DATES]: {
+    iconName: "calendar-alt"
+  },
+  [filterTypes.LISTING_TYPE]: {
+    [postTypes.JOB]: {
+      iconName: "briefcase"
+    },
+    [postTypes.REAL_ESTATE]: {
+      iconName: "home"
+    },
+    [postTypes.GIVE_TAKE]: {
+      iconName: "box-check"
+    },
+    [entityTypes.EVENT]: {
+      iconName: "glass-cheers"
+    }
+  }
+};
 const destinationPartitionLevel = {
   CITY: "city",
   NEIGHBOURHOOD: "neighbourhood"
@@ -929,5 +976,6 @@ export {
   orientationTypes,
   screenNamesTabByEntityType,
   entityTypeBySlug,
-  postTypeBySlug
+  postTypeBySlug,
+  filtersUiDefinitions
 };

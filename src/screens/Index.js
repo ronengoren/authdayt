@@ -31,3 +31,4 @@ export {
   EditProfileDate
 } from "./profile";
 export { PostEditor } from "./post";
+export { PeopleTab } from "./peopleTab";

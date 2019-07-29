@@ -74,6 +74,10 @@ import com.android.build.OutputFile
  * ]
  */
 
+project.ext.vectoricons = [
+        iconFontNames: ['dayt.ttf', 'FontAwesome5ProLight.ttf', 'FontAwesome5ProSolid.ttf', 'FontAwesome5BrandsRegular.ttf']
+]
+
 project.ext.react = [
     entryFile: "index.js"
 ]

@@ -28,3 +28,4 @@ export {
 export { default as InfiniteScroll } from "./InfiniteScroll";
 export { Feed } from "./feed";
 // export { Post } from "./posts";
+export { EntityListsViewSubheader, EntityListsView } from "./entityListsView";

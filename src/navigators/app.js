@@ -11,6 +11,7 @@ import { Header, CustomTabBar } from "../components";
 import { daytColors } from "../vars";
 import { get } from "../infra/utils";
 import Home from "./home";
+import People from "./people";
 
 const screenInterpolator = sceneProps => {
   const transitions = {};
@@ -52,11 +53,23 @@ const screenInterpolator = sceneProps => {
   return transitions;
 };
 
-const TabSection = createBottomTabNavigator({
-  [screenGroupNames.HOME_TAB]: {
-    screen: Home
+const TabSection = createBottomTabNavigator(
+  {
+    [screenGroupNames.HOME_TAB]: {
+      screen: Home
+    },
+    [screenGroupNames.PEOPLE_TAB]: {
+      screen: People
+    }
+  },
+  {
+    initialRouteName: screenGroupNames.PEOPLE_TAB,
+    tabBarComponent: CustomTabBar,
+    lazy: true,
+    animationEnabled: false,
+    swipeEnabled: false
   }
-});
+);
 
 const MiddleSection = createStackNavigator({
   [screenGroupNames.TABS]: {

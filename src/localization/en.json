@@ -2550,39 +2550,51 @@
     },
     "filters": {
         "price": {
-            "header": "Price"
+            "header": "Price",
+            "placeholder": "All Prices"
         },
         "rooms": {
-            "header": "Rooms"
+            "header": "Rooms",
+            "placeholder": "All  Rooms"
         },
         "dates": {
             "search": "Select Dates",
             "picker_title": "Select dates",
             "header": "Dates",
             "from": "From",
-            "to": "To"
+            "to": "To",
+            "placeholder": "Anytime"
+
         },
         "genders": {
             "header": "Gender",
             "0": "Man",
             "1": "Woman",
             "2": "Other",
-            "3": "Unknown"
+            "3": "Unknown",
+            "placeholder": "All Genders"
+
         },
         "age": {
-            "header": "Age"
+            "header": "Age",
+            "placeholder": "All Ages"
+
         },
         "title": "Filter by",
         "ok_button": "Filter",
         "more": "more",
         "neighborhoodsIds": {
             "header": "Location",
-            "search": "Search"
+            "search": "Search",
+            "placeholder": "All Locations"
+
         },
         "friendshipStatuses": {
             "header": "Friendship",
             "0": "Not friends",
-            "1": "My friends"
+            "1": "My friends",
+            "placeholder": "All Friendships"
+
         },
         "relationshipStatuses": {
             "header": "Relationship Status",
@@ -2593,13 +2605,29 @@
             "4": "Divorced",
             "5": "Widowed",
             "6": "It's complicated",
-            "7": "Unknown"
+            "7": "Unknown",
+            "placeholder": "Any Status"
+
         },
         "tags": {
-            "header": "Category"
+            "header": "Category",
+            "placeholder": "All Categories"
+
         },
         "recentlyJoined": {
             "header": "Recently joined"
+        },
+        "toggleBtn": {
+            "show": "More Filters",
+            "hide": "Hide Filters"
+        },
+        "peopleSearch": {
+            "header": "Search",
+            "placeholder": "By Name",
+            "recentlyJoined": "Recently joined"
+        },
+        "postSubType": {
+            "header": "Post Type"
         }
     },
     "context_picker": {

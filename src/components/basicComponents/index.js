@@ -24,3 +24,4 @@ export { default as PostButton } from "./PostButton";
 export { default as Avatar } from "./Avatar";
 export { default as Chip } from "./Chip";
 export { default as FloatingHeader } from "./FloatingHeader";
+export { default as MultiSlider } from "./MultiSlider";

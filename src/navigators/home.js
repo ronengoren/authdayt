@@ -13,14 +13,14 @@ const Home = createStackNavigator(
       }
     }
     // ...commonTabRoutes
+  },
+  {
+    initialRouteName: screenNames.HomeTab,
+    headerMode: "screen",
+    cardStyle: {
+      backgroundColor: daytColors.paleGreyTwo
+    }
   }
-  // {
-  //   initialRouteName: screenNames.HomeTab,
-  //   headerMode: "screen",
-  //   cardStyle: {
-  //     backgroundColor: daytColors.paleGreyTwo
-  //   }
-  // }
 );
 
 export default Home;

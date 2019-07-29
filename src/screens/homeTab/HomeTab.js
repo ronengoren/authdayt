@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import { Screen, Feed, Header, SubHeader } from "src/components";
 // import { GenericListEmptyState } from '/components/emptyState';
 // import { MY_HOOD } from '/components/themes';
-// import { IntroductionPostEditor } from '/components/introduction';
+import { IntroductionPostEditor } from "src/components/introduction";
 import {
   View,
   Text,
@@ -33,7 +33,7 @@ import {
 // import { addSpaceOnCapitalsAndCapitalize, getFirstName } from '/infra/utils/stringUtils';
 // import { misc as miscLocalStorage } from '/infra/localStorage';
 // import { userScheme } from '/schemas';
-// import NewUserWelcomeModal from './NewUserWelcomeModal';
+import NewUserWelcomeModal from "./NewUserWelcomeModal";
 // import BoardsHeader from './BoardsHeader';
 
 const styles = StyleSheet.create({
@@ -151,13 +151,166 @@ const styles = StyleSheet.create({
 });
 
 class HomeTab extends React.Component {
+  static subTabs = {
+    COMMUNITY_FEED: "Community",
+    NEWS_FEED: "My Feed",
+    SCHEDULED_POSTS: "Scheduled Posts",
+    PERSONALIZED: "Personalized"
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      showFloatingHeader: false,
+      screenTabs: []
+    };
+
+    this.scrollY = 0;
+  }
+
   render() {
+    const normalizedSchema = "FEED";
+    const {
+      showIntroPost,
+      getListItemCta,
+      enablePersonalizedFeed
+    } = this.props;
+    const { activeSubTab, showFloatingHeader } = this.state;
+
     return (
       <View testID="homeTab" style={commonStyles.flex1}>
-        <Feed />
+        <Feed
+          onScroll={this.handleFeedScroll}
+          scrollToFeedTop={this.scrollToFeedTop}
+          normalizedSchema={normalizedSchema}
+          ListHeaderComponent={this.renderFeedHeader}
+          originType={originTypes.HOME_FEED}
+          ref={feedRef => {
+            this.feedRef = feedRef;
+          }}
+          extraTopComponent={
+            showIntroPost && isNewsFeed ? (
+              <IntroductionPostEditor
+                scrollToOffset={this.scrollToOffset}
+                key="introPost"
+              />
+            ) : null
+          }
+        />
+        {/* <NewUserWelcomeModal /> */}
+
+        <FloatingHeader
+          style={styles.floatingHeader}
+          showFloatingHeader={showFloatingHeader}
+          height={uiConstants.NAVBAR_HEIGHT}
+        >
+          <Header />
+        </FloatingHeader>
       </View>
     );
   }
+  handleFeedScroll = e => {
+    const { showFloatingHeader } = this.state;
+    this.scrollY = e.nativeEvent.contentOffset.y;
+    const breakpoint = FloatingHeader.getAdjustedBreakpoint(400);
+    if (this.scrollY > breakpoint && !showFloatingHeader) {
+      this.setState({ showFloatingHeader: true });
+    } else if (this.scrollY < breakpoint && showFloatingHeader) {
+      this.setState({ showFloatingHeader: false });
+    }
+  };
+  renderFeedHeader = () => {
+    const { appLanguage, topics, enableCommunityFeed, user } = this.props;
+    const { activeSubTab, screenTabs } = this.state;
+    const greetingLines = this.getGreeting();
+    const isRtlDesign = appLanguage === "he";
+    const textColor = Platform.select({
+      ios: homeisColors.halfLightWhite,
+      android: homeisColors.white
+    });
+    const isAdmin = isAppAdmin(user);
+
+    return (
+      <View style={styles.feedHeaderWrapper}>
+        <View style={styles.headerUpperSection}>
+          <Image
+            source={images.homeTab.gradient}
+            style={styles.headerUpperSectionBackground}
+          />
+          <Text
+            size={36}
+            lineHeight={40}
+            color={homeisColors.white}
+            bold
+            style={[styles.userName, isRtlDesign && styles.userNameRTL]}
+          >
+            {greetingLines[0]}
+          </Text>
+          <Text
+            size={36}
+            lineHeight={40}
+            color={textColor}
+            bold
+            style={[styles.greetingTime, isRtlDesign && styles.greetingTimeRTL]}
+          >
+            {greetingLines[1]}
+          </Text>
+          <TouchableOpacity
+            onPress={this.navigateToSearch}
+            activeOpacity={0.5}
+            style={[
+              styles.searchBox,
+              commonStyles.shadow,
+              isRtlDesign && styles.searchBoxRTL
+            ]}
+          >
+            <AwesomeIcon
+              name="search"
+              size={20}
+              color={homeisColors.b60}
+              style={
+                isRtlDesign ? styles.searchBoxIconRTL : styles.searchBoxIcon
+              }
+              weight="solid"
+            />
+            <Text
+              size={16}
+              lineHeight={19}
+              color={homeisColors.b60}
+              numberOfLines={1}
+              style={
+                isRtlDesign ? styles.searchBoxTextRTL : styles.searchBoxText
+              }
+            >
+              {I18n.t("home.search_placeholder")}
+            </Text>
+          </TouchableOpacity>
+          {topics && topics.length
+            ? this.renderTopicChips({ isRtlDesign })
+            : this.renderTopicChipsLoadingState({ isRtlDesign })}
+        </View>
+        <BoardsHeader />
+        <View style={styles.themesCarouselBottomBorder} />
+        {(enableCommunityFeed || isAdmin) && (
+          <SubHeader
+            tabs={screenTabs}
+            screenName={screenNames.HomeTab}
+            activeTab={activeSubTab}
+            onTabChange={val => this.setState({ activeSubTab: val })}
+            enableAnalytics
+            style={styles.subHeader}
+          />
+        )}
+        <View style={styles.postButtonWrapper} key="postButton">
+          <PostButton
+            text={I18n.t("home.post_button_text")}
+            onPress={this.navigateToPostCreationPage}
+            testID="postButton"
+          />
+        </View>
+      </View>
+    );
+  };
 }
 
 export default HomeTab;

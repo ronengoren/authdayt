@@ -84,7 +84,11 @@ class EntitiesLoadingState extends Component {
       EntitiesLoadingState.renderPlaceholderFeedItem(type, 1),
       EntitiesLoadingState.renderPlaceholderFeedItem(type, 2),
       EntitiesLoadingState.renderPlaceholderFeedItem(type, 3),
-      EntitiesLoadingState.renderPlaceholderFeedItem(type, 4)
+      EntitiesLoadingState.renderPlaceholderFeedItem(type, 4),
+      EntitiesLoadingState.renderPlaceholderFeedItem(type, 5),
+      EntitiesLoadingState.renderPlaceholderFeedItem(type, 6),
+      EntitiesLoadingState.renderPlaceholderFeedItem(type, 7),
+      EntitiesLoadingState.renderPlaceholderFeedItem(type, 8)
     ];
   }
 }
