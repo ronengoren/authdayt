@@ -29,3 +29,7 @@ export { default as InfiniteScroll } from "./InfiniteScroll";
 export { Feed } from "./feed";
 // export { Post } from "./posts";
 export { EntityListsViewSubheader, EntityListsView } from "./entityListsView";
+export { default as HtmlTextWithLinks } from "./HtmlTextWithLinks";
+export { default as HtmlText } from "./HtmlText";
+export { ActionSheetManager, SubHeader } from "./layout";
+export { default as AvatarsList } from "./AvatarsList";

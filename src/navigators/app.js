@@ -12,6 +12,7 @@ import { daytColors } from "../vars";
 import { get } from "../infra/utils";
 import Home from "./home";
 import People from "./people";
+import MyCity from "./myCity";
 
 const screenInterpolator = sceneProps => {
   const transitions = {};
@@ -55,6 +56,12 @@ const screenInterpolator = sceneProps => {
 
 const TabSection = createBottomTabNavigator(
   {
+    [screenGroupNames.MY_CITY]: {
+      screen: MyCity,
+      navigationOptions: {
+        tabBarTestID: "cityTabBtn"
+      }
+    },
     [screenGroupNames.HOME_TAB]: {
       screen: Home
     },
@@ -63,8 +70,8 @@ const TabSection = createBottomTabNavigator(
     }
   },
   {
-    initialRouteName: screenGroupNames.PEOPLE_TAB,
-    tabBarComponent: CustomTabBar,
+    initialRouteName: screenGroupNames.MY_CITY,
+    // tabBarComponent: CustomTabBar,
     lazy: true,
     animationEnabled: false,
     swipeEnabled: false

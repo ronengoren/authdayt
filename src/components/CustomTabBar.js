@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import I18n from "src/infra/localization";
 import { connect } from "react-redux";
-// import { getConnectedAcounts } from "/redux/auth/actions";
+import { getConnectedAcounts } from "src/redux/auth/actions";
 import { Text, Avatar } from "src/components/basicComponents";
 import images from "src/assets/images";
 import { DaytIcon } from "src/assets/icons";
@@ -186,8 +186,10 @@ class CustomTabBar extends React.PureComponent {
           {routes.map((route, routeIndex) => {
             const isFocused = routeIndex === index;
             const testID = getTestID({ route });
-            if (routeIndex === 2) {
-              return this.renderMyCityTab({ isFocused, route, testID });
+            {
+              if (routeIndex === 2) {
+                return this.renderMyCityTab({ isFocused, route, testID });
+              }
             }
             return this.renderTabWithIcon({ isFocused, route, testID });
           })}
@@ -350,12 +352,12 @@ CustomTabBar.propTypes = {
   })
 };
 
-const mapStateToProps = state => ({
-  user: state.auth.user,
-  friendRequestsNumber: state.friendships.friendRequestsNumber,
-  unseenNotifications: state.notifications.unseenNotifications,
-  unreadChats: state.inbox.unreadChats,
-  community: state.auth.user.community
-});
+// const mapStateToProps = state => ({
+//   user: state.auth.user,
+//   friendRequestsNumber: state.friendships.friendRequestsNumber,
+//   unseenNotifications: state.notifications.unseenNotifications,
+//   unreadChats: state.inbox.unreadChats,
+//   community: state.auth.user.community
+// });
 
 export default CustomTabBar;

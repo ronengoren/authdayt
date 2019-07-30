@@ -28,5 +28,13 @@ export default {
     referral_program_people: require("./people/referral_program_people.png"),
     avatar_mask: require("./people/avatar_mask.png"),
     referral_redeemed_people: require("./people/referral_redeemed_people.png")
+  },
+  profile: {
+    imageGradient: require("./profile/image_gradient.png"),
+    imagePlaceholder: require("./profile/image_placeholder.jpg"),
+    plane: require("./profile/plane_route3x.png"),
+    hood: require("./profile/hood.png"),
+    empty_state: require("./profile/empty_state.png"),
+    other: require("./profile/other.png")
   }
 };

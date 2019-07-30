@@ -1,33 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StyleSheet } from "react-native";
-import { View } from "/components/basicComponents";
-import { homeisColors } from "/vars";
+import { View } from "src/components/basicComponents";
+import { daytColors } from "src/vars";
 import {
   entityTypes,
   postTypes,
   listViewTypes,
   originTypes,
   passivePostSubTypes
-} from "/vars/enums";
-import { mentionsSchema } from "/schemas/common";
-import { get } from "/infra/utils";
-import { ActivationPost } from "/components/activation";
-import { PollPost } from "/components/poll";
-import { JoinedYourCommunityPost } from "/components/joinedYourCommunity";
-import { InstagramPassivePostFooter } from "/components/instagram";
-import PostHeader from "./PostHeader";
-import PostContent from "./PostContent";
-import PostFooter from "./PostFooter";
+} from "src/vars/enums";
+import { mentionsSchema } from "src/schemas/common";
+import { get } from "src/infra/utils";
+// import { ActivationPost } from "/components/activation";
+// import { PollPost } from "/components/poll";
+// import { JoinedYourCommunityPost } from "/components/joinedYourCommunity";
+// import { InstagramPassivePostFooter } from "/components/instagram";
+// import PostHeader from "./PostHeader";
+// import PostContent from "./PostContent";
+// import PostFooter from "./PostFooter";
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: homeisColors.paleGreyTwo,
+    backgroundColor: daytColors.paleGreyTwo,
     marginHorizontal: 10,
     marginTop: 15,
     marginBottom: 10,
     borderRadius: 15,
-    shadowColor: homeisColors.boxShadow,
+    shadowColor: daytColors.boxShadow,
     shadowOffset: {
       width: 0,
       height: 5

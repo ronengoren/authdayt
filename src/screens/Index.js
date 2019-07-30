@@ -17,7 +17,7 @@ export { WebView } from "./webView";
 export { SearchAddress } from "./searchAddress";
 export { ImageUpload } from "./imageUpload";
 export {
-  // Profile,
+  Profile,
   // EditProfile,
   // EditProfileRelationship,
   // EditProfileGender,
