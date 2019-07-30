@@ -33,3 +33,4 @@ export {
 // export { PostEditor } from "./post";
 export { PeopleTab } from "./peopleTab";
 export { GroupsTab } from "./groupsTab";
+export { CommunicationCenter } from "./communicationCenter";

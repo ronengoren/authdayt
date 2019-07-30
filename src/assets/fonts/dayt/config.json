@@ -361,7 +361,7 @@
     },
     {
       "uid": "7aa8cc552d9d6d19815750fc339cf090",
-      "css": "groups-fill",
+      "css": "groups-2",
       "code": 62023,
       "src": "fontawesome"
     },
@@ -373,7 +373,7 @@
     },
     {
       "uid": "c7a75a25880928fe76981a53eca4f926",
-      "css": "inbox",
+      "css": "inbox-2",
       "code": 59442,
       "src": "fontawesome"
     },

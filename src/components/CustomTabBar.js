@@ -154,7 +154,7 @@ const tabs = {
     labelName: "activity",
     icon: {
       name: "inbox-2",
-      activeName: "inbox-fill",
+      activeName: "inbox-2",
       size: 20
     },
     activeColor: daytColors.azure

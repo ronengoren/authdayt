@@ -14,6 +14,7 @@ import Home from "./home";
 import People from "./people";
 import MyCity from "./myCity";
 import Groups from "./groups";
+import Communications from "./communications";
 
 const screenInterpolator = sceneProps => {
   const transitions = {};
@@ -74,6 +75,9 @@ const TabSection = createBottomTabNavigator(
       navigationOptions: {
         tabBarTestID: "groupsTabBtn"
       }
+    },
+    [screenGroupNames.COMMUNICATIONS]: {
+      screen: Communications
     }
   },
   {
@@ -92,13 +96,13 @@ const MiddleSection = createStackNavigator({
       header: null
     }
   },
-  [screenNames.PostEditor]: {
-    screen: screens.PostEditor,
-    navigationOptions: {
-      header: null,
-      gesturesEnabled: false
-    }
-  },
+  // [screenNames.PostEditor]: {
+  //   screen: screens.PostEditor,
+  //   navigationOptions: {
+  //     header: null,
+  //     gesturesEnabled: false
+  //   }
+  // },
   [screenNames.WebView]: {
     screen: screens.WebView,
     navigationOptions: {

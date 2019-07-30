@@ -175,19 +175,19 @@ GroupsTab.propTypes = {
   suggestedGroupsThemes: PropTypes.array
 };
 
-const mapStateToProps = state => ({
-  suggestedGroupsThemes: get(state, "groups.suggestedGroupsTags.data", []),
-  user: state.auth.user
-});
+// const mapStateToProps = state => ({
+//   suggestedGroupsThemes: get(state, "groups.suggestedGroupsTags.data", []),
+//   user: state.auth.user
+// });
 
-const mapPropsToDispatch = {
-  resetSuggestedGroups,
-  getSuggestedGroupsTags
-};
+// const mapPropsToDispatch = {
+//   resetSuggestedGroups,
+//   getSuggestedGroupsTags
+// };
 
-GroupsTab = connect(
-  mapStateToProps,
-  mapPropsToDispatch
-)(GroupsTab);
-GroupsTab = Screen()(GroupsTab);
+// GroupsTab = connect(
+//   mapStateToProps,
+//   mapPropsToDispatch
+// )(GroupsTab);
+// GroupsTab = Screen()(GroupsTab);
 export default GroupsTab;
