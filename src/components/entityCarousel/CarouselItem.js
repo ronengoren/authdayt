@@ -663,24 +663,25 @@ CarouselItem.propTypes = {
   fireAnalyticsEvents: PropTypes.bool
 };
 
-const mapStateToProps = (state, ownProps) => {
-  const {
-    entity,
-    sharedEntity,
-    sharedEntityType,
-    sharedEntityId,
-    sharedEntityPost
-  } = denormalize({ dataProp: ownProps.item, state });
+// const mapStateToProps = (state, ownProps) => {
+//   const {
+//     entity,
+//     sharedEntity,
+//     sharedEntityType,
+//     sharedEntityId,
+//     sharedEntityPost
+//   } = denormalize({ dataProp: ownProps.item, state });
 
-  return {
-    user: state.auth.user,
-    entity,
-    sharedEntity,
-    sharedEntityType,
-    sharedEntityId,
-    sharedEntityPost,
-    currency: state.auth.user.community.destinationPricing.currencyCode
-  };
-};
+//   return {
+//     user: state.auth.user,
+//     entity,
+//     sharedEntity,
+//     sharedEntityType,
+//     sharedEntityId,
+//     sharedEntityPost,
+//     currency: state.auth.user.community.destinationPricing.currencyCode
+//   };
+// };
 
-export default connect(mapStateToProps)(CarouselItem);
+// export default connect(mapStateToProps)(CarouselItem);
+export default CarouselItem;

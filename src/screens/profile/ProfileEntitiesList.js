@@ -124,9 +124,9 @@ ProfileEntitiesList.propTypes = {
   })
 };
 
-const mapStateToProps = state => ({
-  appUserId: state.auth.user.id
-});
+// const mapStateToProps = state => ({
+//   appUserId: state.auth.user.id
+// });
 
-ProfileEntitiesList = connect(mapStateToProps)(ProfileEntitiesList);
+// ProfileEntitiesList = connect(mapStateToProps)(ProfileEntitiesList);
 export default ProfileEntitiesList;

@@ -705,27 +705,28 @@ Settings.propTypes = {
   communityManagerEmail: PropTypes.string
 };
 
-const mapDispatchToProps = {
-  logout,
-  updateProfile,
-  getProfile,
-  changeFeatureFlag,
-  openActionSheet,
-  updateUserLanguage,
-  apiCommand
-};
+// const mapDispatchToProps = {
+//   logout,
+//   updateProfile,
+//   getProfile,
+//   changeFeatureFlag,
+//   openActionSheet,
+//   updateUserLanguage,
+//   apiCommand
+// };
 
-const mapStateToProps = state => {
-  const { user } = state.auth;
-  return {
-    featureFlags: state.auth.featureFlags,
-    data: get(state, `profile[${user.id}].data`),
-    user
-  };
-};
+// const mapStateToProps = state => {
+//   const { user } = state.auth;
+//   return {
+//     featureFlags: state.auth.featureFlags,
+//     data: get(state, `profile[${user.id}].data`),
+//     user
+//   };
+// };
 
-Settings = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Settings);
-export default Screen({ modalError: true })(Settings);
+// Settings = connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(Settings);
+// export default Screen({ modalError: true })(Settings);
+export default Settings;

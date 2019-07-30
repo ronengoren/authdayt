@@ -305,5 +305,5 @@ EditProfileRelationship.propTypes = {
   navigation: PropTypes.object
 };
 
-EditProfileRelationship = Screen()(EditProfileRelationship);
+// EditProfileRelationship = Screen()(EditProfileRelationship);
 export default EditProfileRelationship;

@@ -18,16 +18,16 @@ export { SearchAddress } from "./searchAddress";
 export { ImageUpload } from "./imageUpload";
 export {
   Profile,
-  // EditProfile,
+  EditProfile,
   // EditProfileRelationship,
   // EditProfileGender,
   // EditProfileDate,
-  // ConnectedUsersList,
+  ConnectedUsersList,
   OthersFriendsList,
   // Settings,
   // ChangeEmail,
-  // ProfileGroupsList,
-  // ProfilePagesList
+  ProfileGroupsList,
+  ProfilePagesList,
   EditProfileDate
 } from "./profile";
 // export { PostEditor } from "./post";

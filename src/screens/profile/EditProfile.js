@@ -27,16 +27,19 @@ import {
   daytFontWeights,
   uiConstants,
   commonStyles
-} from "/vars";
-import { relationshipType, genderType, screenNames } from "/vars/enums";
-import { get } from "/infra/utils";
-import { translateDate, getBirthdateMinMax } from "/infra/utils/dateTimeUtils";
+} from "src/vars";
+import { relationshipType, genderType, screenNames } from "src/vars/enums";
+import { get } from "src/infra/utils";
 import {
-  connect as connectInsta,
-  disconnect as disconnectInsta
-} from "/infra/instagram";
-import { navigationService } from "/infra/navigation";
-import { pluralTranslateWithZero } from "/redux/utils/common";
+  translateDate,
+  getBirthdateMinMax
+} from "src/infra/utils/dateTimeUtils";
+// import {
+//   connect as connectInsta,
+//   disconnect as disconnectInsta
+// } from "src/infra/instagram";
+import { navigationService } from "src/infra/navigation";
+import { pluralTranslateWithZero } from "src/redux/utils/common";
 
 const styles = StyleSheet.create({
   container: {
@@ -681,29 +684,30 @@ EditProfile.propTypes = {
   instagramToken: PropTypes.string
 };
 
-const mapStateToProps = (state, ownProps) => {
-  const { data } = ownProps.navigation.state.params;
-  const { user } = state.auth;
-  const instagramToken = get(
-    state,
-    `profile[${user.id}].data.user.instagramToken`
-  );
+// const mapStateToProps = (state, ownProps) => {
+//   const { data } = ownProps.navigation.state.params;
+//   const { user } = state.auth;
+//   const instagramToken = get(
+//     state,
+//     `profile[${user.id}].data.user.instagramToken`
+//   );
 
-  return {
-    data,
-    user,
-    instagramToken
-  };
-};
+//   return {
+//     data,
+//     user,
+//     instagramToken
+//   };
+// };
 
-const mapDispatchToProps = {
-  updateProfile,
-  resetUsersAroundData,
-  initSearchAddress
-};
+// const mapDispatchToProps = {
+//   updateProfile,
+//   resetUsersAroundData,
+//   initSearchAddress
+// };
 
-EditProfile = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(EditProfile);
-export default Screen()(EditProfile);
+// EditProfile = connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(EditProfile);
+// export default Screen()(EditProfile);
+export default EditProfile;

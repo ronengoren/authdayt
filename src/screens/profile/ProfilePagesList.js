@@ -87,11 +87,12 @@ ProfilePagesList.propTypes = {
   isPageOwner: PropTypes.bool
 };
 
-const mapStateToProps = (state, ownProps) => ({
-  appUserId: state.auth.user.id,
-  userProfileId: ownProps.navigation.state.params.user.id,
-  isPageOwner: ownProps.navigation.state.params.isPageOwner
-});
+// const mapStateToProps = (state, ownProps) => ({
+//   appUserId: state.auth.user.id,
+//   userProfileId: ownProps.navigation.state.params.user.id,
+//   isPageOwner: ownProps.navigation.state.params.isPageOwner
+// });
 
-ProfilePagesList = connect(mapStateToProps)(ProfilePagesList);
-export default Screen()(ProfilePagesList);
+// ProfilePagesList = connect(mapStateToProps)(ProfilePagesList);
+// export default Screen()(ProfilePagesList);
+export default ProfilePagesList;

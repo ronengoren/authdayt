@@ -157,5 +157,5 @@ EditProfileGender.propTypes = {
   navigation: PropTypes.object
 };
 
-EditProfileGender = Screen()(EditProfileGender);
+// EditProfileGender = Screen()(EditProfileGender);
 export default EditProfileGender;

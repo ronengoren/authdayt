@@ -84,12 +84,12 @@ ProfileGroupsList.propTypes = {
   isGroupManager: PropTypes.bool
 };
 
-const mapStateToProps = (state, ownProps) => ({
-  appUserId: state.auth.user.id,
-  userProfileId: ownProps.navigation.state.params.user.id,
-  isGroupManager: ownProps.navigation.state.params.isGroupManager
-});
+// const mapStateToProps = (state, ownProps) => ({
+//   appUserId: state.auth.user.id,
+//   userProfileId: ownProps.navigation.state.params.user.id,
+//   isGroupManager: ownProps.navigation.state.params.isGroupManager
+// });
 
-ProfileGroupsList = connect(mapStateToProps)(ProfileGroupsList);
-ProfileGroupsList = Screen()(ProfileGroupsList);
+// ProfileGroupsList = connect(mapStateToProps)(ProfileGroupsList);
+// ProfileGroupsList = Screen()(ProfileGroupsList);
 export default ProfileGroupsList;

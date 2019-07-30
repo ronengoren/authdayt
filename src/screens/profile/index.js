@@ -1,4 +1,10 @@
 export { default as EditProfileDate } from "./EditProfileDate";
 export { default as Profile } from "./Profile";
 export { default as OthersFriendsList } from "./OthersFriendsList";
-// export { default as ConnectedUsersList } from "./ConnectedUsersList";
+export { default as ConnectedUsersList } from "./ConnectedUsersList";
+export { default as ProfileGroupsList } from "./ProfileGroupsList";
+export { default as ProfilePagesList } from "./ProfilePagesList";
+export { default as EditProfile } from "./EditProfile";
+export { default as EditProfileRelationship } from "./EditProfileRelationship";
+export { default as EditProfileGender } from "./EditProfileGender";
+export { default as Settings } from "./Settings";
