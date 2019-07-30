@@ -30,5 +30,6 @@ export {
   // ProfilePagesList
   EditProfileDate
 } from "./profile";
-export { PostEditor } from "./post";
+// export { PostEditor } from "./post";
 export { PeopleTab } from "./peopleTab";
+export { GroupsTab } from "./groupsTab";

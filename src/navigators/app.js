@@ -13,6 +13,7 @@ import { get } from "../infra/utils";
 import Home from "./home";
 import People from "./people";
 import MyCity from "./myCity";
+import Groups from "./groups";
 
 const screenInterpolator = sceneProps => {
   const transitions = {};
@@ -66,6 +67,12 @@ const TabSection = createBottomTabNavigator(
       screen: MyCity,
       navigationOptions: {
         tabBarTestID: "cityTabBtn"
+      }
+    },
+    [screenGroupNames.GROUPS_TAB]: {
+      screen: Groups,
+      navigationOptions: {
+        tabBarTestID: "groupsTabBtn"
       }
     }
   },
