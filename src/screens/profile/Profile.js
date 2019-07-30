@@ -3,11 +3,15 @@ import PropTypes from "prop-types";
 import { StyleSheet, TouchableOpacity, LayoutAnimation } from "react-native";
 import I18n from "src/infra/localization";
 import { connect } from "react-redux";
-// import { getProfile, editImages } from '/redux/profile/actions';
-// import { inviteFriendRequest, approveFriendRequest, declineFriendRequest } from '/redux/friendships/actions';
-// import { getEntityFeedInfiniteScrollProps } from '/redux/entityFeed/actions';
-// import { apiCommand } from '/redux/apiCommands/actions';
-// import { openActionSheet } from '/redux/general/actions';
+import { getProfile, editImages } from "src/redux/profile/actions";
+import {
+  inviteFriendRequest,
+  approveFriendRequest,
+  declineFriendRequest
+} from "src/redux/friendships/actions";
+import { getEntityFeedInfiniteScrollProps } from "src/redux/entityFeed/actions";
+import { apiCommand } from "src/redux/apiCommands/actions";
+import { openActionSheet } from "src/redux/general/actions";
 import {
   View,
   Text,
@@ -33,7 +37,7 @@ import { get } from "src/infra/utils";
 import { getAge } from "src/infra/utils/dateTimeUtils";
 import { navigationService } from "src/infra/navigation";
 import { userScheme } from "src/schemas";
-// import { pluralTranslateWithZero } from '/redux/utils/common';
+import { pluralTranslateWithZero } from "src/redux/utils/common";
 import ProfileHeader from "./ProfileHeader";
 import ProfileHeaderButtons from "./ProfileHeaderButtons";
 import ProfileActionsContainer from "./ProfileActionsContainer";
@@ -46,7 +50,7 @@ import {
 import ProfileJourney from "./ProfileJourney";
 import EntitiesCarousel from "./EntitiesCarousel";
 import SavedItems from "./SavedItems";
-// import ActivationsCarousel from "./ActivationsCarousel";
+import ActivationsCarousel from "./ActivationsCarousel";
 
 const HEADER_BREAKPOINT_WITH_IMAGE = 360;
 const HEADER_BREAKPOINT_WITHOUT_IMAGE = 160;
@@ -154,7 +158,7 @@ class Profile extends React.Component {
   state = {
     invited: false,
     withoutFeed: true,
-    showFloatingHeader: true
+    showFloatingHeader: false
   };
   render() {
     const { showFloatingHeader } = this.state;
@@ -196,6 +200,23 @@ class Profile extends React.Component {
       );
     }
   }
+  componentDidMount = async () => {
+    const { userProfileId, getProfile } = this.props;
+    const profile = await getProfile({ userId: userProfileId });
+    this.sendViewAnalytics(profile);
+    try {
+      const profile = await getProfile({ userId: userProfileId });
+      this.sendViewAnalytics(profile);
+      LayoutAnimation.easeInEaseOut();
+    } catch (err) {
+      this.setState({ throwError: err });
+    }
+
+    if (this.state.throwError) {
+      throw this.state.throwError;
+    }
+  };
+
   renderHeaderButtons({ isRenderedInHeader } = {}) {
     const { profile } = this.props;
 
@@ -239,6 +260,11 @@ class Profile extends React.Component {
           thumbnail={thumbnail}
           isWithoutBackground={!userImage && this.isViewingOwnProfile}
           //   name={user.name}
+          ButtonsComponent={this.renderHeaderButtons({
+            isRenderedInHeader: true
+          })}
+          isViewingOwnProfile={this.isViewingOwnProfile}
+          navigateToEditProfile={this.navigateToEditProfile}
         />
         {this.renderProfileDetails()}
       </View>

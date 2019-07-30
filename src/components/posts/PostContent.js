@@ -14,7 +14,7 @@
 // } from "/components/basicComponents";
 // import { InHoodLink } from "/components/neighborhoods";
 // import { AwesomeIcon } from "/assets/icons";
-// import { homeisColors } from "/vars";
+// import { daytColors } from "/vars";
 // import {
 //   postTypes,
 //   postSubTypes,
@@ -49,7 +49,7 @@
 //     borderBottomRightRadius: 15
 //   },
 //   outerWrapper: {
-//     backgroundColor: homeisColors.white
+//     backgroundColor: daytColors.white
 //   },
 //   sharedEntityOuterWrapper: {
 //     borderRadius: 15
@@ -95,7 +95,7 @@
 //     lineHeight: 26
 //   },
 //   sharedPost: {
-//     backgroundColor: homeisColors.white
+//     backgroundColor: daytColors.white
 //   },
 //   sharedPostText: {
 //     paddingHorizontal: 15
@@ -104,7 +104,7 @@
 //     marginHorizontal: 10,
 //     borderRadius: 15,
 //     borderWidth: 1,
-//     borderColor: homeisColors.b90
+//     borderColor: daytColors.b90
 //   },
 //   eventDateAddressWrapper: {
 //     marginBottom: 5
@@ -486,7 +486,7 @@
 //         token={data.instagramToken}
 //         LoadingComponent={
 //           <LoadingBackground
-//             backgroundColor={homeisColors.white}
+//             backgroundColor={daytColors.white}
 //             height={IMAGE_HEIGHT}
 //           />
 //         }
@@ -691,7 +691,7 @@
 //     <Text
 //       size={isPostPage ? 22 : 20}
 //       lineHeight={26}
-//       color={homeisColors.b30}
+//       color={daytColors.b30}
 //       style={[isPostPage && styles.titleMargin]}
 //       bold
 //       numberOfLines={isPostPage ? 0 : 2}
@@ -738,14 +738,14 @@
 //       <AwesomeIcon
 //         name="calendar-check"
 //         style={styles.icon}
-//         color={homeisColors.b70}
+//         color={daytColors.b70}
 //         size={12}
 //         weight="solid"
 //       />
 //       <Text
 //         size={16}
 //         lineHeight={26}
-//         color={homeisColors.b30}
+//         color={daytColors.b30}
 //         numberOfLines={1}
 //         forceLTR
 //       >
@@ -753,7 +753,7 @@
 //         <Text
 //           size={16}
 //           lineHeight={26}
-//           color={homeisColors.b60}
+//           color={daytColors.b60}
 //           numberOfLines={1}
 //           forceLTR
 //         >
@@ -778,14 +778,14 @@
 //       <AwesomeIcon
 //         name="building"
 //         style={styles.iconCompany}
-//         color={homeisColors.b70}
+//         color={daytColors.b70}
 //         size={12}
 //         weight="solid"
 //       />
 //       <Text
 //         size={16}
 //         lineHeight={26}
-//         color={homeisColors.b30}
+//         color={daytColors.b30}
 //         numberOfLines={1}
 //         forceLTR
 //         style={styles.detailsRowText}
@@ -800,23 +800,23 @@
 //       <AwesomeIcon
 //         name="building"
 //         style={styles.iconCompany}
-//         color={homeisColors.b70}
+//         color={daytColors.b70}
 //         size={12}
 //         weight="solid"
 //       />
 //       <Text size={16} lineHeight={26} numberOfLines={1} forceLTR>
 //         {!!size && (
-//           <Text size={16} lineHeight={26} color={homeisColors.b30}>
+//           <Text size={16} lineHeight={26} color={daytColors.b30}>
 //             {I18n.t("posts.real_estate.size", { size })}
 //           </Text>
 //         )}
 //         {!!(size && rooms) && (
-//           <Text size={16} lineHeight={26} color={homeisColors.b30}>
+//           <Text size={16} lineHeight={26} color={daytColors.b30}>
 //             {" · "}
 //           </Text>
 //         )}
 //         {!!rooms && (
-//           <Text size={16} lineHeight={26} color={homeisColors.b30}>
+//           <Text size={16} lineHeight={26} color={daytColors.b30}>
 //             {I18n.p(rooms, "posts.real_estate.rooms")}
 //           </Text>
 //         )}
@@ -830,11 +830,11 @@
 //         <AwesomeIcon
 //           name="clock"
 //           style={styles.iconClock}
-//           color={homeisColors.b70}
+//           color={daytColors.b70}
 //           size={12}
 //           weight="solid"
 //         />
-//         <Text size={16} lineHeight={26} color={homeisColors.b30}>
+//         <Text size={16} lineHeight={26} color={daytColors.b30}>
 //           {getFormattedDateAndTime(
 //             startTime,
 //             dateAndTimeFormats.eventDayMonthTime

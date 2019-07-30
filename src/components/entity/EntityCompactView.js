@@ -16,9 +16,9 @@ import {
   Image,
   OverlayText
 } from "/components/basicComponents";
-import { AwesomeIcon, HomeisIcon } from "/assets/icons";
-import images from "/assets/images";
-import { homeisColors, commonStyles } from "/vars";
+import { AwesomeIcon, DaytIcon } from "src/assets/icons";
+import images from "src/assets/images";
+import { daytColors, commonStyles } from "src/vars";
 import {
   postTypes,
   postSubTypes,
@@ -31,17 +31,17 @@ import {
   uiDefinitions,
   groupPrivacyType,
   mediaTypes
-} from "/vars/enums";
-import { navigationService } from "/infra/navigation";
-import { toCurrency, isRTL } from "/infra/utils/stringUtils";
+} from "src/vars/enums";
+import { navigationService } from "src/infra/navigation";
+import { toCurrency, isRTL } from "src/infra/utils/stringUtils";
 import {
   getFormattedDateAndTime,
   getDayAndMonth,
   getDaysDifference
-} from "/infra/utils/dateTimeUtils";
-import { removeAddressSuffix } from "/infra/utils/addressUtils";
-import { userScheme } from "/schemas";
-import { getPostTimeText } from "/components/posts/utils";
+} from "src/infra/utils/dateTimeUtils";
+import { removeAddressSuffix } from "src/infra/utils/addressUtils";
+import { userScheme } from "src/schemas";
+import { getPostTimeText } from "src/components/posts/utils";
 
 const MEDIA_SIZE = 60;
 
@@ -50,9 +50,9 @@ const styles = StyleSheet.create({
     marginHorizontal: 15,
     marginTop: 5,
     marginBottom: 10,
-    backgroundColor: homeisColors.white,
+    backgroundColor: daytColors.white,
     borderRadius: 15,
-    shadowColor: homeisColors.boxShadow,
+    shadowColor: daytColors.boxShadow,
     shadowOffset: {
       width: 0,
       height: 5
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
     right: 0,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: homeisColors.transparent
+    backgroundColor: daytColors.transparent
   },
   playBtnWrapper: {
     justifyContent: "center",
@@ -176,9 +176,9 @@ const styles = StyleSheet.create({
     height: 30,
     borderRadius: 15,
     zIndex: 10,
-    backgroundColor: homeisColors.halfRealBlack,
+    backgroundColor: daytColors.halfRealBlack,
     borderWidth: 1,
-    borderColor: homeisColors.white80
+    borderColor: daytColors.white80
   },
   playBtn: {
     marginLeft: 4
@@ -384,7 +384,7 @@ class EntityCompactView extends Component {
                 <Text
                   size={titleFontSize}
                   lineHeight={26}
-                  color={homeisColors.b30}
+                  color={daytColors.b30}
                   bold
                   numberOfLines={1}
                   alignLocale={alignLocale}
@@ -403,7 +403,7 @@ class EntityCompactView extends Component {
                 <Text
                   size={titleFontSize}
                   lineHeight={21}
-                  color={homeisColors.b30}
+                  color={daytColors.b30}
                   bold
                   numberOfLines={2}
                   style={styles.entityItemTitle}
@@ -414,7 +414,7 @@ class EntityCompactView extends Component {
                   <Text
                     size={13}
                     lineHeight={15}
-                    color={homeisColors.b60}
+                    color={daytColors.b60}
                     style={styles.postTimeText}
                   >
                     {postTimeText}
@@ -504,7 +504,7 @@ class EntityCompactView extends Component {
               <AwesomeIcon
                 name="play"
                 size={10}
-                color={homeisColors.white}
+                color={daytColors.white}
                 weight="solid"
                 style={styles.playBtn}
               />
@@ -551,12 +551,12 @@ class EntityCompactView extends Component {
     } = entity;
     const color = uiColorDefinitions[this.contentType];
     const {
-      isHomeisIcon,
+      isDaytIcon,
       name,
       breadcrumbIconSize,
       breadcrumbLineHeight
     } = uiDefinitions[this.contentType];
-    const IconComponent = isHomeisIcon ? HomeisIcon : AwesomeIcon;
+    const IconComponent = isDaytIcon ? DaytIcon : AwesomeIcon;
     const iconTestID = `${testIdPrefix}${name}_icon`;
 
     let shouldRenderLocation = false;
@@ -597,10 +597,10 @@ class EntityCompactView extends Component {
                   size={13}
                   weight="solid"
                   name="map-marker-alt"
-                  color={homeisColors.b70}
+                  color={daytColors.b70}
                   style={[styles.icon]}
                 />
-                <Text size={13} lineHeight={20} color={homeisColors.b70}>
+                <Text size={13} lineHeight={20} color={daytColors.b70}>
                   {location}
                 </Text>
               </View>
@@ -610,10 +610,10 @@ class EntityCompactView extends Component {
                 size={12}
                 weight="solid"
                 name={groupIcon}
-                color={homeisColors.b70}
+                color={daytColors.b70}
                 style={[styles.icon]}
               />
-              <Text size={13} lineHeight={20} color={homeisColors.b70}>
+              <Text size={13} lineHeight={20} color={daytColors.b70}>
                 {groupType}
               </Text>
             </View>
@@ -623,7 +623,7 @@ class EntityCompactView extends Component {
       }
       case entityTypes.EVENT: {
         textComponent = (
-          <Text size={13} lineHeight={15} color={homeisColors.b60}>
+          <Text size={13} lineHeight={15} color={daytColors.b60}>
             <Text size={13} lineHeight={15} color={color}>
               {I18n.t("carousels.entity_type_names.event")}
             </Text>
@@ -643,7 +643,7 @@ class EntityCompactView extends Component {
             <Text
               size={13}
               lineHeight={15}
-              color={homeisColors.b30}
+              color={daytColors.b30}
               numberOfLines={1}
             >
               {" · "}
@@ -660,14 +660,14 @@ class EntityCompactView extends Component {
           <Text
             size={13}
             lineHeight={15}
-            color={homeisColors.b60}
+            color={daytColors.b60}
             numberOfLines={1}
             style={commonStyles.flex1}
           >
             <Text size={13} lineHeight={15} color={color}>
               {I18n.t(`carousels.post_type_names.${postType}`)}
             </Text>
-            <Text size={13} lineHeight={15} color={homeisColors.b30}>
+            <Text size={13} lineHeight={15} color={daytColors.b30}>
               {" · "}
               {I18n.t("feed.suggested_post.by")} {actor.name}
             </Text>
@@ -713,14 +713,14 @@ class EntityCompactView extends Component {
       <AwesomeIcon
         name="coins"
         style={styles.iconPrice}
-        color={homeisColors.b70}
+        color={daytColors.b70}
         size={13}
         weight="solid"
       />
       <Text
         size={16}
         lineHeight={26}
-        color={homeisColors.b30}
+        color={daytColors.b30}
         numberOfLines={1}
         forceLTR
       >
@@ -734,14 +734,14 @@ class EntityCompactView extends Component {
       <AwesomeIcon
         name="calendar-check"
         style={styles.iconPrice}
-        color={homeisColors.b70}
+        color={daytColors.b70}
         size={14}
         weight="solid"
       />
       <Text
         size={16}
         lineHeight={26}
-        color={homeisColors.b30}
+        color={daytColors.b30}
         numberOfLines={1}
         forceLTR
       >
@@ -774,19 +774,19 @@ class EntityCompactView extends Component {
           activeOpacity={1}
           key="location"
         >
-          <HomeisIcon
+          <DaytIcon
             name="location"
             style={[
               styles.iconLocation,
               inSubHeader && styles.iconLocationInSubHeader
             ]}
-            color={homeisColors.b70}
+            color={daytColors.b70}
             size={16}
           />
           <Text
             size={inSubHeader ? 13 : 16}
             lineHeight={inSubHeader ? 15 : 26}
-            color={homeisColors.b30}
+            color={daytColors.b30}
             numberOfLines={1}
             forceLTR
             style={commonStyles.flex1}
@@ -848,14 +848,14 @@ class EntityCompactView extends Component {
       <AwesomeIcon
         name="building"
         style={styles.iconCompany}
-        color={homeisColors.b70}
+        color={daytColors.b70}
         size={12}
         weight="solid"
       />
       <Text
         size={16}
         lineHeight={26}
-        color={homeisColors.b30}
+        color={daytColors.b30}
         numberOfLines={1}
         forceLTR
         style={commonStyles.flex1}
@@ -870,23 +870,23 @@ class EntityCompactView extends Component {
       <AwesomeIcon
         name="building"
         style={styles.iconCompany}
-        color={homeisColors.b70}
+        color={daytColors.b70}
         size={12}
         weight="solid"
       />
       <Text size={16} lineHeight={26} numberOfLines={1} forceLTR>
         {!!size && (
-          <Text size={16} lineHeight={26} color={homeisColors.b30}>
+          <Text size={16} lineHeight={26} color={daytColors.b30}>
             {I18n.t("posts.real_estate.size", { size })}
           </Text>
         )}
         {!!(size && rooms) && (
-          <Text size={16} lineHeight={26} color={homeisColors.b30}>
+          <Text size={16} lineHeight={26} color={daytColors.b30}>
             {" · "}
           </Text>
         )}
         {!!rooms && (
-          <Text size={16} lineHeight={26} color={homeisColors.b30}>
+          <Text size={16} lineHeight={26} color={daytColors.b30}>
             {I18n.p(rooms, "posts.real_estate.rooms")}
           </Text>
         )}
@@ -899,11 +899,11 @@ class EntityCompactView extends Component {
       <AwesomeIcon
         name="clock"
         style={styles.iconClock}
-        color={homeisColors.b70}
+        color={daytColors.b70}
         size={12}
         weight="solid"
       />
-      <Text size={16} lineHeight={26} color={homeisColors.b30}>
+      <Text size={16} lineHeight={26} color={daytColors.b30}>
         {getFormattedDateAndTime(
           startTime,
           dateAndTimeFormats.eventDayMonthTime

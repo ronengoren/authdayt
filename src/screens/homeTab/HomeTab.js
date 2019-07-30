@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import { Platform, StyleSheet, TouchableOpacity } from "react-native";
 import I18n from "src/infra/localization";
 import { connect } from "react-redux";
-// import { getListItemCta } from '/redux/lists/actions';
+import { getListItemCta } from "src/redux/lists/actions";
 import { Screen, Feed, Header, SubHeader } from "src/components";
-// import { GenericListEmptyState } from '/components/emptyState';
-// import { MY_HOOD } from '/components/themes';
+import { GenericListEmptyState } from "src/components/emptyState";
+import { MY_HOOD } from "src/components/themes";
 import { IntroductionPostEditor } from "src/components/introduction";
 import {
   View,
@@ -27,14 +27,17 @@ import {
   groupType,
   entityTypes
 } from "src/vars/enums";
-// import { get, isAppAdmin, compact } from '/infra/utils';
-// import { navigationService } from '/infra/navigation';
-// import { getGreetingTime } from '/infra/utils/dateTimeUtils';
-// import { addSpaceOnCapitalsAndCapitalize, getFirstName } from '/infra/utils/stringUtils';
-// import { misc as miscLocalStorage } from '/infra/localStorage';
-// import { userScheme } from '/schemas';
+import { get, isAppAdmin, compact } from "src/infra/utils";
+import { navigationService } from "src/infra/navigation";
+import { getGreetingTime } from "src/infra/utils/dateTimeUtils";
+import {
+  addSpaceOnCapitalsAndCapitalize,
+  getFirstName
+} from "src/infra/utils/stringUtils";
+import { misc as miscLocalStorage } from "src/infra/localStorage";
+import { userScheme } from "src/schemas";
 import NewUserWelcomeModal from "./NewUserWelcomeModal";
-// import BoardsHeader from './BoardsHeader';
+import BoardsHeader from "./BoardsHeader";
 
 const styles = StyleSheet.create({
   feedHeaderWrapper: {
@@ -225,8 +228,8 @@ class HomeTab extends React.Component {
     const greetingLines = this.getGreeting();
     const isRtlDesign = appLanguage === "he";
     const textColor = Platform.select({
-      ios: homeisColors.halfLightWhite,
-      android: homeisColors.white
+      ios: daytColors.halfLightWhite,
+      android: daytColors.white
     });
     const isAdmin = isAppAdmin(user);
 
@@ -240,7 +243,7 @@ class HomeTab extends React.Component {
           <Text
             size={36}
             lineHeight={40}
-            color={homeisColors.white}
+            color={daytColors.white}
             bold
             style={[styles.userName, isRtlDesign && styles.userNameRTL]}
           >
@@ -267,7 +270,7 @@ class HomeTab extends React.Component {
             <AwesomeIcon
               name="search"
               size={20}
-              color={homeisColors.b60}
+              color={daytColors.b60}
               style={
                 isRtlDesign ? styles.searchBoxIconRTL : styles.searchBoxIcon
               }
@@ -276,7 +279,7 @@ class HomeTab extends React.Component {
             <Text
               size={16}
               lineHeight={19}
-              color={homeisColors.b60}
+              color={daytColors.b60}
               numberOfLines={1}
               style={
                 isRtlDesign ? styles.searchBoxTextRTL : styles.searchBoxText

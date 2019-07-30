@@ -23,7 +23,7 @@ export {
   // EditProfileGender,
   // EditProfileDate,
   // ConnectedUsersList,
-  // OthersFriendsList,
+  OthersFriendsList,
   // Settings,
   // ChangeEmail,
   // ProfileGroupsList,

@@ -6,14 +6,14 @@ import { connect } from "react-redux";
 import { closeActionSheet } from "/redux/general/actions";
 import { apiCommand } from "/redux/apiCommands/actions";
 import { Text, View } from "/components/basicComponents";
-import { HomeisIcon, AwesomeIcon } from "/assets/icons";
-import { homeisColors, homeisFonts, homeisFontWeights } from "/vars";
+import { DaytIcon, AwesomeIcon } from "/assets/icons";
+import { daytFonts, daytFontWeights, daytColors } from "src/vars";
 import Logger from "/infra/reporting/Logger";
 import { stylesScheme } from "/schemas";
 
 const styles = StyleSheet.create({
   modal: {
-    backgroundColor: homeisColors.paleBlack,
+    backgroundColor: daytColors.paleBlack,
     height: "100%",
     width: "100%"
   },
@@ -25,17 +25,17 @@ const styles = StyleSheet.create({
   },
   container: {
     borderRadius: 10,
-    backgroundColor: homeisColors.white,
+    backgroundColor: daytColors.white,
     width: "100%",
     marginBottom: 20
   },
   headerText: {
-    color: homeisColors.buttonGrey,
+    color: daytColors.buttonGrey,
     fontSize: 14
   },
   actionSheetItemWrapRadius: {
     borderRadius: 10,
-    backgroundColor: homeisColors.white
+    backgroundColor: daytColors.white
   },
   actionSheetItemWrap: {
     height: 60,
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     height: 30,
-    backgroundColor: homeisColors.white,
+    backgroundColor: daytColors.white,
     justifyContent: "center"
   },
   actionSheetItemWithIcon: {
@@ -55,10 +55,10 @@ const styles = StyleSheet.create({
   },
   actionSheetItemText: {
     fontSize: 16,
-    fontFamily: homeisFonts.medium,
-    fontWeight: homeisFontWeights.medium,
+    fontFamily: daytFonts.medium,
+    fontWeight: daytFontWeights.medium,
     lineHeight: 30,
-    color: homeisColors.black,
+    color: daytColors.black,
     textAlignVertical: "center"
   },
   actionSheetIcon: {
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   },
   line: {
     height: 1,
-    backgroundColor: homeisColors.disabledGrey
+    backgroundColor: daytColors.disabledGrey
   }
 });
 
@@ -98,10 +98,10 @@ const ActionSheetItem = ({
           ]}
         >
           {iconName && (
-            <HomeisIcon
+            <DaytIcon
               name={iconName}
               size={iconSize}
-              color={color || homeisColors.black}
+              color={color || daytColors.black}
               style={styles.actionSheetIcon}
             />
           )}
@@ -110,7 +110,7 @@ const ActionSheetItem = ({
               name={awesomeIconName}
               size={awesomeIconSize}
               weight={awesomeIconWeight}
-              color={color || homeisColors.black}
+              color={color || daytColors.black}
               style={styles.actionSheetAwesomeIcon}
             />
           )}

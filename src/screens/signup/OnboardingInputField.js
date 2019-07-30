@@ -132,7 +132,7 @@ class OnboardingInputField extends Component {
       // }
       // if (placeholderIconName === "search") {
       //   return (
-      //     <HomeisIcon
+      //     <DaytIcon
       //       key="icon"
       //       name="search"
       //       color={iconColor}
@@ -142,7 +142,7 @@ class OnboardingInputField extends Component {
       //   );
       // } else if (placeholderIconName === "envelope") {
       //   return (
-      //     <HomeisIcon
+      //     <DaytIcon
       //       key="icon"
       //       name={placeholderIconName}
       //       color={iconColor}

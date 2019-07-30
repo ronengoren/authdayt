@@ -157,7 +157,7 @@ const uiDefinitions = {
     breadcrumbIconSize: 16,
     breadcrumbLineHeight: 15,
     name: "page-post",
-    isHomeisIcon: true,
+    isDaytIcon: true,
     disclaimerIcon: "info-circle"
   },
   [entityTypes.EVENT]: {
@@ -183,7 +183,7 @@ const uiDefinitions = {
     breadcrumbLineHeight: 14,
     postBreadcrumbIconSize: 10,
     postBreadcrumbIconLineHeight: 13,
-    isHomeisIcon: true,
+    isDaytIcon: true,
     name: "groups-fill"
   },
   [entityTypes.PAGE]: {
@@ -685,12 +685,12 @@ const authErrors = {
   14: { message: "" },
   15: {
     signIn: {
-      message: "Make sure you’ve allowed Homeis to use Facebook and try again",
+      message: "Make sure you’ve allowed Dayt to use Facebook and try again",
       header: "Couldn’t Sign In",
       button: "Try again"
     },
     signUp: {
-      message: "Make sure you’ve allowed Homeis to use Facebook and try again",
+      message: "Make sure you’ve allowed Dayt to use Facebook and try again",
       header: "Couldn’t Sign Up",
       button: "Try again"
     }
@@ -720,11 +720,11 @@ const eventTimeSelectorModes = {
 };
 
 const downloadLinks = {
-  sms: "https://l.homeis.com/app-invite-sms",
-  email: "https://l.homeis.com/app-invite-email",
-  whatsapp: "https://l.homeis.com/app-invite-whatsapp",
-  messenger: "https://l.homeis.com/app-invite-fb",
-  download: "https://l.homeis.com/app-invite-download"
+  sms: "https://l.ronengoren.com/app-invite-sms",
+  email: "https://l.ronengoren.com/app-invite-email",
+  whatsapp: "https://l.ronengoren.com/app-invite-whatsapp",
+  messenger: "https://l.ronengoren.com/app-invite-fb",
+  download: "https://l.ronengoren.com/app-invite-download"
 };
 
 const userInviteMethods = {
