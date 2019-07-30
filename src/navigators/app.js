@@ -56,22 +56,22 @@ const screenInterpolator = sceneProps => {
 
 const TabSection = createBottomTabNavigator(
   {
-    [screenGroupNames.MY_CITY]: {
-      screen: MyCity,
-      navigationOptions: {
-        tabBarTestID: "cityTabBtn"
-      }
-    },
     [screenGroupNames.HOME_TAB]: {
       screen: Home
     },
     [screenGroupNames.PEOPLE_TAB]: {
       screen: People
+    },
+    [screenGroupNames.MY_CITY]: {
+      screen: MyCity,
+      navigationOptions: {
+        tabBarTestID: "cityTabBtn"
+      }
     }
   },
   {
     initialRouteName: screenGroupNames.MY_CITY,
-    // tabBarComponent: CustomTabBar,
+    tabBarComponent: CustomTabBar,
     lazy: true,
     animationEnabled: false,
     swipeEnabled: false

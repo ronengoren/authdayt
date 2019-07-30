@@ -10,7 +10,7 @@ import {
   avatarBadgePosition
 } from "src/vars/enums";
 import { daytColors, uiConstants } from "src/vars";
-import { daytIcon, AwesomeIcon } from "src/assets/icons";
+import { DaytIcon, AwesomeIcon } from "src/assets/icons";
 import { getInitials } from "src/infra/utils/stringUtils";
 import { stylesScheme } from "src/schemas";
 import { navigationService } from "src/infra/navigation";
@@ -433,7 +433,7 @@ export class Avatar extends Component {
             size={awesomeIconFontSize[size] || 30}
           />
         ) : (
-          <daytIcon
+          <DaytIcon
             name={entityIcon}
             color={daytColors.b90}
             size={iconFontSize[size] || 30}
@@ -520,7 +520,7 @@ export class Avatar extends Component {
 
     if (iconName) {
       return (
-        <daytIcon
+        <DaytIcon
           style={[styles.badgeIcon, { backgroundColor: badgeColor }]}
           name={iconName}
           color={daytColors.white}

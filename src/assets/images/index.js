@@ -36,5 +36,11 @@ export default {
     hood: require("./profile/hood.png"),
     empty_state: require("./profile/empty_state.png"),
     other: require("./profile/other.png")
+  },
+  feed: {
+    avatar_placeholder: require("./feed/avatar_placeholder.png")
+  },
+  userEntity: {
+    avatar_placeholder: require("./userEntity/avatar_placeholder.png")
   }
 };

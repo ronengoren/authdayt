@@ -243,10 +243,11 @@ class CustomTabBar extends React.PureComponent {
   };
 
   renderMyCityTab = ({ isFocused, route, testID }) => {
-    const {
-      user: { media, themeColor, name },
-      community
-    } = this.props;
+    // const {
+    //   user: { media, themeColor, name },
+    //   community
+    // } = this.props;
+    const community = "this.props";
     const textColor = isFocused ? daytColors.darkPink : INACTIVE_TAB_TEXT_COLOR;
     const maskUrl = isFocused
       ? images.tabsFooter.profile_mask_focused
@@ -264,9 +265,9 @@ class CustomTabBar extends React.PureComponent {
               imageStyle={styles.avatar}
               size="tiny"
               entityType="user"
-              themeColor={themeColor}
-              thumbnail={media.thumbnail}
-              name={name}
+              // themeColor={themeColor}
+              // thumbnail={media.thumbnail}
+              // name={name}
               linkable={false}
             />
           </View>
