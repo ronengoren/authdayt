@@ -64,11 +64,11 @@ class ActivationsCarousel extends Component {
       <InfiniteScroll
         horizontal
         keyExtractor={keyExtractor}
-        reducerStatePath={`profile.activations.${user.id}`}
+        reducerStatePath={`profile.activations.${"user.id"}`}
         apiQuery={{
           domain: "activations",
           key: "getActivations",
-          params: { userId: user.id }
+          params: { userId: "user.id" }
         }}
         ListItemComponent={this.renderActivation}
         listItemProps={{ user }}
@@ -127,9 +127,9 @@ ActivationsCarousel.propTypes = {
   name: PropTypes.string
 };
 
-const mapStateToProps = (state, ownProps) => ({
-  activations: get(state, `profile.activations.${ownProps.user.id}`)
-});
+// const mapStateToProps = (state, ownProps) => ({
+//   activations: get(state, `profile.activations.${ownProps.user.id}`)
+// });
 
-ActivationsCarousel = connect(mapStateToProps)(ActivationsCarousel);
+// ActivationsCarousel = connect(mapStateToProps)(ActivationsCarousel);
 export default ActivationsCarousel;

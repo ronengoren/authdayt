@@ -1,5 +1,5 @@
 import { apiCommand } from "src/redux/apiCommands/actions";
-import blobFetcher from "src/infra/blob/blobFetcher";
+// import blobFetcher from "src/infra/blob/blobFetcher";
 import { fetchTypes, uploadStateTypes } from "src/vars/enums";
 import { uniqueId } from "src/infra/utils";
 

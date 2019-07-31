@@ -6,7 +6,7 @@ export const getRelevantOnboardingScreen = ({ user }) => {
   const isGenderNotValid =
     isNil(get(user, "gender")) || get(user, "gender") === genderType.UNKNOWN;
   const userEmail = get(user, "email", "");
-  const isEmailValid = !/@facebook.homeis.com/.exec(userEmail);
+  const isEmailValid = !/@facebook.ronengoren.com/.exec(userEmail);
 
   if (!isEmailValid) {
     return screenNames.SetUserEmail;

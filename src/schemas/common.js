@@ -26,27 +26,27 @@ export const mediaScheme = shape({
 });
 
 export const userScheme = shape({
-  id: string,
-  name: string,
+  id: "string",
+  name: "string",
   media: shape({
-    thumbnail: string,
-    profile: string
+    thumbnail: "string",
+    profile: "string"
   }),
-  themeColor: string,
-  communityId: string,
-  originCountryName: string,
-  currentCityName: string,
+  themeColor: "string",
+  communityId: "string",
+  originCountryName: "string",
+  currentCityName: "string",
   settings: shape({
     notifications: shape({
-      messages: bool,
-      ongoingUpdates: bool,
-      friendRequests: bool,
-      comments: bool,
-      likes: bool
+      messages: true,
+      ongoingUpdates: false,
+      friendRequests: false,
+      comments: false,
+      likes: false
     }),
-    showAge: bool,
-    showRelationship: bool,
-    showGender: bool
+    showAge: true,
+    showRelationship: true,
+    showGender: true
   }),
   userType: oneOf(Object.values(userTypes))
 });

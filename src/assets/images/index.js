@@ -1,6 +1,6 @@
 export default {
   welcome: {
-    dayt: require("./dayt3x.png")
+    dayt: require("./assortedImage//dayt3x.png")
   },
   signIn: {
     email: require("./signIn/email3x.png")
@@ -42,5 +42,20 @@ export default {
   },
   userEntity: {
     avatar_placeholder: require("./userEntity/avatar_placeholder.png")
+  },
+  common: {
+    gradientDownTop: require("./gradients/gradient_down_top.png"),
+    gradientTopDown: require("./gradients/gradient_topdown3x.png"),
+    whiteGradientBottom: require("./gradients/white_gradient3x.png"),
+    gradientBlue: require("./gradients/gradient_blue.png"),
+    gradientGreen: require("./gradients/gradient_green.png"),
+    gradientWhite: require("./gradients/gradient_white.png"),
+    gradientLeftRight: require("./gradients/gradient_left_right.png"),
+    gradientLeftRightSmall: require("./gradients/gradient_left_right_small.png"),
+    gradientGreenWithDaytLogo: require("./gradients/gradient_green_with_dayt_logo.png"),
+    mask: require("./mask2x.png"),
+    dotted_border: require("./dotted_border.png"),
+    dotted_border_vertical: require("./dotted_border_vertical.png"),
+    bottomRoundedBorder: require("./bottom_rounded_border.png")
   }
 };

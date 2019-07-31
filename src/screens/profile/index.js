@@ -8,3 +8,4 @@ export { default as EditProfile } from "./EditProfile";
 export { default as EditProfileRelationship } from "./EditProfileRelationship";
 export { default as EditProfileGender } from "./EditProfileGender";
 export { default as Settings } from "./Settings";
+export { default as ChangeEmail } from "./ChangeEmail";

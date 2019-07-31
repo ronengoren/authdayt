@@ -155,13 +155,19 @@ const styles = StyleSheet.create({
 });
 
 class Profile extends React.Component {
+  // isViewingOwnProfile = this.props.appUser.id === this.props.userProfileId; // eslint-disable-line react/sort-comp
+  isViewingOwnProfile = true; // eslint-disable-line react/sort-comp
+
   state = {
     invited: false,
     withoutFeed: true,
     showFloatingHeader: false
   };
+
   render() {
+    const { userProfileId } = this.props;
     const { showFloatingHeader } = this.state;
+
     if (this.state.withoutFeed) {
       return (
         <ScrollView onScroll={this.handleScroll}>
@@ -180,7 +186,7 @@ class Profile extends React.Component {
         <View style={styles.feed}>
           <Feed
             ListHeaderComponent={this.renderUserDetails()}
-            // {...getEntityFeedInfiniteScrollProps({ entityId: userProfileId })}
+            {...getEntityFeedInfiniteScrollProps({ entityId: userProfileId })}
             onRef={node => {
               this.feed = node;
             }}
@@ -200,10 +206,10 @@ class Profile extends React.Component {
       );
     }
   }
+
   componentDidMount = async () => {
     const { userProfileId, getProfile } = this.props;
-    const profile = await getProfile({ userId: userProfileId });
-    this.sendViewAnalytics(profile);
+
     try {
       const profile = await getProfile({ userId: userProfileId });
       this.sendViewAnalytics(profile);
@@ -217,25 +223,12 @@ class Profile extends React.Component {
     }
   };
 
-  renderHeaderButtons({ isRenderedInHeader } = {}) {
-    const { profile } = this.props;
+  componentDidCatch(error) {
+    this.setState({ withoutFeed: true });
 
-    return (
-      <ProfileHeaderButtons
-        text={null}
-        isViewingOwnProfile={this.isViewingOwnProfile}
-        isRenderedInHeader={isRenderedInHeader}
-        navigateToEditProfile={this.navigateToEditProfile}
-        navigateToSettings={this.navigateToSettings}
-        navigateToConnectedAccounts={this.navigateToConnectedAccounts}
-        navigateBack={() => navigationService.goBack()}
-        openProfileActionsheet={() =>
-          this.openMainActionSheet({ withReport: true })
-        }
-        hasProfileData={null}
-      />
-    );
+    ErrorsLogger.boundaryError("ProfileFeed", error);
   }
+
   renderUserDetails() {
     const {
       profile,
@@ -252,53 +245,93 @@ class Profile extends React.Component {
       get(profile, "data.totals.ownedGroups", 0);
     const savedTotals = get(profile, "data.themes.savedTotals");
     const shouldRenderSavedItems = this.isViewingOwnProfile && !!savedTotals;
+
     return (
       <View style={styles.container}>
         <ProfileHeader
           saveMedia={this.saveMedia}
+          journey={"user.journey"}
+          userProfileId={userProfileId}
           image={userImage}
           thumbnail={thumbnail}
           isWithoutBackground={!userImage && this.isViewingOwnProfile}
-          //   name={user.name}
+          name={"user.name"}
           ButtonsComponent={this.renderHeaderButtons({
             isRenderedInHeader: true
           })}
           isViewingOwnProfile={this.isViewingOwnProfile}
+          instagramToken={instagramToken}
           navigateToEditProfile={this.navigateToEditProfile}
         />
         {this.renderProfileDetails()}
-      </View>
-    );
-  }
-  renderFeedError = () => (
-    <View>
-      <Text size={15} lineHeight={22} style={styles.feedErrorText}>
-        {I18n.t("error_boundaries.default.title")}
-      </Text>
-    </View>
-  );
-  renderFeedTitle() {
-    return (
-      <View
-        onLayout={({
-          nativeEvent: {
-            layout: { y }
+        <View style={styles.darkBackground}>
+          {
+            <ActivationsCarousel
+              style={styles.contentMarginBottom}
+              firstItemStyle={styles.firstItemCarouselStyle}
+              user={user}
+              isViewingOwnActivations={this.isViewingOwnProfile}
+              name={"user.name"}
+            />
           }
-        }) => this.setState({ subHeaderLayoutY: y })}
-        style={styles.horizontalMarginContent}
-      >
-        <Text
-          bold
-          style={styles.recentActivityHeaderText}
-          color={daytColors.b30}
-        >
-          {this.isViewingOwnProfile
-            ? I18n.t("profile.view.activity_header.mine")
-            : I18n.t("profile.view.activity_header.others")}
-        </Text>
+
+          {shouldRenderSavedItems && (
+            <View style={[styles.contentMarginBottom]}>
+              <SavedItems
+                firstItemStyle={styles.firstItemCarouselStyle}
+                totals={savedTotals}
+                appUser={appUser}
+                profileUser={user}
+              />
+            </View>
+          )}
+
+          {!!numOfFriends && (
+            <View style={[styles.contentMarginBottom]}>
+              <EntitiesCarousel
+                firstItemStyle={styles.firstItemCarouselStyle}
+                title={I18n.t("profile.view.friends")}
+                query={{
+                  domain: "friendships",
+                  key: "friends",
+                  params: { userId: user.id, excludeMutual: true }
+                }}
+                count={numOfFriends}
+                onAllPress={this.navigateToFriendsList}
+                onItemPress={this.navigateToProfle}
+                isUserEntity
+              />
+            </View>
+          )}
+
+          {!!groupsCount && (
+            <View style={[styles.contentMarginBottom]}>
+              <EntitiesCarousel
+                showItemBadge={item =>
+                  item &&
+                  item.manager &&
+                  item.manager.some(m => m.id === userProfileId)
+                }
+                firstItemStyle={styles.firstItemCarouselStyle}
+                title={I18n.t("profile.view.groups")}
+                query={{
+                  domain: "groups",
+                  key: "getMembered",
+                  params: { userId: userProfileId }
+                }}
+                userProfileId={userProfileId}
+                count={groupsCount}
+                onAllPress={this.navigateToGroupsList}
+                onItemPress={this.navigateToGroup}
+              />
+            </View>
+          )}
+          {hasFeedContent && this.renderFeedTitle()}
+        </View>
       </View>
     );
   }
+
   renderProfileDetails = () => {
     const { profile, appUser } = this.props;
     const {
@@ -321,12 +354,13 @@ class Profile extends React.Component {
     );
     const showBio = !!(this.isViewingOwnProfile || bio);
     const userCommunity = get(appUser, "community");
+
     return (
       <View style={styles.content}>
         <ProfileJourney
           userCommunity={userCommunity}
           style={[styles.profileJourneyContent, styles.horizontalMarginContent]}
-          //   journey={user.journey}
+          // journey={user.journey}
           aroundCurrent={aroundCurrent}
           aroundOrigin={aroundOrigin}
           isViewingOwnProfile={this.isViewingOwnProfile}
@@ -351,6 +385,49 @@ class Profile extends React.Component {
       </View>
     );
   };
+
+  renderProfileActions() {
+    const { profile } = this.props;
+    const { friendshipStatus } = "profile.data";
+
+    return (
+      <ProfileActionsContainer
+        isFriend={friendshipStatus === friendshipStatusType.FRIENDS}
+        requestedFriendship={
+          friendshipStatus === friendshipStatusType.REQUEST_SENT
+        }
+        receivedFriendshipRequest={
+          friendshipStatus === friendshipStatusType.REQUEST_RECEIVED
+        }
+        declinedFriendship={friendshipStatus === friendshipStatusType.REJECTED}
+        respondToRequest={this.respondToFriendRequest}
+        requestFriendship={this.toggleFriendshipRequest}
+        cancelFriendshipRequest={this.openCancelFriendRequestActionSheet}
+        unFriend={this.openMainActionSheet}
+        navigateToConversation={this.navigateToConversation}
+      />
+    );
+  }
+
+  renderHeaderButtons({ isRenderedInHeader } = {}) {
+    const { profile } = this.props;
+
+    return (
+      <ProfileHeaderButtons
+        text={isRenderedInHeader ? null : "profile.data.user.name"}
+        isViewingOwnProfile={this.isViewingOwnProfile}
+        isRenderedInHeader={isRenderedInHeader}
+        navigateToEditProfile={this.navigateToEditProfile}
+        navigateToSettings={this.navigateToSettings}
+        navigateToConnectedAccounts={this.navigateToConnectedAccounts}
+        navigateBack={() => navigationService.goBack()}
+        openProfileActionsheet={() =>
+          this.openMainActionSheet({ withReport: true })
+        }
+        hasProfileData={!!"profile.data"}
+      />
+    );
+  }
 
   renderDetails() {
     const { profile } = this.props;
@@ -434,6 +511,7 @@ class Profile extends React.Component {
       </View>
     );
   }
+
   renderOwnedPagesRow() {
     const { profile } = this.props;
     const { pages } = get(profile, "data", {});
@@ -475,6 +553,7 @@ class Profile extends React.Component {
       </View>
     ) : null;
   }
+
   renderCreateBusinessRow() {
     return (
       <TouchableOpacity
@@ -544,34 +623,279 @@ class Profile extends React.Component {
       return null;
     }
   }
-  renderProfileActions() {
-    const { profile } = this.props;
-    const { friendshipStatus } = "profile.data";
 
+  renderFeedError = () => (
+    <View>
+      <Text size={15} lineHeight={22} style={styles.feedErrorText}>
+        {I18n.t("error_boundaries.default.title")}
+      </Text>
+    </View>
+  );
+
+  renderFeedTitle() {
     return (
-      <ProfileActionsContainer
-        isFriend={friendshipStatus === friendshipStatusType.FRIENDS}
-        requestedFriendship={
-          friendshipStatus === friendshipStatusType.REQUEST_SENT
-        }
-        receivedFriendshipRequest={
-          friendshipStatus === friendshipStatusType.REQUEST_RECEIVED
-        }
-        declinedFriendship={friendshipStatus === friendshipStatusType.REJECTED}
-        respondToRequest={this.respondToFriendRequest}
-        requestFriendship={this.toggleFriendshipRequest}
-        cancelFriendshipRequest={this.openCancelFriendRequestActionSheet}
-        unFriend={this.openMainActionSheet}
-        navigateToConversation={this.navigateToConversation}
-      />
+      <View
+        onLayout={({
+          nativeEvent: {
+            layout: { y }
+          }
+        }) => this.setState({ subHeaderLayoutY: y })}
+        style={styles.horizontalMarginContent}
+      >
+        <Text
+          bold
+          style={styles.recentActivityHeaderText}
+          color={daytColors.b30}
+        >
+          {this.isViewingOwnProfile
+            ? I18n.t("profile.view.activity_header.mine")
+            : I18n.t("profile.view.activity_header.others")}
+        </Text>
+      </View>
     );
   }
+
+  sendViewAnalytics(profile) {
+    const { navigation } = this.props;
+    const { params = {} } = navigation.state;
+    const { origin, originType, entityId } = params;
+    const {
+      user: { name: userName, id }
+    } = profile;
+
+    analytics.viewEvents
+      .entityView({
+        screenName: screenNames.Profile,
+        origin,
+        originType,
+        entityId: entityId || id,
+        entityName: userName
+      })
+      .dispatch();
+  }
+
+  getProfileConditionaly = ({ isInitialFetch }) => {
+    const { getProfile, userProfileId } = this.props;
+    if (!isInitialFetch) {
+      getProfile({ userId: userProfileId });
+    }
+  };
+
+  navigateToProfle = profile => {
+    const {
+      entityId,
+      data: { name, themeColor }
+    } = profile;
+    const thumbnail = get(profile, "data.thumbnail.uri", "");
+    navigationService.navigateToProfile({
+      entityId,
+      data: { name, thumbnail, themeColor }
+    });
+  };
+
+  navigateToSettings = () => {
+    navigationService.navigate(screenNames.Settings);
+  };
+
+  navigateToConnectedAccounts = () => {
+    const {
+      profile: { data }
+    } = this.props;
+    const {
+      connectedAccounts = [],
+      settings: { enableSound = true }
+    } = data;
+    if (connectedAccounts.length) {
+      navigationService.navigate(screenNames.ConnectedUsersList, {
+        connectedAccounts,
+        isSoundEnabled: enableSound
+      });
+    }
+  };
+
+  navigateToConversation = async () => {
+    const { profile } = this.props;
+    const participant = {
+      participantId: "profile.data.user.id",
+      participantName: "profile.data.user.name",
+      participantAvatar: get(profile, "data.user.media.thumbnail")
+    };
+    navigationService.navigate(screenNames.Chat, participant);
+  };
+
+  navigateToEditProfile = ({ focusField } = {}) => {
+    const {
+      profile: { data }
+    } = this.props;
+    navigationService.navigate(screenNames.EditProfile, { data, focusField });
+  };
+
+  navigateToFriendsList = ({ navigateToMutual = false }) => {
+    const { appUser, profile } = this.props;
+    const hasFriends = !!get(profile, "data.numOfFriends", 0);
+    if (!hasFriends) {
+      return;
+    }
+
+    const { user } = profile.data;
+    const subTab = navigateToMutual
+      ? OthersFriendsList.subTabs.MUTUAL_FRIENDS
+      : OthersFriendsList.subTabs.ALL_FRIENDS;
+    navigationService.navigate(screenNames.OthersFriendsList, {
+      entityId: "user.id",
+      name: "user.name",
+      subTab,
+      hideSubHeader: "user.id" === appUser.id
+    });
+  };
+
+  navigateToGroupsList = () => {
+    const {
+      profile: {
+        data: { user, groups }
+      }
+    } = this.props;
+    const isGroupManager = !!groups.data.length;
+    navigationService.navigate(screenNames.ProfileGroupsList, {
+      user,
+      isGroupManager,
+      isOwnProfile: this.isViewingOwnProfile
+    });
+  };
+
+  navigateToGroup = params =>
+    navigationService.navigate(screenNames.GroupView, params);
+
+  navigateToPagesList = () => {
+    const {
+      profile: {
+        data: { user, pages }
+      }
+    } = this.props;
+    const isPageOwner = !!pages.data.length;
+    navigationService.navigate(screenNames.ProfilePagesList, {
+      user,
+      isPageOwner,
+      isOwnProfile: this.isViewingOwnProfile
+    });
+  };
+
+  navigateToPageCreation = () => {
+    navigationService.navigate(screenGroupNames.CREATE_PAGE_MODAL);
+  };
+
+  navigateToPage = pageId => {
+    navigationService.navigate(screenNames.PageView, { entityId: pageId });
+  };
+
+  respondToFriendRequest = () => {
+    const {
+      openActionSheet,
+      profile: {
+        data: { user }
+      }
+    } = this.props;
+    const actionSheet = confirmOrDeleteFriendshipRequest({
+      confirmFriendshipRequest: () =>
+        this.onFriendshipRequestApproval({ user }),
+      deleteFriendshipRequest: this.onUnFriend
+    });
+    openActionSheet(actionSheet);
+  };
+
+  toggleFriendshipRequest = () => {
+    const {
+      inviteFriendRequest,
+      declineFriendRequest,
+      profile: {
+        data: { user }
+      }
+    } = this.props;
+    const { invited } = this.state;
+    this.setState({ invited: !invited }, async () => {
+      if (!invited) {
+        inviteFriendRequest({ userId: "user.id" });
+      } else {
+        declineFriendRequest({ userId: "user.id", name: user.name });
+      }
+    });
+  };
+
+  onFriendshipRequestApproval = async ({ user }) => {
+    const { approveFriendRequest } = this.props;
+    const { id, name } = user;
+    approveFriendRequest({ userId: id, name });
+  };
+
+  onUnFriend = async () => {
+    const {
+      declineFriendRequest,
+      profile: {
+        data: { user }
+      }
+    } = this.props;
+    this.setState({ invited: false });
+    declineFriendRequest({ userId: "user.id", name: user.name });
+  };
+
+  saveMedia = async ({ mediaUrl }) => {
+    const { editImages, userProfileId } = this.props;
+    await editImages({ userId: userProfileId, imageUrl: mediaUrl });
+  };
+
+  scrollToFeedTop = () => {
+    this.feed.scrollToOffset({ offset: this.state.subHeaderLayoutY });
+  };
+
+  openCancelFriendRequestActionSheet = () => {
+    const { openActionSheet } = this.props;
+    const actionSheet = cancelFriendRequestActionSheetDefinition({
+      cancelFriendRequest: this.onUnFriend
+    });
+    openActionSheet(actionSheet);
+  };
+
+  openMainActionSheet = ({ withReport }) => {
+    const {
+      openActionSheet,
+      profile: {
+        data: { user, friendshipStatus }
+      }
+    } = this.props;
+    const isFriend = friendshipStatus === friendshipStatusType.FRIENDS;
+
+    if (isFriend || withReport) {
+      const actionSheet = mainActionSheetDefinition({
+        withReport,
+        withUnfriend: isFriend,
+        onReport: this.openReportActionSheet,
+        onUnFriend: this.onUnFriend,
+        userName: user.name
+      });
+      openActionSheet(actionSheet);
+    }
+  };
+
+  openReportActionSheet = () => {
+    const {
+      openActionSheet,
+      profile: {
+        data: { user }
+      }
+    } = this.props;
+    const actionSheet = reportActionSheetDefinition({
+      entityType: entityTypes.USER,
+      entityId: "user.id"
+    });
+    openActionSheet(actionSheet);
+  };
+
   handleScroll = e => {
     const { profile } = this.props;
     const hasProfileImage = !!get(
       profile,
       "data.user.media.profile",
-      profile.data.user.thumbnail
+      "profile.data.user.thumbnail"
     );
     const headerBreakpoint = hasProfileImage
       ? HEADER_BREAKPOINT_WITH_IMAGE
@@ -587,4 +911,77 @@ class Profile extends React.Component {
     }
   };
 }
+
+Profile.propTypes = {
+  getProfile: PropTypes.func,
+  apiCommand: PropTypes.func,
+  openActionSheet: PropTypes.func,
+  editImages: PropTypes.func,
+  navigation: PropTypes.object,
+  profile: PropTypes.object,
+  appUser: userScheme,
+  ownThemesTotals: PropTypes.arrayOf(
+    PropTypes.shape({
+      tag: PropTypes.string,
+      total: PropTypes.number
+    })
+  ),
+  thumbnail: PropTypes.string,
+  userProfileId: PropTypes.string,
+  inviteFriendRequest: PropTypes.func,
+  approveFriendRequest: PropTypes.func,
+  declineFriendRequest: PropTypes.func,
+  hasFeedContent: PropTypes.bool
+};
+
+const mapStateToProps = (state, ownProps) => {
+  const userProfileId = get(
+    ownProps,
+    "navigation.state.params.entityId",
+    state.auth.user.id
+  );
+  const loadedProfileData = get(state, `profile[${userProfileId}].data`);
+  const isOwnProfile = state.auth.user.id === userProfileId;
+  let profile;
+
+  if (loadedProfileData) {
+    profile = state.profile[userProfileId];
+  } else if (isOwnProfile) {
+    profile = {
+      data: { user: { ...state.auth.user, ...state.auth.user.media } }
+    };
+  } else {
+    profile = {
+      data: { user: get(ownProps, "navigation.state.params.data", {}) }
+    };
+  }
+
+  return {
+    profile,
+    appUser: state.auth.user,
+    userProfileId,
+    ownThemesTotals: get(state, "themes.savedThemes"),
+    hasFeedContent: !!get(state, `entityFeed.${userProfileId}.data.length`),
+    thumbnail: isOwnProfile
+      ? get(state, "auth.user.media.thumbnail")
+      : get(ownProps, "navigation.state.params.data.thumbnail")
+  };
+};
+
+const mapDispatchToProps = {
+  getProfile,
+  editImages,
+  apiCommand,
+  openActionSheet,
+  inviteFriendRequest,
+  approveFriendRequest,
+  declineFriendRequest
+};
+
+// Profile = connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(Profile);
+// Profile = Screen({ modalError: true })(Profile);
+
 export default Profile;

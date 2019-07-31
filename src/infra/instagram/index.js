@@ -11,7 +11,7 @@ import {
   deleteInstagramToken
 } from "src/redux/profile/actions";
 
-const redirectUrl = "https://www.homeis.com/";
+const redirectUrl = "https://www.ronengoren.com/";
 const instagramUrl = config.providers.instagram.url;
 
 const axiosInstance = axios.create({ baseURL: instagramUrl });

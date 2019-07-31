@@ -45,7 +45,7 @@ import config from "src/config";
 //   return match;
 // };
 
-// const getHomeisWebLink = ({ entityId, entityType }) => {
+// const getDaytWebLink = ({ entityId, entityType }) => {
 //   const user = global.store.getState().auth.user;
 //   if (user && user.community) {
 //     const {
@@ -56,8 +56,8 @@ import config from "src/config";
 //   return config.web.url;
 // };
 
-// const setClipboardHomeisWebLink = ({ entityId, entityType }) => {
-//   const link = getHomeisWebLink({ entityId, entityType });
+// const setClipboardDaytWebLink = ({ entityId, entityType }) => {
+//   const link = getDaytWebLink({ entityId, entityType });
 //   Clipboard.setString(link);
 // };
 
@@ -106,7 +106,7 @@ import config from "src/config";
 //   mailto,
 //   call,
 //   isIosAndItunesLink,
-//   getHomeisWebLink,
-//   setClipboardHomeisWebLink,
+//   getDaytWebLink,
+//   setClipboardDaytWebLink,
 //   getQueryStringParams
 // };

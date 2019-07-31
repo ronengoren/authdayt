@@ -127,7 +127,7 @@ class NewUserWelcomeModal extends React.Component {
                       )}
                     </Text>
                     <DaytIcon
-                      name="homeis-symbol"
+                      name="dayt-symbol"
                       size={47}
                       color={daytColors.green}
                       style={styles.icon}

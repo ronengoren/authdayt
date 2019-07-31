@@ -39,12 +39,12 @@ class HtmlTextWithLinks extends Component {
     if (isIosAndItunesLink(link)) {
       Linking.openURL(link);
     } else if (
-      link.includes("l.homeis.com") ||
-      link.includes("homeis.test-app.link")
+      link.includes("l.ronengoren.com") ||
+      link.includes("ronengoren.test-app.link")
     ) {
       branch.openURL(link);
-    } else if (link.includes("homeis.com")) {
-      this.handleHomeisLinkPress(link);
+    } else if (link.includes("ronengoren.com")) {
+      this.handleDaytLinkPress(link);
     } else if (link.startsWith("tel:")) {
       call(link.replace("tel:", ""));
     } else if (link.startsWith("mailto:")) {
@@ -59,7 +59,7 @@ class HtmlTextWithLinks extends Component {
     }
   };
 
-  handleHomeisLinkPress = link => {
+  handleDaytLinkPress = link => {
     const [entitySlug, entityTitle] = link
       .split("?")[0]
       .split("/")

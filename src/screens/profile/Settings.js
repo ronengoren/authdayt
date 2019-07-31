@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import codePush from "react-native-code-push";
+// import codePush from "react-native-code-push";
 import { StyleSheet, TouchableOpacity, Linking } from "react-native";
 import I18n from "src/infra/localization";
 import { connect } from "react-redux";
@@ -118,8 +118,8 @@ const styles = StyleSheet.create({
   }
 });
 
-const HOMEIS_CONTACT_US_EMAIL = "info@ronengoren.com";
-const HOMEIS_SUPPORT_EMAIL = "support@ronengoren.com";
+const DAYT_CONTACT_US_EMAIL = "info@ronengoren.com";
+const DAYT_SUPPORT_EMAIL = "support@ronengoren.com";
 
 const checkStatusMessages = {
   CHECKING: "Looking for update...",
@@ -535,14 +535,14 @@ class Settings extends React.Component {
     const { data } = this.props;
     const { communityManagerEmail } = data.user;
     Linking.openURL(
-      `mailto:${communityManagerEmail}?cc=${HOMEIS_CONTACT_US_EMAIL}&subject=Hi, Homeis`
+      `mailto:${communityManagerEmail}?cc=${DAYT_CONTACT_US_EMAIL}&subject=Hi, Dayt`
     );
   };
 
   openDeleteAccountMail = () => {
     const { data } = this.props;
     const { name, email, communityManagerEmail } = data.user;
-    const url = `mailto:${communityManagerEmail}?cc=${HOMEIS_SUPPORT_EMAIL}&subject=Delete Account&body=Hi Homeis,
+    const url = `mailto:${communityManagerEmail}?cc=${DAYT_SUPPORT_EMAIL}&subject=Delete Account&body=Hi DAYT,
     \nI would like to delete my account please - ${email}.\n\nThanks,\n${name}`;
     Linking.openURL(url);
   };

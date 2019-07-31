@@ -70,7 +70,7 @@ class ActivationCarouselItem extends Component {
             canNavigateToProfile={false}
             mediaUrl={mediaUrl}
             user={actor}
-            mediaSource={images.common.gradientGreenWithHomeisLogo}
+            mediaSource={images.common.gradientGreenWithDaytLogo}
             size={ItemCtaHeader.sizes.SMALL}
           />
           <View style={styles.content}>

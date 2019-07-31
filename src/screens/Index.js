@@ -19,13 +19,12 @@ export { ImageUpload } from "./imageUpload";
 export {
   Profile,
   EditProfile,
-  // EditProfileRelationship,
-  // EditProfileGender,
-  // EditProfileDate,
+  EditProfileRelationship,
+  EditProfileGender,
   ConnectedUsersList,
   OthersFriendsList,
-  // Settings,
-  // ChangeEmail,
+  Settings,
+  ChangeEmail,
   ProfileGroupsList,
   ProfilePagesList,
   EditProfileDate
@@ -34,3 +33,5 @@ export {
 export { PeopleTab } from "./peopleTab";
 export { GroupsTab } from "./groupsTab";
 export { CommunicationCenter } from "./communicationCenter";
+export { PostPage, PostEditor, AddDescription, ContextPicker } from "./post";
+export { Chat } from "./chat";

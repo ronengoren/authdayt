@@ -101,7 +101,7 @@ class ActivationCtaPost extends Component {
               ? ItemCtaHeader.sizes.SMALL
               : ItemCtaHeader.sizes.MEDIUM
           }
-          mediaSource={images.common.gradientGreenWithHomeisLogo}
+          mediaSource={images.common.gradientGreenWithDaytLogo}
           canNavigateToProfile={!isJourneyActivation}
         />
         {!isJourneyActivation && (
