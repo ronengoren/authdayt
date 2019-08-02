@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import memoize from "memoize-one";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import I18n from "src/infra/localization";
 import { connect } from "react-redux";
 import {
@@ -34,10 +34,6 @@ const styles = StyleSheet.create({
 class GroupsTab extends React.Component {
   constructor(props) {
     super(props);
-
-    const {
-      user: { id }
-    } = props;
     this.state = {
       suggestedGroupsProps: {
         normalizedSchema: "GROUPS",
@@ -63,34 +59,29 @@ class GroupsTab extends React.Component {
         )
       }
     };
-
     this.myGroupsProps = {
       normalizedSchema: "GROUPS",
       reducerStatePath: "groups.myGroups",
       apiQuery: {
         domain: "groups",
         key: "getManagedAndRecent",
-        params: { userId: id }
+        params: { userId: 1 }
       },
       EntityComponent: this.renderMyGroupComponent()
     };
-
     this.createEntityButton = {
       text: I18n.t("groups.create_button"),
       action: () =>
         navigationService.navigate(screenGroupNames.CREATE_GROUP_MODAL),
       testID: "createGroupBtn"
     };
-
     this.topSectionSubHeaderProps = {
       leftText: I18n.t("groups.sub_tabs.sub_tab_2")
     };
-
     this.bottomSectionSubHeaderProps = {
       leftText: I18n.t("groups.sub_tabs.sub_tab_1")
     };
   }
-
   static translateThemes = memoize(themes =>
     themes
       ? themes.map(tag =>
@@ -102,35 +93,30 @@ class GroupsTab extends React.Component {
   );
 
   render() {
-    const { suggestedGroupsProps } = this.state;
-    const { suggestedGroupsThemes } = this.props;
-    const translatedThemes = GroupsTab.translateThemes(suggestedGroupsThemes);
-
     return (
       <View style={styles.container}>
+        <Text>GroupsTab</Text>
         <EntityListsView
           createEntityButton={this.createEntityButton}
           topSectionSubHeaderProps={this.topSectionSubHeaderProps}
           bottomSectionSubHeaderProps={this.bottomSectionSubHeaderProps}
           topSectionListProps={this.myGroupsProps}
-          bottomSectionListProps={suggestedGroupsProps}
+          // bottomSectionListProps={suggestedGroupsProps}
           componentColor={daytColors.golden}
           optionsSelectorProps={{
-            options: translatedThemes,
+            // options: translatedThemes,
             updateParentSelectedOption: this.changeTheme,
-            showOptionAll: true,
+            // showOptionAll: true,
             optionAllCustomName: I18n.t("themes.suggested")
           }}
         />
       </View>
     );
   }
-
-  componentDidMount() {
-    const { getSuggestedGroupsTags } = this.props;
-    getSuggestedGroupsTags();
-  }
-
+  // componentDidMount() {
+  //   const { getSuggestedGroupsTags } = this.props;
+  //   getSuggestedGroupsTags();
+  // }
   renderMyGroupComponent = () => ({ data, index }) => (
     <CarouselItem
       size={CarouselItem.sizes.SMALL_ACTIONLESS}
@@ -143,51 +129,5 @@ class GroupsTab extends React.Component {
       testID={`groupDisplayComponent${data.name}`}
     />
   );
-
-  changeTheme = ({ index }) => {
-    const { resetSuggestedGroups, suggestedGroupsThemes } = this.props;
-    const { suggestedGroupsProps } = this.state;
-    const theme =
-      index === OptionsSelector.ALL_OPTION_INDEX
-        ? null
-        : suggestedGroupsThemes[index];
-    if (theme !== suggestedGroupsProps.apiQuery.params.theme) {
-      resetSuggestedGroups();
-      this.setState({
-        suggestedGroupsProps: {
-          ...suggestedGroupsProps,
-          apiQuery: {
-            domain: "groups",
-            key: "getSuggested",
-            params: { theme, featured: !theme }
-          },
-          reducerStatePath: "groups.suggestedGroups"
-        }
-      });
-    }
-  };
 }
-
-GroupsTab.propTypes = {
-  user: userScheme,
-  resetSuggestedGroups: PropTypes.func,
-  getSuggestedGroupsTags: PropTypes.func,
-  suggestedGroupsThemes: PropTypes.array
-};
-
-// const mapStateToProps = state => ({
-//   suggestedGroupsThemes: get(state, "groups.suggestedGroupsTags.data", []),
-//   user: state.auth.user
-// });
-
-// const mapPropsToDispatch = {
-//   resetSuggestedGroups,
-//   getSuggestedGroupsTags
-// };
-
-// GroupsTab = connect(
-//   mapStateToProps,
-//   mapPropsToDispatch
-// )(GroupsTab);
-// GroupsTab = Screen()(GroupsTab);
 export default GroupsTab;

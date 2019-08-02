@@ -81,7 +81,7 @@ const TabSection = createBottomTabNavigator(
     }
   },
   {
-    initialRouteName: screenGroupNames.MY_CITY,
+    initialRouteName: screenGroupNames.HOME_TAB,
     tabBarComponent: CustomTabBar,
     lazy: true,
     animationEnabled: false,
@@ -89,25 +89,37 @@ const TabSection = createBottomTabNavigator(
   }
 );
 
-const MiddleSection = createStackNavigator({
-  [screenGroupNames.TABS]: {
-    screen: TabSection,
-    navigationOptions: {
-      header: null
+const MiddleSection = createStackNavigator(
+  {
+    [screenGroupNames.TABS]: {
+      screen: TabSection,
+      navigationOptions: {
+        header: null
+      }
+    },
+    // [screenNames.PostEditor]: {
+    //   screen: screens.PostEditor,
+    //   navigationOptions: {
+    //     header: null,
+    //     gesturesEnabled: false
+    //   }
+    // },
+    [screenNames.WebView]: {
+      screen: screens.WebView,
+      navigationOptions: {
+        header: null
+      }
     }
   },
-  // [screenNames.PostEditor]: {
-  //   screen: screens.PostEditor,
-  //   navigationOptions: {
-  //     header: null,
-  //     gesturesEnabled: false
-  //   }
-  // },
-  [screenNames.WebView]: {
-    screen: screens.WebView,
-    navigationOptions: {
-      header: null
-    }
+  {
+    initialRouteName: screenGroupNames.TABS,
+    cardStyle: {
+      backgroundColor: daytColors.white
+    },
+    mode: "modal",
+    transitionConfig: () => ({
+      screenInterpolator
+    })
   }
-});
+);
 export default MiddleSection;

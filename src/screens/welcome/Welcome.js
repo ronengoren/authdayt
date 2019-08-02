@@ -14,17 +14,17 @@ import {
   TextButton,
   Image,
   TranslatedText
-} from "../../components/basicComponents";
+} from "src/components/basicComponents";
 import Slide from "./Slide";
-import I18n from "../../infra/localization";
-import { Screen, persistentAuth, Slider } from "../../components";
-import { hasNotch } from "../../infra/utils/deviceUtils";
-import { navigationService } from "../../infra/navigation";
-import images from "../../assets/images";
-import { daytColors, uiConstants } from "../../vars";
-import { screenNames } from "../../vars/enums";
-import { isObject } from "../../infra/utils";
-import { misc as miscLocalStorage } from "../../infra/localStorage";
+import I18n from "src/infra/localization";
+import { Screen, persistentAuth, Slider } from "src/components";
+import { hasNotch } from "src/infra/utils/deviceUtils";
+import { navigationService } from "src/infra/navigation";
+import images from "src/assets/images";
+import { daytColors, uiConstants } from "src/vars";
+import { screenNames } from "src/vars/enums";
+import { isObject } from "src/infra/utils";
+import { misc as miscLocalStorage } from "src/infra/localStorage";
 
 const LOGO_MARGIN_TOP = hasNotch() ? 60 : 25;
 const SLIDER_MARGIN_TOP = hasNotch() ? 40 : 0;
@@ -122,7 +122,7 @@ class Welcome extends React.Component {
       <View style={styles.container}>
         <StatusBar translucent={false} barStyle="light-content" />
         <Image style={styles.logo} source={images.welcome.dayt} />
-        <Slider
+        {/* <Slider
           withAndroidIntervals
           numberOfSlides={NUMBER_OF_SLIDES}
           autoPlay={autoPlay}
@@ -198,7 +198,7 @@ class Welcome extends React.Component {
               </Slide>
             </View>
           ]}
-        </Slider>
+        </Slider> */}
         <View style={styles.lowerSection}>
           <TextButton
             size="big50Height"
@@ -225,10 +225,10 @@ class Welcome extends React.Component {
     );
   }
 
-  navigateToSignUp = () => {
+  navigateToSignIn = () => {
     const { currentSlide } = this.state;
     this.setState({ autoPlay: false });
-    navigationService.navigate(screenNames.SignUp, {}, { noPush: true });
+    navigationService.navigate(screenNames.SignIn, {}, { noPush: true });
   };
   navigateToSignUp = () => {
     const { currentSlide } = this.state;
@@ -240,6 +240,7 @@ class Welcome extends React.Component {
 Welcome.propTypes = {
   navigation: PropTypes.object
 };
-// Welcome = Screen({ modalError: true })(Welcome);
+
+Welcome = Screen({ modalError: true })(Welcome);
 
 export default Welcome;

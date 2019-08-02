@@ -24,6 +24,11 @@ import {
 import { get } from "./infra/utils";
 import { navigationService, screenTrackingService } from "./infra/navigation";
 import { AppTopNavigation } from "./navigators";
+import {
+  ConnectionHeader,
+  ScreenErrorBoundary,
+  ActionSheetManager
+} from "src/components";
 
 import Welcome from "./screens/welcome/Welcome";
 import SetUserGender from "./screens/signup/SetUserGender";
@@ -31,30 +36,25 @@ import Signup from "./screens/signup/Signup";
 import OnBoardingDiscover from "./screens/signup/OnBoardingDiscover/OnBoardingDiscover";
 import SuggestedTopicItem from "./screens/signup/OnBoardingDiscover/SuggestedTopicItem";
 
-const IntroStack = createStackNavigator({
-  welcome: Welcome
-});
-const MainStack = () => {
-  return createAppContainer(
-    createSwitchNavigator(
-      {
-        welcome: Welcome,
-        setUserGender: SetUserGender,
-        signup: Signup,
-        onBoardingDiscover: OnBoardingDiscover,
-        suggestedTopicItem: SuggestedTopicItem
-      },
-      {
-        initialRouteName: "onBoardingDiscover"
-        // authBoolean ? "main" : "login"
-      }
-    )
-  );
-};
-
 export default class App extends Component {
   render() {
-    const Switch = MainStack();
-    return <AppTopNavigation />;
+    return [
+      <StatusBar
+        translucent
+        barStyle="light-content"
+        backgroundColor="transparent"
+        key="statusBar"
+      />,
+      <ScreenErrorBoundary key="AppTopNavigation">
+        <AppTopNavigation
+          ref={navigatorRef => {
+            navigationService.setTopLevelNavigator(navigatorRef);
+          }}
+        />
+      </ScreenErrorBoundary>
+    ];
+  }
+  componentDidMount() {
+    Orientation.lockToPortrait();
   }
 }

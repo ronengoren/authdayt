@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import I18n from "src/infra/localization";
 import { connect } from "react-redux";
-// import { signIn } from '/redux/auth/actions';
+import { signIn } from "src/redux/auth/actions";
 // import { facebookLogin, AccessToken } from '/infra/facebook/loginService';
 import { Screen, ApiCommandTextButton, FormInput } from "src/components";
 import { View, Text, TextButton } from "src/components/basicComponents";
@@ -17,11 +17,16 @@ import { View, Text, TextButton } from "src/components/basicComponents";
 // import ErrorsLogger from '/infra/reporting/ErrorsLogger';
 // import { Logger, analytics } from '/infra/reporting';
 import { get } from "src/infra/utils";
-// import { navigationService } from '/infra/navigation';
+import { navigationService } from "src/infra/navigation";
 import { DaytIcon } from "src/assets/icons";
 import { daytColors, uiConstants } from "src/vars";
-// import { screenGroupNames, screenNames, signInMethodTypes, authErrors } from '/vars/enums';
-// import { getRelevantOnboardingScreen } from '/infra/utils/onboardingUtils';
+import {
+  screenGroupNames,
+  screenNames,
+  signInMethodTypes,
+  authErrors
+} from "src/vars/enums";
+import { getRelevantOnboardingScreen } from "src/infra/utils/onboardingUtils";
 
 const hitSlop = { left: 40, right: 40, top: 40, bottom: 40 };
 const slidingDistance = 110;
@@ -135,7 +140,9 @@ class SignIn extends React.Component {
 
   render() {
     const { marginTop, facebookSignIn, email, password } = this.state;
-    //     const submitDisabled = Object.keys(this.state).some((key) => this.state[key].isValid === false);
+    const submitDisabled = Object.keys(this.state).some(
+      key => this.state[key].isValid === false
+    );
 
     return (
       <View style={styles.container}>
@@ -149,6 +156,7 @@ class SignIn extends React.Component {
             accessibilityTraits="button"
             accessibilityComponentType="button"
             activeOpacity={1}
+            onPress={this.onBackButtonPress}
           >
             <DaytIcon
               name="back-arrow"
@@ -215,8 +223,7 @@ class SignIn extends React.Component {
               />
             </View>
             <View style={styles.signInBtnWrapper}>
-              <Text>ApiCommandTextButton</Text>
-              {/* <ApiCommandTextButton
+              <ApiCommandTextButton
                 size="big50Height"
                 command="auth.signIn"
                 onPress={this.handleSubmit}
@@ -224,7 +231,7 @@ class SignIn extends React.Component {
                 testID="loginBtn"
               >
                 {I18n.t("onboarding.sign_in.submit_button")}
-              </ApiCommandTextButton> */}
+              </ApiCommandTextButton>
             </View>
             <Text
               style={styles.forgotPasswordText}
@@ -259,6 +266,101 @@ class SignIn extends React.Component {
       </View>
     );
   }
+  handleFacebookSignIn = async () => {
+    Keyboard.dismiss();
+    this.setState({ facebookSignIn: true });
+    const { signIn } = this.props;
+    try {
+      analytics.actionEvents
+        .onboardingClickedContinueWithFacebook({ success: true })
+        .dispatch();
+
+      const result = await facebookLogin([
+        "public_profile",
+        "email",
+        "user_friends",
+        "user_hometown",
+        "user_location",
+        "user_gender"
+      ]);
+
+      analytics.viewEvents
+        .tabView({
+          screenName: "OB - Facebook Sign In",
+          origin: "OB - Add pages",
+          subTab: "Approved"
+        })
+        .dispatch();
+
+      if (!result.isCancelled) {
+        const data = await AccessToken.getCurrentAccessToken();
+        const accessToken = data.accessToken.toString();
+        await signIn({
+          method: signInMethodTypes.FACEBOOK,
+          params: {
+            accessToken
+          },
+          onUnregisteredUserSignIn: this.onNewUserRegistration,
+          onError: this.facebookSignInErrorHandler
+        });
+      } else {
+        this.setState({ facebookSignIn: false });
+      }
+    } catch (err) {
+      analytics.viewEvents
+        .tabView({
+          screenName: "OB - Facebook Sign In",
+          origin: "OB - Add pages",
+          subTab: "Canceled"
+        })
+        .dispatch();
+      analytics.actionEvents
+        .onboardingClickedContinueWithFacebook({
+          success: false,
+          failureReason: err
+        })
+        .dispatch();
+      this.facebookSignInErrorHandler(err);
+    }
+  };
+  onBackButtonPress = () => {
+    const { slidedUp } = this.state;
+    if (!slidedUp) {
+      navigationService.goBack();
+    } else {
+      Animated.timing(this.state.marginTop, {
+        toValue: 0,
+        duration: 300
+      }).start(this.toggleSlidedUpFlag);
+    }
+  };
+  handleSubmit = async () => {
+    Keyboard.dismiss();
+    const { email, password } = this.state;
+    const { signIn } = this.props;
+
+    await signIn({
+      method: signInMethodTypes.EMAIL,
+      params: {
+        email: email.value,
+        password: password.value
+      },
+      onUnregisteredUserSignIn: this.onNewUserRegistration,
+      onError: this.emailSignInErrorHandler
+    });
+  };
+  onNewUserRegistration = ({ user }) => {
+    const initialScreen = getRelevantOnboardingScreen({ user });
+    navigationService.navigate(
+      screenGroupNames.SIGN_UP_WIZARD,
+      { origin: screenNames.SignIn, isFirstScreen: true },
+      { initialScreen }
+    );
+  };
+  navigateToSignUp = () => {
+    Keyboard.dismiss();
+    navigationService.navigate(screenNames.SignUp, {}, { noPush: true });
+  };
 }
 
 export default SignIn;

@@ -52,7 +52,7 @@ class Slide extends React.Component {
         <View style={{ width: videoWidth, height: videoWidth / VIDEO_RATIO }}>
           <Video
             style={styles.video}
-            source={this.videoSource}
+            // source={this.videoSource}
             onRef={ref => {
               this.player = ref;
             }}

@@ -46,7 +46,7 @@ const authentication = createStackNavigator(
     }
   },
   {
-    initialRouteName: screenGroupNames.SIGN_UP_WIZARD,
+    initialRouteName: screenNames.Welcome,
     headerMode: "screen",
     cardStyle: {
       backgroundColor: daytColors.white

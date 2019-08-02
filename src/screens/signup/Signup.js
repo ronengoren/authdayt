@@ -11,11 +11,7 @@ import {
   PanResponder
 } from "react-native";
 import { daytColors, uiConstants } from "src/vars";
-import {
-  // Screen,
-  ApiCommandTextButton,
-  FormInput
-} from "src/components";
+import { Screen, ApiCommandTextButton, FormInput } from "src/components";
 
 import { View, Text, TextButton } from "src/components/basicComponents";
 import { connect } from "react-redux";
@@ -187,6 +183,7 @@ class Signup extends React.Component {
             activeOpacity={1}
             style={styles.backButtonWrapper}
             hitSlop={hitSlop}
+            onPress={this.onBackButtonPress}
           >
             <DaytIcon
               name="back-arrow"

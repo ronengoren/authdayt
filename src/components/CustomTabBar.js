@@ -136,7 +136,7 @@ const tabs = {
     labelName: "groups",
     icon: {
       name: "groups-2",
-      activeName: "groups-fill",
+      activeName: "groups-2",
       size: 20
     },
     activeColor: daytColors.golden
