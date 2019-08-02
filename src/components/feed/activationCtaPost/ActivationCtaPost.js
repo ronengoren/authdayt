@@ -220,17 +220,17 @@ ActivationCtaPost.propTypes = {
   screenContextId: PropTypes.string
 };
 
-const mapDispatchToProps = {
-  addHiddenPost
-};
+// const mapDispatchToProps = {
+//   addHiddenPost
+// };
 
-const mapStateToProps = state => ({
-  user: get(state, "auth.user"),
-  hiddenPosts: get(state, "auth.hiddenPosts")
-});
+// const mapStateToProps = state => ({
+//   user: get(state, "auth.user"),
+//   hiddenPosts: get(state, "auth.hiddenPosts")
+// });
 
-ActivationCtaPost = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ActivationCtaPost);
+// ActivationCtaPost = connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(ActivationCtaPost);
 export default ActivationCtaPost;

@@ -109,5 +109,5 @@ const mapStateToProps = state => {
   };
 };
 
-BoardsHeader = connect(mapStateToProps)(BoardsHeader);
+// BoardsHeader = connect(mapStateToProps)(BoardsHeader);
 export default BoardsHeader;

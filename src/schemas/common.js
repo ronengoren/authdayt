@@ -9,7 +9,7 @@ import {
   oneOfType,
   arrayOf
 } from "prop-types";
-import { userTypes } from "../vars/enums";
+import { userTypes } from "src/vars/enums";
 
 export const actorScheme = shape({
   id: string,

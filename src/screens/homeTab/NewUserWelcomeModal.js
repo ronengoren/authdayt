@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import I18n from "src/infra/localization";
 import { connect } from "react-redux";
-// import { turnOffNewUserWelcome } from '/redux/auth/actions';
+import { turnOffNewUserWelcome } from "src/redux/auth/actions";
 import { View, Text, Video } from "src/components/basicComponents";
 import videos from "src/assets/videos";
 import { get } from "src/infra/utils";
@@ -181,14 +181,14 @@ class NewUserWelcomeModal extends React.Component {
         turnOffNewUserWelcome();
         this.setState({ showNewUserWelcome: false });
       });
-      analytics.viewEvents
-        .entityView({
-          screenName: "OB - Joined",
-          origin: "OB - Enable Notifications",
-          entityId: user.id,
-          entityName: user.name
-        })
-        .dispatch();
+      // analytics.viewEvents
+      //   .entityView({
+      //     screenName: "OB - Joined",
+      //     origin: "OB - Enable Notifications",
+      //     entityId: user.id,
+      //     entityName: user.name
+      //   })
+      //   .dispatch();
     }
   }
 

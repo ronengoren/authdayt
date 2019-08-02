@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { FlatList, StyleSheet, View, VirtualizedList } from "react-native";
 import { connect } from "react-redux";
-// import { fetchBottom, fetchTop } from '/redux/InfiniteScroll/actions';
+import { fetchBottom, fetchTop } from "src/redux/InfiniteScroll/actions";
 import { get, isNil } from "src/infra/utils";
 import { Spinner } from "src/components/basicComponents";
 import { ScrollItemErrorBoundary } from "src/components";
@@ -95,11 +95,11 @@ class InfiniteScroll extends React.Component {
           data={adjustedData}
           renderItem={this.renderItem}
           keyExtractor={keyExtractor}
-          // onRefresh={!disableRefresh && this.fetchTop}
+          onRefresh={!disableRefresh && this.fetchTop}
           refreshing={refreshing}
           // onEndReached={this.fetchBottom}
           onEndReachedThreshold={2}
-          ListFooterComponent={this.renderFooter}
+          // ListFooterComponent={this.renderFooter}
           ListHeaderComponent={ListHeaderComponent}
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}
@@ -128,9 +128,9 @@ class InfiniteScroll extends React.Component {
         data={data}
         renderItem={this.renderItem}
         keyExtractor={keyExtractor}
-        // onRefresh={!disableRefresh && this.fetchTop}
+        onRefresh={!disableRefresh && this.fetchTop}
         refreshing={refreshing}
-        // onEndReached={this.fetchBottom}
+        onEndReached={this.fetchBottom}
         onEndReachedThreshold={2}
         ListFooterComponent={this.renderFooter}
         ListHeaderComponent={ListHeaderComponent}
@@ -150,29 +150,29 @@ class InfiniteScroll extends React.Component {
     );
   }
 
-  // componentDidMount() {
-  //   const { disableInitialFetch } = this.props;
-  //   !disableInitialFetch && this.fetchTop({ isInitialFetch: true });
-  // }
+  componentDidMount() {
+    const { disableInitialFetch } = this.props;
+    !disableInitialFetch && this.fetchTop({ isInitialFetch: true });
+  }
 
-  // componentDidUpdate(prevProps) {
-  //   if (this.state.throwError) {
-  //     throw this.state.throwError;
-  //   }
+  componentDidUpdate(prevProps) {
+    if (this.state.throwError) {
+      throw this.state.throwError;
+    }
 
-  //   const { onUpdate, data } = this.props;
-  //   if (typeof onUpdate === "function") {
-  //     onUpdate(data);
-  //   }
+    const { onUpdate, data } = this.props;
+    if (typeof onUpdate === "function") {
+      onUpdate(data);
+    }
 
-  //   if (
-  //     JSON.stringify(this.props.apiQuery) !==
-  //       JSON.stringify(prevProps.apiQuery) &&
-  //     !data
-  //   ) {
-  //     this.fetchTop({ apiQueryChanged: true });
-  //   }
-  // }
+    if (
+      JSON.stringify(this.props.apiQuery) !==
+        JSON.stringify(prevProps.apiQuery) &&
+      !data
+    ) {
+      this.fetchTop({ apiQueryChanged: true });
+    }
+  }
 
   renderItem = ({ item, index }) => {
     const {
@@ -229,78 +229,78 @@ class InfiniteScroll extends React.Component {
     }
   };
 
-  //   renderFooter = () => {
-  //     const {
-  //       horizontal,
-  //       isFetchingBottom,
-  //       hasMore,
-  //       ListFooterComponent
-  //     } = this.props;
-  //     if (!horizontal && isFetchingBottom && hasMore) {
-  //       return (
-  //         <View style={styles.footer}>
-  //           <Spinner size="large" />
-  //           {ListFooterComponent}
-  //         </View>
-  //       );
-  //     }
-  //     return ListFooterComponent;
-  //   };
+  renderFooter = () => {
+    const {
+      horizontal,
+      isFetchingBottom,
+      hasMore,
+      ListFooterComponent
+    } = this.props;
+    if (!horizontal && isFetchingBottom && hasMore) {
+      return (
+        <View style={styles.footer}>
+          <Spinner size="large" />
+          {ListFooterComponent}
+        </View>
+      );
+    }
+    return ListFooterComponent;
+  };
 
-  //   fetchTop = async ({ isInitialFetch, apiQueryChanged } = {}) => {
-  //     const {
-  //       normalizedSchema,
-  //       reducerStatePath,
-  //       apiQuery,
-  //       fetchTop,
-  //       resetDataOnFetchTop,
-  //       data,
-  //       onTopFetchAction,
-  //       ListErrorComponent
-  //     } = this.props;
-  //     const { isFirstDataLoaded } = this.state;
+  fetchTop = async ({ isInitialFetch, apiQueryChanged } = {}) => {
+    const {
+      normalizedSchema,
+      reducerStatePath,
+      apiQuery,
+      fetchTop,
+      resetDataOnFetchTop,
+      data,
+      onTopFetchAction,
+      ListErrorComponent
+    } = this.props;
+    const { isFirstDataLoaded } = this.state;
 
-  //     this.setState({
-  //       isListErrorShown: false,
-  //       isFirstDataLoaded: apiQueryChanged ? false : isFirstDataLoaded
-  //     });
+    this.setState({
+      isListErrorShown: false,
+      isFirstDataLoaded: apiQueryChanged ? false : isFirstDataLoaded
+    });
 
-  //     try {
-  //       await fetchTop({
-  //         normalizedSchema,
-  //         reducerStatePath,
-  //         query: apiQuery,
-  //         resetData: resetDataOnFetchTop
-  //       });
-  //       if (isInitialFetch) {
-  //         this.setState({ isFirstDataLoaded: true });
-  //       }
-  //       data && onTopFetchAction && onTopFetchAction({ isInitialFetch });
-  //     } catch (err) {
-  //       // In case we already have something in the list - don't fail the entire list
-  //       if (!data || !data.length) {
-  //         if (ListErrorComponent) {
-  //           this.setState({ isListErrorShown: true });
-  //         } else {
-  //           this.setState({ throwError: err });
-  //         }
-  //       }
-  //     }
-  //   };
+    try {
+      await fetchTop({
+        normalizedSchema,
+        reducerStatePath,
+        query: apiQuery,
+        resetData: resetDataOnFetchTop
+      });
+      if (isInitialFetch) {
+        this.setState({ isFirstDataLoaded: true });
+      }
+      data && onTopFetchAction && onTopFetchAction({ isInitialFetch });
+    } catch (err) {
+      // In case we already have something in the list - don't fail the entire list
+      if (!data || !data.length) {
+        if (ListErrorComponent) {
+          this.setState({ isListErrorShown: true });
+        } else {
+          this.setState({ throwError: err });
+        }
+      }
+    }
+  };
 
-  // fetchBottom = () => {
-  //   const {
-  //     normalizedSchema,
-  //     reducerStatePath,
-  //     apiQuery,
-  //     fetchBottom,
-  //     isFetchingBottom,
-  //     disableFetchBottom
-  //   } = this.props;
-  //   !isFetchingBottom &&
-  //     !disableFetchBottom &&
-  //     fetchBottom({ normalizedSchema, reducerStatePath, query: apiQuery });
-  // };
+  fetchBottom = () => {
+    const {
+      normalizedSchema,
+      reducerStatePath,
+      apiQuery,
+      fetchBottom,
+      isFetchingBottom,
+      disableFetchBottom
+    } = this.props;
+    !isFetchingBottom &&
+      !disableFetchBottom &&
+      fetchBottom({ normalizedSchema, reducerStatePath, query: apiQuery });
+  };
 
   handleFeedRef = node => {
     setImmediate(() => {

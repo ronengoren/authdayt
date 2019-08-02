@@ -1,5 +1,5 @@
 import { DatePickerAndroid, TimePickerAndroid } from "react-native"; // eslint-disable-line react-native/split-platform-components
-import { ErrorsLogger } from "/infra/reporting";
+// import { ErrorsLogger } from "/infra/reporting";
 
 class NativeDateTimePickerAndroid {
   static async open({ onSelected, minDate, maxDate, date }) {

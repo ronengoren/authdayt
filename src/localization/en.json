@@ -732,7 +732,7 @@
                 "title": "My Journey",
                 "origin_label": "I'm originally from",
                 "current_label": "I currently live in",
-                "arrival_picker_header": "When did you arrive?",
+                "arrival_picker_header": "27, Brooklyn, NY",
                 "arrival_picker_subheader": "Date of Arrival",
                 "arrival_date_header": "I arrived in"
             },
@@ -1684,10 +1684,10 @@
         "subheader": "Events you can't miss!"
     },
     "tab_names": {
-        "home": "Home",
-        "people": "People",
-        "groups": "Channels",
-        "activity": "Activity",
+        "home": "Feed",
+        "people": "days",
+        "groups": "Calendar",
+        "activity": "Chats",
         "city": {
             "neighbourhood": "My City",
             "city": "Profile"
@@ -1701,10 +1701,10 @@
         },
         "post_button": "Post",
         "boards": {
-            "job": "Jobs",
-            "events": "Events",
-            "realEstate": "Real Estate",
-            "giveAndTake": "Give / Take"
+            "job": "Drinks",
+            "events": "Wild Nights",
+            "realEstate": "Horse ride",
+            "giveAndTake": "Netflix N' Chill"
         },
         "post_button_text": "What's new in the city?",
         "user_greeting": "Hey {{name}}",

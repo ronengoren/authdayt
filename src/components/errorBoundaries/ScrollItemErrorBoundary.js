@@ -17,12 +17,12 @@ class ScrollItemErrorBoundary extends Component {
     return children;
   }
 
-  //   componentDidCatch(error) {
-  //     const { boundaryName } = this.props;
+  componentDidCatch(error) {
+    const { boundaryName } = this.props;
 
-  //     this.setState({ hasError: true });
-  //     ErrorsLogger.boundaryError(boundaryName, error);
-  //   }
+    this.setState({ hasError: true });
+    // ErrorsLogger.boundaryError(boundaryName, error);
+  }
 }
 
 ScrollItemErrorBoundary.propTypes = {

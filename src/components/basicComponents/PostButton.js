@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { StyleSheet, TouchableOpacity } from "react-native";
 import { Text, Avatar } from "src/components/basicComponents";
 import { daytColors, commonStyles } from "src/vars";
-// import connect from 'react-redux/es/connect/connect';
+import connect from "react-redux/es/connect/connect";
 import { entityTypes } from "src/vars/enums";
 
 const styles = StyleSheet.create({

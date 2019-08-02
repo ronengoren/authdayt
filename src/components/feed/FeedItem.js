@@ -1,5 +1,5 @@
 import React from "react";
-// import { denormalize, constructDenormalizedData } from '/redux/normalizer';
+import { denormalize, constructDenormalizedData } from "src/redux/normalizer";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 // import { Post } from "src/components";

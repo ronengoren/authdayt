@@ -11,7 +11,7 @@ import { View, Text, IconButton } from "src/components/basicComponents";
 import { daytColors, uiConstants, commonStyles } from "src/vars";
 import { screenNames } from "src/vars/enums";
 import { navigationService } from "src/infra/navigation";
-// import HeaderSearch from "./HeaderSearch";
+import HeaderSearch from "./HeaderSearch";
 
 const MIN_TITLE_HORIZONTAL_MARGIN = 10;
 
@@ -64,254 +64,254 @@ class Header extends Component {
   };
 
   render() {
-    //     const { searchMode, backgroundColor, withBorderBottom } = this.props;
+    const { searchMode, backgroundColor, withBorderBottom } = this.props;
 
     return (
-      //       <View
-      //         style={[
-      //           styles.wrapper,
-      //           withBorderBottom && styles.wrapperBorder,
-      //           { backgroundColor },
-      //           commonStyles.tinyShadow
-      //         ]}
-      //       >
-      <StatusBar
-        translucent
-        barStyle="dark-content"
-        backgroundColor="transparent"
-      />
-      //         <View onLayout={this.calcLeftComponentWidth}>
-      //           {!searchMode && this.renderLeftSection()}
-      //         </View>
-      //         {this.renderMiddleSection()}
-      //         <View onLayout={this.calcRightComponentWidth}>
-      //           {this.renderRightSection()}
-      //         </View>
-      //       </View>
+      <View
+        style={[
+          styles.wrapper,
+          withBorderBottom && styles.wrapperBorder,
+          { backgroundColor },
+          commonStyles.tinyShadow
+        ]}
+      >
+        <StatusBar
+          translucent
+          barStyle="dark-content"
+          backgroundColor="transparent"
+        />
+        <View onLayout={this.calcLeftComponentWidth}>
+          {!searchMode && this.renderLeftSection()}
+        </View>
+        {this.renderMiddleSection()}
+        <View onLayout={this.calcRightComponentWidth}>
+          {this.renderRightSection()}
+        </View>
+      </View>
     );
   }
 
-  //   renderLeftSection = () => {
-  //     const {
-  //       backIconName,
-  //       buttonColor,
-  //       leftComponent,
-  //       hasBackButton,
-  //       testIdPrefix,
-  //       leftBtnIconName,
-  //       leftBtnAction
-  //     } = this.props;
-  //     let leftSection;
+  renderLeftSection = () => {
+    const {
+      backIconName,
+      buttonColor,
+      leftComponent,
+      hasBackButton,
+      testIdPrefix,
+      leftBtnIconName,
+      leftBtnAction
+    } = this.props;
+    let leftSection;
 
-  //     if (leftComponent) {
-  //       leftSection = leftComponent;
-  //     } else if (hasBackButton) {
-  //       leftSection = this.renderIconButton({
-  //         name: backIconName,
-  //         onPress: this.navigateBackWrapper,
-  //         hitSlop: { left: 15, right: 5, top: 5, bottom: 5 },
-  //         testID: `${testIdPrefix}BackBtn`,
-  //         buttonColor
-  //       });
-  //     } else if (leftBtnIconName) {
-  //       leftSection = this.renderIconButton({
-  //         name: leftBtnIconName,
-  //         onPress: leftBtnAction,
-  //         hitSlop: leftButtonHitSlop,
-  //         buttonColor
-  //       });
-  //     }
-  //     return leftSection ? (
-  //       <View style={[styles.left]}>{leftSection}</View>
-  //     ) : null;
-  //   };
+    if (leftComponent) {
+      leftSection = leftComponent;
+    } else if (hasBackButton) {
+      leftSection = this.renderIconButton({
+        name: backIconName,
+        onPress: this.navigateBackWrapper,
+        hitSlop: { left: 15, right: 5, top: 5, bottom: 5 },
+        testID: `${testIdPrefix}BackBtn`,
+        buttonColor
+      });
+    } else if (leftBtnIconName) {
+      leftSection = this.renderIconButton({
+        name: leftBtnIconName,
+        onPress: leftBtnAction,
+        hitSlop: leftButtonHitSlop,
+        buttonColor
+      });
+    }
+    return leftSection ? (
+      <View style={[styles.left]}>{leftSection}</View>
+    ) : null;
+  };
 
-  //   renderMiddleSection = () => {
-  //     const { leftComponentWidth, rightComponentWidth } = this.state;
-  //     const {
-  //       title,
-  //       titleOnPress,
-  //       titleColor,
-  //       subTitle,
-  //       searchMode,
-  //       searchAddressMode,
-  //       isHideSearch
-  //     } = this.props;
-  //     const marginRight =
-  //       Math.max(leftComponentWidth - rightComponentWidth, 0) +
-  //       MIN_TITLE_HORIZONTAL_MARGIN;
-  //     const marginLeft =
-  //       Math.max(rightComponentWidth - leftComponentWidth, 0) +
-  //       MIN_TITLE_HORIZONTAL_MARGIN;
+  renderMiddleSection = () => {
+    const { leftComponentWidth, rightComponentWidth } = this.state;
+    const {
+      title,
+      titleOnPress,
+      titleColor,
+      subTitle,
+      searchMode,
+      searchAddressMode,
+      isHideSearch
+    } = this.props;
+    const marginRight =
+      Math.max(leftComponentWidth - rightComponentWidth, 0) +
+      MIN_TITLE_HORIZONTAL_MARGIN;
+    const marginLeft =
+      Math.max(rightComponentWidth - leftComponentWidth, 0) +
+      MIN_TITLE_HORIZONTAL_MARGIN;
 
-  //     if (title) {
-  //       return (
-  //         <TouchableOpacity
-  //           onPress={titleOnPress}
-  //           style={[styles.titleWrapper, { marginLeft, marginRight }]}
-  //           activeOpacity={1}
-  //         >
-  //           <Text
-  //             numberOfLines={1}
-  //             size={16}
-  //             color={titleColor}
-  //             medium
-  //             style={styles.titleText}
-  //           >
-  //             {title}
-  //           </Text>
-  //           {!!subTitle && (
-  //             <Text numberOfLines={1} size={12} color={daytColors.b60}>
-  //               {subTitle}
-  //             </Text>
-  //           )}
-  //         </TouchableOpacity>
-  //       );
-  //     } else if (!isHideSearch) {
-  //       return (
-  //         <View style={styles.center}>
-  //           <HeaderSearch
-  //             searchMode={searchMode}
-  //             searchAddressMode={searchAddressMode}
-  //             handleSearchFocus={this.handleSearchFocus}
-  //           />
-  //         </View>
-  //       );
-  //     }
-  //     return null;
-  //   };
+    if (title) {
+      return (
+        <TouchableOpacity
+          onPress={titleOnPress}
+          style={[styles.titleWrapper, { marginLeft, marginRight }]}
+          activeOpacity={1}
+        >
+          <Text
+            numberOfLines={1}
+            size={16}
+            color={titleColor}
+            medium
+            style={styles.titleText}
+          >
+            {title}
+          </Text>
+          {!!subTitle && (
+            <Text numberOfLines={1} size={12} color={daytColors.b60}>
+              {subTitle}
+            </Text>
+          )}
+        </TouchableOpacity>
+      );
+    } else if (!isHideSearch) {
+      return (
+        <View style={styles.center}>
+          <HeaderSearch
+            searchMode={searchMode}
+            searchAddressMode={searchAddressMode}
+            handleSearchFocus={this.handleSearchFocus}
+          />
+        </View>
+      );
+    }
+    return null;
+  };
 
-  //   renderRightSection = () => {
-  //     const {
-  //       searchMode,
-  //       rightComponent,
-  //       closeAction,
-  //       rightBtnIconName,
-  //       rightBtnIconSize,
-  //       rightBtnAction
-  //     } = this.props;
-  //     let rightSection = null;
+  renderRightSection = () => {
+    const {
+      searchMode,
+      rightComponent,
+      closeAction,
+      rightBtnIconName,
+      rightBtnIconSize,
+      rightBtnAction
+    } = this.props;
+    let rightSection = null;
 
-  //     if (searchMode) {
-  //       rightSection = this.renderCancelSearch();
-  //     } else if (rightComponent) {
-  //       rightSection = rightComponent;
-  //     } else if (closeAction) {
-  //       rightSection = this.renderIconButton({
-  //         name: "close",
-  //         size: 22,
-  //         onPress: closeAction,
-  //         hitSlop: rightButtonHitSlop
-  //       });
-  //     } else if (rightBtnIconName) {
-  //       rightSection = this.renderIconButton({
-  //         name: rightBtnIconName,
-  //         size: rightBtnIconSize,
-  //         onPress: rightBtnAction,
-  //         hitSlop: rightButtonHitSlop
-  //       });
-  //     }
-  //     return rightSection ? (
-  //       <View style={styles.right}>{rightSection}</View>
-  //     ) : null;
-  //   };
+    if (searchMode) {
+      rightSection = this.renderCancelSearch();
+    } else if (rightComponent) {
+      rightSection = rightComponent;
+    } else if (closeAction) {
+      rightSection = this.renderIconButton({
+        name: "close",
+        size: 22,
+        onPress: closeAction,
+        hitSlop: rightButtonHitSlop
+      });
+    } else if (rightBtnIconName) {
+      rightSection = this.renderIconButton({
+        name: rightBtnIconName,
+        size: rightBtnIconSize,
+        onPress: rightBtnAction,
+        hitSlop: rightButtonHitSlop
+      });
+    }
+    return rightSection ? (
+      <View style={styles.right}>{rightSection}</View>
+    ) : null;
+  };
 
-  //   renderCancelSearch = () => (
-  //     <Text
-  //       size={16}
-  //       lineHeight={30}
-  //       color={daytColors.azure}
-  //       onPress={this.handleSearchCancelPress}
-  //     >
-  //       {I18n.t("header.cancel_button")}
-  //     </Text>
-  //   );
+  renderCancelSearch = () => (
+    <Text
+      size={16}
+      lineHeight={30}
+      color={daytColors.azure}
+      onPress={this.handleSearchCancelPress}
+    >
+      {I18n.t("header.cancel_button")}
+    </Text>
+  );
 
-  //   renderIconButton = ({
-  //     buttonColor,
-  //     name,
-  //     size = 26,
-  //     onPress,
-  //     testID,
-  //     hitSlop
-  //   }) => (
-  //     <IconButton
-  //       name={name}
-  //       style={styles.removeIcon}
-  //       iconColor={buttonColor}
-  //       iconSize={size}
-  //       onPress={onPress}
-  //       testID={testID}
-  //       hitSlop={hitSlop}
-  //     />
-  //   );
+  renderIconButton = ({
+    buttonColor,
+    name,
+    size = 26,
+    onPress,
+    testID,
+    hitSlop
+  }) => (
+    <IconButton
+      name={name}
+      style={styles.removeIcon}
+      iconColor={buttonColor}
+      iconSize={size}
+      onPress={onPress}
+      testID={testID}
+      hitSlop={hitSlop}
+    />
+  );
 
-  //   handleSearchFocus = () => {
-  //     const { searchMode } = this.props;
-  //     if (!searchMode) {
-  //       navigationService.navigate(screenNames.Search, {
-  //         withPeopleSearch: true
-  //       });
-  //     }
-  //   };
+  handleSearchFocus = () => {
+    const { searchMode } = this.props;
+    if (!searchMode) {
+      navigationService.navigate(screenNames.Search, {
+        withPeopleSearch: true
+      });
+    }
+  };
 
-  //   handleSearchCancelPress = () => {
-  //     Keyboard.dismiss();
-  //     navigationService.goBack();
-  //   };
+  handleSearchCancelPress = () => {
+    Keyboard.dismiss();
+    navigationService.goBack();
+  };
 
-  //   calcLeftComponentWidth = e => {
-  //     this.setState({ leftComponentWidth: e.nativeEvent.layout.width });
-  //   };
+  calcLeftComponentWidth = e => {
+    this.setState({ leftComponentWidth: e.nativeEvent.layout.width });
+  };
 
-  //   calcRightComponentWidth = e => {
-  //     this.setState({ rightComponentWidth: e.nativeEvent.layout.width });
-  //   };
+  calcRightComponentWidth = e => {
+    this.setState({ rightComponentWidth: e.nativeEvent.layout.width });
+  };
 
-  //   navigateBackWrapper = () => {
-  //     const { backAction } = this.props;
+  navigateBackWrapper = () => {
+    const { backAction } = this.props;
 
-  //     if (backAction) {
-  //       backAction();
-  //     } else {
-  //       Keyboard.dismiss();
-  //       navigationService.goBack();
-  //     }
-  //   };
+    if (backAction) {
+      backAction();
+    } else {
+      Keyboard.dismiss();
+      navigationService.goBack();
+    }
+  };
 }
 
-// Header.propTypes = {
-//   backIconName: PropTypes.string,
-//   withBorderBottom: PropTypes.bool,
-//   hasBackButton: PropTypes.bool,
-//   testIdPrefix: PropTypes.string,
-//   title: PropTypes.string,
-//   titleOnPress: PropTypes.func,
-//   subTitle: PropTypes.string,
-//   closeAction: PropTypes.func,
-//   backAction: PropTypes.func,
-//   leftComponent: PropTypes.node,
-//   leftBtnIconName: PropTypes.string,
-//   leftBtnAction: PropTypes.func,
-//   rightComponent: PropTypes.node,
-//   rightBtnIconName: PropTypes.string,
-//   rightBtnIconSize: PropTypes.number,
-//   rightBtnAction: PropTypes.func,
-//   searchMode: PropTypes.bool,
-//   searchAddressMode: PropTypes.bool,
-//   backgroundColor: PropTypes.string,
-//   isHideSearch: PropTypes.bool,
-//   buttonColor: PropTypes.string,
-//   titleColor: PropTypes.string
-// };
+Header.propTypes = {
+  backIconName: PropTypes.string,
+  withBorderBottom: PropTypes.bool,
+  hasBackButton: PropTypes.bool,
+  testIdPrefix: PropTypes.string,
+  title: PropTypes.string,
+  titleOnPress: PropTypes.func,
+  subTitle: PropTypes.string,
+  closeAction: PropTypes.func,
+  backAction: PropTypes.func,
+  leftComponent: PropTypes.node,
+  leftBtnIconName: PropTypes.string,
+  leftBtnAction: PropTypes.func,
+  rightComponent: PropTypes.node,
+  rightBtnIconName: PropTypes.string,
+  rightBtnIconSize: PropTypes.number,
+  rightBtnAction: PropTypes.func,
+  searchMode: PropTypes.bool,
+  searchAddressMode: PropTypes.bool,
+  backgroundColor: PropTypes.string,
+  isHideSearch: PropTypes.bool,
+  buttonColor: PropTypes.string,
+  titleColor: PropTypes.string
+};
 
-// Header.defaultProps = {
-//   withBorderBottom: true,
-//   backIconName: "back-arrow",
-//   testIdPrefix: "",
-//   backgroundColor: daytColors.white,
-//   titleColor: daytColors.b30,
-//   buttonColor: "b30"
-// };
+Header.defaultProps = {
+  withBorderBottom: true,
+  backIconName: "back-arrow",
+  testIdPrefix: "",
+  backgroundColor: daytColors.white,
+  titleColor: daytColors.b30,
+  buttonColor: "b30"
+};
 
 export default Header;

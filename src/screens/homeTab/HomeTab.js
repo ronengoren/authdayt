@@ -163,7 +163,19 @@ class HomeTab extends React.Component {
 
   constructor(props) {
     super(props);
+    const { enablePersonalizedFeed } = this.props;
+
+    const {
+      navigation: {
+        state: { params }
+      }
+    } = props;
     this.state = {
+      activeSubTab:
+        (params && params.subTab) || enablePersonalizedFeed
+          ? HomeTab.subTabs.PERSONALIZED
+          : HomeTab.subTabs.NEWS_FEED,
+
       showFloatingHeader: false,
       screenTabs: []
     };
@@ -179,14 +191,34 @@ class HomeTab extends React.Component {
       enablePersonalizedFeed
     } = this.props;
     const { activeSubTab, showFloatingHeader } = this.state;
+    const isNewsFeed = [
+      HomeTab.subTabs.NEWS_FEED,
+      HomeTab.subTabs.PERSONALIZED
+    ].includes(activeSubTab);
+
+    const isScheduledPostsSubTab =
+      activeSubTab === HomeTab.subTabs.SCHEDULED_POSTS;
 
     return (
       <View testID="homeTab" style={commonStyles.flex1}>
         <Feed
           onScroll={this.handleFeedScroll}
           scrollToFeedTop={this.scrollToFeedTop}
+          activeHomeTab={
+            enablePersonalizedFeed
+              ? HomeTab.subTabs.PERSONALIZED
+              : HomeTab.subTabs.NEWS_FEED
+          }
           normalizedSchema={normalizedSchema}
           ListHeaderComponent={this.renderFeedHeader}
+          ListEmptyComponent={
+            isScheduledPostsSubTab ? (
+              <GenericListEmptyState
+                type={entityTypes.SCHEDULED_POST}
+                headerText={I18n.t(`home.scheduled_empty_state.header`)}
+              />
+            ) : null
+          }
           originType={originTypes.HOME_FEED}
           ref={feedRef => {
             this.feedRef = feedRef;
@@ -199,6 +231,7 @@ class HomeTab extends React.Component {
               />
             ) : null
           }
+          onTopFetchAction={isNewsFeed ? getListItemCta : null}
         />
         {/* <NewUserWelcomeModal /> */}
 
@@ -212,6 +245,42 @@ class HomeTab extends React.Component {
       </View>
     );
   }
+  getGreeting = () => {
+    // const {
+    //   community,
+    //   user: { name }
+    // } = this.props;
+    const greetingTimeDefinition = getGreetingTime();
+    const customGreetings = ("community", "customAppFace.greetings", []);
+    const customGreeting = this.getFirstValidGreeting(customGreetings);
+    const greetingLines = [
+      I18n.t("home.user_greeting", { name: "getFirstName(name)" }),
+      I18n.t(`home.${greetingTimeDefinition}`)
+    ];
+
+    if (customGreeting) {
+      if (customGreeting.line1) {
+        greetingLines[0] = customGreeting.line1.replace(
+          "{name}"
+          // getFirstName(name)
+        );
+      }
+      if (customGreeting.line2) {
+        greetingLines[1] = customGreeting.line2.replace(
+          "{name}"
+          // getFirstName(name)
+        );
+      }
+    }
+    return greetingLines;
+  };
+  getFirstValidGreeting = customGreetings =>
+    customGreetings.find(greeting => {
+      const now = Date.now();
+      const startTime = Date.parse(greeting.startTime);
+      const endTime = Date.parse(greeting.endTime);
+      return now >= startTime && now <= endTime;
+    });
   handleFeedScroll = e => {
     const { showFloatingHeader } = this.state;
     this.scrollY = e.nativeEvent.contentOffset.y;
@@ -231,7 +300,7 @@ class HomeTab extends React.Component {
       ios: daytColors.halfLightWhite,
       android: daytColors.white
     });
-    const isAdmin = isAppAdmin(user);
+    const isAdmin = isAppAdmin(true);
 
     return (
       <View style={styles.feedHeaderWrapper}>
@@ -247,7 +316,7 @@ class HomeTab extends React.Component {
             bold
             style={[styles.userName, isRtlDesign && styles.userNameRTL]}
           >
-            {greetingLines[0]}
+            {/* {greetingLines[0]} */}
           </Text>
           <Text
             size={36}
@@ -258,7 +327,7 @@ class HomeTab extends React.Component {
           >
             {greetingLines[1]}
           </Text>
-          <TouchableOpacity
+          {/* <TouchableOpacity
             onPress={this.navigateToSearch}
             activeOpacity={0.5}
             style={[
@@ -287,10 +356,10 @@ class HomeTab extends React.Component {
             >
               {I18n.t("home.search_placeholder")}
             </Text>
-          </TouchableOpacity>
-          {topics && topics.length
+          </TouchableOpacity> */}
+          {/* {topics && topics.length
             ? this.renderTopicChips({ isRtlDesign })
-            : this.renderTopicChipsLoadingState({ isRtlDesign })}
+            : this.renderTopicChipsLoadingState({ isRtlDesign })} */}
         </View>
         <BoardsHeader />
         <View style={styles.themesCarouselBottomBorder} />
@@ -305,12 +374,80 @@ class HomeTab extends React.Component {
           />
         )}
         <View style={styles.postButtonWrapper} key="postButton">
-          <PostButton
+          {/* <PostButton
             text={I18n.t("home.post_button_text")}
             onPress={this.navigateToPostCreationPage}
             testID="postButton"
-          />
+          /> */}
         </View>
+      </View>
+    );
+  };
+  renderTopicChipsLoadingState = ({ isRtlDesign }) => {
+    const row = index => (
+      <View
+        key={`row-${index}`}
+        style={
+          isRtlDesign
+            ? styles.topicChipsLoadingWrapperRTL
+            : styles.topicChipsLoadingWrapper
+        }
+      >
+        <PlaceholderRectangle
+          width={"35%"}
+          height={34}
+          backgroundColor={daytColors.white20}
+          borderRadius={18}
+          marginBottom={10}
+          marginRight={7}
+        />
+        <PlaceholderRectangle
+          width={"20%"}
+          height={34}
+          backgroundColor={daytColors.white20}
+          borderRadius={18}
+          marginBottom={10}
+          marginRight={7}
+        />
+        <PlaceholderRectangle
+          width={"25%"}
+          height={34}
+          backgroundColor={daytColors.white20}
+          borderRadius={18}
+          marginBottom={10}
+          marginRight={7}
+        />
+      </View>
+    );
+    return <View style={styles.chipsLoadingState}>{[1, 2, 3].map(row)}</View>;
+  };
+  renderTopicChips = ({ isRtlDesign }) => {
+    const { topics } = this.props;
+    const adjustedTopics = [{ tags: [MY_HOOD] }, ...topics];
+    const topicChips = adjustedTopics.map(topic => {
+      const topicTranslation = this.getTopicTranslation({ topic });
+      const topicTag = topic.tags[0];
+      return (
+        <Chip
+          testID={topicTag}
+          key={topicTag}
+          onPress={() => this.navigateToTopic({ topic })}
+          style={styles.topicItem}
+          textStyle={styles.topicItemText}
+          isBold
+        >
+          {topicTranslation}
+        </Chip>
+      );
+    });
+    return (
+      <View
+        style={[
+          styles.topicChipsWrapper,
+          isRtlDesign && styles.topicChipsWrapperRTL
+        ]}
+      >
+        {topicChips}
       </View>
     );
   };

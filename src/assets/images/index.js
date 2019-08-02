@@ -57,5 +57,8 @@ export default {
     dotted_border: require("./dotted_border.png"),
     dotted_border_vertical: require("./dotted_border_vertical.png"),
     bottomRoundedBorder: require("./bottom_rounded_border.png")
+  },
+  homeTab: {
+    gradient: require("./homeTab/homeTabGradient.png")
   }
 };
