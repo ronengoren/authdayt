@@ -12,23 +12,23 @@ import { navigationService } from "src/infra/navigation";
 const BOARDS_DEFINITIONS = [
   {
     name: "job",
-    iconName: "jobs-2",
+    iconName: "events-small",
     screenName: screenNames.CityResults,
     navigationParams: { postType: postTypes.JOB }
   },
   {
     name: "realEstate",
-    iconName: "realestate-2",
+    iconName: "ownership",
     screenName: screenNames.CityResults,
     navigationParams: { postType: postTypes.REAL_ESTATE }
   },
   {
     name: "giveAndTake",
-    iconName: "givetake-2",
+    iconName: "lock-outline",
     screenName: screenNames.CityResults,
     navigationParams: { postType: postTypes.GIVE_TAKE }
   },
-  { name: "events", iconName: "events-2", screenName: screenNames.Events }
+  { name: "events", iconName: "private", screenName: screenNames.Events }
 ];
 
 const styles = StyleSheet.create({

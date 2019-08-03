@@ -100,37 +100,37 @@ class EntityListsView extends Component {
     );
   }
 
-  //   static getDerivedStateFromProps(props, state) {
-  //     const {
-  //       optionsSelectorProps: { selectedOptionIndex }
-  //     } = props;
-  //     if (state.propsSelectedOptionIndex !== selectedOptionIndex) {
-  //       return {
-  //         selectedOptionIndex,
-  //         propsSelectedOptionIndex: selectedOptionIndex
-  //       };
-  //     }
-  //     return null;
-  //   }
+  static getDerivedStateFromProps(props, state) {
+    const {
+      optionsSelectorProps: { selectedOptionIndex }
+    } = props;
+    if (state.propsSelectedOptionIndex !== selectedOptionIndex) {
+      return {
+        selectedOptionIndex,
+        propsSelectedOptionIndex: selectedOptionIndex
+      };
+    }
+    return null;
+  }
 
-  //   componentDidUpdate(prevProps) {
-  //     const { topSectionData } = this.props;
-  //     const isNextTopSectionDataHasItems =
-  //       topSectionData && !!topSectionData.length;
-  //     const isPrevTopSectionDataHasItems =
-  //       prevProps.topSectionData && !!prevProps.topSectionData.length;
-  //     const isDataBecameFull =
-  //       isNextTopSectionDataHasItems && !isPrevTopSectionDataHasItems;
-  //     const isDataBecameEmpty =
-  //       !isNextTopSectionDataHasItems && isPrevTopSectionDataHasItems;
+  componentDidUpdate(prevProps) {
+    const { topSectionData } = this.props;
+    const isNextTopSectionDataHasItems =
+      topSectionData && !!topSectionData.length;
+    const isPrevTopSectionDataHasItems =
+      prevProps.topSectionData && !!prevProps.topSectionData.length;
+    const isDataBecameFull =
+      isNextTopSectionDataHasItems && !isPrevTopSectionDataHasItems;
+    const isDataBecameEmpty =
+      !isNextTopSectionDataHasItems && isPrevTopSectionDataHasItems;
 
-  //     if (isDataBecameFull) {
-  //       LayoutAnimation.easeInEaseOut();
-  //     }
-  //     if (isDataBecameEmpty) {
-  //       LayoutAnimation.easeInEaseOut();
-  //     }
-  //   }
+    if (isDataBecameFull) {
+      LayoutAnimation.easeInEaseOut();
+    }
+    if (isDataBecameEmpty) {
+      LayoutAnimation.easeInEaseOut();
+    }
+  }
 
   renderHeader = () => {
     const {
@@ -151,7 +151,7 @@ class EntityListsView extends Component {
           componentColor,
           style: styles.headerBar
         })}
-        {/* {this.renderOptions()} */}
+        {this.renderOptions()}
       </View>
     );
   };

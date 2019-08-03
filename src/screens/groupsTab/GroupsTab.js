@@ -37,7 +37,7 @@ class GroupsTab extends React.Component {
     this.state = {
       suggestedGroupsProps: {
         normalizedSchema: "GROUPS",
-        reducerStatePath: "groups.suggestedGroups",
+        // reducerStatePath: "groups.suggestedGroups",
         apiQuery: {
           domain: "groups",
           key: "getSuggested",
@@ -61,7 +61,7 @@ class GroupsTab extends React.Component {
     };
     this.myGroupsProps = {
       normalizedSchema: "GROUPS",
-      reducerStatePath: "groups.myGroups",
+      // reducerStatePath: "groups.myGroups",
       apiQuery: {
         domain: "groups",
         key: "getManagedAndRecent",
@@ -93,19 +93,23 @@ class GroupsTab extends React.Component {
   );
 
   render() {
+    // const { suggestedGroupsProps } = this.state;
+    // const { suggestedGroupsThemes } = this.props;
+    // const translatedThemes = GroupsTab.translateThemes(suggestedGroupsThemes);
+
     return (
       <View style={styles.container}>
         <Text>GroupsTab</Text>
         <EntityListsView
           createEntityButton={this.createEntityButton}
           topSectionSubHeaderProps={this.topSectionSubHeaderProps}
-          bottomSectionSubHeaderProps={this.bottomSectionSubHeaderProps}
+          // bottomSectionSubHeaderProps={this.bottomSectionSubHeaderProps}
           topSectionListProps={this.myGroupsProps}
           // bottomSectionListProps={suggestedGroupsProps}
           componentColor={daytColors.golden}
           optionsSelectorProps={{
             // options: translatedThemes,
-            updateParentSelectedOption: this.changeTheme,
+            // updateParentSelectedOption: this.changeTheme,
             // showOptionAll: true,
             optionAllCustomName: I18n.t("themes.suggested")
           }}
@@ -129,5 +133,44 @@ class GroupsTab extends React.Component {
       testID={`groupDisplayComponent${data.name}`}
     />
   );
+  changeTheme = ({ index }) => {
+    const { resetSuggestedGroups, suggestedGroupsThemes } = this.props;
+    const { suggestedGroupsProps } = this.state;
+    const theme =
+      index === OptionsSelector.ALL_OPTION_INDEX
+        ? null
+        : suggestedGroupsThemes[index];
+    // if (theme !== suggestedGroupsProps.apiQuery.params.theme) {
+    resetSuggestedGroups();
+    this.setState({
+      suggestedGroupsProps: {
+        ...suggestedGroupsProps,
+        apiQuery: {
+          domain: "groups",
+          key: "getSuggested",
+          params: { theme, featured: !theme }
+        }
+        // reducerStatePath: "groups.suggestedGroups"
+      }
+    });
+    // }
+  };
 }
+GroupsTab.propTypes = {
+  user: userScheme,
+  resetSuggestedGroups: PropTypes.func,
+  getSuggestedGroupsTags: PropTypes.func,
+  suggestedGroupsThemes: PropTypes.array
+};
+
+const mapStateToProps = state => ({
+  suggestedGroupsThemes: get(state, "groups.suggestedGroupsTags.data", []),
+  user: state.auth.user
+});
+
+const mapPropsToDispatch = {
+  resetSuggestedGroups,
+  getSuggestedGroupsTags
+};
+
 export default GroupsTab;

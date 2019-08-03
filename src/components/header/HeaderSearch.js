@@ -197,8 +197,8 @@ const mapDispatchToProps = {
   clearSearchAddress
 };
 
-HeaderSearch = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(HeaderSearch);
+// HeaderSearch = connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(HeaderSearch);
 export default HeaderSearch;

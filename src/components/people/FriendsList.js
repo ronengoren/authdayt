@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import { Platform, StyleSheet, LayoutAnimation } from "react-native";
 import I18n from "src/infra/localization";
 import { connect } from "react-redux";
-// import {
-//   approveFriendRequest,
-//   declineFriendRequest
-// } from "/redux/friendships/actions";
+import {
+  approveFriendRequest,
+  declineFriendRequest
+} from "src/redux/friendships/actions";
 import { EntityListsView } from "src/components";
 import { GenericEmptyState } from "src/components/emptyState";
 import {
@@ -19,7 +19,7 @@ import { originTypes } from "src/vars/enums";
 import { get } from "src/infra/utils";
 import { stylesScheme } from "src/schemas";
 import DeclineFriendshipModal from "./DeclineFriendshipModal";
-// import FriendshipRequestComponent from "./FriendshipRequestComponent";
+import FriendshipRequestComponent from "./FriendshipRequestComponent";
 
 const styles = StyleSheet.create({
   container: {
@@ -44,7 +44,7 @@ class FriendsList extends React.Component {
     };
 
     this.topSectionListProps = {
-      reducerStatePath: "friendships.requests",
+      // reducerStatePath: "friendships.requests",
       apiQuery: { domain: "friendships", key: "requests", params: {} },
       EntityComponent: this.renderFriendshipRequestComponent
     };
@@ -81,6 +81,7 @@ class FriendsList extends React.Component {
           headerStyle={headerStyle}
           onScroll={onScroll}
         />
+
         {showDeclineFriendshipModal && (
           <DeclineFriendshipModal
             onCancel={this.toggleDeclineFriendshipModal}
@@ -157,14 +158,14 @@ class FriendsList extends React.Component {
     if (filters && !isFiltersEmpty) {
       return {
         ...staticBottomSectionListProps,
-        reducerStatePath: "users.results",
+        // reducerStatePath: "users.results",
         apiQuery: { domain: "users", key: "getUsers", params: filters }
       };
     }
 
     return {
       ...staticBottomSectionListProps,
-      reducerStatePath: "friendships.recommended",
+      // reducerStatePath: "friendships.recommended",
       apiQuery: { domain: "friendships", key: "recommended" }
     };
   };

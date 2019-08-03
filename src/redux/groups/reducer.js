@@ -1,9 +1,9 @@
 /* eslint-disable no-param-reassign */
 import produce from "immer";
 
-import { merge, cloneDeep } from "/infra/utils";
-import { ADD_ENTITIES } from "/redux/normalizer";
-import { entityTypes } from "/vars/enums";
+import { merge, cloneDeep } from "src/infra/utils";
+import { ADD_ENTITIES } from "src/redux/normalizer";
+import { entityTypes } from "src/vars/enums";
 import * as actions from "./actions";
 
 const initialState = {

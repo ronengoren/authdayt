@@ -76,4 +76,4 @@ export { default as EnhancedHeader } from "./EnhancedHeader";
 //   CollapsableOptionsSelector
 // } from "./optionsSelectors";
 // export { SuggestedItems } from "./feed/suggestedItems";
-// export { EntityListsViewSubheader, EntityListsView } from "./entityListsView";
+export { EntityListsViewSubheader, EntityListsView } from "./entityListsView";
