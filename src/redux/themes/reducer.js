@@ -1,6 +1,6 @@
 import { get } from "src/infra/utils";
 import { rsvpStatuses } from "src/vars/enums";
-import { EVENT_SET_RSVP } from "/redux/events/actions";
+import { EVENT_SET_RSVP } from "src/redux/events/actions";
 import * as actions from "./actions";
 
 const initialState = {

@@ -15,6 +15,7 @@
     "fs": "0.0.1-security",
     "hoist-non-react-statics": "^3.3.0",
     "i18n-js": "^3.3.0",
+    "immer": "^3.2.0",
     "intl": "^1.2.5",
     "memoize-one": "^5.0.5",
     "moment": "^2.24.0",
@@ -45,6 +46,7 @@
     "redux": "^4.0.4",
     "redux-persist": "^5.10.0",
     "redux-thunk": "^2.3.0",
+    "stacktrace-js": "^2.0.0",
     "subscriptions-transport-ws": "^0.9.16",
     "turbo360": "^1.8.65",
     "uuid": "^3.3.2"
