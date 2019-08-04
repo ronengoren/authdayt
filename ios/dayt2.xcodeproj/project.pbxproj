@@ -5,6 +5,7 @@
 	};
 	objectVersion = 51;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00403F2E2926446EA541D0A4 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A2C38280BDB4B3B8F21F7C1 /* Entypo.ttf */; };
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
@@ -31,6 +32,7 @@
 		8053DC5B6BBC45FD8492000D /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C11F1B980747ABA4CCDAD3 /* FontAwesome.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		932A92F301642D1CD3324445 /* libPods-dayt2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9490BD32AF4D879A379292D5 /* libPods-dayt2.a */; };
+		941668D922F72B57004044C4 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 941668A822F72B4A004044C4 /* libBVLinearGradient.a */; };
 		944B5AE622D1B72200F1947B /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 944B5ADF22D1B71400F1947B /* libRNDeviceInfo.a */; };
 		9455347F22DBC3EC003387F3 /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9455345B22DBC3D9003387F3 /* libRCTOrientation.a */; };
 		94753CA922E391250091A5A4 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 949EDA3322B59C65004E882F /* libRNGestureHandler.a */; };
@@ -278,6 +280,20 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
+		941668A522F72B4A004044C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 941668A022F72B49004044C4 /* BVLinearGradient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = BVLinearGradient;
+		};
+		941668A722F72B4A004044C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 941668A022F72B49004044C4 /* BVLinearGradient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 64AA15081EF7F30100718508;
+			remoteInfo = "BVLinearGradient-tvOS";
+		};
 		944B5ADE22D1B71400F1947B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 944B5AB222D1B71300F1947B /* RNDeviceInfo.xcodeproj */;
@@ -444,6 +460,7 @@
 		7E80A69040264F3A84E2BC5E /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8EFDA43E4BD6477F80A417FF /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		941668A022F72B49004044C4 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
 		943718CD22E2E44D005742C4 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		944B5AB222D1B71300F1947B /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/ios/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
 		9455344922DBC3D9003387F3 /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTOrientation.xcodeproj; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; };
@@ -482,6 +499,7 @@
 				9495B66D22C8133B000D5001 /* JavaScriptCore.framework in Frameworks */,
 				94FEA58322B73A2100442A3C /* libRNCAsyncStorage.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
+				941668D922F72B57004044C4 /* libBVLinearGradient.a in Frameworks */,
 				94BBFA5422E37FB6004FB935 /* libFastImage.a in Frameworks */,
 				94753CA922E391250091A5A4 /* libRNGestureHandler.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
@@ -662,6 +680,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				941668A022F72B49004044C4 /* BVLinearGradient.xcodeproj */,
 				94BBFA1E22E37FA7004FB935 /* FastImage.xcodeproj */,
 				9455344922DBC3D9003387F3 /* RCTOrientation.xcodeproj */,
 				94854C4022D6E6D6000B9191 /* RCTVideo.xcodeproj */,
@@ -746,6 +765,15 @@
 				8EFDA43E4BD6477F80A417FF /* Fontisto.ttf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		941668A122F72B49004044C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				941668A622F72B4A004044C4 /* libBVLinearGradient.a */,
+				941668A822F72B4A004044C4 /* libBVLinearGradient.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		944B5AB322D1B71300F1947B /* Products */ = {
@@ -886,6 +914,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 941668A122F72B49004044C4 /* Products */;
+					ProjectRef = 941668A022F72B49004044C4 /* BVLinearGradient.xcodeproj */;
+				},
 				{
 					ProductGroup = 94BBFA1F22E37FA7004FB935 /* Products */;
 					ProjectRef = 94BBFA1E22E37FA7004FB935 /* FastImage.xcodeproj */;
@@ -1193,6 +1225,20 @@
 			fileType = archive.ar;
 			path = libRCTText.a;
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		941668A622F72B4A004044C4 /* libBVLinearGradient.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBVLinearGradient.a;
+			remoteRef = 941668A522F72B4A004044C4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		941668A822F72B4A004044C4 /* libBVLinearGradient.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBVLinearGradient.a;
+			remoteRef = 941668A722F72B4A004044C4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		944B5ADF22D1B71400F1947B /* libRNDeviceInfo.a */ = {

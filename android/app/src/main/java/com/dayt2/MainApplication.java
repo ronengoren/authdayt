@@ -18,7 +18,7 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
-
+import com.BV.LinearGradient.LinearGradientPackage;
 import java.util.Arrays;
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(new MainReactPackage(), new RNCViewPagerPackage(), new OrientationPackage(),
           new RNLocalizePackage(), new ReactVideoPackage(), new FastImageViewPackage(), new RNFSPackage(),
           new RNDeviceInfo(), new AsyncStoragePackage(), new ReactNativeConfigPackage(), new VectorIconsPackage(),
-          new RNGestureHandlerPackage());
+          new RNGestureHandlerPackage(), new LinearGradientPackage());
     }
 
     @Override
