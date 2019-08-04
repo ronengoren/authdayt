@@ -6,9 +6,9 @@ import {
   differenceObject,
   memoize
 } from "src/infra/utils";
-import { FloatingHeader } from "src/components/basicComponents";
+// import { FloatingHeader } from "src/components/basicComponents";
 
-const breakpoint = FloatingHeader.getAdjustedBreakpoint();
+// const breakpoint = FloatingHeader.getAdjustedBreakpoint();
 
 export const hasActiveFilters = memoize(
   ({ filters, filtersObjToExclude = {}, ignoreFilters = [] }) => {
@@ -19,19 +19,19 @@ export const hasActiveFilters = memoize(
   }
 );
 
-export const shouldShowFloatingHeader = ({
-  contentYOffset,
-  prevShowFloatingHeader
-}) => {
-  if (contentYOffset > breakpoint && !prevShowFloatingHeader) {
-    return true;
-  } else if (contentYOffset < breakpoint && prevShowFloatingHeader) {
-    return false;
-  }
+// export const shouldShowFloatingHeader = ({
+//   contentYOffset,
+//   prevShowFloatingHeader
+// }) => {
+//   if (contentYOffset > breakpoint && !prevShowFloatingHeader) {
+//     return true;
+//   } else if (contentYOffset < breakpoint && prevShowFloatingHeader) {
+//     return false;
+//   }
 
-  return null;
-};
+//   return null;
+// };
 
 export function getFiltersScrollYOffset(event) {
-  return event.nativeEvent.layout.y - breakpoint;
+  return event.nativeEvent.layout.y;
 }

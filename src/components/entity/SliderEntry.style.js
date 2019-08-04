@@ -11,7 +11,7 @@ function wp(percentage) {
   return Math.round(value);
 }
 
-const slideHeight = viewportHeight * 0.36;
+const slideHeight = viewportHeight * 0.45;
 const slideWidth = wp(100);
 const itemHorizontalMargin = wp(0);
 
@@ -23,9 +23,9 @@ const entryBorderRadius = 0;
 export default StyleSheet.create({
   slideInnerContainer: {
     width: itemWidth,
-    height: slideHeight,
-    paddingHorizontal: itemHorizontalMargin,
-    paddingBottom: 18 // needed for shadow
+    height: slideHeight
+    // paddingHorizontal: itemHorizontalMargin
+    // paddingBottom: 18 // needed for shadow
   },
   shadow: {
     position: "absolute",
@@ -47,7 +47,7 @@ export default StyleSheet.create({
     borderTopRightRadius: entryBorderRadius
   },
   imageContainerEven: {
-    backgroundColor: colors.black
+    backgroundColor: "white"
   },
   image: {
     ...StyleSheet.absoluteFillObject,
@@ -66,28 +66,28 @@ export default StyleSheet.create({
     backgroundColor: "white"
   },
   radiusMaskEven: {
-    backgroundColor: colors.black
+    backgroundColor: "white"
   },
   textContainer: {
-    justifyContent: "center",
-    paddingTop: 20 - entryBorderRadius,
-    paddingBottom: 20,
-    paddingHorizontal: 16,
-    backgroundColor: "white",
-    borderBottomLeftRadius: entryBorderRadius,
-    borderBottomRightRadius: entryBorderRadius
+    // justifyContent: "center",
+    // paddingTop: 20 - entryBorderRadius,
+    // paddingBottom: 20,
+    // paddingHorizontal: 16,
+    // backgroundColor: "white",
+    // borderBottomLeftRadius: entryBorderRadius,
+    // borderBottomRightRadius: entryBorderRadius
   },
   textContainerEven: {
-    backgroundColor: colors.black
+    backgroundColor: "white"
   },
   title: {
-    color: colors.black,
+    color: "black",
     fontSize: 13,
     fontWeight: "bold",
     letterSpacing: 0.5
   },
   titleEven: {
-    color: "white"
+    color: "black"
   },
   subtitle: {
     marginTop: 6,
@@ -96,6 +96,6 @@ export default StyleSheet.create({
     fontStyle: "italic"
   },
   subtitleEven: {
-    color: "rgba(255, 255, 255, 0.7)"
+    color: colors.gray
   }
 });

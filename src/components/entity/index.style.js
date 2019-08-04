@@ -3,8 +3,8 @@ import { StyleSheet } from "react-native";
 export const colors = {
   black: "#1a1917",
   gray: "#888888",
-  background1: "#B721FF",
-  background2: "#21D4FD"
+  background1: "white",
+  background2: "white"
 };
 
 export default StyleSheet.create({
@@ -22,11 +22,11 @@ export default StyleSheet.create({
   scrollview: {
     flex: 1
   },
-  exampleContainer: {
-    paddingVertical: 30
-  },
+  // exampleContainer: {
+  //   paddingVertical: 30
+  // },
   exampleContainerDark: {
-    backgroundColor: colors.black
+    backgroundColor: "white"
   },
   exampleContainerLight: {
     backgroundColor: "white"
@@ -40,23 +40,23 @@ export default StyleSheet.create({
     textAlign: "center"
   },
   titleDark: {
-    color: colors.black
+    color: colors.background2
   },
   subtitle: {
-    marginTop: 5,
-    paddingHorizontal: 30,
-    backgroundColor: "transparent",
-    color: "rgba(255, 255, 255, 0.75)",
-    fontSize: 13,
-    fontStyle: "italic",
-    textAlign: "center"
+    // marginTop: 5,
+    // paddingHorizontal: 30,
+    // backgroundColor: "transparent",
+    // color: "rgba(255, 255, 255, 0.75)",
+    // fontSize: 13,
+    // fontStyle: "italic",
+    // textAlign: "center"
   },
   slider: {
-    marginTop: 15,
+    marginTop: 0,
     overflow: "visible" // for custom animations
   },
   sliderContentContainer: {
-    paddingVertical: 10 // for custom animation
+    paddingVertical: 0 // for custom animation
   },
   paginationContainer: {
     paddingVertical: 8

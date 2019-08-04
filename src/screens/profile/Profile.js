@@ -160,25 +160,25 @@ class Profile extends React.Component {
 
   state = {
     invited: false,
-    withoutFeed: true,
-    showFloatingHeader: false
+    withoutFeed: true
+    // showFloatingHeader: false
   };
 
   render() {
     const { userProfileId } = this.props;
-    const { showFloatingHeader } = this.state;
+    // const { showFloatingHeader } = this.state;
 
     if (this.state.withoutFeed) {
       return (
         <ScrollView onScroll={this.handleScroll}>
           {this.renderUserDetails()}
           {this.renderFeedError()}
-          <FloatingHeader
+          {/* <FloatingHeader
             showFloatingHeader={showFloatingHeader}
             height={uiConstants.NAVBAR_HEIGHT}
-          >
-            {this.renderHeaderButtons({ isRenderedInHeader: false })}
-          </FloatingHeader>
+          > */}
+          {this.renderHeaderButtons({ isRenderedInHeader: false })}
+          {/* </FloatingHeader> */}
         </ScrollView>
       );
     } else {

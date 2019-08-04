@@ -11,7 +11,7 @@ import {
   EntityActionButton
 } from "src/components/entityListsView";
 import { FiltersExpandable } from "src/components/filters";
-import { FloatingHeader, View } from "src/components/basicComponents";
+import { View } from "src/components/basicComponents";
 import { get, isEqual, isNil } from "src/infra/utils";
 import { navigationService } from "src/infra/navigation";
 import { screenNames, filterTypes } from "src/vars/enums";
@@ -20,20 +20,20 @@ import images from "src/assets/images";
 import { userScheme } from "src/schemas";
 import {
   hasActiveFilters,
-  getFiltersScrollYOffset,
-  shouldShowFloatingHeader
+  getFiltersScrollYOffset
+  // shouldShowFloatingHeader
 } from "src/components/filters/utils";
 
 const styles = StyleSheet.create({
   header: {
     marginTop: 0
-  },
-  floatingHeader: {
-    borderBottomWidth: 0,
-    paddingLeft: 0,
-    paddingRight: 0,
-    paddingTop: 10
   }
+  // floatingHeader: {
+  //   borderBottomWidth: 0,
+  //   paddingLeft: 0,
+  //   paddingRight: 0,
+  //   paddingTop: 10
+  // }
 });
 
 const FILTERS = [
@@ -53,8 +53,8 @@ class PeopleTab extends React.Component {
     const { initialFilters } = params;
 
     this.state = {
-      filters: { ...initialFilters },
-      showFloatingHeader: false
+      filters: { ...initialFilters }
+      // showFloatingHeader: false
     };
     this.contentYOffset = 0;
   }
@@ -139,17 +139,17 @@ class PeopleTab extends React.Component {
     this.filtersScrollYOffset = getFiltersScrollYOffset(event);
   };
 
-  handleScroll = event => {
-    const { y: contentYOffset } = event.nativeEvent.contentOffset;
-    const showFloatingHeader = shouldShowFloatingHeader({
-      contentYOffset,
-      prevShowFloatingHeader: this.state.showFloatingHeader
-    });
-    this.contentYOffset = contentYOffset;
-    if (!isNil(showFloatingHeader)) {
-      this.setState({ showFloatingHeader });
-    }
-  };
+  // handleScroll = event => {
+  //   const { y: contentYOffset } = event.nativeEvent.contentOffset;
+  //   const showFloatingHeader = shouldShowFloatingHeader({
+  //     contentYOffset,
+  //     prevShowFloatingHeader: this.state.showFloatingHeader
+  //   });
+  //   this.contentYOffset = contentYOffset;
+  //   if (!isNil(showFloatingHeader)) {
+  //     this.setState({ showFloatingHeader });
+  //   }
+  // };
 
   navigateToInviteFriends = () => {
     const {

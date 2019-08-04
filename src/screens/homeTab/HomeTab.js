@@ -14,7 +14,7 @@ import {
   PostButton,
   Image,
   Chip,
-  FloatingHeader,
+  // FloatingHeader,
   PlaceholderRectangle
 } from "src/components/basicComponents";
 import { AwesomeIcon } from "src/assets/icons";
@@ -134,19 +134,19 @@ const styles = StyleSheet.create({
     marginBottom: 15
   },
   themesCarouselBottomBorder: {
-    marginBottom: 20,
-    marginHorizontal: 15,
-    height: 1,
+    // marginBottom: 20
+    // marginHorizontal: 0,
+    // height: 3,
     backgroundColor: daytColors.b90
   },
   postButtonWrapper: {
     marginBottom: 5
   },
-  floatingHeader: {
-    borderBottomWidth: 0,
-    paddingLeft: 0,
-    paddingRight: 0
-  },
+  // floatingHeader: {
+  //   borderBottomWidth: 0,
+  //   paddingLeft: 0,
+  //   paddingRight: 0
+  // },
   subHeader: {
     marginTop: -20,
     marginBottom: 20
@@ -176,7 +176,6 @@ class HomeTab extends React.Component {
           ? HomeTab.subTabs.PERSONALIZED
           : HomeTab.subTabs.NEWS_FEED,
 
-      showFloatingHeader: false,
       screenTabs: []
     };
 
@@ -190,7 +189,7 @@ class HomeTab extends React.Component {
       getListItemCta,
       enablePersonalizedFeed
     } = this.props;
-    const { activeSubTab, showFloatingHeader } = this.state;
+    const { activeSubTab } = this.state;
     const isNewsFeed = [
       HomeTab.subTabs.NEWS_FEED,
       HomeTab.subTabs.PERSONALIZED
@@ -235,13 +234,13 @@ class HomeTab extends React.Component {
         />
         {/* <NewUserWelcomeModal /> */}
 
-        <FloatingHeader
+        {/* <FloatingHeader
           style={styles.floatingHeader}
           showFloatingHeader={showFloatingHeader}
           height={uiConstants.NAVBAR_HEIGHT}
-        >
-          <Header />
-        </FloatingHeader>
+        > */}
+        {/* <Header /> */}
+        {/* </FloatingHeader> */}
       </View>
     );
   }
@@ -281,16 +280,15 @@ class HomeTab extends React.Component {
       const endTime = Date.parse(greeting.endTime);
       return now >= startTime && now <= endTime;
     });
-  handleFeedScroll = e => {
-    const { showFloatingHeader } = this.state;
-    this.scrollY = e.nativeEvent.contentOffset.y;
-    const breakpoint = FloatingHeader.getAdjustedBreakpoint(400);
-    if (this.scrollY > breakpoint && !showFloatingHeader) {
-      this.setState({ showFloatingHeader: true });
-    } else if (this.scrollY < breakpoint && showFloatingHeader) {
-      this.setState({ showFloatingHeader: false });
-    }
-  };
+  // handleFeedScroll = e => {
+  //   this.scrollY = e.nativeEvent.contentOffset.y;
+  //   const breakpoint = FloatingHeader.getAdjustedBreakpoint(400);
+  //   if (this.scrollY > breakpoint && !showFloatingHeader) {
+  //     this.setState({ showFloatingHeader: true });
+  //   } else if (this.scrollY < breakpoint && showFloatingHeader) {
+  //     this.setState({ showFloatingHeader: false });
+  //   }
+  // };
   renderFeedHeader = () => {
     const { appLanguage, topics, enableCommunityFeed, user } = this.props;
     const { activeSubTab, screenTabs } = this.state;

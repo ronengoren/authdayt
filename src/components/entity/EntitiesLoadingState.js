@@ -23,30 +23,30 @@ import SliderEntry from "./SliderEntry";
 
 const styles = StyleSheet.create({
   itemContainer: {
-    height: 260,
+    // height: 260
     marginHorizontal: 10,
-    marginTop: 15,
-    marginBottom: 10,
-    backgroundColor: daytColors.white,
-    borderRadius: 15,
-    shadowColor: daytColors.boxShadow,
-    shadowOffset: {
-      width: 0,
-      height: 5
-    },
-    shadowRadius: 10,
-    shadowOpacity: 1,
-    elevation: 3
+    // marginTop: 15,
+    marginBottom: 50
+    // backgroundColor: daytColors.white,
+    // borderRadius: 15,
+    // shadowColor: daytColors.boxShadow,
+    // shadowOffset: {
+    //   width: 0,
+    //   height: 5
+    // },
+    // shadowRadius: 10,
+    // shadowOpacity: 1,
+    // elevation: 3
   },
   compactItemContainer: {
     height: 160
   },
   itemTopSection: {
-    flexDirection: "row",
-    padding: 15
+    flexDirection: "row"
+    // padding: 15
   },
   itemMiddleSection: {
-    paddingHorizontal: 15
+    // paddingHorizontal: 15
   },
   compactActionPlaceholder: {
     borderBottomRightRadius: 15,
@@ -56,20 +56,20 @@ const styles = StyleSheet.create({
     flex: 1
   },
   container: {
-    padding: 20
+    // padding: 20
   },
   box: {
-    marginTop: 10,
-    backgroundColor: "white",
+    // marginTop: 10,
+    // backgroundColor: "white",
     alignItems: "center",
-    shadowColor: "black",
+    // shadowColor: "black",
     shadowOpacity: 0.2,
     shadowOffset: {
       height: 1,
       width: -2
     },
-    elevation: 2,
-    paddingTop: 10
+    elevation: 2
+    // paddingTop: 10
   },
   profileImage: {
     width: 100,
@@ -79,12 +79,12 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 20,
     // marginBottom: 20,
-    fontWeight: "bold",
+    // fontWeight: "bold",
     color: "#1E90FF"
   },
   buttonContainer: {
-    flexDirection: "row",
-    marginTop: 20
+    flexDirection: "row"
+    // marginTop: 20
   },
 
   button: {
@@ -93,28 +93,34 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 20,
+    // marginBottom: 20,
     borderRadius: 30,
-    margin: 10,
-    shadowColor: "black",
-    shadowOpacity: 0.8,
-    shadowOffset: {
-      height: 2,
-      width: -2
-    },
-    elevation: 4
+
+    margin: 10
+    // shadowColor: "black",
+    // shadowOpacity: 0.8,
+    // shadowOffset: {
+    //   height: 2,
+    //   width: -2
+    // },
+    // elevation: 4
   },
   buttonMessage: {
-    backgroundColor: "#00BFFF"
+    // backgroundColor: "#00BFFF",
+    borderWidth: 0.6,
+    borderColor: "black"
   },
   buttonLike: {
-    backgroundColor: "#228B22"
+    borderWidth: 0.6,
+    borderColor: "black"
   },
   buttonLove: {
-    backgroundColor: "#FF1493"
+    borderWidth: 0.6,
+    borderColor: "black"
   },
   buttonCall: {
-    backgroundColor: "#40E0D0"
+    borderWidth: 0.6,
+    borderColor: "black"
   },
   icon: {
     width: 35,
@@ -123,7 +129,7 @@ const styles = StyleSheet.create({
 });
 
 const IS_ANDROID = Platform.OS === "android";
-const SLIDER_1_FIRST_ITEM = 1;
+const SLIDER_1_FIRST_ITEM = 0;
 
 class EntitiesLoadingState extends Component {
   constructor(props) {
@@ -157,8 +163,6 @@ class EntitiesLoadingState extends Component {
 
     return (
       <View style={carouseleStyles.exampleContainer}>
-        {/* <Text style={carouseleStyles.title}>{`Example ${number}`}</Text>
-        <Text style={carouseleStyles.subtitle}>{title}</Text> */}
         <Carousel
           ref={c => (this._slider1Ref = c)}
           data={ENTRIES1}
@@ -169,147 +173,20 @@ class EntitiesLoadingState extends Component {
           firstItem={SLIDER_1_FIRST_ITEM}
           inactiveSlideScale={0.94}
           inactiveSlideOpacity={0.7}
-          // inactiveSlideShift={20}
+          inactiveSlideShift={0}
           containerCustomStyle={carouseleStyles.slider}
           contentContainerCustomStyle={carouseleStyles.sliderContentContainer}
           loop={true}
           loopClonesPerSide={2}
-          autoplay={true}
+          autoplay={false}
           autoplayDelay={500}
           autoplayInterval={3000}
           onSnapToItem={index => this.setState({ slider1ActiveSlide: index })}
         />
-        <Pagination
-          dotsLength={ENTRIES1.length}
-          activeDotIndex={slider1ActiveSlide}
-          containerStyle={carouseleStyles.paginationContainer}
-          dotColor={"rgba(255, 255, 255, 0.92)"}
-          dotStyle={carouseleStyles.paginationDot}
-          inactiveDotColor={colors.black}
-          inactiveDotOpacity={0.4}
-          inactiveDotScale={0.6}
-          carouselRef={this._slider1Ref}
-          tappableDots={!!this._slider1Ref}
-        />
       </View>
     );
   }
 
-  momentumExample(number, title) {
-    return (
-      <View style={carouseleStyles.exampleContainer}>
-        <Text style={carouseleStyles.title}>{`Example ${number}`}</Text>
-        <Text style={carouseleStyles.subtitle}>{title}</Text>
-        <Carousel
-          data={ENTRIES2}
-          renderItem={this._renderItem}
-          sliderWidth={sliderWidth}
-          itemWidth={itemWidth}
-          inactiveSlideScale={0.95}
-          inactiveSlideOpacity={1}
-          enableMomentum={true}
-          activeSlideAlignment={"start"}
-          containerCustomStyle={carouseleStyles.slider}
-          contentContainerCustomStyle={carouseleStyles.sliderContentContainer}
-          activeAnimationType={"spring"}
-          activeAnimationOptions={{
-            friction: 4,
-            tension: 40
-          }}
-        />
-      </View>
-    );
-  }
-
-  layoutExample(number, title, type) {
-    const isTinder = type === "tinder";
-    return (
-      <View
-        style={[
-          carouseleStyles.exampleContainer,
-          isTinder
-            ? carouseleStyles.exampleContainerDark
-            : carouseleStyles.exampleContainerLight
-        ]}
-      >
-        <Text
-          style={[carouseleStyles.title, isTinder ? {} : styles.titleDark]}
-        >{`Example ${number}`}</Text>
-        <Text
-          style={[
-            carouseleStyles.subtitle,
-            isTinder ? {} : carouseleStyles.titleDark
-          ]}
-        >
-          {title}
-        </Text>
-        <Carousel
-          data={isTinder ? ENTRIES2 : ENTRIES1}
-          renderItem={isTinder ? this._renderLightItem : this._renderItem}
-          sliderWidth={sliderWidth}
-          itemWidth={itemWidth}
-          containerCustomStyle={carouseleStyles.slider}
-          contentContainerCustomStyle={carouseleStyles.sliderContentContainer}
-          layout={type}
-          loop={true}
-        />
-      </View>
-    );
-  }
-
-  customExample(number, title, refNumber, renderItemFunc) {
-    const isEven = refNumber % 2 === 0;
-
-    // Do not render examples on Android; because of the zIndex bug, they won't work as is
-    return (
-      <View
-        style={[
-          carouseleStyles.exampleContainer,
-          isEven
-            ? carouseleStyles.exampleContainerDark
-            : carouseleStyles.exampleContainerLight
-        ]}
-      >
-        <Text
-          style={[carouseleStyles.title, isEven ? {} : styles.titleDark]}
-        >{`Example ${number}`}</Text>
-        <Text
-          style={[
-            carouseleStyles.subtitle,
-            isEven ? {} : carouseleStyles.titleDark
-          ]}
-        >
-          {title}
-        </Text>
-        <Carousel
-          data={isEven ? ENTRIES2 : ENTRIES1}
-          renderItem={renderItemFunc}
-          sliderWidth={sliderWidth}
-          itemWidth={itemWidth}
-          containerCustomStyle={carouseleStyles.slider}
-          contentContainerCustomStyle={carouseleStyles.sliderContentContainer}
-          scrollInterpolator={
-            scrollInterpolators[`scrollInterpolator${refNumber}`]
-          }
-          slideInterpolatedStyle={animatedStyles[`animatedStyles${refNumber}`]}
-          useScrollView={true}
-        />
-      </View>
-      // ) : (
-      //   false
-    );
-  }
-
-  get gradient() {
-    return (
-      <LinearGradient
-        colors={[colors.background1, colors.background2]}
-        startPoint={{ x: 1, y: 0 }}
-        endPoint={{ x: 0, y: 1 }}
-        style={carouseleStyles.gradient}
-      />
-    );
-  }
   static COMPONENT_TYPE = {
     COMPACT: "compact",
     REGULAR: "regular"
@@ -319,32 +196,9 @@ class EntitiesLoadingState extends Component {
   };
 
   static renderPlaceholderFeedItem(type, key) {
-    const isCompact = type === EntitiesLoadingState.COMPONENT_TYPE.COMPACT;
     return (
-      <View
-        style={[styles.itemContainer, isCompact && styles.compactItemContainer]}
-        key={key}
-      >
-        <View style={styles.itemTopSection}>
-          {/* <PlaceholderRectangle
-            width={isCompact ? 60 : 35}
-            height={isCompact ? 60 : 35}
-            borderRadius={isCompact ? 10 : 30}
-          /> */}
-          <View>
-            {/* <PlaceholderRectangle width={109} height={15} borderRadius={3} /> */}
-            <Text style={styles.name}>John Doe, 27, Brooklyn</Text>
-
-            {/* <PlaceholderRectangle width={65} /> */}
-          </View>
-        </View>
-        {!isCompact && (
-          <View style={styles.itemMiddleSection}>
-            <PlaceholderRectangle width={270} />
-            <PlaceholderRectangle width={315} />
-            <PlaceholderRectangle width={135} marginBottom={25} />
-          </View>
-        )}
+      <View style={styles.itemContainer} key={key}>
+        <Text style={styles.name}>John Doe, 27, Brooklyn</Text>
 
         <View style={styles.buttonContainer}>
           <TouchableHighlight
@@ -410,7 +264,7 @@ class EntitiesLoadingState extends Component {
             // width={"100%"}
             // height={60}
             borderRadius={0}
-            style={isCompact && styles.compactActionPlaceholder}
+            style={styles.compactActionPlaceholder}
           />
         </View>
       </View>
@@ -423,44 +277,6 @@ class EntitiesLoadingState extends Component {
       1,
       "Default layout | Loop | Autoplay | Parallax | Scale | Opacity | Pagination with tappable dots"
     );
-    const example2 = this.momentumExample(
-      2,
-      "Momentum | Left-aligned | Active animation"
-    );
-    const example3 = this.layoutExample(
-      3,
-      '"Stack of cards" layout | Loop',
-      "stack"
-    );
-    const example4 = this.layoutExample(
-      4,
-      '"Tinder-like" layout | Loop',
-      "tinder"
-    );
-    const example5 = this.customExample(
-      5,
-      "Custom animation 1",
-      1,
-      this._renderItem
-    );
-    const example6 = this.customExample(
-      6,
-      "Custom animation 2",
-      2,
-      this._renderLightItem
-    );
-    const example7 = this.customExample(
-      7,
-      "Custom animation 3",
-      3,
-      this._renderDarkItem
-    );
-    const example8 = this.customExample(
-      8,
-      "Custom animation 4",
-      4,
-      this._renderLightItem
-    );
     return (
       <SafeAreaView style={carouseleStyles.safeArea}>
         <View style={carouseleStyles.container}>
@@ -469,34 +285,73 @@ class EntitiesLoadingState extends Component {
             backgroundColor={"rgba(0, 0, 0, 0.3)"}
             barStyle={"light-content"}
           />
-          {this.gradient}
           <ScrollView
             style={carouseleStyles.scrollview}
             scrollEventThrottle={200}
             directionalLockEnabled={true}
           >
             {example1}
-            {example2}
-            {example3}
-            {example4}
-            {example5}
-            {example6}
-            {example7}
-            {example8}
+            {EntitiesLoadingState.renderPlaceholderFeedItem(type, 1)}
+          </ScrollView>
+          <ScrollView
+            style={carouseleStyles.scrollview}
+            scrollEventThrottle={200}
+            directionalLockEnabled={true}
+          >
+            {example1}
+            {EntitiesLoadingState.renderPlaceholderFeedItem(type, 2)}
+          </ScrollView>
+          <ScrollView
+            style={carouseleStyles.scrollview}
+            scrollEventThrottle={200}
+            directionalLockEnabled={true}
+          >
+            {example1}
+            {EntitiesLoadingState.renderPlaceholderFeedItem(type, 3)}
+          </ScrollView>
+          <ScrollView
+            style={carouseleStyles.scrollview}
+            scrollEventThrottle={200}
+            directionalLockEnabled={true}
+          >
+            {example1}
+            {EntitiesLoadingState.renderPlaceholderFeedItem(type, 4)}
+          </ScrollView>
+          <ScrollView
+            style={carouseleStyles.scrollview}
+            scrollEventThrottle={200}
+            directionalLockEnabled={true}
+          >
+            {example1}
+            {EntitiesLoadingState.renderPlaceholderFeedItem(type, 5)}
+          </ScrollView>
+          <ScrollView
+            style={carouseleStyles.scrollview}
+            scrollEventThrottle={200}
+            directionalLockEnabled={true}
+          >
+            {example1}
+            {EntitiesLoadingState.renderPlaceholderFeedItem(type, 6)}
+          </ScrollView>
+          <ScrollView
+            style={carouseleStyles.scrollview}
+            scrollEventThrottle={200}
+            directionalLockEnabled={true}
+          >
+            {example1}
+            {EntitiesLoadingState.renderPlaceholderFeedItem(type, 7)}
+          </ScrollView>
+          <ScrollView
+            style={carouseleStyles.scrollview}
+            scrollEventThrottle={200}
+            directionalLockEnabled={true}
+          >
+            {example1}
+            {EntitiesLoadingState.renderPlaceholderFeedItem(type, 8)}
           </ScrollView>
         </View>
       </SafeAreaView>
     );
-    // return [
-    //   EntitiesLoadingState.renderPlaceholderFeedItem(type, 1),
-    //   EntitiesLoadingState.renderPlaceholderFeedItem(type, 2),
-    //   EntitiesLoadingState.renderPlaceholderFeedItem(type, 3),
-    //   EntitiesLoadingState.renderPlaceholderFeedItem(type, 4),
-    //   EntitiesLoadingState.renderPlaceholderFeedItem(type, 5),
-    //   EntitiesLoadingState.renderPlaceholderFeedItem(type, 6),
-    //   EntitiesLoadingState.renderPlaceholderFeedItem(type, 7),
-    //   EntitiesLoadingState.renderPlaceholderFeedItem(type, 8)
-    // ];
   }
 }
 
