@@ -4,7 +4,7 @@ import { StyleSheet, Platform } from "react-native";
 import I18n from "src/infra/localization";
 import { connect } from "react-redux";
 import { markAllAsSeen } from "src/redux/notifications/actions";
-import * as pushManager from "src/infra/pushNotifications";
+// import * as pushManager from "src/infra/pushNotifications";
 import permissionsService from "src/infra/permissions/permissionsService";
 import {
   View,
@@ -153,12 +153,12 @@ class Notifications extends Component {
 
   registerNotifications = async () => {
     const { user } = this.props;
-    const pushToken = await pushManager.getPushToken();
+    // const pushToken = await pushManager.getPushToken();
 
     if (pushToken) {
       this.setState({ showNotificationsCta: false });
     } else {
-      const newPushToken = await pushManager.register(user);
+      // const newPushToken = await pushManager.register(user);
 
       if (newPushToken && this.state.showNotificationsCta) {
         this.setState({ showNotificationsCta: false });

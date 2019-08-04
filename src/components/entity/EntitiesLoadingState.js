@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { StyleSheet } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  Image,
+  Alert,
+  ScrollView
+} from "react-native";
 import { View, PlaceholderRectangle } from "src/components/basicComponents";
 import { daytColors } from "src/vars";
 
@@ -34,15 +41,88 @@ const styles = StyleSheet.create({
   compactActionPlaceholder: {
     borderBottomRightRadius: 15,
     borderBottomLeftRadius: 15
+  },
+  scrollContainer: {
+    flex: 1
+  },
+  container: {
+    padding: 20
+  },
+  box: {
+    marginTop: 10,
+    backgroundColor: "white",
+    alignItems: "center",
+    shadowColor: "black",
+    shadowOpacity: 0.2,
+    shadowOffset: {
+      height: 1,
+      width: -2
+    },
+    elevation: 2,
+    paddingTop: 10
+  },
+  profileImage: {
+    width: 100,
+    height: 100,
+    marginBottom: 20
+  },
+  name: {
+    fontSize: 20,
+    // marginBottom: 20,
+    fontWeight: "bold",
+    color: "#1E90FF"
+  },
+  buttonContainer: {
+    flexDirection: "row",
+    marginTop: 20
+  },
+
+  button: {
+    width: 60,
+    height: 60,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 20,
+    borderRadius: 30,
+    margin: 10,
+    shadowColor: "black",
+    shadowOpacity: 0.8,
+    shadowOffset: {
+      height: 2,
+      width: -2
+    },
+    elevation: 4
+  },
+  buttonMessage: {
+    backgroundColor: "#00BFFF"
+  },
+  buttonLike: {
+    backgroundColor: "#228B22"
+  },
+  buttonLove: {
+    backgroundColor: "#FF1493"
+  },
+  buttonCall: {
+    backgroundColor: "#40E0D0"
+  },
+  icon: {
+    width: 35,
+    height: 35
   }
 });
 
 class EntitiesLoadingState extends Component {
+  constructor(props) {
+    super(props);
+  }
   static COMPONENT_TYPE = {
     COMPACT: "compact",
     REGULAR: "regular"
   };
-
+  onClickListener = viewId => {
+    Alert.alert("Alert", "Button pressed " + viewId);
+  };
   static renderPlaceholderFeedItem(type, key) {
     const isCompact = type === EntitiesLoadingState.COMPONENT_TYPE.COMPACT;
     return (
@@ -51,29 +131,93 @@ class EntitiesLoadingState extends Component {
         key={key}
       >
         <View style={styles.itemTopSection}>
-          <PlaceholderRectangle
+          {/* <PlaceholderRectangle
             width={isCompact ? 60 : 35}
             height={isCompact ? 60 : 35}
             borderRadius={isCompact ? 10 : 30}
-          />
+          /> */}
           <View>
-            <PlaceholderRectangle width={109} height={15} borderRadius={3} />
-            <PlaceholderRectangle width={65} />
+            {/* <PlaceholderRectangle width={109} height={15} borderRadius={3} /> */}
+            <Text style={styles.name}>John Doe, 27, Brooklyn</Text>
+
+            {/* <PlaceholderRectangle width={65} /> */}
           </View>
         </View>
         {!isCompact && (
           <View style={styles.itemMiddleSection}>
             <PlaceholderRectangle width={270} />
             <PlaceholderRectangle width={315} />
-            <PlaceholderRectangle width={135} marginBottom={35} />
+            <PlaceholderRectangle width={135} marginBottom={25} />
           </View>
         )}
-        <PlaceholderRectangle
-          width={"100%"}
-          height={60}
-          borderRadius={0}
-          style={isCompact && styles.compactActionPlaceholder}
-        />
+
+        <View style={styles.buttonContainer}>
+          <TouchableHighlight
+            style={[styles.button, styles.buttonMessage]}
+            onPress={() => this.onClickListener("message")}
+          >
+            <Image
+              style={styles.icon}
+              source={{
+                uri: "https://img.icons8.com/ios/64/000000/cocktail.png"
+              }}
+            />
+          </TouchableHighlight>
+
+          <TouchableHighlight
+            style={[styles.button, styles.buttonLike]}
+            onPress={() => this.onClickListener("like")}
+          >
+            <Image
+              style={styles.icon}
+              source={{
+                uri: "https://img.icons8.com/ios/50/000000/sunset.png"
+              }}
+            />
+          </TouchableHighlight>
+
+          <TouchableHighlight
+            style={[styles.button, styles.buttonLove]}
+            onPress={() => this.onClickListener("love")}
+          >
+            <Image
+              style={styles.icon}
+              source={{
+                uri:
+                  "https://img.icons8.com/pastel-glyph/64/000000/tent-in-the-forest.png"
+              }}
+            />
+          </TouchableHighlight>
+
+          <TouchableHighlight
+            style={[styles.button, styles.buttonCall]}
+            onPress={() => this.onClickListener("phone")}
+          >
+            <Image
+              style={styles.icon}
+              source={{
+                uri: "https://img.icons8.com/ios/64/000000/ticket.png"
+              }}
+            />
+          </TouchableHighlight>
+          <TouchableHighlight
+            style={[styles.button, styles.buttonCall]}
+            onPress={() => this.onClickListener("phone")}
+          >
+            <Image
+              style={styles.icon}
+              source={{
+                uri: "https://img.icons8.com/ios/64/000000/ticket.png"
+              }}
+            />
+          </TouchableHighlight>
+          <PlaceholderRectangle
+            // width={"100%"}
+            // height={60}
+            borderRadius={0}
+            style={isCompact && styles.compactActionPlaceholder}
+          />
+        </View>
       </View>
     );
   }

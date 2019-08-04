@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">dayt2</string>
+    <string name="fcm_sender_id">431500802141</string>
+
 </resources>

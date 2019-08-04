@@ -217,7 +217,7 @@ class InfiniteScroll extends React.Component {
       if (horizontal) {
         return null;
       }
-      return <Spinner style={styles.spinner} size="large" key="loader" />;
+      return <Spinner style={styles.spinner} size="small" key="loader" />;
     } else if (
       (isNil(totalCount) || totalCount === 0) &&
       data &&

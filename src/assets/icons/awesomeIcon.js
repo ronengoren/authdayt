@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, StyleSheet, Platform } from "react-native";
 import PropTypes from "prop-types";
-import Icons from "../../assets/fonts/fontAwesome/config.json";
-import { daytColors } from "../../vars";
-import { stylesScheme } from "../../schemas/common";
+import Icons from "src/assets/fonts/fontAwesome/config.json";
+import { daytColors } from "src/vars";
+import { stylesScheme } from "src/schemas/common";
 
 const styles = StyleSheet.create({
   icon: {

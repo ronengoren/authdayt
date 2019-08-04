@@ -6,7 +6,7 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>3865F6B3-600C-43BB-80CC-9E18798C5AB7</key>
+		<key>9C213AD7-784D-4C67-9767-75CAA91C0AA8</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>3865F6B3-600C-43BB-80CC-9E18798C5AB7.xcactivitylog</string>
+			<string>9C213AD7-784D-4C67-9767-75CAA91C0AA8.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>S</string>
 			<key>schemeIdentifier-containerName</key>
@@ -27,15 +27,15 @@
 			<key>signature</key>
 			<string>Debug dayt2</string>
 			<key>timeStartedRecording</key>
-			<real>586488043.04050601</real>
+			<real>586502117.62345695</real>
 			<key>timeStoppedRecording</key>
-			<real>586488200.29237998</real>
+			<real>586502538.10524404</real>
 			<key>title</key>
 			<string>Debug dayt2</string>
 			<key>uniqueIdentifier</key>
-			<string>3865F6B3-600C-43BB-80CC-9E18798C5AB7</string>
+			<string>9C213AD7-784D-4C67-9767-75CAA91C0AA8</string>
 		</dict>
-		<key>555EF028-7E2A-42F8-9E54-E1A259CDBD13</key>
+		<key>ED3122F4-3549-406D-A7B4-0D9C720F4E80</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -44,7 +44,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>555EF028-7E2A-42F8-9E54-E1A259CDBD13.xcactivitylog</string>
+			<string>ED3122F4-3549-406D-A7B4-0D9C720F4E80.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>S</string>
 			<key>schemeIdentifier-containerName</key>
@@ -56,13 +56,13 @@
 			<key>signature</key>
 			<string>Debug dayt2</string>
 			<key>timeStartedRecording</key>
-			<real>586397248.61917901</real>
+			<real>586498896.109833</real>
 			<key>timeStoppedRecording</key>
-			<real>586397534.64686298</real>
+			<real>586500385.56142199</real>
 			<key>title</key>
 			<string>Debug dayt2</string>
 			<key>uniqueIdentifier</key>
-			<string>555EF028-7E2A-42F8-9E54-E1A259CDBD13</string>
+			<string>ED3122F4-3549-406D-A7B4-0D9C720F4E80</string>
 		</dict>
 	</dict>
 </dict>

@@ -9,7 +9,6 @@
 	<string>WebKit</string>
 	<string>folly</string>
 	<string>FLAnimatedImage</string>
-	<string>CodePush</string>
 	<string>CoreLocation</string>
 	<string>AVKit</string>
 	<string>DVAssetLoaderDelegate</string>

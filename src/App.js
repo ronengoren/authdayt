@@ -30,12 +30,6 @@ import {
   ActionSheetManager
 } from "src/components";
 
-import Welcome from "./screens/welcome/Welcome";
-import SetUserGender from "./screens/signup/SetUserGender";
-import Signup from "./screens/signup/Signup";
-import OnBoardingDiscover from "./screens/signup/OnBoardingDiscover/OnBoardingDiscover";
-import SuggestedTopicItem from "./screens/signup/OnBoardingDiscover/SuggestedTopicItem";
-
 export default class App extends Component {
   render() {
     return [

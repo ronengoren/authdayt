@@ -126,8 +126,8 @@ export const setUser = user => async dispatch => {
   dispatch({ type: LOAD_FEATURE_FLAGS, payload: featureFlags });
   await userLocalStorage.set(user);
 
-  pushManager.setUserId(id);
-  pushManager.setUserTags(user);
+  // pushManager.setUserId(id);
+  // pushManager.setUserTags(user);
 
   chatService.init(id);
 
@@ -145,16 +145,16 @@ export const setUser = user => async dispatch => {
     .dispatch();
 };
 
-const logoutProviders = () => {
-  chatService.resetUser();
-  pushManager.resetUser();
-};
+// const logoutProviders = () => {
+//   chatService.resetUser();
+//   pushManager.resetUser();
+// };
 
 export const logout = ({ onError }) => async dispatch => {
   dispatch({ type: LOGOUT_BEGIN });
   try {
     analytics.actionEvents.logout().dispatch();
-    const token = await pushManager.getPushToken();
+    // const token = await pushManager.getPushToken();
     await dispatch(apiCommand("auth.logout", { deviceToken: token }));
     await userLocalStorage.remove();
     logoutProviders();

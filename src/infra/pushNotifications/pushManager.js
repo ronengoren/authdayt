@@ -1,10 +1,10 @@
-// import Pushwoosh from 'pushwoosh-react-native-plugin';
-// import config from '/config';
-// import { apiCommand } from '/redux/apiCommands/actions';
-// import { Logger } from '/infra/reporting';
-// import { get } from '/infra/utils';
-// import { getDeviceUUID } from '/infra/utils/deviceUtils';
-// import { getFirstName } from '/infra/utils/stringUtils';
+import Pushwoosh from "pushwoosh-react-native-plugin";
+import config from "src/config";
+import { apiCommand } from "src/redux/apiCommands/actions";
+import { Logger } from "src/infra/reporting";
+import { get } from "src/infra/utils";
+import { getDeviceUUID } from "src/infra/utils/deviceUtils";
+import { getFirstName } from "src/infra/utils/stringUtils";
 
 // Pushwoosh.init({
 //   pw_appid: config.providers.pushwoosh.appId,
@@ -14,10 +14,10 @@
 // export function getPushToken() {
 //   return new Promise((resolve, reject) => {
 //     Pushwoosh.getPushToken(
-//       (token) => {
+//       token => {
 //         resolve(token);
 //       },
-//       (err) => {
+//       err => {
 //         reject(err);
 //       }
 //     );
@@ -29,10 +29,10 @@
 // }
 
 // export async function setUserTags(user) {
-//   const { name = '', gender } = user;
-//   const communityId = get(user, 'community.id');
-//   const neighborhoodName = get(user, 'journey.neighborhood.name');
-//   const neighborhoodId = get(user, 'journey.neighborhood.id');
+//   const { name = "", gender } = user;
+//   const communityId = get(user, "community.id");
+//   const neighborhoodName = get(user, "journey.neighborhood.name");
+//   const neighborhoodId = get(user, "journey.neighborhood.id");
 
 //   await Pushwoosh.setTags({
 //     communityId,
@@ -44,11 +44,13 @@
 // }
 
 // export function setBadgeNumber(newBadgeNumber) {
-//   return new Promise((resolve) => {
-//     Pushwoosh.getApplicationIconBadgeNumber((currentBadgeNumber) => {
+//   return new Promise(resolve => {
+//     Pushwoosh.getApplicationIconBadgeNumber(currentBadgeNumber => {
 //       if (currentBadgeNumber !== newBadgeNumber) {
 //         Pushwoosh.setApplicationIconBadgeNumber(newBadgeNumber);
-//         global.store.dispatch(apiCommand('users.setBadgeNumber', { badgeNumber: newBadgeNumber }));
+//         global.store.dispatch(
+//           apiCommand("users.setBadgeNumber", { badgeNumber: newBadgeNumber })
+//         );
 //       }
 //       resolve();
 //     });
@@ -61,17 +63,21 @@
 // }
 
 // export function register(user) {
-//   return new Promise((resolve) => {
+//   return new Promise(resolve => {
 //     const { id } = user;
 //     Pushwoosh.register(
-//       (token) => {
-//         global.store.dispatch(apiCommand('auth.addDeviceToken', { token }));
+//       token => {
+//         global.store.dispatch(apiCommand("auth.addDeviceToken", { token }));
 //         setUserId(id);
 //         setUserTags(user);
 //         resolve(token);
 //       },
-//       (err) => {
-//         Logger.error({ errType: 'pushwoosh', err, action: 'register push notifications' });
+//       err => {
+//         Logger.error({
+//           errType: "pushwoosh",
+//           err,
+//           action: "register push notifications"
+//         });
 //         resolve();
 //       }
 //     );
@@ -83,22 +89,22 @@
 
 //   return new Promise((resolve, reject) => {
 //     Pushwoosh.unregister(
-//       (response) => {
+//       response => {
 //         Logger.info({
-//           domain: 'push',
-//           method: 'unregisterPushNotifications',
-//           case: 'success',
+//           domain: "push",
+//           method: "unregisterPushNotifications",
+//           case: "success",
 //           response,
 //           userName: user && user.name,
 //           userId: user && user.id
 //         });
 //         resolve();
 //       },
-//       (err) => {
+//       err => {
 //         Logger.info({
-//           domain: 'push',
-//           method: 'unregisterPushNotifications',
-//           case: 'failure',
+//           domain: "push",
+//           method: "unregisterPushNotifications",
+//           case: "failure",
 //           err,
 //           userName: user && user.name,
 //           userId: user && user.id
