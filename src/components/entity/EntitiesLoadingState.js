@@ -157,8 +157,8 @@ class EntitiesLoadingState extends Component {
 
     return (
       <View style={carouseleStyles.exampleContainer}>
-        <Text style={carouseleStyles.title}>{`Example ${number}`}</Text>
-        <Text style={carouseleStyles.subtitle}>{title}</Text>
+        {/* <Text style={carouseleStyles.title}>{`Example ${number}`}</Text>
+        <Text style={carouseleStyles.subtitle}>{title}</Text> */}
         <Carousel
           ref={c => (this._slider1Ref = c)}
           data={ENTRIES1}
@@ -261,7 +261,7 @@ class EntitiesLoadingState extends Component {
     const isEven = refNumber % 2 === 0;
 
     // Do not render examples on Android; because of the zIndex bug, they won't work as is
-    return !IS_ANDROID ? (
+    return (
       <View
         style={[
           carouseleStyles.exampleContainer,
@@ -295,8 +295,8 @@ class EntitiesLoadingState extends Component {
           useScrollView={true}
         />
       </View>
-    ) : (
-      false
+      // ) : (
+      //   false
     );
   }
 
@@ -488,14 +488,14 @@ class EntitiesLoadingState extends Component {
       </SafeAreaView>
     );
     // return [
-    // EntitiesLoadingState.renderPlaceholderFeedItem(type, 1),
-    // EntitiesLoadingState.renderPlaceholderFeedItem(type, 2),
-    // EntitiesLoadingState.renderPlaceholderFeedItem(type, 3),
-    // EntitiesLoadingState.renderPlaceholderFeedItem(type, 4),
-    // EntitiesLoadingState.renderPlaceholderFeedItem(type, 5),
-    // EntitiesLoadingState.renderPlaceholderFeedItem(type, 6),
-    // EntitiesLoadingState.renderPlaceholderFeedItem(type, 7),
-    // EntitiesLoadingState.renderPlaceholderFeedItem(type, 8)
+    //   EntitiesLoadingState.renderPlaceholderFeedItem(type, 1),
+    //   EntitiesLoadingState.renderPlaceholderFeedItem(type, 2),
+    //   EntitiesLoadingState.renderPlaceholderFeedItem(type, 3),
+    //   EntitiesLoadingState.renderPlaceholderFeedItem(type, 4),
+    //   EntitiesLoadingState.renderPlaceholderFeedItem(type, 5),
+    //   EntitiesLoadingState.renderPlaceholderFeedItem(type, 6),
+    //   EntitiesLoadingState.renderPlaceholderFeedItem(type, 7),
+    //   EntitiesLoadingState.renderPlaceholderFeedItem(type, 8)
     // ];
   }
 }
