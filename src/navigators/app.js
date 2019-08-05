@@ -11,8 +11,8 @@ import { Header, CustomTabBar } from "../components";
 import { daytColors } from "../vars";
 import { get } from "../infra/utils";
 import Home from "./home";
-import People from "./people";
-import MyCity from "./myCity";
+// import People from "./people";
+// import MyCity from "./myCity";
 import Groups from "./groups";
 import Communications from "./communications";
 
@@ -61,15 +61,15 @@ const TabSection = createBottomTabNavigator(
     [screenGroupNames.HOME_TAB]: {
       screen: Home
     },
-    [screenGroupNames.PEOPLE_TAB]: {
-      screen: People
-    },
-    [screenGroupNames.MY_CITY]: {
-      screen: MyCity,
-      navigationOptions: {
-        tabBarTestID: "cityTabBtn"
-      }
-    },
+    // [screenGroupNames.PEOPLE_TAB]: {
+    //   screen: People
+    // },
+    // [screenGroupNames.MY_CITY]: {
+    //   screen: MyCity,
+    //   navigationOptions: {
+    //     tabBarTestID: "cityTabBtn"
+    //   }
+    // },
     [screenGroupNames.GROUPS_TAB]: {
       screen: Groups,
       navigationOptions: {

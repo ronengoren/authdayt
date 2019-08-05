@@ -7,8 +7,8 @@ export default {
     video4: require("./video4.mp4"),
     notification: require("./notification.mp4"),
     welcome: require("./Welcome.mp4")
-  },
-  people: {
-    main: require("./people.mp4")
   }
+  // people: {
+  //   main: require("./people.mp4")
+  // }
 };

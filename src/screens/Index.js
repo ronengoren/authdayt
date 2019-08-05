@@ -30,7 +30,7 @@ export {
   EditProfileDate
 } from "./profile";
 // export { PostEditor } from "./post";
-export { PeopleTab } from "./peopleTab";
+// export { PeopleTab } from "./peopleTab";
 export { GroupsTab } from "./groupsTab";
 export { CommunicationCenter } from "./communicationCenter";
 export { PostPage, PostEditor, AddDescription, ContextPicker } from "./post";

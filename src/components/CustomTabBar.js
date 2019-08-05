@@ -177,21 +177,24 @@ class CustomTabBar extends React.PureComponent {
     return (
       <View style={isAndroid ? styles.wrapperAndroid : styles.wrapper}>
         <View style={styles.footerBackgroundWrapper}>
-          <Image
+          {/* <Image
             source={images.tabsFooter.background}
             style={styles.footerBackground}
-          />
+          /> */}
         </View>
         <View style={styles.innerWrapper}>
           {routes.map((route, routeIndex) => {
             const isFocused = routeIndex === index;
             const testID = getTestID({ route });
+            return this.renderTabWithIcon({ isFocused, route, testID });
             {
+              /* {
               if (routeIndex === 2) {
                 return this.renderMyCityTab({ isFocused, route, testID });
               }
             }
-            return this.renderTabWithIcon({ isFocused, route, testID });
+            return this.renderTabWithIcon({ isFocused, route, testID }); */
+            }
           })}
         </View>
       </View>
@@ -243,10 +246,10 @@ class CustomTabBar extends React.PureComponent {
   };
 
   renderMyCityTab = ({ isFocused, route, testID }) => {
-    // const {
-    //   user: { media, themeColor, name },
-    //   community
-    // } = this.props;
+    const {
+      user: { media, themeColor, name }
+      // community
+    } = this.props;
     const community = "this.props";
     const textColor = isFocused ? daytColors.darkPink : INACTIVE_TAB_TEXT_COLOR;
     const maskUrl = isFocused
@@ -265,9 +268,9 @@ class CustomTabBar extends React.PureComponent {
               imageStyle={styles.avatar}
               size="tiny"
               entityType="user"
-              // themeColor={themeColor}
-              // thumbnail={media.thumbnail}
-              // name={name}
+              themeColor={themeColor}
+              thumbnail={media.thumbnail}
+              name={name}
               linkable={false}
             />
           </View>
@@ -327,14 +330,14 @@ class CustomTabBar extends React.PureComponent {
   };
 
   navigateToConnectedAccounts = async () => {
-    // const { getConnectedAcounts } = this.props;
-    // const connectedAccounts = await getConnectedAcounts();
-    // if (connectedAccounts.length) {
-    //   navigationService.navigate(screenNames.ConnectedUsersList, {
-    //     connectedAccounts,
-    //     isSoundEnabled: false
-    //   });
-    // }
+    const { getConnectedAcounts } = this.props;
+    const connectedAccounts = await getConnectedAcounts();
+    if (connectedAccounts.length) {
+      navigationService.navigate(screenNames.ConnectedUsersList, {
+        connectedAccounts,
+        isSoundEnabled: false
+      });
+    }
   };
 }
 
@@ -353,12 +356,12 @@ CustomTabBar.propTypes = {
   })
 };
 
-// const mapStateToProps = state => ({
-//   user: state.auth.user,
-//   friendRequestsNumber: state.friendships.friendRequestsNumber,
-//   unseenNotifications: state.notifications.unseenNotifications,
-//   unreadChats: state.inbox.unreadChats,
-//   community: state.auth.user.community
-// });
+const mapStateToProps = state => ({
+  user: state.auth.user,
+  friendRequestsNumber: state.friendships.friendRequestsNumber,
+  unseenNotifications: state.notifications.unseenNotifications,
+  unreadChats: state.inbox.unreadChats,
+  community: state.auth.user.community
+});
 
 export default CustomTabBar;

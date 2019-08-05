@@ -22,13 +22,13 @@ export default {
     profile_mask_focused: require("./tabsFooter/profile_mask_focused.png"),
     profile_placeholder: require("./tabsFooter/profile_placeholder.png")
   },
-  people: {
-    main: require("./people/people1080p.png"),
-    people: require("./people/people.png"),
-    referral_program_people: require("./people/referral_program_people.png"),
-    avatar_mask: require("./people/avatar_mask.png"),
-    referral_redeemed_people: require("./people/referral_redeemed_people.png")
-  },
+  // people: {
+  //   main: require("./people/people1080p.png"),
+  //   people: require("./people/people.png"),
+  //   referral_program_people: require("./people/referral_program_people.png"),
+  //   avatar_mask: require("./people/avatar_mask.png"),
+  //   referral_redeemed_people: require("./people/referral_redeemed_people.png")
+  // },
   profile: {
     imageGradient: require("./profile/image_gradient.png"),
     imagePlaceholder: require("./profile/image_placeholder.jpg"),
