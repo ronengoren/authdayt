@@ -9,17 +9,18 @@ import { entityTypes } from "src/vars/enums";
 
 const styles = StyleSheet.create({
   wrapper: {
-    flex: 1,
-    flexDirection: "row",
-    height: 55,
+    // flex: 1,
+    // flexDirection: "row",
+    justifyContent: "center",
+    // height: 75,
     borderRadius: 14,
-    alignItems: "center",
-    marginHorizontal: 10,
-    elevation: 2
+    alignItems: "center"
+    // marginHorizontal: 10
+    // elevation: 2
   },
   textStyle: {
     fontSize: 16,
-    lineHeight: 18,
+    lineHeight: 28,
     color: daytColors.b60,
     textAlign: "left",
     flex: 1
@@ -30,23 +31,26 @@ const styles = StyleSheet.create({
   },
   postText: {
     fontWeight: "bold",
-    color: daytColors.azure,
-    marginRight: 15,
-    fontSize: 16
+    // color: daytColors.azure,
+    // marginRight: 15,
+    lineHeight: 40,
+    fontSize: 36,
+    marginTop: 20,
+    color: "#FEF08C"
   }
 });
 
 class PostButton extends React.Component {
   render() {
     const { text, user, onPress, testID } = this.props;
-    const { id, themeColor, name, media } = user;
+    // const { id, themeColor, name, media } = user;
     return (
       <TouchableOpacity
         activeOpacity={1}
         onPress={onPress}
         style={[commonStyles.shadow, styles.wrapper]}
       >
-        <Avatar
+        {/* <Avatar
           style={styles.avatar}
           size="medium1"
           entityId={id}
@@ -55,15 +59,15 @@ class PostButton extends React.Component {
           name={name}
           thumbnail={media ? media.thumbnail : null}
           linkable={false}
-        />
-        <Text
+        /> */}
+        {/* <Text
           numberOfLines={1}
           style={styles.textStyle}
           key="text"
           testID={testID}
         >
           {text}
-        </Text>
+        </Text> */}
         <Text style={styles.postText}>{I18n.t("home.post_button")}</Text>
       </TouchableOpacity>
     );

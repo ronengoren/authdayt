@@ -38,7 +38,8 @@ import { misc as miscLocalStorage } from "src/infra/localStorage";
 import { userScheme } from "src/schemas";
 import NewUserWelcomeModal from "./NewUserWelcomeModal";
 import BoardsHeader from "./BoardsHeader";
-
+import ActionButton from "react-native-action-button";
+import PostEditor from "src/screens/post/PostEditor/PostEditor";
 const styles = StyleSheet.create({
   feedHeaderWrapper: {
     flex: 1,
@@ -123,15 +124,15 @@ const styles = StyleSheet.create({
     color: daytColors.white
   },
   topicChipsLoadingWrapper: {
-    flexDirection: "row",
-    marginHorizontal: 15
+    flexDirection: "row"
+    // marginHorizontal: 15
   },
   topicChipsLoadingWrapperRTL: {
-    flexDirection: "row-reverse",
-    marginHorizontal: 15
+    flexDirection: "row-reverse"
+    // marginHorizontal: 15
   },
   chipsLoadingState: {
-    marginBottom: 15
+    // marginBottom: 15
   },
   themesCarouselBottomBorder: {
     // marginBottom: 20
@@ -140,7 +141,7 @@ const styles = StyleSheet.create({
     backgroundColor: daytColors.b90
   },
   postButtonWrapper: {
-    marginBottom: 5
+    marginTop: 25
   },
   // floatingHeader: {
   //   borderBottomWidth: 0,
@@ -232,6 +233,7 @@ class HomeTab extends React.Component {
           }
           onTopFetchAction={isNewsFeed ? getListItemCta : null}
         />
+
         {/* <NewUserWelcomeModal /> */}
 
         {/* <FloatingHeader
@@ -301,9 +303,64 @@ class HomeTab extends React.Component {
     const isAdmin = isAppAdmin(true);
 
     return (
+      // <View style={{ marginBottom: 50, backgroundColor: "#f3f3f3" }}>
+      //   {/* Rest of the app comes ABOVE the action button component !*/}
+      //   <ActionButton buttonColor="rgba(231,76,60,1)" useNativeFeedback="true">
+      //     <ActionButton.Item
+      //       buttonColor="#9b59b6"
+      //       onPress={() => console.log("notes tapped!")}
+      //     >
+      //       <AwesomeIcon name="md-create" style={styles.actionButtonIcon} />
+      //     </ActionButton.Item>
+      //     <ActionButton.Item buttonColor="#3498db" onPress={() => {}}>
+      //       <AwesomeIcon
+      //         name="md-notifications-off"
+      //         style={styles.actionButtonIcon}
+      //       />
+      //     </ActionButton.Item>
+      //     <ActionButton.Item buttonColor="#1abc9c" onPress={() => {}}>
+      //       <AwesomeIcon name="md-done-all" style={styles.actionButtonIcon} />
+      //     </ActionButton.Item>
+      //     <ActionButton.Item
+      //       buttonColor="#9b59b6"
+      //       onPress={() => console.log("notes tapped!")}
+      //     >
+      //       <AwesomeIcon name="md-create" style={styles.actionButtonIcon} />
+      //     </ActionButton.Item>
+      //     <ActionButton.Item
+      //       buttonColor="green"
+      //       onPress={() => console.log("notes tapped!")}
+      //     >
+      //       <AwesomeIcon name="md-create" style={styles.actionButtonIcon} />
+      //     </ActionButton.Item>
+      //     <ActionButton.Item
+      //       buttonColor="yellow"
+      //       onPress={() => console.log("notes tapped!")}
+      //     >
+      //       <AwesomeIcon name="md-create" style={styles.actionButtonIcon} />
+      //     </ActionButton.Item>
+      //     <ActionButton.Item
+      //       buttonColor="pink"
+      //       onPress={() => console.log("notes tapped!")}
+      //     >
+      //       <AwesomeIcon name="md-create" style={styles.actionButtonIcon} />
+      //     </ActionButton.Item>
+      //   </ActionButton>
+      //   </View>
+
       <View style={styles.feedHeaderWrapper}>
         <View style={styles.headerUpperSection}>
-          <Image
+          <View style={styles.postButtonWrapper} key="postButton">
+            <PostButton
+              text={I18n.t("home.post_button_text")}
+              onPress={this.navigateToPostCreationPage}
+              testID="postButton"
+            />
+          </View>
+          <View style={{ height: 700 }}>
+            <PostEditor />
+          </View>
+          {/* <Image
             source={images.homeTab.gradient}
             style={styles.headerUpperSectionBackground}
           />
@@ -314,9 +371,10 @@ class HomeTab extends React.Component {
             bold
             style={[styles.userName, isRtlDesign && styles.userNameRTL]}
           >
-            {/* {greetingLines[0]} */}
-          </Text>
-          <Text
+            {greetingLines[0]}
+          </Text> */}
+
+          {/* <Text
             size={36}
             lineHeight={40}
             color={textColor}
@@ -324,40 +382,7 @@ class HomeTab extends React.Component {
             style={[styles.greetingTime, isRtlDesign && styles.greetingTimeRTL]}
           >
             {greetingLines[1]}
-          </Text>
-          {/* <TouchableOpacity
-            onPress={this.navigateToSearch}
-            activeOpacity={0.5}
-            style={[
-              styles.searchBox,
-              commonStyles.shadow,
-              isRtlDesign && styles.searchBoxRTL
-            ]}
-          >
-            <AwesomeIcon
-              name="search"
-              size={20}
-              color={daytColors.b60}
-              style={
-                isRtlDesign ? styles.searchBoxIconRTL : styles.searchBoxIcon
-              }
-              weight="solid"
-            />
-            <Text
-              size={16}
-              lineHeight={19}
-              color={daytColors.b60}
-              numberOfLines={1}
-              style={
-                isRtlDesign ? styles.searchBoxTextRTL : styles.searchBoxText
-              }
-            >
-              {I18n.t("home.search_placeholder")}
-            </Text>
-          </TouchableOpacity> */}
-          {/* {topics && topics.length
-            ? this.renderTopicChips({ isRtlDesign })
-            : this.renderTopicChipsLoadingState({ isRtlDesign })} */}
+          </Text> */}
         </View>
         <BoardsHeader />
         <View style={styles.themesCarouselBottomBorder} />
@@ -371,16 +396,23 @@ class HomeTab extends React.Component {
             style={styles.subHeader}
           />
         )}
-        <View style={styles.postButtonWrapper} key="postButton">
-          {/* <PostButton
-            text={I18n.t("home.post_button_text")}
-            onPress={this.navigateToPostCreationPage}
-            testID="postButton"
-          /> */}
-        </View>
       </View>
     );
   };
+  navigateToPostCreationPage = () => {
+    // const { userNeighborhood } = this.props;
+    // const { activeSubTab } = this.state;
+    // const params = {
+    //   mode: editModes.CREATE,
+    //   onCreated: this.scrollToFeedTop,
+    //   activeSubTab
+    // };
+    // if (userNeighborhood) {
+    //   params.additionalContexts = [{ ...userNeighborhood, entityType: entityTypes.NEIGHBORHOOD }];
+    // }
+    navigationService.navigate(screenNames.PostEditor);
+  };
+
   renderTopicChipsLoadingState = ({ isRtlDesign }) => {
     const row = index => (
       <View

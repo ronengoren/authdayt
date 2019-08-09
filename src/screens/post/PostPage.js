@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { StyleSheet, FlatList } from "react-native";
+import { StyleSheet, FlatList, Text } from "react-native";
 import { connect } from "react-redux";
 import { getPost } from "src/redux/postPage/actions";
 import { openActionSheet } from "src/redux/general/actions";
@@ -17,18 +17,18 @@ import {
   ScrollItemErrorBoundary
 } from "src/components";
 import { IntroductionPost } from "src/components/introduction";
-// import { ActivationPost } from '/components/activation';
-import { JoinedYourCommunityPost } from "src/components/joinedYourCommunity";
-import { InstagramPassivePostFooter } from "src/components/instagram";
+// // import { ActivationPost } from '/components/activation';
+// import { JoinedYourCommunityPost } from "src/components/joinedYourCommunity";
+// import { InstagramPassivePostFooter } from "src/components/instagram";
 import {
   View,
   IconButton,
   FloatingHeader,
   CommentInput
-} from "/components/basicComponents";
-import { PollPost } from "/components/poll";
-import ViewCountsService from "/infra/viewCounts";
-import { homeisColors, uiConstants, commonStyles } from "/vars";
+} from "src/components/basicComponents";
+// import { PollPost } from "/components/poll";
+import ViewCountsService from "src/infra/viewCounts";
+import { daytColors, uiConstants, commonStyles } from "src/vars";
 import {
   postTypes,
   listViewTypes,
@@ -36,14 +36,14 @@ import {
   entityTypes,
   originTypes,
   passivePostSubTypes
-} from "/vars/enums";
-import { get } from "/infra/utils";
-import { navigationService } from "/infra/navigation";
-import { PostActionSheetButton } from "/components/posts";
+} from "src/vars/enums";
+import { get } from "src/infra/utils";
+import { navigationService } from "src/infra/navigation";
+import { PostActionSheetButton } from "src/components/posts";
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: homeisColors.white
+    backgroundColor: daytColors.white
   },
   postBody: {
     flex: 1
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     height: 45,
-    backgroundColor: homeisColors.transparent,
+    backgroundColor: daytColors.transparent,
     paddingHorizontal: 10
   }
 });
@@ -393,28 +393,28 @@ PostPage.propTypes = {
   getPost: PropTypes.func
 };
 
-const mapStateToProps = (state, ownProps) => {
-  const postId = ownProps.navigation.state.params.entityId;
-  const { showKeyboard } = ownProps.navigation.state.params;
-  return {
-    user: state.auth.user,
-    postPageData: state.postPage[postId],
-    postId,
-    showKeyboard
-  };
-};
+// const mapStateToProps = (state, ownProps) => {
+//   const postId = ownProps.navigation.state.params.entityId;
+//   const { showKeyboard } = ownProps.navigation.state.params;
+//   return {
+//     user: state.auth.user,
+//     postPageData: state.postPage[postId],
+//     postId,
+//     showKeyboard
+//   };
+// };
 
-const mapDispatchToProps = {
-  getPost,
-  apiCommand,
-  openActionSheet,
-  deletePost,
-  clearMentionsList
-};
+// const mapDispatchToProps = {
+//   getPost,
+//   apiCommand,
+//   openActionSheet,
+//   deletePost,
+//   clearMentionsList
+// };
 
-PostPage = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(PostPage);
-PostPage = Screen()(PostPage);
+// PostPage = connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(PostPage);
+// PostPage = Screen()(PostPage);
 export default PostPage;

@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { StyleSheet, TouchableOpacity } from "react-native";
 import I18n from "src/infra/localization";
 import connect from "react-redux/es/connect/connect";
-// import { likePost, deletePost } from "/redux/feed/actions";
-// import { openActionSheet } from "/redux/general/actions";
+import { likePost, deletePost } from "src/redux/feed/actions";
+import { openActionSheet } from "src/redux/general/actions";
 import { PostFooter, HtmlText } from "src/components";
 import { EntityAction } from "src/components/entity";
 import {

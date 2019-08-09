@@ -32,3 +32,6 @@ export { default as BreadCrumbs } from "./BreadCrumbs";
 export { default as Triangle } from "./Triangle";
 export { default as BadgeIcon } from "./BadgeIcon";
 export { default as SquareIconButton } from "./SquareIconButton";
+export { default as CommentInput } from "./CommentInput";
+export { default as KeyboardAvoidingView } from "./KeyboardAvoidingView";
+export { default as Toast } from "./Toast";

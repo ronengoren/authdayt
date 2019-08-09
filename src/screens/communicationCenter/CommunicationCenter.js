@@ -72,7 +72,7 @@ class CommunicationCenter extends Component {
       return (
         <Header
           title={I18n.t("communication_center.title")}
-          rightBtnIconName="compose"
+          // rightBtnIconName="compose"
           rightBtnIconSize={31}
           rightBtnAction={() =>
             navigate(screenNames.ChatUserSelector, { selectFriends: true })

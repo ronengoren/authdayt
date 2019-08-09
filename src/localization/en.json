@@ -1184,10 +1184,10 @@
         "create_button": "Create"
     },
     "communication_center": {
-        "title": "Inbox",
+        "title": "Chats",
         "sub_tabs": {
-            "sub_tab_1": "Notifications",
-            "sub_tab_2": "Messages"
+            "sub_tab_1": "Potential Dayts",
+            "sub_tab_2": "Conversations"
         },
         "notifications": {
             "turn_on_notifications_cta": {
@@ -1698,7 +1698,7 @@
             "sub_tab_2": "Community",
             "sub_tab_3": "Scheduled"
         },
-        "post_button": "Post",
+        "post_button": "When?",
         "boards": {
             "job": "Drinks",
             "events": "Wild Nights",

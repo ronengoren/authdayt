@@ -99,7 +99,6 @@ class GroupsTab extends React.Component {
 
     return (
       <View style={styles.container}>
-        <Text>GroupsTab</Text>
         <EntityListsView
           createEntityButton={this.createEntityButton}
           topSectionSubHeaderProps={this.topSectionSubHeaderProps}

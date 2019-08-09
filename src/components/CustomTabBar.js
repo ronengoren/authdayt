@@ -158,6 +158,11 @@ const tabs = {
       size: 20
     },
     activeColor: daytColors.azure
+  },
+  actionButtonIcon: {
+    fontSize: 20,
+    height: 22,
+    color: "white"
   }
 };
 
