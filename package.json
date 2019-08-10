@@ -39,10 +39,10 @@
     "react-native-motion": "^1.0.4",
     "react-native-orientation": "^3.1.3",
     "react-native-paper": "^2.16.0",
+    "react-native-parallax-header": "^1.1.3",
     "react-native-snap-carousel": "^3.8.0",
     "react-native-vector-icons": "^6.4.2",
     "react-native-video": "^4.4.4",
-    "react-native-wheel-picker": "^1.2.0",
     "react-navigation": "^3.10.2",
     "react-navigation-material-bottom-tabs": "^1.0.0",
     "react-redux": "^7.0.3",
@@ -52,7 +52,6 @@
     "redux-thunk": "^2.3.0",
     "stacktrace-js": "^2.0.0",
     "subscriptions-transport-ws": "^0.9.16",
-    "turbo360": "^1.8.65",
     "uuid": "^3.3.2"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 import React from "react";
 import I18n from "src/infra/localization";
 import PropTypes from "prop-types";
-import { StyleSheet, TouchableOpacity } from "react-native";
+import { StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 import { Text, Avatar } from "src/components/basicComponents";
 import { daytColors, commonStyles } from "src/vars";
 import connect from "react-redux/es/connect/connect";
@@ -9,14 +9,14 @@ import { entityTypes } from "src/vars/enums";
 
 const styles = StyleSheet.create({
   wrapper: {
-    // flex: 1,
+    flex: 1,
     // flexDirection: "row",
-    justifyContent: "center",
+    // justifyContent: "center",
     // height: 75,
-    borderRadius: 14,
+    // borderRadius: 14,
     alignItems: "center"
     // marginHorizontal: 10
-    // elevation: 2
+    // elevation: 2,
   },
   textStyle: {
     fontSize: 16,
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     // color: daytColors.azure,
     // marginRight: 15,
     lineHeight: 40,
-    fontSize: 36,
+    fontSize: 40,
     marginTop: 20,
     color: "#FEF08C"
   }

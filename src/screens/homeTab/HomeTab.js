@@ -1,6 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Platform, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  Platform,
+  StyleSheet,
+  TouchableOpacity,
+  ScrollView
+} from "react-native";
 import I18n from "src/infra/localization";
 import { connect } from "react-redux";
 import { getListItemCta } from "src/redux/lists/actions";
@@ -141,7 +146,7 @@ const styles = StyleSheet.create({
     backgroundColor: daytColors.b90
   },
   postButtonWrapper: {
-    marginTop: 25
+    marginTop: 20
   },
   // floatingHeader: {
   //   borderBottomWidth: 0,
@@ -350,16 +355,18 @@ class HomeTab extends React.Component {
 
       <View style={styles.feedHeaderWrapper}>
         <View style={styles.headerUpperSection}>
-          <View style={styles.postButtonWrapper} key="postButton">
+          {/* <ScrollView style={styles.postButtonWrapper} key="postButton">
             <PostButton
               text={I18n.t("home.post_button_text")}
               onPress={this.navigateToPostCreationPage}
               testID="postButton"
             />
-          </View>
-          <View style={{ height: 700 }}>
+          </ScrollView> */}
+
+          {/* <View style={{ height: 700 }}>
             <PostEditor />
-          </View>
+          </View> */}
+
           {/* <Image
             source={images.homeTab.gradient}
             style={styles.headerUpperSectionBackground}
@@ -386,16 +393,17 @@ class HomeTab extends React.Component {
         </View>
         <BoardsHeader />
         <View style={styles.themesCarouselBottomBorder} />
-        {(enableCommunityFeed || isAdmin) && (
-          <SubHeader
+        {(enableCommunityFeed || isAdmin) &&
+          {
+            /* <SubHeader
             tabs={screenTabs}
             screenName={screenNames.HomeTab}
             activeTab={activeSubTab}
             onTabChange={val => this.setState({ activeSubTab: val })}
             enableAnalytics
             style={styles.subHeader}
-          />
-        )}
+          /> */
+          }}
       </View>
     );
   };

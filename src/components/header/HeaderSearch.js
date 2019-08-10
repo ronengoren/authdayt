@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import I18n from "src/infra/localization";
+
 import { LayoutAnimation } from "react-native";
 import { connect } from "react-redux";
 import { entityTypes, searchTypes } from "src/vars/enums";
@@ -8,6 +10,13 @@ import {
   searchAddress,
   clearSearchAddress
 } from "src/redux/searchAddress/actions";
+import {
+  View,
+  Text,
+  IconButton,
+  PostButton
+} from "src/components/basicComponents";
+
 import { get } from "src/infra/utils";
 import { navigationService } from "src/infra/navigation";
 import HeaderSearchInput from "./HeaderSearchInput";
@@ -22,18 +31,23 @@ class HeaderSearch extends React.Component {
     const { searchMode } = this.props;
 
     return (
-      <HeaderSearchInput
-        ref={node => {
-          this.SearchInput = node;
-        }}
-        value={queryField}
-        onPress={searchMode ? null : this.handleOnPress}
-        onCancel={this.handleQueryCancelPress}
-        searchMode={searchMode}
-        onChange={text => this.setState({ queryField: text })}
-        onChangeDebounced={this.handleChangeTextDebounced}
-        debounceTime={400}
+      <PostButton
+        text={I18n.t("home.post_button_text")}
+        onPress={this.navigateToPostCreationPage}
+        testID="postButton"
       />
+      // <HeaderSearchInput
+      //   ref={node => {
+      //     this.SearchInput = node;
+      //   }}
+      //   value={queryField}
+      //   onPress={searchMode ? null : this.handleOnPress}
+      //   onCancel={this.handleQueryCancelPress}
+      //   searchMode={searchMode}
+      //   onChange={text => this.setState({ queryField: text })}
+      //   onChangeDebounced={this.handleChangeTextDebounced}
+      //   debounceTime={400}
+      // />
     );
   }
 

@@ -21,8 +21,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "100%",
     height: uiConstants.NAVBAR_HEIGHT,
-    paddingTop: uiConstants.PHONE_BAR_HEIGHT_TRANSLUCENT,
-    paddingHorizontal: 10
+    paddingTop: uiConstants.PHONE_BAR_HEIGHT_TRANSLUCENT
+    // paddingHorizontal: 10
   },
   wrapperBorder: {
     borderBottomWidth: 1,
