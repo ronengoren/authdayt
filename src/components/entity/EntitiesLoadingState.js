@@ -20,13 +20,15 @@ import { ENTRIES1, ENTRIES2 } from "./static/entries";
 import { scrollInterpolators, animatedStyles } from "./utils/animations";
 import carouseleStyles, { colors } from "./index.style";
 import SliderEntry from "./SliderEntry";
+import I18n from "src/infra/localization";
+import { AwesomeIcon } from "src/assets/icons";
 
 const styles = StyleSheet.create({
   itemContainer: {
     // height: 260
     marginHorizontal: 10,
     // marginTop: 15,
-    marginBottom: 50
+    marginBottom: 10
     // backgroundColor: daytColors.white,
     // borderRadius: 15,
     // shadowColor: daytColors.boxShadow,
@@ -46,6 +48,7 @@ const styles = StyleSheet.create({
     // padding: 15
   },
   itemMiddleSection: {
+    marginTop: 5
     // paddingHorizontal: 15
   },
   compactActionPlaceholder: {
@@ -73,14 +76,17 @@ const styles = StyleSheet.create({
   },
   profileImage: {
     width: 100,
-    height: 100,
-    marginBottom: 20
+    height: 100
+    // marginBottom: 10
   },
   name: {
     fontSize: 20,
+    alignContent: "center",
     // marginBottom: 20,
     // fontWeight: "bold",
-    color: "#1E90FF"
+    color: "#5eadbb",
+    marginLeft: 30
+    // marginTop: 4
   },
   buttonContainer: {
     flexDirection: "row"
@@ -125,6 +131,28 @@ const styles = StyleSheet.create({
   icon: {
     width: 35,
     height: 35
+  },
+  pagination: {
+    margin: -20
+  },
+  horizontalMarginContent: {
+    marginHorizontal: 40,
+    marginTop: 5
+  },
+
+  detailsRowIcon: {
+    marginRight: 10
+    // marginTop: 5
+  },
+  detailsRow: {
+    flexDirection: "row",
+    alignItems: "center"
+    // marginVertical: 5
+  },
+  detailsRowText: {
+    color: "#4D4A4B",
+    fontSize: 13
+    // paddingRight: 15
   }
 });
 
@@ -140,6 +168,29 @@ class EntitiesLoadingState extends Component {
   }
   _renderItem({ item, index }) {
     return <SliderEntry data={item} even={(index + 1) % 2 === 0} />;
+  }
+  get pagination() {
+    const { entries, slider1ActiveSlide } = this.state;
+    return (
+      <Pagination
+        dotsLength={ENTRIES1.length}
+        activeDotIndex={slider1ActiveSlide}
+        containerStyle={{ backgroundColor: "white" }}
+        dotStyle={{
+          color: "#5eadbb",
+          width: 5,
+          height: 5,
+          borderRadius: 5,
+          marginHorizontal: 8,
+          backgroundColor: "#5eadbb"
+        }}
+        inactiveDotStyle={{
+          backgroundColor: "grey"
+        }}
+        inactiveDotOpacity={0.4}
+        inactiveDotScale={0.6}
+      />
+    );
   }
   _renderItemWithParallax({ item, index }, parallaxProps) {
     return (
@@ -183,6 +234,62 @@ class EntitiesLoadingState extends Component {
           autoplayInterval={3000}
           onSnapToItem={index => this.setState({ slider1ActiveSlide: index })}
         />
+
+        <View style={styles.pagination}>
+          <Text style={styles.name}>John Doe, 27</Text>
+
+          <View style={styles.horizontalMarginContent}>
+            <View style={[styles.detailsRow]}>
+              <AwesomeIcon
+                name={"ruler"}
+                size={20}
+                color={daytColors.b70}
+                style={styles.detailsRowIcon}
+              />
+
+              <Text
+                color={daytColors.b30}
+                style={styles.detailsRowText}
+                lineHeight={22}
+              >
+                1.77m
+              </Text>
+            </View>
+            <View style={[styles.detailsRow]}>
+              <AwesomeIcon
+                name={"home"}
+                size={20}
+                color={daytColors.b70}
+                style={styles.detailsRowIcon}
+              />
+
+              <Text
+                color={daytColors.b30}
+                style={styles.detailsRowText}
+                lineHeight={22}
+              >
+                Brooklyn, NY
+              </Text>
+            </View>
+            <View style={[styles.detailsRow]}>
+              <AwesomeIcon
+                name={"suitcase"}
+                size={20}
+                color={daytColors.b70}
+                style={styles.detailsRowIcon}
+              />
+
+              <Text
+                color={daytColors.b30}
+                style={styles.detailsRowText}
+                lineHeight={22}
+              >
+                Heart Doctor
+              </Text>
+            </View>
+          </View>
+          {this.pagination}
+        </View>
       </View>
     );
   }
@@ -198,10 +305,13 @@ class EntitiesLoadingState extends Component {
   static renderPlaceholderFeedItem(type, key) {
     return (
       <View style={styles.itemContainer} key={key}>
-        <Text style={styles.name}>John Doe, 27, Brooklyn</Text>
-
         <View style={styles.buttonContainer}>
-          <TouchableHighlight
+          {/* <View style={styles.itemMiddleSection}>
+            <PlaceholderRectangle width={270} />
+            <PlaceholderRectangle width={315} />
+            <PlaceholderRectangle width={135} />
+          </View> */}
+          {/* <TouchableHighlight
             style={[styles.button, styles.buttonMessage]}
             onPress={() => this.onClickListener("message")}
           >
@@ -265,8 +375,21 @@ class EntitiesLoadingState extends Component {
             // height={60}
             borderRadius={0}
             style={styles.compactActionPlaceholder}
-          />
+          /> */}
         </View>
+      </View>
+    );
+  }
+  renderDetailsRow({ iconName }) {
+    return (
+      <View style={[styles.detailsRow]}>
+        <AwesomeIcon
+          name={iconName}
+          // size={iconSize}
+          // color={daytColors.b70}
+          // style={styles.detailsRowIcon}
+        />
+        )}
       </View>
     );
   }

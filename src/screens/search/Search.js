@@ -116,10 +116,10 @@ class Search extends Component {
   //     getSearchTerms(this.props.userId);
   //   }
 
-  componentWillUnmount() {
-    const { removeSearchFromStack } = this.props;
-    removeSearchFromStack({ searchTypes: this.getSearchTypes() });
-  }
+  //   componentWillUnmount() {
+  //     const { removeSearchFromStack } = this.props;
+  //     removeSearchFromStack({ searchTypes: this.getSearchTypes() });
+  //   }
 
   getSearchTypes = () => {
     const { isWithPeopleSearch, isPeopleSearchOnly } = this.props;

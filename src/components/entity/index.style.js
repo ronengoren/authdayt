@@ -9,10 +9,12 @@ export const colors = {
 
 export default StyleSheet.create({
   safeArea: {
+    paddingHorizontal: 15,
     flex: 1,
-    backgroundColor: colors.black
+    backgroundColor: colors.background1
   },
   container: {
+    // padding: 15,
     flex: 1,
     backgroundColor: colors.background1
   },
@@ -20,7 +22,10 @@ export default StyleSheet.create({
     ...StyleSheet.absoluteFillObject
   },
   scrollview: {
-    flex: 1
+    flex: 1,
+    borderWidth: 1.5,
+    borderColor: "#5eadbb",
+    marginBottom: 10
   },
   // exampleContainer: {
   //   paddingVertical: 30

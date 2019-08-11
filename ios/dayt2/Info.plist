@@ -39,6 +39,7 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>LondrinaOutline-Regular.ttf</string>
 		<string>FontAwesome5_Brands.ttf</string>
 		<string>FontAwesome5_Regular.ttf</string>
 		<string>FontAwesome5_Solid.ttf</string>
@@ -46,7 +47,6 @@
 		<string>FontAwesome5BrandsRegular.ttf</string>
 		<string>FontAwesome5ProLight.ttf</string>
 		<string>FontAwesome5ProSolid.ttf</string>
-		<string>dayt.woff</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
