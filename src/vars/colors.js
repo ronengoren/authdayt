@@ -27,7 +27,7 @@ const daytColors = {
   facebookBlue: "#107aff",
   b70: "#b3b3b3",
   b30: "#4d4d4d",
-  b60: "#999999",
+  b60: "#fef08c",
   b80: "#cccccc",
   b90: "#e6e6e6",
   b97: "#f7f7f7",

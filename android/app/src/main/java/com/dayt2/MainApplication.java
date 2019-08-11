@@ -1,7 +1,6 @@
 package com.dayt2;
 
 import android.app.Application;
-import com.zyu.ReactNativeWheelPickerPackage;
 
 import com.facebook.react.ReactApplication;
 import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
@@ -36,7 +35,7 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(new MainReactPackage(), new RNCViewPagerPackage(), new OrientationPackage(),
           new RNLocalizePackage(), new ReactVideoPackage(), new FastImageViewPackage(), new RNFSPackage(),
           new RNDeviceInfo(), new AsyncStoragePackage(), new ReactNativeConfigPackage(), new VectorIconsPackage(),
-          new RNGestureHandlerPackage(), new LinearGradientPackage(), new ReactNativeWheelPickerPackage());
+          new RNGestureHandlerPackage(), new LinearGradientPackage());
     }
 
     @Override

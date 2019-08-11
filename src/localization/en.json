@@ -1710,7 +1710,7 @@
         "morning": "Good morning!",
         "afternoon": "Good afternoon!",
         "evening": "Good evening!",
-        "search_placeholder": "Find People, Restaurants, Services...",
+        "search_placeholder": "When?",
         "scheduled_empty_state": {
             "header": "No scheduled posts yet."
         }

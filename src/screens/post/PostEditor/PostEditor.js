@@ -61,20 +61,6 @@ import { AwesomeIcon } from "src/assets/icons";
 //   // RecommendationPostEditor
 // } from "./postTypesEditors";
 
-const { height: SCREEN_HEIGHT } = Dimensions.get("window");
-const IS_IPHONE_X = SCREEN_HEIGHT === 812 || SCREEN_HEIGHT === 896;
-const STATUS_BAR_HEIGHT = Platform.OS === "ios" ? (IS_IPHONE_X ? 44 : 20) : 0;
-const NAV_BAR_HEIGHT = Platform.OS === "ios" ? (IS_IPHONE_X ? 88 : 64) : 64;
-
-const SCROLL_EVENT_THROTTLE = 16;
-const DEFAULT_HEADER_MAX_HEIGHT = 170;
-const DEFAULT_HEADER_MIN_HEIGHT = NAV_BAR_HEIGHT;
-const DEFAULT_EXTRA_SCROLL_HEIGHT = 30;
-const DEFAULT_BACKGROUND_IMAGE_SCALE = 1.5;
-
-const DEFAULT_NAVBAR_COLOR = "#3498db";
-const DEFAULT_BACKGROUND_COLOR = "#303F9F";
-const DEFAULT_TITLE_COLOR = "white";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -88,49 +74,6 @@ const styles = StyleSheet.create({
     // paddingHorizontal: 20,
     // marginBottom: 30,
     // textAlign: "center"
-  },
-  scrollView: {
-    flex: 1
-  },
-  header: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: DEFAULT_NAVBAR_COLOR,
-    overflow: "hidden"
-  },
-  backgroundImage: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    width: null,
-    height: DEFAULT_HEADER_MAX_HEIGHT,
-    resizeMode: "cover"
-  },
-  bar: {
-    backgroundColor: "transparent",
-    height: DEFAULT_HEADER_MIN_HEIGHT,
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0
-  },
-  headerTitle: {
-    backgroundColor: "transparent",
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    paddingTop: STATUS_BAR_HEIGHT,
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  headerText: {
-    color: DEFAULT_TITLE_COLOR,
-    textAlign: "center",
-    fontSize: 16
   }
 });
 
@@ -411,50 +354,5 @@ class PostEditor extends Component {
     );
   }
 }
-PostEditor.propTypes = {
-  renderNavBar: PropTypes.func,
-  renderContent: PropTypes.func.isRequired,
-  backgroundColor: PropTypes.string,
-  backgroundImage: PropTypes.any,
-  navbarColor: PropTypes.string,
-  title: PropTypes.any,
-  titleStyle: PropTypes.any,
-  headerTitleStyle: PropTypes.any,
-  headerMaxHeight: PropTypes.number,
-  headerMinHeight: PropTypes.number,
-  scrollEventThrottle: PropTypes.number,
-  extraScrollHeight: PropTypes.number,
-  backgroundImageScale: PropTypes.number,
-  contentContainerStyle: PropTypes.any,
-  innerContainerStyle: PropTypes.any,
-  scrollViewStyle: PropTypes.any,
-  containerStyle: PropTypes.any,
-  alwaysShowTitle: PropTypes.bool,
-  alwaysShowNavBar: PropTypes.bool,
-  statusBarColor: PropTypes.string,
-  scrollViewProps: PropTypes.object
-};
 
-PostEditor.defaultProps = {
-  renderNavBar: () => <View />,
-  navbarColor: DEFAULT_NAVBAR_COLOR,
-  backgroundColor: DEFAULT_BACKGROUND_COLOR,
-  backgroundImage: null,
-  title: null,
-  titleStyle: styles.headerText,
-  headerTitleStyle: null,
-  headerMaxHeight: DEFAULT_HEADER_MAX_HEIGHT,
-  headerMinHeight: DEFAULT_HEADER_MIN_HEIGHT,
-  scrollEventThrottle: SCROLL_EVENT_THROTTLE,
-  extraScrollHeight: DEFAULT_EXTRA_SCROLL_HEIGHT,
-  backgroundImageScale: DEFAULT_BACKGROUND_IMAGE_SCALE,
-  contentContainerStyle: null,
-  innerContainerStyle: null,
-  scrollViewStyle: null,
-  containerStyle: null,
-  alwaysShowTitle: true,
-  alwaysShowNavBar: true,
-  statusBarColor: null,
-  scrollViewProps: {}
-};
 export default PostEditor;

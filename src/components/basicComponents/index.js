@@ -35,3 +35,4 @@ export { default as SquareIconButton } from "./SquareIconButton";
 export { default as CommentInput } from "./CommentInput";
 export { default as KeyboardAvoidingView } from "./KeyboardAvoidingView";
 export { default as Toast } from "./Toast";
+export { default as TruncatedMultiLineName } from "./TruncatedMultiLineName";

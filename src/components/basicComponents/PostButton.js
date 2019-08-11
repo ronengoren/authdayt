@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 import { Text, Avatar } from "src/components/basicComponents";
 import { daytColors, commonStyles } from "src/vars";
+
 import connect from "react-redux/es/connect/connect";
 import { entityTypes } from "src/vars/enums";
 
@@ -72,6 +73,20 @@ class PostButton extends React.Component {
       </TouchableOpacity>
     );
   }
+  navigateToPostCreationPage = () => {
+    alert("postbutton");
+    // const { userNeighborhood } = this.props;
+    // const { activeSubTab } = this.state;
+    // const params = {
+    //   mode: editModes.CREATE,
+    //   onCreated: this.scrollToFeedTop,
+    //   activeSubTab
+    // };
+    // if (userNeighborhood) {
+    //   params.additionalContexts = [{ ...userNeighborhood, entityType: entityTypes.NEIGHBORHOOD }];
+    // }
+    // navigationService.navigate(screenNames.PostEditor);
+  };
 }
 
 PostButton.defaultProps = {

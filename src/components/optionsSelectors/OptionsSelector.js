@@ -12,7 +12,7 @@ import { stylesScheme } from "src/schemas";
 
 const styles = StyleSheet.create({
   optionsWrapper: {
-    marginBottom: -10,
+    // marginBottom: -10,
     backgroundColor: daytColors.paleGreyTwo
   },
   optionsScrollContext: {
@@ -21,8 +21,9 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   innerOptionsWrapper: {
-    flexDirection: "row",
-    flexWrap: "wrap"
+    flexDirection: "column",
+    // flexWrap: "wrap",
+    width: "100%"
   }
 });
 
@@ -45,7 +46,9 @@ class OptionsSelector extends PureComponent {
             {this.renderOptions()}
           </ScrollView>
         ) : (
-          <View style={styles.innerOptionsWrapper}>{this.renderOptions()}</View>
+          <ScrollView style={styles.innerOptionsWrapper}>
+            {this.renderOptions()}
+          </ScrollView>
         )}
       </View>
     );

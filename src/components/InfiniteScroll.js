@@ -400,7 +400,7 @@ const mapStateToProps = (state, ownProps) => ({
   v: get(state, `${ownProps.reducerStatePath}.v`)
 });
 
-// const mapDispatchToProps = { fetchTop, fetchBottom };
+const mapDispatchToProps = { fetchTop, fetchBottom };
 
 // export default connect(
 //   mapStateToProps,

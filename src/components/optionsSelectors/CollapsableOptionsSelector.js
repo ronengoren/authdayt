@@ -4,7 +4,7 @@ import I18n from "src/infra/localization";
 import { StyleSheet, Animated } from "react-native";
 import { View, Chip, Spinner } from "src/components/basicComponents";
 import { AwesomeIcon } from "src/assets/icons";
-// import { clone } from "/infra/utils";
+import { clone } from "src/infra/utils";
 import { addSpaceOnCapitalsAndCapitalize } from "src/infra/utils/stringUtils";
 import { daytColors } from "src/vars";
 import { stylesScheme } from "src/schemas";

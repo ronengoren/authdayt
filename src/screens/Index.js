@@ -34,3 +34,13 @@ export { GroupsTab } from "./groupsTab";
 export { CommunicationCenter } from "./communicationCenter";
 export { PostPage, PostEditor, AddDescription, ContextPicker } from "./post";
 export { Chat } from "./chat";
+export { Search } from "./search";
+export {
+  EmptySearch,
+  SearchResultsList,
+  SearchMentionsResults,
+  SearchMentionsResultsList,
+  SearchResultRow,
+  SearchResultRowHeight,
+  SearchAddressResultRow
+} from "./search";

@@ -7,29 +7,29 @@ import { isHebrewOrArabic } from "src/infra/utils/stringUtils";
 import { stylesScheme } from "src/schemas";
 
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    alignItems: "center",
-    paddingHorizontal: 12,
-    marginRight: 10,
-    borderWidth: 1,
-    borderColor: daytColors.b90,
-    borderRadius: 5,
-    backgroundColor: daytColors.white
-  },
+  // container: {
+  //   flexDirection: "row",
+  //   alignItems: "center",
+  //   paddingHorizontal: 12,
+  //   marginRight: 10,
+  //   borderWidth: 1,
+  //   borderColor: daytColors.b90,
+  //   borderRadius: 5
+  //   // backgroundColor: daytColors.white
+  // },
   text: {
     fontSize: 14,
-    lineHeight: 30,
+    lineHeight: 50,
     textAlign: "center",
     color: daytColors.b30
-  },
-  hebrewText: {
-    fontSize: 15,
-    lineHeight: 33
-  },
-  activeText: {
-    color: daytColors.white
   }
+  // hebrewText: {
+  //   fontSize: 15,
+  //   lineHeight: 33
+  // },
+  // activeText: {
+  //   color: daytColors.white
+  // }
 });
 
 class Chip extends React.Component {

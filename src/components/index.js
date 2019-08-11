@@ -71,9 +71,9 @@ export { default as EnhancedHeader } from "./EnhancedHeader";
 //   ListItemsLoadingState
 // } from "./list";
 // export { SuggestionItem } from "./searchableForm";
-// export {
-//   OptionsSelector,
-//   CollapsableOptionsSelector
-// } from "./optionsSelectors";
+export {
+  OptionsSelector,
+  CollapsableOptionsSelector
+} from "./optionsSelectors";
 // export { SuggestedItems } from "./feed/suggestedItems";
 export { EntityListsViewSubheader, EntityListsView } from "./entityListsView";

@@ -144,6 +144,12 @@ const commonTabRoutes = {
     navigationOptions: {
       header: null
     }
+  },
+  [screenNames.Search]: {
+    screen: screens.Search,
+    navigationOptions: {
+      header: null
+    }
   }
   //   [screenNames.ProfileGroupsList]: {
   //     screen: screens.ProfileGroupsList,
