@@ -8,8 +8,8 @@ const getAndroidStatusBarDiff = () =>
 
 const uiConstants = {
   NAVBAR_HEIGHT: Platform.select({
-    ios: hasNotch() ? 111 : 96,
-    android: hasNotch() ? getAndroidStatusBarDiff() + 96 : 96
+    ios: hasNotch() ? 116 : 106,
+    android: hasNotch() ? getAndroidStatusBarDiff() + 106 : 106
   }),
   NAVBAR_TOP_MARGIN: Platform.select({
     ios: hasNotch() ? 15 : 0,

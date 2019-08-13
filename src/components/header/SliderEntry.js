@@ -14,7 +14,7 @@ export default class SliderEntry extends Component {
 
   get image() {
     const {
-      data: { illustration, name },
+      data: { illustration },
       parallax,
       parallaxProps,
       even
@@ -47,9 +47,10 @@ export default class SliderEntry extends Component {
     const uppercaseTitle = title ? (
       <Text
         style={[styles.title, even ? styles.titleEven : {}]}
-        numberOfLines={2}
+        numberOfLines={1}
       >
-        {title.toUpperCase()}
+        {title}
+        <Text style={styles.dayt}>dayt</Text>
       </Text>
     ) : (
       false
@@ -67,7 +68,6 @@ export default class SliderEntry extends Component {
         <View
           style={[styles.imageContainer, even ? styles.imageContainerEven : {}]}
         >
-          {this.image}
           <View
             style={[styles.radiusMask, even ? styles.radiusMaskEven : {}]}
           />
@@ -76,12 +76,12 @@ export default class SliderEntry extends Component {
           style={[styles.textContainer, even ? styles.textContainerEven : {}]}
         >
           {uppercaseTitle}
-          <Text
+          {/* <Text
             style={[styles.subtitle, even ? styles.subtitleEven : {}]}
             numberOfLines={2}
           >
             {subtitle}
-          </Text>
+          </Text> */}
         </View>
       </TouchableOpacity>
     );

@@ -2,7 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import I18n from "src/infra/localization";
 
-import { LayoutAnimation, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  LayoutAnimation,
+  StyleSheet,
+  TouchableOpacity,
+  Platform,
+  SafeAreaView,
+  StatusBar,
+  ScrollView
+} from "react-native";
 import { connect } from "react-redux";
 import { entityTypes, searchTypes, screenNames } from "src/vars/enums";
 import { search, clearSearch } from "src/redux/search/actions";
@@ -22,31 +30,82 @@ import { navigationService } from "src/infra/navigation";
 import HeaderSearchInput from "./HeaderSearchInput";
 import { daytColors, commonStyles, uiConstants } from "src/vars";
 import { AwesomeIcon } from "src/assets/icons";
-
+import Carousel, { Pagination } from "react-native-snap-carousel";
+import { sliderWidth, itemWidth } from "./SliderEntry.style";
+import SliderEntry from "./SliderEntry";
+import carouselsStyles, { colors } from "./index.style";
+import { ENTRIES1, ENTRIES2 } from "./entries";
+import { scrollInterpolators, animatedStyles } from "./animations";
+import LinearGradient from "react-native-linear-gradient";
 const styles = StyleSheet.create({
   searchBox: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    height: 55,
-    marginHorizontal: 15,
-    marginBottom: 25,
-    paddingHorizontal: 15,
-    borderRadius: 15,
-    backgroundColor: daytColors.white
+    // flex: 1,
+    // flexDirection: "row",
+    // alignItems: "center",
+    // height: 35
+    // marginHorizontal: 15,
+    // marginBottom: 25,
+    // paddingHorizontal: 15,
+    // borderRadius: 15
+    // backgroundColor: daytColors.white
   },
   searchBoxIcon: {
-    marginRight: 10
+    // marginRight: 10
   },
   searchBoxText: {
-    flex: 1,
-    alignItems: "center",
-    textAlign: "center",
-    fontWeight: "900"
+    // flex: 1,
+    // alignItems: "center",
+    // textAlign: "center",
+    // fontWeight: "900"
   }
 });
 
+const IS_ANDROID = Platform.OS === "android";
+const SLIDER_1_FIRST_ITEM = 1;
+
 class HeaderSearch extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      slider1ActiveSlide: SLIDER_1_FIRST_ITEM
+    };
+  }
+  _renderItem({ item, index }) {
+    return <SliderEntry data={item} even={(index + 1) % 2 === 0} />;
+  }
+
+  mainExample(number, title) {
+    const { slider1ActiveSlide } = this.state;
+
+    return (
+      <View style={carouselsStyles.exampleContainer}>
+        <Carousel
+          directionalLockEnabled={true}
+          alwaysBounceHorizontal={true}
+          ref={c => (this._slider1Ref = c)}
+          data={ENTRIES2}
+          renderItem={this._renderItem}
+          sliderWidth={sliderWidth}
+          //   vertical={true}
+          //   windowSize={1}
+          itemWidth={itemWidth}
+          hasParallaxImages={false}
+          firstItem={slider1ActiveSlide}
+          inactiveSlideScale={0.94}
+          inactiveSlideOpacity={0.7}
+          // inactiveSlideShift={20}
+          containerCustomStyle={carouselsStyles.slider}
+          contentContainerCustomStyle={carouselsStyles.sliderContentContainer}
+          loop={true}
+          loopClonesPerSide={2}
+          autoplay={false}
+          autoplayDelay={500}
+          autoplayInterval={3000}
+          onSnapToItem={index => this.setState({ slider1ActiveSlide: index })}
+        />
+      </View>
+    );
+  }
   state = {
     queryField: this.props.searchQuery || null
   };
@@ -54,7 +113,10 @@ class HeaderSearch extends React.Component {
   render() {
     const { queryField } = this.state;
     const { searchMode } = this.props;
-
+    const example1 = this.mainExample(
+      1,
+      "Default layout | Loop | Autoplay | Parallax | Scale | Opacity | Pagination with tappable dots"
+    );
     return (
       // <PostButton
       //   text={I18n.t("home.post_button_text")}
@@ -62,14 +124,31 @@ class HeaderSearch extends React.Component {
       //   testID="postButton"
       // />,
       <TouchableOpacity
-        onPress={this.navigateToSearch}
+        // onPress={this.navigateToSearch}
         activeOpacity={0.5}
         style={[
-          styles.searchBox,
-          commonStyles.shadow
+          styles.searchBox
+          // commonStyles.shadow
           // isRtlDesign && styles.searchBoxRTL
         ]}
       >
+        <SafeAreaView style={styles.safeArea}>
+          <View style={styles.container}>
+            {/* <StatusBar
+              translucent={true}
+              backgroundColor={"rgba(0, 0, 0, 0.3)"}
+              barStyle={"light-content"}
+            /> */}
+            {this.gradient}
+            <ScrollView
+              style={styles.scrollview}
+              scrollEventThrottle={700}
+              directionalLockEnabled={false}
+            >
+              {example1}
+            </ScrollView>
+          </View>
+        </SafeAreaView>
         {/* <AwesomeIcon
           name="search"
           size={20}
@@ -77,7 +156,7 @@ class HeaderSearch extends React.Component {
           style={styles.searchBoxIcon}
           weight="solid"
         /> */}
-        <Text
+        {/* <Text
           size={36}
           lineHeight={39}
           color={daytColors.b60}
@@ -85,7 +164,7 @@ class HeaderSearch extends React.Component {
           style={styles.searchBoxText}
         >
           {I18n.t("home.search_placeholder")}
-        </Text>
+        </Text> */}
       </TouchableOpacity>
     );
   }

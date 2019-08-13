@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { StyleSheet, ScrollView } from "react-native";
 import I18n from "src/infra/localization";
-import { View, Chip } from "src/components/basicComponents";
+import { View, Chip, Text } from "src/components/basicComponents";
 import {
   camelCase,
   addSpaceOnCapitalsAndCapitalize
@@ -16,14 +16,30 @@ const styles = StyleSheet.create({
     backgroundColor: daytColors.paleGreyTwo
   },
   optionsScrollContext: {
+    marginTop: 90 + "%",
     paddingLeft: 15,
-    paddingRight: 5,
-    marginBottom: 10
+    paddingRight: 5
+    // marginBottom: 10
   },
   innerOptionsWrapper: {
     flexDirection: "column",
     // flexWrap: "wrap",
     width: "100%"
+  },
+  dayt: {
+    height: 20 + "%",
+    width: 100 + "%",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    flexDirection: "row",
+    color: "#fef08c"
+  },
+  daytText: {
+    lineHeight: 50,
+    color: "#fef08c",
+    fontSize: 40,
+    fontWeight: "900"
   }
 });
 
@@ -46,7 +62,18 @@ class OptionsSelector extends PureComponent {
             {this.renderOptions()}
           </ScrollView>
         ) : (
-          <ScrollView style={styles.innerOptionsWrapper}>
+          <ScrollView
+            keyboardShouldPersistTaps="always"
+            keyboardDismissMode="on-drag"
+            // horizontal
+            contentContainerStyle={styles.optionsScrollContext}
+            removeClippedSubviews={false}
+            showsHorizontalScrollIndicator={false}
+          >
+            <View style={styles.dayt}>
+              <Text style={styles.daytText}>Dayt</Text>
+            </View>
+
             {this.renderOptions()}
           </ScrollView>
         )}

@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Platform, ScrollView, Keyboard, StyleSheet } from "react-native";
+import {
+  Platform,
+  ScrollView,
+  Keyboard,
+  StyleSheet,
+  SafeAreaView,
+  StatusBar
+} from "react-native";
 import I18n from "src/infra/localization";
 import { connect } from "react-redux";
 import {
@@ -44,11 +51,11 @@ import { addSpaceOnCapitalsAndCapitalize } from "src/infra/utils/stringUtils";
 import { navigationService } from "src/infra/navigation";
 import { UserEntityComponent } from "src/components/entity";
 import SearchTermRow from "./SearchTermRow";
-import OnBoardingDiscover from "../../screens/signup";
+
 const styles = StyleSheet.create({
   popular: {
+    height: 100 + "%",
     width: 100 + "%",
-    marginTop: 52,
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center"
@@ -58,7 +65,11 @@ const styles = StyleSheet.create({
     // marginBottom: 12
   },
   options: {
-    width: 100 + "%"
+    // marginTop: 59 + "%",
+
+    width: 100 + "%",
+    height: 100 + "%"
+
     // marginLeft: 15,
     // marginRight: 7,
     // backgroundColor: daytColors.transparent
@@ -68,7 +79,8 @@ const styles = StyleSheet.create({
     // marginRight: 8,
     margin: 18,
     // backgroundColor: daytColors.azure,
-    borderWidth: 0
+    borderWidth: 0,
+    marginBottom: 50
   },
   optionTextStyle: {
     fontSize: 53,
@@ -105,7 +117,7 @@ class Search extends Component {
         style={commonStyles.flex1}
         behavior={Platform.OS === "ios" ? "padding" : null}
       >
-        {this.renderSearchSuggestions()}
+        {/* {this.renderSearchSuggestions()} */}
       </KeyboardAvoidingView>
     );
   };

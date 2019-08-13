@@ -7,16 +7,18 @@ import { isHebrewOrArabic } from "src/infra/utils/stringUtils";
 import { stylesScheme } from "src/schemas";
 
 const styles = StyleSheet.create({
-  // container: {
-  //   flexDirection: "row",
-  //   alignItems: "center",
-  //   paddingHorizontal: 12,
-  //   marginRight: 10,
-  //   borderWidth: 1,
-  //   borderColor: daytColors.b90,
-  //   borderRadius: 5
-  //   // backgroundColor: daytColors.white
-  // },
+  container: {
+    marginBottom: 70,
+    borderWidth: 2,
+
+    // flexDirection: "row",
+    // alignItems: "center",
+    // paddingHorizontal: 12,
+    // marginRight: 10,
+    borderColor: "red",
+    borderRadius: 5
+    // backgroundColor: daytColors.white
+  },
   text: {
     fontSize: 14,
     lineHeight: 50,
