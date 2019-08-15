@@ -12,7 +12,7 @@ import { daytColors } from "../vars";
 import { get } from "../infra/utils";
 import Home from "./home";
 // import People from "./people";
-// import MyCity from "./myCity";
+import MyCity from "./myCity";
 import Groups from "./groups";
 import Communications from "./communications";
 
@@ -64,12 +64,7 @@ const TabSection = createBottomTabNavigator(
     // [screenGroupNames.PEOPLE_TAB]: {
     //   screen: People
     // },
-    // [screenGroupNames.MY_CITY]: {
-    //   screen: MyCity,
-    //   navigationOptions: {
-    //     tabBarTestID: "cityTabBtn"
-    //   }
-    // },
+
     [screenGroupNames.GROUPS_TAB]: {
       screen: Groups,
       navigationOptions: {
@@ -97,6 +92,17 @@ const MiddleSection = createStackNavigator(
         header: null
       }
     },
+    [screenGroupNames.MY_CITY]: {
+      screen: MyCity,
+      navigationOptions: {
+        header: null
+      }
+      // navigationOptions: {
+      //   title: "View User",
+      //   headerStyle: { backgroundColor: "#3a59b7" },
+      //   headerTintColor: "#ffffff"
+      // }
+    },
     // [screenNames.PostEditor]: {
     //   screen: screens.PostEditor,
     //   navigationOptions: {
@@ -112,7 +118,7 @@ const MiddleSection = createStackNavigator(
     }
   },
   {
-    initialRouteName: screenGroupNames.TABS,
+    initialRouteName: screenGroupNames.MY_CITY,
     cardStyle: {
       backgroundColor: daytColors.white
     },

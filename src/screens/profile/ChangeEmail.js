@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
 
 class ChangeEmail extends React.Component {
   state = {
-    email: { value: this.props.user.email || "" }
+    email: { value: "this.props.user.email" || "" }
   };
 
   render() {
@@ -155,16 +155,17 @@ ChangeEmail.propTypes = {
   apiCommand: PropTypes.func
 };
 
-const mapStateToProps = state => {
-  const userId = state.auth.user.id;
-  const { user } = state.profile[userId].data;
-  return {
-    user
-  };
-};
-const mapDispatchToProps = { apiCommand, updateProfile };
+// const mapStateToProps = state => {
+//   const userId = state.auth.user.id;
+//   const { user } = state.profile[userId].data;
+//   return {
+//     user
+//   };
+// };
+// const mapDispatchToProps = { apiCommand, updateProfile };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ChangeEmail);
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(ChangeEmail);
+export default ChangeEmail;

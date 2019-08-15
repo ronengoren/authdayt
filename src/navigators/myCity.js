@@ -15,6 +15,30 @@ const MyCity = createStackNavigator(
         header: null
       }
     },
+    [screenNames.ChangeEmail]: {
+      screen: screens.ChangeEmail,
+      navigationOptions: {
+        header: null
+      }
+    },
+    [screenNames.EditProfileGender]: {
+      screen: screens.EditProfileGender,
+      navigationOptions: () => {
+        const title = I18n.t("profile.edit.generic_header");
+        return {
+          header: <Header hasBackButton title={title} />
+        };
+      }
+    },
+    [screenNames.EditProfileRelationship]: {
+      screen: screens.EditProfileRelationship,
+      navigationOptions: () => {
+        const title = I18n.t("profile.edit_profile_relationship.header");
+        return {
+          header: <Header hasBackButton title={title} />
+        };
+      }
+    },
     [screenNames.EditProfile]: {
       screen: screens.EditProfile,
       navigationOptions: {

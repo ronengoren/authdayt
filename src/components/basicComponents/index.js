@@ -36,3 +36,5 @@ export { default as CommentInput } from "./CommentInput";
 export { default as KeyboardAvoidingView } from "./KeyboardAvoidingView";
 export { default as Toast } from "./Toast";
 export { default as TruncatedMultiLineName } from "./TruncatedMultiLineName";
+export { default as KeyboardAwareScrollView } from "./KeyboardAwareScrollView";
+export { default as TextArea } from "./TextArea";

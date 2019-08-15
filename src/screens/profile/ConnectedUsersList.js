@@ -62,10 +62,10 @@ class ConnectedUsersList extends React.Component {
 
   render() {
     const { showModal } = this.state;
-    const {
-      connectedAccounts,
-      isSoundEnabled
-    } = this.props.navigation.state.params;
+    // const {
+    //   connectedAccounts,
+    //   isSoundEnabled
+    // } = this.props.navigation.state.params;
     return (
       <View style={styles.container}>
         <ScrollView>

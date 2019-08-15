@@ -123,33 +123,33 @@ const kidsCounter = (() => {
 })();
 
 class EditProfileRelationship extends React.Component {
-  constructor(props) {
-    super(props);
-    const {
-      navigation: {
-        state: {
-          params: {
-            data: { relationship, numOfKids, showRelationship }
-          }
-        }
-      }
-    } = props;
-    this.state = {
-      selectedRelationship: relationship,
-      gotKids: numOfKids > 0,
-      numOfKids: numOfKids > 0 ? numOfKids : 0,
-      showRelationship,
-      showChildrenNumSelectorModal: false
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   const {
+  //     navigation: {
+  //       state: {
+  //         params: {
+  //           data: { relationship, numOfKids, showRelationship }
+  //         }
+  //       }
+  //     }
+  //   } = props;
+  //   this.state = {
+  //     selectedRelationship: relationship,
+  //     gotKids: numOfKids > 0,
+  //     numOfKids: numOfKids > 0 ? numOfKids : 0,
+  //     showRelationship,
+  //     showChildrenNumSelectorModal: false
+  //   };
+  // }
 
   render() {
-    const {
-      selectedRelationship,
-      gotKids,
-      numOfKids,
-      showRelationship
-    } = this.state;
+    // const {
+    //   // selectedRelationship,
+    //   // gotKids,
+    //   // numOfKids,
+    //   // showRelationship
+    // } = this.state;
     const relations = Object.values(relationshipType);
     return (
       <View style={styles.container}>
@@ -170,7 +170,7 @@ class EditProfileRelationship extends React.Component {
                 <View style={styles.singleLine} key={`relationship${value}`}>
                   <Checkbox
                     onChange={this.onRelationshipChange(value)}
-                    value={selectedRelationship === value}
+                    // value={selectedRelationship === value}
                   />
                   <Text style={styles.singleLineText}>
                     {I18n.t(`profile.edit.relationship.options.${value}`)}
@@ -183,25 +183,28 @@ class EditProfileRelationship extends React.Component {
             </Text>
             <View style={styles.complexSingleLine}>
               <View style={styles.complexSingleLineInner}>
-                <Checkbox onChange={this.toggleGotKids} value={gotKids} />
+                <Checkbox
+                  onChange={this.toggleGotKids}
+                  // value={gotKids}
+                />
                 <Text style={styles.singleLineText}>
                   {I18n.t("profile.edit.relationship.have_kids")}
                 </Text>
               </View>
               <View
                 style={[
-                  styles.numOfKidsWrapper,
-                  gotKids && numOfKids > 0 && styles.numOfKidsWrapperActive
+                  styles.numOfKidsWrapper
+                  // gotKids && numOfKids > 0 && styles.numOfKidsWrapperActive
                 ]}
               >
-                {gotKids && (
-                  <Text
-                    style={styles.numOfKidsText}
-                    onPress={() => this.showChildrenNumSelectorModal(true)}
-                  >
-                    {numOfKids}
-                  </Text>
-                )}
+                {/* {gotKids && ( */}
+                <Text
+                  style={styles.numOfKidsText}
+                  // onPress={() => this.showChildrenNumSelectorModal(true)}
+                >
+                  numOfKids
+                </Text>
+                {/* )} */}
               </View>
             </View>
           </View>
@@ -211,8 +214,8 @@ class EditProfileRelationship extends React.Component {
               {I18n.t("profile.edit.relationship.privacy_toggle_label")}
             </Text>
             <Switch
-              onChange={this.toggleSettingsShowRelationship}
-              active={showRelationship}
+            // onChange={this.toggleSettingsShowRelationship}
+            // active={showRelationship}
             />
           </View>
         </KeyboardAwareScrollView>
@@ -220,7 +223,7 @@ class EditProfileRelationship extends React.Component {
           {I18n.t("common.buttons.save")}
         </TextButton>
         <GenericConfirmationModal
-          show={this.state.showChildrenNumSelectorModal}
+          // show={this.state.showChildrenNumSelectorModal}
           headerText={I18n.t("profile.edit.kid_selector_modal.header")}
           confirmText={I18n.t("profile.edit.kid_selector_modal.ok_button")}
           confirmTextColor={daytColors.green}
@@ -232,8 +235,8 @@ class EditProfileRelationship extends React.Component {
           <View style={styles.pickerContainer}>
             <Picker
               data={kidsCounter}
-              selectedValue={numOfKids}
-              onChange={val => this.setState({ numOfKids: val })}
+              // selectedValue={numOfKids}
+              // onChange={val => this.setState({ numOfKids: val })}
               style={styles.picker}
             />
           </View>

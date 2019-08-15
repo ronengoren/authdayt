@@ -21,6 +21,7 @@ import com.facebook.soloader.SoLoader;
 import com.BV.LinearGradient.LinearGradientPackage;
 import java.util.Arrays;
 import java.util.List;
+import io.realm.react.RealmReactPackage; // add this import
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -35,7 +36,7 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(new MainReactPackage(), new RNCViewPagerPackage(), new OrientationPackage(),
           new RNLocalizePackage(), new ReactVideoPackage(), new FastImageViewPackage(), new RNFSPackage(),
           new RNDeviceInfo(), new AsyncStoragePackage(), new ReactNativeConfigPackage(), new VectorIconsPackage(),
-          new RNGestureHandlerPackage(), new LinearGradientPackage());
+          new RNGestureHandlerPackage(), new LinearGradientPackage(), new RealmReactPackage());
     }
 
     @Override

@@ -69,25 +69,25 @@ const styles = StyleSheet.create({
 });
 
 class EditProfileGender extends React.Component {
-  constructor(props) {
-    super(props);
-    const {
-      navigation: {
-        state: {
-          params: {
-            data: { gender, showGender }
-          }
-        }
-      }
-    } = props;
-    this.state = {
-      selectedGender: gender,
-      showGender
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   const {
+  //     navigation: {
+  //       state: {
+  //         params: {
+  //           data: { gender, showGender }
+  //         }
+  //       }
+  //     }
+  //   } = props;
+  //   this.state = {
+  //     selectedGender: gender,
+  //     showGender
+  //   };
+  // }
 
   render() {
-    const { selectedGender, showGender } = this.state;
+    // const { selectedGender, showGender } = this.state;
     const genders = Object.values(genderType);
     return (
       <View style={styles.container}>
@@ -102,8 +102,8 @@ class EditProfileGender extends React.Component {
             return (
               <View style={styles.singleLine} key={`gender${value}`}>
                 <Checkbox
-                  onChange={this.onGenderChange(value)}
-                  value={selectedGender === value}
+                // onChange={this.onGenderChange(value)}
+                // value={selectedGender === value}
                 />
                 <Text style={styles.singleLineText}>
                   {I18n.t(`profile.gender.${value}`)}

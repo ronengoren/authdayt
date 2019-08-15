@@ -160,18 +160,18 @@ class Profile extends React.Component {
 
   state = {
     invited: false,
-    withoutFeed: true
-    // showFloatingHeader: false
+    withoutFeed: false,
+    showFloatingHeader: false
   };
 
   render() {
     const { userProfileId } = this.props;
-    // const { showFloatingHeader } = this.state;
+    const { showFloatingHeader } = this.state;
 
     if (this.state.withoutFeed) {
       return (
-        <ScrollView onScroll={this.handleScroll}>
-          {this.renderUserDetails()}
+        <ScrollView>
+          {/* {this.renderUserDetails()} */}
           {this.renderFeedError()}
           {/* <FloatingHeader
             showFloatingHeader={showFloatingHeader}
@@ -196,12 +196,12 @@ class Profile extends React.Component {
             onScroll={this.handleScroll}
             onTopFetchAction={this.getProfileConditionaly}
           />
-          <FloatingHeader
+          {/* <FloatingHeader
             showFloatingHeader={showFloatingHeader}
             height={uiConstants.NAVBAR_HEIGHT}
           >
             {this.renderHeaderButtons({ isRenderedInHeader: false })}
-          </FloatingHeader>
+          </FloatingHeader> */}
         </View>
       );
     }
@@ -388,23 +388,20 @@ class Profile extends React.Component {
 
   renderProfileActions() {
     const { profile } = this.props;
-    const { friendshipStatus } = "profile.data";
+    const { friendshipStatus } = profile.data;
 
+    if (!isNumber(friendshipStatus) && !this.isViewingOwnProfile) {
+      return <View />;
+    }
     return (
       <ProfileActionsContainer
-        isFriend={friendshipStatus === friendshipStatusType.FRIENDS}
-        requestedFriendship={
-          friendshipStatus === friendshipStatusType.REQUEST_SENT
-        }
-        receivedFriendshipRequest={
-          friendshipStatus === friendshipStatusType.REQUEST_RECEIVED
-        }
-        declinedFriendship={friendshipStatus === friendshipStatusType.REJECTED}
+        user={profile.data}
+        isViewingOwnProfile={this.isViewingOwnProfile}
+        handleSettingsPress={this.handleSettingsPress}
         respondToRequest={this.respondToFriendRequest}
         requestFriendship={this.toggleFriendshipRequest}
         cancelFriendshipRequest={this.openCancelFriendRequestActionSheet}
         unFriend={this.openMainActionSheet}
-        navigateToConversation={this.navigateToConversation}
       />
     );
   }
