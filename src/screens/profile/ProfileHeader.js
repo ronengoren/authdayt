@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
 
 class ProfileHeader extends Component {
   render() {
-    const { image, ButtonsComponent, isViewingOwnProfile } = this.props;
+    const { image, TopComponent, isViewingOwnProfile } = this.props;
 
     return (
       <View
@@ -85,7 +85,7 @@ class ProfileHeader extends Component {
         ]}
       >
         {this.renderImage()}
-        {isViewingOwnProfile ? <View /> : ButtonsComponent}
+        {TopComponent || <View />}
         {this.renderContent()}
       </View>
     );
@@ -187,7 +187,7 @@ class ProfileHeader extends Component {
             </Text>
             {this.renderJourney()}
           </View>
-          {!!isViewingOwnProfile && ButtonsComponent}
+          {ButtonsComponent}
         </View>
         {/* {shouldRenderInstagram && <ProfileInstagram token={instagramToken} isDarkPlaceholder={isWithoutBackground} />} */}
       </View>

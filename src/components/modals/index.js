@@ -3,3 +3,4 @@ export { default as GenericHalfScreenModal } from "./GenericHalfScreenModal";
 export {
   default as GenericConfirmationModal
 } from "./GenericConfirmationModal";
+export { default as AfterReportModal } from "./AfterReportModal";

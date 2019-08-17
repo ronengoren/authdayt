@@ -1,4 +1,4 @@
-// import { AfterReportModal } from "/components/modals";
+import { AfterReportModal } from "src/components/modals";
 import I18n from "src/infra/localization";
 import { reportTypes } from "src/vars/enums";
 import { daytColors } from "src/vars";

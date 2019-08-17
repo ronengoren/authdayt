@@ -171,14 +171,14 @@ class Profile extends React.Component {
     if (this.state.withoutFeed) {
       return (
         <ScrollView>
-          {/* {this.renderUserDetails()} */}
+          {this.renderUserDetails()}
           {this.renderFeedError()}
-          {/* <FloatingHeader
+          <FloatingHeader
             showFloatingHeader={showFloatingHeader}
             height={uiConstants.NAVBAR_HEIGHT}
-          > */}
-          {this.renderHeaderButtons({ isRenderedInHeader: false })}
-          {/* </FloatingHeader> */}
+          >
+            {this.renderHeaderButtons({ isRenderedInHeader: false })}
+          </FloatingHeader>
         </ScrollView>
       );
     } else {
@@ -196,12 +196,12 @@ class Profile extends React.Component {
             onScroll={this.handleScroll}
             onTopFetchAction={this.getProfileConditionaly}
           />
-          {/* <FloatingHeader
+          <FloatingHeader
             showFloatingHeader={showFloatingHeader}
             height={uiConstants.NAVBAR_HEIGHT}
           >
             {this.renderHeaderButtons({ isRenderedInHeader: false })}
-          </FloatingHeader> */}
+          </FloatingHeader>
         </View>
       );
     }
@@ -260,7 +260,7 @@ class Profile extends React.Component {
             isRenderedInHeader: true
           })}
           isViewingOwnProfile={this.isViewingOwnProfile}
-          instagramToken={instagramToken}
+          // instagramToken={instagramToken}
           navigateToEditProfile={this.navigateToEditProfile}
         />
         {this.renderProfileDetails()}
@@ -411,17 +411,18 @@ class Profile extends React.Component {
 
     return (
       <ProfileHeaderButtons
-        text={isRenderedInHeader ? null : "profile.data.user.name"}
+        handleSettingsPress={this.navigateToEditProfile}
+        text={"profile.data.uddsdser.name"}
         isViewingOwnProfile={this.isViewingOwnProfile}
         isRenderedInHeader={isRenderedInHeader}
         navigateToEditProfile={this.navigateToEditProfile}
-        navigateToSettings={this.navigateToSettings}
-        navigateToConnectedAccounts={this.navigateToConnectedAccounts}
+        // navigateToSettings={this.navigateToSettings}
+        // navigateToConnectedAccounts={this.navigateToConnectedAccounts}
         navigateBack={() => navigationService.goBack()}
-        openProfileActionsheet={() =>
-          this.openMainActionSheet({ withReport: true })
-        }
-        hasProfileData={!!"profile.data"}
+        // openProfileActionsheet={() =>
+        //   this.openMainActionSheet({ withReport: true })
+        // }
+        hasProfileData={false}
       />
     );
   }
@@ -569,6 +570,37 @@ class Profile extends React.Component {
       </TouchableOpacity>
     );
   }
+  handleSettingsPress = () => {
+    const { openActionSheet } = this.props;
+    const options = [
+      {
+        id: "edit",
+        text: I18n.t("profile.view.action_sheet.edit"),
+        awesomeIconName: "pencil-alt",
+        awesomeIconSize: 16,
+        awesomeIconWeight: "solid",
+        color: daytColors.b30,
+        shouldClose: true,
+        action: () => this.navigateToEditProfile({})
+      },
+      {
+        id: "settings",
+        text: I18n.t("profile.view.action_sheet.settings"),
+        iconName: "settings",
+        iconSize: 24,
+        color: daytColors.b30,
+        shouldClose: true,
+        action: this.navigateToSettings
+      }
+    ];
+
+    const data = {
+      options,
+      hasCancelButton: true
+    };
+
+    openActionSheet(data);
+  };
 
   renderBio() {
     return (
@@ -721,10 +753,10 @@ class Profile extends React.Component {
   };
 
   navigateToEditProfile = ({ focusField } = {}) => {
-    const {
-      profile: { data }
-    } = this.props;
-    navigationService.navigate(screenNames.EditProfile, { data, focusField });
+    // const {
+    //   profile: { data }
+    // } = this.props;
+    navigationService.navigate(screenNames.EditProfile, { focusField });
   };
 
   navigateToFriendsList = ({ navigateToMutual = false }) => {

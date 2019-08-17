@@ -23,7 +23,7 @@ export { default as TextInLine } from "./TextInLine";
 export { default as PostButton } from "./PostButton";
 export { default as Avatar } from "./Avatar";
 export { default as Chip } from "./Chip";
-// export { default as FloatingHeader } from "./FloatingHeader";
+export { default as FloatingHeader } from "./FloatingHeader";
 export { default as MultiSlider } from "./MultiSlider";
 export { default as CallToActionArea } from "./CallToActionArea";
 export { default as DashedBorder } from "./DashedBorder";

@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { openActionSheet } from "src/redux/general/actions";
-import I18n from "src/infra/localization";
+
 import { StyleSheet } from "react-native";
 import { View, Text, IconButton } from "src/components/basicComponents";
-import { daytColors, uiConstants, commonStyles } from "src/vars";
+import { uiConstants, commonStyles } from "src/vars";
 
 const styles = StyleSheet.create({
   container: {
@@ -36,22 +34,28 @@ class ProfileHeaderButtons extends Component {
   render() {
     const { isViewingOwnProfile } = this.props;
 
-    if (isViewingOwnProfile) {
-      return this.renderOwnHeaderButtons();
-    } else {
-      return this.renderOthersHeaderButtons();
-    }
+    // if (isViewingOwnProfile) {
+    return this.renderOwnHeaderButtons();
+    // } else {
+    //   return this.renderOthersHeaderButtons();
+    // }
   }
 
   renderOwnHeaderButtons() {
-    const { text, hasProfileData, isRenderedInHeader } = this.props;
+    const {
+      text,
+      hasProfileData,
+      isRenderedInHeader,
+      handleSettingsPress,
+      handleSettingsLongPress
+    } = this.props;
 
     if (isRenderedInHeader) {
       return (
         <IconButton
-          name="more-horizontal"
-          onPress={hasProfileData ? this.handleSettingsPress : null}
-          onLongPress={hasProfileData ? this.handleSettingsLongPress : null}
+          name="more"
+          onPress={handleSettingsPress}
+          // onLongPress={hasProfileData ? handleSettingsLongPress : null}
           iconColor={hasProfileData ? "b60" : "disabledGrey"}
           iconSize={30}
           style={[styles.settingsBtn, commonStyles.shadow]}
@@ -64,10 +68,10 @@ class ProfileHeaderButtons extends Component {
         <View style={styles.noBtnSpacing} />
         {!!text && this.renderText()}
         <IconButton
-          name="more-horizontal"
-          onPress={hasProfileData ? this.handleSettingsPress : null}
-          onLongPress={hasProfileData ? this.handleSettingsLongPress : null}
-          iconColor={hasProfileData ? "black" : "disabledGrey"}
+          name="more"
+          onPress={handleSettingsPress}
+          onLongPress={handleSettingsLongPress}
+          iconColor={"black"}
           iconSize={24}
         />
       </View>
@@ -121,64 +125,17 @@ class ProfileHeaderButtons extends Component {
       </Text>
     );
   }
-
-  handleSettingsLongPress = () => {
-    const { navigateToConnectedAccounts } = this.props;
-    navigateToConnectedAccounts && navigateToConnectedAccounts({});
-  };
-
-  handleSettingsPress = () => {
-    const {
-      openActionSheet,
-      navigateToEditProfile,
-      navigateToSettings
-    } = this.props;
-    const options = [
-      {
-        id: "edit",
-        text: I18n.t("profile.view.action_sheet.edit"),
-        awesomeIconName: "pencil-alt",
-        awesomeIconSize: 16,
-        awesomeIconWeight: "solid",
-        color: daytColors.b30,
-        shouldClose: true,
-        action: () => navigateToEditProfile({})
-      },
-      {
-        id: "settings",
-        text: I18n.t("profile.view.action_sheet.settings"),
-        iconName: "settings",
-        iconSize: 24,
-        color: daytColors.b30,
-        shouldClose: true,
-        action: navigateToSettings
-      }
-    ];
-
-    const data = {
-      options,
-      hasCancelButton: true
-    };
-
-    openActionSheet(data);
-  };
 }
 
 ProfileHeaderButtons.propTypes = {
   text: PropTypes.string,
   isViewingOwnProfile: PropTypes.bool,
   isRenderedInHeader: PropTypes.bool,
-  navigateToEditProfile: PropTypes.func,
-  navigateToSettings: PropTypes.func,
-  navigateToConnectedAccounts: PropTypes.func,
   navigateBack: PropTypes.func,
-  openActionSheet: PropTypes.func,
   openProfileActionsheet: PropTypes.func,
+  handleSettingsPress: PropTypes.func,
+  handleSettingsLongPress: PropTypes.func,
   hasProfileData: PropTypes.bool
 };
 
-// export default connect(
-//   null,
-//   { openActionSheet }
-// )(ProfileHeaderButtons);
 export default ProfileHeaderButtons;
