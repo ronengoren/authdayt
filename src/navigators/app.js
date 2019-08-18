@@ -76,7 +76,7 @@ const TabSection = createBottomTabNavigator(
     }
   },
   {
-    initialRouteName: screenGroupNames.HOME_TAB,
+    initialRouteName: screenGroupNames.GROUPS_TAB,
     tabBarComponent: CustomTabBar,
     lazy: true,
     animationEnabled: false,
@@ -118,7 +118,7 @@ const MiddleSection = createStackNavigator(
     }
   },
   {
-    initialRouteName: screenGroupNames.MY_CITY,
+    initialRouteName: screenGroupNames.TABS,
     cardStyle: {
       backgroundColor: daytColors.white
     },

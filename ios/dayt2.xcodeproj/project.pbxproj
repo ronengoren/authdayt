@@ -5,6 +5,7 @@
 	};
 	objectVersion = 51;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00403F2E2926446EA541D0A4 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A2C38280BDB4B3B8F21F7C1 /* Entypo.ttf */; };
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
@@ -29,7 +30,6 @@
 		66E40940172049CEA79DB021 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A6D54D30C31472294C19BE6 /* Zocial.ttf */; };
 		8053DC5B6BBC45FD8492000D /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C11F1B980747ABA4CCDAD3 /* FontAwesome.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		932A92F301642D1CD3324445 /* libPods-dayt2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9490BD32AF4D879A379292D5 /* libPods-dayt2.a */; };
 		941668D922F72B57004044C4 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 941668A822F72B4A004044C4 /* libBVLinearGradient.a */; };
 		944432B622FE1CB700CDF6C0 /* dayt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A80A855EB3E94ABEB6983D1A /* dayt.ttf */; };
 		944B5AE622D1B72200F1947B /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 944B5ADF22D1B71400F1947B /* libRNDeviceInfo.a */; };
@@ -458,6 +458,7 @@
 		7E80A69040264F3A84E2BC5E /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8EFDA43E4BD6477F80A417FF /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		8FDE5F3AB1F94E6B82866B74 /* libc++.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		941668A022F72B49004044C4 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
 		943718CD22E2E44D005742C4 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		944B5AB222D1B71300F1947B /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/ios/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
@@ -480,6 +481,7 @@
 		BFADD8B5FE81418F97A23E33 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		C73F19463F3547F882C4BF41 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		CB6C21969AA04BED9D4F24D2 /* libRNVectorIcons-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNVectorIcons-tvOS.a"; sourceTree = "<group>"; };
+		D0872414DB264EE88CF9155A /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		DCC08B2278BB434C8A9A3CB5 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		EAEF7F5E56E04D5580C52D00 /* FontAwesome5ProSolid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5ProSolid.ttf; path = ../src/assets/fonts/fontAwesome/FontAwesome5ProSolid.ttf; sourceTree = "<group>"; };
 		EC5B9CCAD17E42AA93B0800F /* libRCTRestart.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTRestart.a; sourceTree = "<group>"; };
@@ -513,7 +515,6 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				932A92F301642D1CD3324445 /* libPods-dayt2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +654,8 @@
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
 				9490BD32AF4D879A379292D5 /* libPods-dayt2.a */,
+				8FDE5F3AB1F94E6B82866B74 /* libc++.tbd */,
+				D0872414DB264EE88CF9155A /* libz.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1489,6 +1492,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/dayt2\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1523,6 +1527,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/dayt2\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

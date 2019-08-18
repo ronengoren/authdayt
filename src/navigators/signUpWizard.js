@@ -110,7 +110,7 @@ const SignUpWizard = createStackNavigator(
     }
   },
   {
-    initialRouteName: screenNames.NoCommunity,
+    initialRouteName: screenNames.SetUserGender,
     cardStyle: {
       backgroundColor: daytColors.white
     },

@@ -93,18 +93,18 @@ class GroupsTab extends React.Component {
   );
 
   render() {
-    // const { suggestedGroupsProps } = this.state;
+    const { suggestedGroupsProps } = this.state;
     // const { suggestedGroupsThemes } = this.props;
     // const translatedThemes = GroupsTab.translateThemes(suggestedGroupsThemes);
 
     return (
       <View style={styles.container}>
         <EntityListsView
-          createEntityButton={this.createEntityButton}
+          // createEntityButton={this.createEntityButton}
           topSectionSubHeaderProps={this.topSectionSubHeaderProps}
           // bottomSectionSubHeaderProps={this.bottomSectionSubHeaderProps}
           topSectionListProps={this.myGroupsProps}
-          // bottomSectionListProps={suggestedGroupsProps}
+          bottomSectionListProps={suggestedGroupsProps}
           componentColor={daytColors.golden}
           optionsSelectorProps={{
             // options: translatedThemes,

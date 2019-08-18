@@ -5,6 +5,7 @@ import I18n from "src/infra/localization";
 import { View } from "src/components/basicComponents";
 import { daytColors, daytFonts, daytFontWeights } from "src/vars";
 import { stylesScheme } from "src/schemas";
+import * as validators from "src/infra/utils/formValidations";
 
 const LABEL_BOTTOM_TOP = 32;
 const LABEL_BOTTOM_CENTER = 8;
@@ -61,6 +62,20 @@ const styles = StyleSheet.create({
 class FormInput extends Component {
   constructor(props) {
     super(props);
+    if (!props.validations || !props.validations.length) {
+      this.validations = [() => ({ isValid: true, errorText: "" })];
+    } else {
+      this.validations = props.validations.map(validation => {
+        if (typeof validation === "string") {
+          return validators[validation]();
+        }
+        const { validator, type, value, errorText } = validation;
+        if (validator) {
+          return validator;
+        }
+        return validators[type](value, errorText);
+      });
+    }
     const { value, isInitiallyFocused } = props;
     const initialValue = value || "";
     this.state = {
@@ -95,7 +110,7 @@ class FormInput extends Component {
         style={[
           styles.container,
           style,
-          // isFocused && styles.containerFocused,
+          isFocused && styles.containerFocused,
           !!inputErrorText && styles.containerWithError
         ]}
       >
@@ -127,6 +142,123 @@ class FormInput extends Component {
       </View>
     );
   }
+  componentDidMount() {
+    const { value, required, onChange, isInitiallyFocused } = this.props;
+    const initialValue = value || "";
+    let isValid = true;
+    if (!required && !initialValue.length) {
+      isValid = true;
+    } else {
+      const validationRes = this.validate(initialValue);
+      isValid = !!initialValue.length && validationRes.isValid;
+    }
+
+    if (isInitiallyFocused) {
+      this.textInput.focus();
+    }
+    onChange({ isValid });
+  }
+
+  componentDidUpdate(prevProps) {
+    const { showLabelOnTop } = this.props;
+    if (prevProps.showLabelOnTop !== showLabelOnTop) {
+      Animated.parallel([
+        this.animateLabel(
+          "labelBottom",
+          showLabelOnTop ? LABEL_BOTTOM_TOP : LABEL_BOTTOM_CENTER
+        ),
+        this.animateLabel(
+          "labelFontSize",
+          showLabelOnTop ? LABEL_FONT_SIZE_TOP : LABEL_FONT_SIZE_CENTER
+        )
+      ]);
+    }
+  }
+
+  handleInputChanged = newValue => {
+    const { value, onChange } = this.props;
+    const inputValue = value || "";
+
+    if (!inputValue.length && newValue.length) {
+      Animated.parallel([
+        this.animateLabel("labelBottom", LABEL_BOTTOM_TOP),
+        this.animateLabel("labelFontSize", LABEL_FONT_SIZE_TOP)
+      ]);
+    } else if (inputValue.length && !newValue.length) {
+      Animated.parallel([
+        this.animateLabel("labelBottom", LABEL_BOTTOM_CENTER),
+        this.animateLabel("labelFontSize", LABEL_FONT_SIZE_CENTER)
+      ]);
+    }
+
+    const { isValid } = this.validate(newValue);
+    onChange({ isValid, value: newValue, errorText: "" });
+  };
+
+  handleInputBlur = () => {
+    const { value, onChange } = this.props;
+    const inputValue = value || "";
+    const { isValid, errorText } = this.validate(inputValue);
+
+    this.setState({ isFocused: false });
+    onChange({ isValid, errorText });
+  };
+
+  validate = newValue => {
+    if (!newValue || !newValue.length) {
+      return {
+        isValid: !this.props.required,
+        errorText: this.props.required
+          ? I18n.t("common.form.required_field")
+          : ""
+      };
+    }
+
+    let isValid;
+    let errorText;
+
+    // eslint-disable-next-line no-restricted-syntax
+    for (const validation of this.validations) {
+      const result = validation(newValue);
+      ({ isValid, errorText } = result);
+      if (!isValid || result.break) break;
+    }
+    return { isValid, errorText };
+  };
+
+  animateLabel = (key, to) => {
+    Animated.timing(this.state[key], {
+      toValue: to,
+      duration: 300
+    }).start();
+  };
+
+  focus = () => {
+    this.textInput.focus();
+  };
+
+  handleInputFocus = () => {
+    const { onFocus } = this.props;
+    this.setState({ isFocused: true });
+    onFocus && onFocus();
+  };
 }
+
+FormInput.propTypes = {
+  value: PropTypes.string,
+  label: PropTypes.string,
+  isInitiallyFocused: PropTypes.bool,
+  showLabelOnTop: PropTypes.bool,
+  isValid: PropTypes.bool,
+  onChange: PropTypes.func.isRequired,
+  onFocus: PropTypes.func,
+  errorText: PropTypes.string,
+  required: PropTypes.bool,
+  validations: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.object])
+  ),
+  style: stylesScheme,
+  inputStyle: stylesScheme
+};
 
 export default FormInput;

@@ -48,7 +48,6 @@
     "react-navigation-material-bottom-tabs": "^1.0.0",
     "react-redux": "^7.0.3",
     "react-router-native": "^5.0.1",
-    "realm": "^2.29.2",
     "redux": "^4.0.4",
     "redux-persist": "^5.10.0",
     "redux-thunk": "^2.3.0",

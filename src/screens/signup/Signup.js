@@ -320,7 +320,18 @@ class Signup extends React.Component {
                 testID="signupPasswordInput"
               />
             </View>
-            <View style={styles.signUpButton} />
+            <View style={styles.signUpButton}>
+              <ApiCommandTextButton
+                size="big50Height"
+                command="auth.signUp"
+                onPress={() => this.handleSubmit(submitDisabled)}
+                style={[submitDisabled && styles.disabledSignUpButton]}
+                disabled={submitDisabled}
+                testID="signupSubmitBtn"
+              >
+                {I18n.t("onboarding.sign_up.submit_button")}
+              </ApiCommandTextButton>
+            </View>
           </Animated.View>
         </View>
         <View style={styles.footerWrapper}>
@@ -356,6 +367,70 @@ class Signup extends React.Component {
       </View>
     );
   }
+  regularSignUpErrorHandler = err => {
+    const { email } = this.state;
+    Logger.error(`sign up failed: ${err}`);
+    const code = get(err, "response.data.error.code");
+    if (code || code === 0) {
+      if (authErrors[code].field) {
+        this.setState({
+          [authErrors[code].field]: {
+            ...this.state[authErrors[code].field],
+            valid: false,
+            errorText: authErrors[code].message
+          }
+        });
+        analytics.actionEvents
+          .onboardingClickedClickedGetStarted({
+            email: email.value,
+            success: false,
+            failureReason: authErrors[code].message
+          })
+          .dispatch();
+      } else {
+        analytics.actionEvents
+          .onboardingClickedClickedGetStarted({
+            email: email.value,
+            success: false,
+            failureReason: authErrors[code].signUp.message
+          })
+          .dispatch();
+        this.showErrorAlert(err);
+      }
+    } else {
+      ErrorModal.showAlert("Sign Up failed");
+    }
+  };
+  handleSubmit = async submitDisabled => {
+    if (submitDisabled) {
+      Alert.alert(
+        "There was a problem",
+        "Please review the form and try again",
+        [{ text: "OK" }]
+      );
+      return;
+    }
+    Keyboard.dismiss();
+    const { email, firstName, lastName, password, referrer } = this.state;
+    const { id, linkType } = referrer;
+    const { signUp } = this.props;
+
+    await signUp({
+      method: signUpMethodTypes.EMAIL,
+      params: {
+        email: email.value,
+        firstName: firstName.value,
+        lastName: lastName.value,
+        password: password.value,
+        referrer: {
+          id,
+          linkType
+        }
+      },
+      onNewUserSignUp: this.onNewUserRegistration(false),
+      onError: this.regularSignUpErrorHandler
+    });
+  };
   registerPanResponder() {
     if (Platform.OS === "android") {
       this.panResponder = { panHandlers: {} };
@@ -410,12 +485,12 @@ class Signup extends React.Component {
       }).start(this.toggleSlideUpFlag);
       if (!this.reportedRegularSignUp) {
         this.reportedRegularSignUp = true;
-        analytics.viewEvents
-          .entityView({
-            screenName: "OB - Email Sign-up",
-            origin: "OB - Welcome "
-          })
-          .dispatch();
+        // analytics.viewEvents
+        //   .entityView({
+        //     screenName: "OB - Email Sign-up",
+        //     origin: "OB - Welcome "
+        //   })
+        //   .dispatch();
       }
     }
     return true;

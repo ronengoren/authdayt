@@ -10,10 +10,10 @@ const ApiCommandTextButton = ({
   busy,
   ...props
 }) => {
-  // const apiCommand = apiCommands[command];
+  const apiCommand = apiCommands[command];
   return (
     <TextButton
-      // busy={busy || (apiCommand && apiCommand === "processing")}
+      busy={busy || (apiCommand && apiCommand === "processing")}
       {...props}
     >
       {children}
@@ -33,12 +33,12 @@ ApiCommandTextButton.propTypes = {
   busy: PropTypes.bool
 };
 
-// const mapStateToProps = state => ({
-//   apiCommands: state.apiCommands
-// });
+const mapStateToProps = state => ({
+  apiCommands: state.apiCommands
+});
 
-// export default connect(
-//   mapStateToProps,
-//   null
-// )(ApiCommandTextButton);
-export default ApiCommandTextButton;
+export default connect(
+  mapStateToProps,
+  null
+)(ApiCommandTextButton);
+// export default ApiCommandTextButton;

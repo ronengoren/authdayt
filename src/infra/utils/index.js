@@ -5,10 +5,11 @@ import {
   isEqual,
   get,
   isNil,
+  isNumber,
   uniqBy,
+  uniqWith,
   merge,
   intersection,
-  intersectionBy,
   compact,
   uniqueId,
   debounce,
@@ -19,25 +20,16 @@ import {
   omit,
   pull,
   set,
-  remove
+  remove,
+  isObject,
+  isUndefined,
+  isBoolean,
+  omitBy,
+  transform,
+  without
 } from "lodash";
 import React from "react";
-import { userTypes } from "../../vars/enums";
-
-export function capitalizeAllWords(str) {
-  return str.replace(
-    /\w\S*/g,
-    txt => txt.charAt(0).toUpperCase() + txt.substr(1)
-  );
-}
-
-export function isArrayWithElements(val) {
-  return Array.isArray(val) && val.length > 0;
-}
-
-export function isObject(val) {
-  return val !== null && typeof val === "object";
-}
+import { userTypes } from "src/vars/enums";
 
 export function getFilePathFromLocalUri(localUri) {
   return localUri.replace("file:///", "");
@@ -116,18 +108,33 @@ export async function delayInMilliseconds(ms) {
 export const isAppAdmin = user =>
   [userTypes.ADMIN, userTypes.SUPER_ADMIN].includes(user.userType);
 
+export function differenceObject(object, base) {
+  const changes = (object, base) =>
+    transform(object, (result, value, key) => {
+      if (!isEqual(value, base[key])) {
+        // eslint-disable-next-line no-param-reassign
+        result[key] =
+          isObject(value) && isObject(base[key])
+            ? changes(value, base[key])
+            : value;
+      }
+    });
+  return changes(object, base);
+}
+
 export {
   clone,
   capitalize,
   cloneDeep,
   isNil,
+  isNumber,
   omit,
   isEqual,
   get,
   uniqBy,
+  uniqWith,
   merge,
   intersection,
-  intersectionBy,
   compact,
   uniqueId,
   debounce,
@@ -137,5 +144,10 @@ export {
   isEmpty,
   pull,
   set,
-  remove
+  remove,
+  isObject,
+  isUndefined,
+  isBoolean,
+  omitBy,
+  without
 };
