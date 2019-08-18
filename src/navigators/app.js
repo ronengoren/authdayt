@@ -76,7 +76,7 @@ const TabSection = createBottomTabNavigator(
     }
   },
   {
-    initialRouteName: screenGroupNames.GROUPS_TAB,
+    initialRouteName: screenGroupNames.HOME_TAB,
     tabBarComponent: CustomTabBar,
     lazy: true,
     animationEnabled: false,

@@ -37,7 +37,7 @@ class CommunicationCenter extends Component {
 
     return (
       <View style={commonStyles.flex1}>
-        {this.renderHeader()}
+        {/* {this.renderHeader()} */}
         <SubHeader
           tabs={[
             {
@@ -56,7 +56,7 @@ class CommunicationCenter extends Component {
           onTabChange={val => this.setState({ activeSubTab: val })}
           activeUnderlineColor={daytColors.azure}
           fullWidth
-          enableAnalytics
+          // enableAnalytics
         />
         {this.renderActiveSubTab()}
       </View>

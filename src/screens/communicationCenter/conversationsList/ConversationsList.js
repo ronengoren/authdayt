@@ -5,6 +5,8 @@ import React, { Component } from "react";
 //   ChannelListMessenger,
 //   InfiniteScrollPaginator
 // } from "stream-chat-react-native";
+import { StyleSheet } from "react-native";
+
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getChatStatus } from "src/redux/inbox/actions";
@@ -16,10 +18,24 @@ import chatService from "src/infra/chat/chatService";
 import { get, debounce } from "src/infra/utils";
 import { navigationService } from "src/infra/navigation";
 import { Logger } from "src/infra/reporting";
-import { commonStyles } from "src/vars";
+import { commonStyles, daytColors } from "src/vars";
 import { screenNames } from "src/vars/enums";
 import ConversationItem from "./ConversationItem";
 import EmptyList from "./EmptyList";
+
+const styles = StyleSheet.create({
+  loadingContainer: {
+    paddingVertical: 0
+  },
+  loadingContainerBorder: {
+    marginHorizontal: 15,
+    borderTopWidth: 1,
+    borderTopColor: daytColors.veryLightPink
+  },
+  emptyList: {
+    backgroundColor: daytColors.white
+  }
+});
 
 class ConversationsList extends Component {
   state = {
@@ -35,14 +51,17 @@ class ConversationsList extends Component {
 
     if (!client) {
       return (
-        <View style={commonStyles.flex1}>
-          <Spinner />
-        </View>
+        <React.Fragment>
+          <View style={styles.loadingContainer}>
+            <View style={styles.loadingContainerBorder} />
+            <NotificationsLoadingState />
+          </View>
+        </React.Fragment>
       );
     }
 
     return (
-      <Chat client={client}>
+      <View client={client}>
         <ChannelList
           key={refreshConversationsKey}
           List={ChannelListMessenger}
@@ -63,7 +82,7 @@ class ConversationsList extends Component {
           loadMoreThreshold={4}
           onSelect={this.navigateToChat}
         />
-      </Chat>
+      </View>
     );
   }
 
@@ -138,13 +157,14 @@ ConversationsList.propTypes = {
   getChatStatus: PropTypes.func
 };
 
-const mapStateToProps = state => ({
-  userId: state.auth.user.id,
-  client: get(state, "inbox.client")
-});
-const mapDispatchToProps = { getChatStatus };
+// const mapStateToProps = state => ({
+//   userId: state.auth.user.id,
+//   client: get(state, "inbox.client")
+// });
+// const mapDispatchToProps = { getChatStatus };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ConversationsList);
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(ConversationsList);
+export default ConversationsList;

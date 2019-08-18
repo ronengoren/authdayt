@@ -38,11 +38,11 @@ class GroupsTab extends React.Component {
       suggestedGroupsProps: {
         normalizedSchema: "GROUPS",
         // reducerStatePath: "groups.suggestedGroups",
-        apiQuery: {
-          domain: "groups",
-          key: "getSuggested",
-          params: { filter: null, featured: true }
-        },
+        // apiQuery: {
+        //   domain: "groups",
+        //   key: "getSuggested",
+        //   params: { filter: null, featured: true }
+        // },
         ListItemComponent: EntityCompactView,
         listItemProps: { entityType: entityTypes.GROUP },
         listEmptyState: (
@@ -62,11 +62,11 @@ class GroupsTab extends React.Component {
     this.myGroupsProps = {
       normalizedSchema: "GROUPS",
       // reducerStatePath: "groups.myGroups",
-      apiQuery: {
-        domain: "groups",
-        key: "getManagedAndRecent",
-        params: { userId: 1 }
-      },
+      // apiQuery: {
+      //   domain: "groups",
+      //   key: "getManagedAndRecent",
+      //   params: { userId: 1 }
+      // },
       EntityComponent: this.renderMyGroupComponent()
     };
     this.createEntityButton = {
@@ -94,22 +94,22 @@ class GroupsTab extends React.Component {
 
   render() {
     const { suggestedGroupsProps } = this.state;
-    // const { suggestedGroupsThemes } = this.props;
-    // const translatedThemes = GroupsTab.translateThemes(suggestedGroupsThemes);
+    const { suggestedGroupsThemes } = this.props;
+    const translatedThemes = GroupsTab.translateThemes(suggestedGroupsThemes);
 
     return (
       <View style={styles.container}>
         <EntityListsView
           // createEntityButton={this.createEntityButton}
-          topSectionSubHeaderProps={this.topSectionSubHeaderProps}
+          // topSectionSubHeaderProps={this.topSectionSubHeaderProps}
           // bottomSectionSubHeaderProps={this.bottomSectionSubHeaderProps}
           topSectionListProps={this.myGroupsProps}
           bottomSectionListProps={suggestedGroupsProps}
           componentColor={daytColors.golden}
           optionsSelectorProps={{
-            // options: translatedThemes,
-            // updateParentSelectedOption: this.changeTheme,
-            // showOptionAll: true,
+            options: translatedThemes,
+            updateParentSelectedOption: this.changeTheme,
+            showOptionAll: true,
             optionAllCustomName: I18n.t("themes.suggested")
           }}
         />
@@ -143,12 +143,12 @@ class GroupsTab extends React.Component {
     resetSuggestedGroups();
     this.setState({
       suggestedGroupsProps: {
-        ...suggestedGroupsProps,
-        apiQuery: {
-          domain: "groups",
-          key: "getSuggested",
-          params: { theme, featured: !theme }
-        }
+        ...suggestedGroupsProps
+        // apiQuery: {
+        //   domain: "groups",
+        //   key: "getSuggested",
+        //   params: { theme, featured: !theme }
+        // }
         // reducerStatePath: "groups.suggestedGroups"
       }
     });
@@ -162,14 +162,14 @@ GroupsTab.propTypes = {
   suggestedGroupsThemes: PropTypes.array
 };
 
-const mapStateToProps = state => ({
-  suggestedGroupsThemes: get(state, "groups.suggestedGroupsTags.data", []),
-  user: state.auth.user
-});
+// const mapStateToProps = state => ({
+//   suggestedGroupsThemes: get(state, "groups.suggestedGroupsTags.data", []),
+//   user: state.auth.user
+// });
 
-const mapPropsToDispatch = {
-  resetSuggestedGroups,
-  getSuggestedGroupsTags
-};
+// const mapPropsToDispatch = {
+//   resetSuggestedGroups,
+//   getSuggestedGroupsTags
+// };
 
 export default GroupsTab;

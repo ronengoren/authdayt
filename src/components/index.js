@@ -35,7 +35,7 @@ export {
   PostContent,
   PostHeader
 } from "./posts";
-// export { UsersList, SelectUsers } from "./usersList";
+export { UsersList, SelectUsers } from "./usersList";
 export {
   EmptySearch,
   SearchResultsList,

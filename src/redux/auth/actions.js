@@ -21,8 +21,8 @@ import {
   screenNames
 } from "src/vars/enums";
 // import chatService from '/infra/chat/chatService';
-// import { navigationService } from '/infra/navigation';
-// import permissionsService from '/infra/permissions/permissionsService';
+import { navigationService } from "src/infra/navigation";
+import permissionsService from "src/infra/permissions/permissionsService";
 // import { setTestFairyUserData } from '/infra/testFairy';
 
 export const SIGN_IN_BEGIN = "AUTH/SIGN_IN_BEGIN";

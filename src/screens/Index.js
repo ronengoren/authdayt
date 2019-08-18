@@ -31,7 +31,12 @@ export {
 } from "./profile";
 // export { PeopleTab } from "./peopleTab";
 export { GroupsTab } from "./groupsTab";
-export { CommunicationCenter } from "./communicationCenter";
+export {
+  CommunicationCenter,
+  ChatUserSelector,
+  ChatInteraction,
+  ConversationsList
+} from "./communicationCenter";
 export { PostPage, PostEditor, AddDescription, ContextPicker } from "./post";
 export { Chat } from "./chat";
 export { Search } from "./search";

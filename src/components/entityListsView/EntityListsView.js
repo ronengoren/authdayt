@@ -68,16 +68,16 @@ class EntityListsView extends Component {
     })
   };
   render() {
-    // const { onScroll, bottomSectionListProps } = this.props;
-    // const {
-    //   // apiQuery,
-    //   // reducerStatePath,
-    //   // ListItemComponent,
-    //   // listItemProps,
-    //   // listEmptyState,
-    //   // listLoadingComponent,
-    //   // normalizedSchema
-    // } = bottomSectionListProps;
+    const { onScroll, bottomSectionListProps } = this.props;
+    const {
+      //   // apiQuery,
+      //   // reducerStatePath,
+      ListItemComponent,
+      listItemProps,
+      listEmptyState,
+      listLoadingComponent,
+      normalizedSchema
+    } = bottomSectionListProps;
 
     return (
       <View style={styles.wrapper}>
@@ -87,14 +87,14 @@ class EntityListsView extends Component {
           }}
           // reducerStatePath={reducerStatePath}
           // apiQuery={apiQuery}
-          // ListItemComponent={ListItemComponent}
-          // listItemProps={listItemProps}
-          // ListEmptyComponent={listEmptyState}
-          // ListLoadingComponent={listLoadingComponent}
+          ListItemComponent={ListItemComponent}
+          listItemProps={listItemProps}
+          ListEmptyComponent={listEmptyState}
+          ListLoadingComponent={listLoadingComponent}
           ListHeaderComponent={this.renderHeader()}
           onTopFetchAction={this.reloadTopSectionList}
-          // normalizedSchema={normalizedSchema || "MIXED_TYPE_ENTITIES"}
-          // onScroll={onScroll}
+          normalizedSchema={normalizedSchema || "MIXED_TYPE_ENTITIES"}
+          onScroll={onScroll}
         />
       </View>
     );

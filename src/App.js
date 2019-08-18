@@ -29,8 +29,22 @@ import {
   ScreenErrorBoundary,
   ActionSheetManager
 } from "src/components";
+import { omit } from "src/infra/utils";
+import {
+  user as userLocalStorage,
+  medias as mediasCache,
+  misc as miscLocalStorage
+} from "src/infra/localStorage";
 
-export default class App extends Component {
+const topLevelRoutes = ["ChangePassword"];
+const INACTIVE_MINUTES_RESET = 5;
+
+class App extends Component {
+  inactiveTimestamp = null;
+
+  state = {
+    appState: "active"
+  };
   render() {
     return [
       <StatusBar
@@ -45,10 +59,13 @@ export default class App extends Component {
             navigationService.setTopLevelNavigator(navigatorRef);
           }}
         />
-      </ScreenErrorBoundary>
+      </ScreenErrorBoundary>,
+      <ConnectionHeader key="ConnectionHeader" />
     ];
   }
   componentDidMount() {
     Orientation.lockToPortrait();
   }
 }
+
+export default App;
