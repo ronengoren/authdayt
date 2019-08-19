@@ -19,6 +19,75 @@
             "message": "<b>{{participantFullName}}</b> wants to send you a message.\nDo you want to let {{participantFullName}} send you messages from now on?",
             "decline_button": "Decline",
             "allow_button": "Allow"
+        },
+        "interactions": {
+            "drink": {
+                "interaction_screen": {
+                    "header_title": "Drink with {{firstName}}",
+                    "title": "Hey {{firstName}} 👋🏽",
+                    "subtitle": "Up for a drink?",
+                    "input_placeholder": "A few words about yourself would be helpful :)",
+                    "cta_button": "Send"
+                },
+                "chat_message": {
+                    "subtitle": "Hey {{firstName}}\nWanna grab a drink?"
+                }
+            },
+            "coffee": {
+                "interaction_screen": {
+                    "header_title": "Coffee with {{firstName}}",
+                    "title": "Hey {{firstName}} 👋🏽",
+                    "subtitle": "how about coffee together?",
+                    "input_placeholder": "We can talk about...",
+                    "cta_button": "Send"
+                },
+                "chat_message": {
+                    "subtitle": "Hey {{firstName}}, \nHow about coffee together?"
+                }
+            },
+            "business": {
+                "interaction_screen": {
+                    "header_title": "Business with {{firstName}}",
+                    "title": "Hey {{firstName}} 👋🏽",
+                    "subtitle": "let's talk business",
+                    "input_placeholder": "We can discuss...",
+                    "cta_button": "Send"
+                },
+                "chat_message": {
+                    "subtitle": "Hey {{firstName}},\nLet's talk business"
+                }
+            },
+            "types": {
+                "drink": "Drink",
+                "coffee": "Coffee",
+                "business": "Business",
+                "general": "Message"
+            },
+            "job": {
+                "interaction_screen": {
+                    "header_title": "Message {{firstName}}",
+                    "input_placeholder": "Message {{firstName}} about this job",
+                    "cta_button": "Send"
+                }
+            },
+            "realEstate": {
+                "interaction_screen": {
+                    "header_title": "Message {{firstName}}",
+                    "input_placeholder": "Message {{firstName}} about this place",
+                    "cta_button": "Send"
+                }
+            },
+            "giveAndTake": {
+                "interaction_screen": {
+                    "header_title": "Message {{firstName}}",
+                    "input_placeholder": "Message {{firstName}}...",
+                    "cta_button": "Send"
+                }
+            }
+        },
+        "interaction_sent_snackbar": {
+            "title": "Message Sent!",
+            "subTitle": "View your inbox"
         }
     },
     "common": {

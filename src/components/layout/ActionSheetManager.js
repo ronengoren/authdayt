@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Modal, StyleSheet, TouchableOpacity } from "react-native";
-import I18n from "/infra/localization";
+import I18n from "src/infra/localization";
 import { connect } from "react-redux";
-import { closeActionSheet } from "/redux/general/actions";
-import { apiCommand } from "/redux/apiCommands/actions";
-import { Text, View } from "/components/basicComponents";
-import { DaytIcon, AwesomeIcon } from "/assets/icons";
+import { closeActionSheet } from "src/redux/general/actions";
+import { apiCommand } from "src/redux/apiCommands/actions";
+import { Text, View } from "src/components/basicComponents";
+import { DaytIcon, AwesomeIcon } from "src/assets/icons";
 import { daytFonts, daytFontWeights, daytColors } from "src/vars";
-import Logger from "/infra/reporting/Logger";
-import { stylesScheme } from "/schemas";
+// import Logger from "/infra/reporting/Logger";
+import { stylesScheme } from "src/schemas";
 
 const styles = StyleSheet.create({
   modal: {

@@ -18,10 +18,15 @@ import { isEmpty, get } from "src/infra/utils";
 import { isRTL } from "src/infra/utils/stringUtils";
 // import { analytics } from '/infra/reporting';
 import { userScheme } from "src/schemas";
-// import { showSnackbar } from '/redux/general/actions';
+import { showSnackbar } from "src/redux/general/actions";
+
 import { navigationService } from "src/infra/navigation";
 import images from "src/assets/images";
-import { postTypes, chatInteractioDefinitions } from "src/vars/enums";
+import {
+  postTypes,
+  chatInteractioDefinitions,
+  snackbarTypes
+} from "src/vars/enums";
 import { commonStyles, daytColors } from "src/vars";
 // import { PostContentMeta } from '/components/posts';
 
@@ -279,7 +284,7 @@ class ChatInteraction extends React.Component {
   };
 
   handleFormSubmit = async () => {
-    const { channel, interaction, user, ownUser } = this.props;
+    const { channel, interaction, user, ownUser, showSnackbar } = this.props;
     const { text } = this.state;
     const message = { text: text.trim() };
 
@@ -293,10 +298,10 @@ class ChatInteraction extends React.Component {
         .chatMessageAction({ senderId: ownUser.id, recipientId: user.id })
         .dispatch();
       navigationService.goBack();
-      // showSnackbar(
-      //   { snackbarType: snackbarTypes.CHAT, user },
-      //   { dismissAfter: 5000 }
-      // );
+      showSnackbar(
+        { snackbarType: snackbarTypes.CHAT, user },
+        { dismissAfter: 5000 }
+      );
     } catch (err) {
       console.log("Failed! \n ", err);
     } finally {
@@ -323,9 +328,9 @@ const mapStateToProps = (state, ownProps) => ({
   isPostPage: get(ownProps.navigation, "state.params.isPostPage")
 });
 
-// const mapDispatchToProps = {
-//   showSnackbar
-// };
+const mapDispatchToProps = {
+  showSnackbar
+};
 
 // ChatInteraction = connect(
 //   mapStateToProps,

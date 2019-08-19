@@ -907,6 +907,19 @@ const listViewTypes = {
   DEFAULT: "default",
   POLL: "poll"
 };
+const webSupportedTypes = [
+  postTypes.GUIDE,
+  postTypes.REAL_ESTATE,
+  postTypes.JOB,
+  postTypes.GIVE_TAKE,
+  entityTypes.LIST,
+  entityTypes.EVENT
+];
+
+const snackbarTypes = {
+  CONNECTION: "connection",
+  CHAT: "chat"
+};
 
 export {
   userTypes,
@@ -977,5 +990,6 @@ export {
   screenNamesTabByEntityType,
   entityTypeBySlug,
   postTypeBySlug,
-  filtersUiDefinitions
+  filtersUiDefinitions,
+  snackbarTypes
 };

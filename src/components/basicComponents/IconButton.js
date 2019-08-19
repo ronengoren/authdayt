@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StyleSheet, TouchableOpacity } from "react-native";
-import { DaytIcon, AwesomeIcon } from "../../assets/icons";
-import { daytColors, uiConstants } from "../../vars";
+import { DaytIcon, AwesomeIcon } from "src/assets/icons";
+import { daytColors, uiConstants } from "src/vars";
 
 const styles = StyleSheet.create({
   defaultContainer: {
@@ -63,7 +63,7 @@ const IconButton = ({
       accessible
       accessibilityComponentType="button"
       accessibilityTraits="button"
-      style={containerStyle}
+      // style={containerStyle}
       onPress={disabled ? null : onPress}
       onLongPress={disabled ? null : onLongPress}
       activeOpacity={disabled ? 1 : 0.6}
