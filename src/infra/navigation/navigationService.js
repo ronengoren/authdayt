@@ -116,7 +116,7 @@ function navigateToProfile(params, options) {
   const appUserId = global.store.getState().auth.user.id;
   const screenName =
     params && params.entityId === appUserId
-      ? screenGroupNames.MY_CITY
+      ? screenGroupNames.PROFILE
       : screenNames.Profile;
   navigate(screenName, params, options);
 }

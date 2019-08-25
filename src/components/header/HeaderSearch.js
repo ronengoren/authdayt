@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import I18n from "src/infra/localization";
+import BoardsHeader from "src/screens/homeTab/BoardsHeader";
 
 import {
   LayoutAnimation,
@@ -57,6 +58,9 @@ const styles = StyleSheet.create({
     // alignItems: "center",
     // textAlign: "center",
     // fontWeight: "900"
+  },
+  dayt: {
+    fontSize: 40
   }
 });
 
@@ -79,6 +83,8 @@ class HeaderSearch extends React.Component {
 
     return (
       <View style={carouselsStyles.exampleContainer}>
+        <BoardsHeader />
+
         <Carousel
           directionalLockEnabled={true}
           alwaysBounceHorizontal={true}
@@ -123,6 +129,7 @@ class HeaderSearch extends React.Component {
       //   onPress={this.handleOnPress}
       //   testID="postButton"
       // />,
+
       <TouchableOpacity
         // onPress={this.navigateToSearch}
         activeOpacity={0.5}

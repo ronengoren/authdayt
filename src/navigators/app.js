@@ -1,7 +1,8 @@
 import React from "react";
 import {
   createStackNavigator,
-  createBottomTabNavigator
+  createBottomTabNavigator,
+  createDrawerNavigator
 } from "react-navigation";
 import * as screens from "../screens";
 import I18n from "../infra/localization";
@@ -12,7 +13,7 @@ import { daytColors } from "../vars";
 import { get } from "../infra/utils";
 import Home from "./home";
 // import People from "./people";
-import MyCity from "./myCity";
+import Profile from "./Profile";
 import Groups from "./groups";
 import Communications from "./communications";
 
@@ -83,17 +84,28 @@ const TabSection = createBottomTabNavigator(
     swipeEnabled: false
   }
 );
+const MiddleSection = createDrawerNavigator({
+  [screenGroupNames.TABS]: {
+    screen: TabSection
+  },
+  [screenGroupNames.PROFILE]: {
+    screen: Profile
+  },
+  [screenNames.Settings]: {
+    screen: screens.Settings
+    // navigationOptions: () => {
+    //   const title = I18n.t("profile.settings.screen_header");
+    //   return {
+    //     header: <Header hasBackButton title={title} />
+    //   };
+    // }
+  }
+});
 
-const MiddleSection = createStackNavigator(
+const DrawerNavigator = createStackNavigator(
   {
-    [screenGroupNames.TABS]: {
-      screen: TabSection,
-      navigationOptions: {
-        header: null
-      }
-    },
-    [screenGroupNames.MY_CITY]: {
-      screen: MyCity,
+    [screenGroupNames.PROFILE]: {
+      screen: Profile,
       navigationOptions: {
         header: null
       }

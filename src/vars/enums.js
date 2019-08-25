@@ -388,7 +388,7 @@ const screenGroupNames = {
   CREATE_GROUP_MODAL: "CreateGroupModal",
   CREATE_EVENT_MODAL: "CreateEventModal",
   COMMUNICATIONS: "Communications",
-  MY_CITY: "MyCity"
+  PROFILE: "Profile"
 };
 
 const screenNames = {
@@ -784,7 +784,7 @@ const listItemPermissions = {
   DELETE: "delete"
 };
 
-const myCityTabs = {
+const myProfileTabs = {
   PAGES: "pages",
   LISTS: "lists",
   ITEMS: "items",
@@ -975,7 +975,7 @@ export {
   feedEventTypes,
   listPermissions,
   listItemPermissions,
-  myCityTabs,
+  myProfileTabs,
   videoStatus,
   passivePostSubTypes,
   componentNamesForAnalytics,

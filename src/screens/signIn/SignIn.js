@@ -191,7 +191,7 @@ class SignIn extends React.Component {
                 label={I18n.t("common.form.email")}
                 keyboardType="email-address"
                 autoCapitalize="none"
-                // onChange={this.onChangeHandlerWrapper('email')}
+                onChange={this.onChangeHandlerWrapper("email")}
                 onFocus={this.onInputFocus}
                 value={email.value}
                 validations={["email"]}
@@ -204,7 +204,7 @@ class SignIn extends React.Component {
                 label={I18n.t("common.form.password")}
                 autoCapitalize={"none"}
                 secureTextEntry
-                // onChange={this.onChangeHandlerWrapper('password')}
+                onChange={this.onChangeHandlerWrapper("password")}
                 onFocus={this.onInputFocus}
                 value={password.value}
                 validations={[
@@ -266,6 +266,32 @@ class SignIn extends React.Component {
       </View>
     );
   }
+  onInputFocus = () => {
+    const { slidedUp } = this.state;
+    if (!slidedUp) {
+      Animated.timing(this.state.marginTop, {
+        toValue: -1 * slidingDistance,
+        duration: 300
+      }).start(this.toggleSlidedUpFlag);
+    }
+  };
+
+  onChangeHandlerWrapper = field => changes => {
+    this.setState(state => ({
+      [field]: {
+        ...state[field],
+        ...changes
+      }
+    }));
+  };
+  toggleSlidedUpFlag = () => {
+    if (this.state.slidedUp) {
+      // blur the input in case of showing the upper part
+      Keyboard.dismiss();
+    }
+    this.setState({ slidedUp: !this.state.slidedUp });
+  };
+
   handleFacebookSignIn = async () => {
     Keyboard.dismiss();
     this.setState({ facebookSignIn: true });

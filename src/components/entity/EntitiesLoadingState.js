@@ -166,6 +166,7 @@ class EntitiesLoadingState extends Component {
       slider1ActiveSlide: SLIDER_1_FIRST_ITEM
     };
   }
+
   _renderItem({ item, index }) {
     return <SliderEntry data={item} even={(index + 1) % 2 === 0} />;
   }
@@ -177,7 +178,6 @@ class EntitiesLoadingState extends Component {
         activeDotIndex={slider1ActiveSlide}
         containerStyle={{ backgroundColor: "white" }}
         dotStyle={{
-          color: "#5eadbb",
           width: 5,
           height: 5,
           borderRadius: 5,
@@ -217,10 +217,10 @@ class EntitiesLoadingState extends Component {
         <Carousel
           ref={c => (this._slider1Ref = c)}
           data={ENTRIES1}
-          renderItem={this._renderItemWithParallax}
+          renderItem={this._renderItem}
           sliderWidth={sliderWidth}
           itemWidth={itemWidth}
-          hasParallaxImages={true}
+          hasParallaxImages={false}
           firstItem={SLIDER_1_FIRST_ITEM}
           inactiveSlideScale={0.94}
           inactiveSlideOpacity={0.7}
@@ -232,6 +232,8 @@ class EntitiesLoadingState extends Component {
           autoplay={false}
           autoplayDelay={500}
           autoplayInterval={3000}
+          enableSnap={true}
+          snapOnAndroid={true} //to enable snapping on android
           onSnapToItem={index => this.setState({ slider1ActiveSlide: index })}
         />
 
@@ -414,7 +416,7 @@ class EntitiesLoadingState extends Component {
             directionalLockEnabled={true}
           >
             {example1}
-            {EntitiesLoadingState.renderPlaceholderFeedItem(type, 1)}
+            {/* {EntitiesLoadingState.renderPlaceholderFeedItem(type, 1)} */}
           </ScrollView>
           <ScrollView
             style={carouseleStyles.scrollview}
@@ -422,7 +424,7 @@ class EntitiesLoadingState extends Component {
             directionalLockEnabled={true}
           >
             {example1}
-            {EntitiesLoadingState.renderPlaceholderFeedItem(type, 2)}
+            {/* {EntitiesLoadingState.renderPlaceholderFeedItem(type, 2)} */}
           </ScrollView>
           <ScrollView
             style={carouseleStyles.scrollview}
@@ -430,7 +432,7 @@ class EntitiesLoadingState extends Component {
             directionalLockEnabled={true}
           >
             {example1}
-            {EntitiesLoadingState.renderPlaceholderFeedItem(type, 3)}
+            {/* {EntitiesLoadingState.renderPlaceholderFeedItem(type, 3)} */}
           </ScrollView>
           <ScrollView
             style={carouseleStyles.scrollview}
@@ -438,7 +440,7 @@ class EntitiesLoadingState extends Component {
             directionalLockEnabled={true}
           >
             {example1}
-            {EntitiesLoadingState.renderPlaceholderFeedItem(type, 4)}
+            {/* {EntitiesLoadingState.renderPlaceholderFeedItem(type, 4)} */}
           </ScrollView>
           <ScrollView
             style={carouseleStyles.scrollview}
@@ -446,7 +448,7 @@ class EntitiesLoadingState extends Component {
             directionalLockEnabled={true}
           >
             {example1}
-            {EntitiesLoadingState.renderPlaceholderFeedItem(type, 5)}
+            {/* {EntitiesLoadingState.renderPlaceholderFeedItem(type, 5)} */}
           </ScrollView>
           <ScrollView
             style={carouseleStyles.scrollview}
@@ -454,7 +456,7 @@ class EntitiesLoadingState extends Component {
             directionalLockEnabled={true}
           >
             {example1}
-            {EntitiesLoadingState.renderPlaceholderFeedItem(type, 6)}
+            {/* {EntitiesLoadingState.renderPlaceholderFeedItem(type, 6)} */}
           </ScrollView>
           <ScrollView
             style={carouseleStyles.scrollview}
@@ -462,7 +464,7 @@ class EntitiesLoadingState extends Component {
             directionalLockEnabled={true}
           >
             {example1}
-            {EntitiesLoadingState.renderPlaceholderFeedItem(type, 7)}
+            {/* {EntitiesLoadingState.renderPlaceholderFeedItem(type, 7)} */}
           </ScrollView>
           <ScrollView
             style={carouseleStyles.scrollview}
@@ -470,7 +472,7 @@ class EntitiesLoadingState extends Component {
             directionalLockEnabled={true}
           >
             {example1}
-            {EntitiesLoadingState.renderPlaceholderFeedItem(type, 8)}
+            {/* {EntitiesLoadingState.renderPlaceholderFeedItem(type, 8)} */}
           </ScrollView>
         </View>
       </SafeAreaView>

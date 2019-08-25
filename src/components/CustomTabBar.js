@@ -195,7 +195,7 @@ class CustomTabBar extends React.PureComponent {
             {
               /* {
               if (routeIndex === 2) {
-                return this.renderMyCityTab({ isFocused, route, testID });
+                return this.renderProfileTab({ isFocused, route, testID });
               }
             }
             return this.renderTabWithIcon({ isFocused, route, testID }); */
@@ -250,7 +250,7 @@ class CustomTabBar extends React.PureComponent {
     );
   };
 
-  renderMyCityTab = ({ isFocused, route, testID }) => {
+  renderProfileTab = ({ isFocused, route, testID }) => {
     const {
       user: { media, themeColor, name }
       // community

@@ -1,6 +1,6 @@
 import { createSwitchNavigator, createAppContainer } from "react-navigation";
 import { daytColors } from "../vars";
-import { screenGroupNames } from "../vars/enums";
+import { screenGroupNames } from "src/vars/enums";
 import MiddleSection from "./app";
 import authentication from "./authentication";
 
@@ -20,7 +20,7 @@ const AppTopNavigation = createSwitchNavigator(
     }
   },
   {
-    initialRouteName: screenGroupNames.AUTHENTICATION,
+    initialRouteName: screenGroupNames.SIGNED_IN,
     headerMode: "screen"
   }
 );

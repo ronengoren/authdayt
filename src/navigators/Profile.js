@@ -7,9 +7,9 @@ import { daytColors } from "src/vars";
 import { screenNames, screenGroupNames } from "src/vars/enums";
 import commonTabRoutes from "./commonTabRoutes";
 
-const MyCity = createStackNavigator(
+const myProfile = createStackNavigator(
   {
-    [screenGroupNames.MY_CITY]: {
+    [screenGroupNames.PROFILE]: {
       screen: screens.Profile,
       navigationOptions: {
         header: null
@@ -67,7 +67,7 @@ const MyCity = createStackNavigator(
   },
 
   {
-    initialRouteName: screenGroupNames.MY_CITY,
+    initialRouteName: screenGroupNames.PROFILE,
     headerMode: "screen",
     cardStyle: {
       backgroundColor: daytColors.white
@@ -75,4 +75,4 @@ const MyCity = createStackNavigator(
   }
 );
 
-export default MyCity;
+export default myProfile;

@@ -2447,7 +2447,7 @@
         }
     },
     "save_modal": {
-        "header": "Save to",
+        "header": "Choose dayt for {{day}}",
         "subheader": "Select at least one collection.",
         "saved_header": "Saved!",
         "saved_subheader": "Item saved to these collections:",

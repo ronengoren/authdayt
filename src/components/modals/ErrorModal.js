@@ -1,5 +1,5 @@
 import { Alert } from "react-native";
-import I18n from "../../infra/localization";
+import I18n from "src/infra/localization";
 
 class ErrorModal {
   static showAlert = (headerText, bodyText, buttonText) => {

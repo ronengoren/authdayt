@@ -146,7 +146,7 @@ class Settings extends React.Component {
   render() {
     const { data, logout } = this.props;
     const { form } = this.state;
-    const versionNumber = getVersionNumber();
+    // const versionNumber = getVersionNumber();
 
     if (!data) {
       return <Spinner />;

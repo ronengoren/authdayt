@@ -17,8 +17,8 @@ const MIN_TITLE_HORIZONTAL_MARGIN = 10;
 
 const styles = StyleSheet.create({
   wrapper: {
-    flexDirection: "row",
-    alignItems: "center",
+    // flexDirection: "row"
+    // alignItems: "flex-end"
     width: "100%",
     height: uiConstants.NAVBAR_HEIGHT,
     paddingTop: uiConstants.PHONE_BAR_HEIGHT_TRANSLUCENT

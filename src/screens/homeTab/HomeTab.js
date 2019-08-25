@@ -354,6 +354,9 @@ class HomeTab extends React.Component {
       //   </View>
 
       <View style={styles.feedHeaderWrapper}>
+        {/* <TouchableOpacity onPress={this.props.navigation.openDrawer}>
+          <Text>Open Drawer</Text>
+        </TouchableOpacity> */}
         <View style={styles.headerUpperSection}>
           {/* <ScrollView style={styles.postButtonWrapper} key="postButton">
             <PostButton
@@ -391,7 +394,7 @@ class HomeTab extends React.Component {
             {greetingLines[1]}
           </Text> */}
         </View>
-        <BoardsHeader />
+
         <View style={styles.themesCarouselBottomBorder} />
         {(enableCommunityFeed || isAdmin) &&
           {

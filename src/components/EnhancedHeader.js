@@ -17,7 +17,7 @@ import {
   screenNames,
   uiDefinitions,
   uiColorDefinitions,
-  myCityTabs
+  myProfileTabs
 } from "src/vars/enums";
 
 const styles = StyleSheet.create({
@@ -200,7 +200,7 @@ class EnhancedHeader extends React.Component {
         });
         break;
       }
-      case myCityTabs.LISTS: {
+      case myProfileTabs.LISTS: {
         navigationService.navigate(screenNames.ListOfLists, { contextId });
         break;
       }
@@ -213,7 +213,7 @@ class EnhancedHeader extends React.Component {
 EnhancedHeader.propTypes = {
   headerItems: PropTypes.arrayOf(
     PropTypes.oneOf([
-      myCityTabs.LISTS,
+      myProfileTabs.LISTS,
       postTypes.TIP_REQUEST,
       postTypes.GUIDE,
       postTypes.JOB,

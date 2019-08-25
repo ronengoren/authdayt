@@ -14,7 +14,7 @@ export default StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: colors.background1
+    backgroundColor: colors.background2
   },
   gradient: {
     ...StyleSheet.absoluteFillObject
@@ -23,7 +23,7 @@ export default StyleSheet.create({
     // flex: 1
   },
   exampleContainer: {
-    // paddingVertical: 30
+    paddingVertical: 10
   },
   exampleContainerDark: {
     backgroundColor: colors.black

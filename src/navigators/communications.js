@@ -11,7 +11,7 @@ const Communications = createStackNavigator(
     [screenNames.CommunicationCenter]: {
       screen: screens.CommunicationCenter,
       navigationOptions: () => ({
-        header: <Header />
+        header: null
       })
     },
     [screenNames.ChatUserSelector]: {

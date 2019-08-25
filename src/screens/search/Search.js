@@ -516,7 +516,7 @@ class Search extends Component {
           style={styles.options}
           textStyle={styles.optionTextStyle}
           selectOption={this.handleOptionSelected}
-          infiniteScroll={false}
+          infiniteScroll={true}
         />
       </View>
     );
