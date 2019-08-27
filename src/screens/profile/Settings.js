@@ -205,7 +205,7 @@ class Settings extends React.Component {
           })}
           {this.renderNotificationSettingsRow({
             translationKey: "group_updates",
-            stateKey: "groups"
+            stateKey: "calendar"
           })}
           {this.renderNotificationSettingsRow({
             translationKey: "list_updates",

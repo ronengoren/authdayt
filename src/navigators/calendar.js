@@ -7,9 +7,9 @@ import { daytColors } from "src/vars";
 // import CreateGroup from "./createGroup";
 // import commonTabRoutes from './commonTabRoutes';
 
-const Groups = createStackNavigator({
-  [screenNames.GroupsTab]: {
-    screen: screens.GroupsTab,
+const Calendar = createStackNavigator({
+  [screenNames.Calendar]: {
+    screen: screens.Calendar,
     navigationOptions: {
       header: <Header />
     }
@@ -30,11 +30,11 @@ const Groups = createStackNavigator({
   //     ...commonTabRoutes
   //   },
   //   {
-  //     initialRouteName: screenNames.GroupsTab,
+  //     initialRouteName: screenNames.Calendar,
   //     headerMode: 'screen',
   //     cardStyle: {
   //       backgroundColor: daytColors.white
   //     }
 });
 
-export default Groups;
+export default Calendar;

@@ -22,39 +22,39 @@ const entryBorderRadius = 0;
 
 export default StyleSheet.create({
   slideInnerContainer: {
-    width: 92 + "%",
-    height: slideHeight,
-    paddingHorizontal: itemHorizontalMargin
+    width: 100 + "%",
+    height: slideHeight
+    // paddingHorizontal: itemHorizontalMargin
     // paddingBottom: 18 // needed for shadow
   },
   shadow: {
-    position: "absolute",
-    top: 0,
-    left: itemHorizontalMargin,
-    right: itemHorizontalMargin,
-    bottom: 18,
-    shadowColor: colors.black,
-    shadowOpacity: 0.25,
-    shadowOffset: { width: 0, height: 10 },
-    shadowRadius: 10,
-    borderRadius: entryBorderRadius
+    // position: "absolute",
+    // top: 0,
+    // left: itemHorizontalMargin,
+    // right: itemHorizontalMargin,
+    // bottom: 18,
+    // shadowColor: colors.black,
+    // shadowOpacity: 0.25,
+    // shadowOffset: { width: 0, height: 10 },
+    // shadowRadius: 10,
+    // borderRadius: entryBorderRadius
   },
   imageContainer: {
-    margin: 5,
+    // margin: 5,
     // marginRight: 19,
     // padding: 25,
     flex: 1,
-    marginBottom: IS_IOS ? 0 : -1, // Prevent a random Android rendering issue
-    backgroundColor: "white",
-    borderTopLeftRadius: entryBorderRadius,
-    borderTopRightRadius: entryBorderRadius
+    // marginBottom: IS_IOS ? 0 : -1, // Prevent a random Android rendering issue
+    backgroundColor: "black"
+    // borderTopLeftRadius: entryBorderRadius,
+    // borderTopRightRadius: entryBorderRadius
   },
   imageContainerEven: {
     backgroundColor: "white"
   },
   image: {
     ...StyleSheet.absoluteFillObject,
-    resizeMode: "contain",
+    resizeMode: "cover",
     borderRadius: IS_IOS ? entryBorderRadius : 0,
     borderTopLeftRadius: entryBorderRadius,
     borderTopRightRadius: entryBorderRadius

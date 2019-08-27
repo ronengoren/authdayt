@@ -30,7 +30,7 @@ export {
   EditProfileDate
 } from "./profile";
 // export { PeopleTab } from "./peopleTab";
-export { GroupsTab } from "./groupsTab";
+export { Calendar } from "./calendar";
 export {
   CommunicationCenter,
   ChatUserSelector,

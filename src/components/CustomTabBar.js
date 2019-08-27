@@ -132,7 +132,7 @@ const tabs = {
     },
     activeColor: daytColors.flatBlue
   },
-  [screenGroupNames.GROUPS_TAB]: {
+  [screenGroupNames.CALENDAR]: {
     labelName: "groups",
     icon: {
       name: "groups-2",

@@ -2,27 +2,34 @@ import React from "react";
 import PropTypes from "prop-types";
 import memoize from "memoize-one";
 import { StyleSheet, View, Text } from "react-native";
-import I18n from "src/infra/localization";
+import I18n from "./node_modules/src/infra/localization";
 import { connect } from "react-redux";
 import {
   resetSuggestedGroups,
   getSuggestedGroupsTags
-} from "src/redux/groups/actions";
-import { Screen, EntityListsView, OptionsSelector } from "src/components";
-import { GenericListEmptyState } from "src/components/emptyState";
-import { CarouselItem } from "src/components/entityCarousel";
-import { EntityCompactView, EntitiesLoadingState } from "src/components/entity";
-import { daytColors } from "src/vars";
+} from "./node_modules/src/redux/groups/actions";
+import {
+  Screen,
+  EntityListsView,
+  OptionsSelector
+} from "./node_modules/src/components";
+import { GenericListEmptyState } from "./node_modules/src/components/emptyState";
+import { CarouselItem } from "./node_modules/src/components/entityCarousel";
+import {
+  EntityCompactView,
+  EntitiesLoadingState
+} from "./node_modules/src/components/entity";
+import { daytColors } from "./node_modules/src/vars";
 import {
   screenGroupNames,
   entityTypes,
   originTypes,
   componentNamesForAnalytics
-} from "src/vars/enums";
-import { get } from "src/infra/utils";
-import { addSpaceOnCapitalsAndCapitalize } from "src/infra/utils/stringUtils";
-import { navigationService } from "src/infra/navigation";
-import { userScheme } from "src/schemas";
+} from "./node_modules/src/vars/enums";
+import { get } from "./node_modules/src/infra/utils";
+import { addSpaceOnCapitalsAndCapitalize } from "./node_modules/src/infra/utils/stringUtils";
+import { navigationService } from "./node_modules/src/infra/navigation";
+import { userScheme } from "./node_modules/src/schemas";
 
 const styles = StyleSheet.create({
   container: {
@@ -31,7 +38,7 @@ const styles = StyleSheet.create({
   }
 });
 
-class GroupsTab extends React.Component {
+class Calendar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -95,7 +102,7 @@ class GroupsTab extends React.Component {
   render() {
     const { suggestedGroupsProps } = this.state;
     const { suggestedGroupsThemes } = this.props;
-    const translatedThemes = GroupsTab.translateThemes(suggestedGroupsThemes);
+    const translatedThemes = Calendar.translateThemes(suggestedGroupsThemes);
 
     return (
       <View style={styles.container}>
@@ -155,7 +162,7 @@ class GroupsTab extends React.Component {
     // }
   };
 }
-GroupsTab.propTypes = {
+Calendar.propTypes = {
   user: userScheme,
   resetSuggestedGroups: PropTypes.func,
   getSuggestedGroupsTags: PropTypes.func,
@@ -172,4 +179,4 @@ GroupsTab.propTypes = {
 //   getSuggestedGroupsTags
 // };
 
-export default GroupsTab;
+export default Calendar;

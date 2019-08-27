@@ -9,7 +9,7 @@ export const colors = {
 
 export default StyleSheet.create({
   safeArea: {
-    paddingHorizontal: 15,
+    paddingHorizontal: 1,
     flex: 1,
     backgroundColor: colors.background1
   },
@@ -22,8 +22,8 @@ export default StyleSheet.create({
     ...StyleSheet.absoluteFillObject
   },
   scrollview: {
-    flex: 1,
-    borderWidth: 1.5,
+    // flex: 1,
+    borderWidth: 1,
     borderColor: "#5eadbb",
     marginBottom: 10
   },
@@ -57,8 +57,8 @@ export default StyleSheet.create({
     // textAlign: "center"
   },
   slider: {
-    marginTop: 0,
-    overflow: "visible" // for custom animations
+    marginTop: 0
+    // overflow: "visible" // for custom animations
   },
   sliderContentContainer: {
     paddingVertical: 0 // for custom animation

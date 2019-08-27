@@ -381,7 +381,7 @@ const screenGroupNames = {
   TABS: "Tabs",
   HOME_TAB: "HomeTab",
   PEOPLE_TAB: "PeopleTab",
-  GROUPS_TAB: "GroupTab",
+  CALENDAR: "Calendar",
   CITY_TAB: "CityTab",
   POST: "Post",
   CREATE_PAGE_MODAL: "CreatePageModal",
@@ -407,7 +407,7 @@ const screenNames = {
   HomeTab: "Home",
   PeopleTab: "Discover",
   InviteFriends: "InviteFriends",
-  GroupsTab: "Groups",
+  Calendar: "Calendar",
   CreateGroup: "CreateGroup",
   GroupView: "GroupView",
   GroupRules: "GroupRules",
@@ -487,7 +487,7 @@ const screenNamesAliases = {
 };
 
 const screenNamesWithTabNavigation = {
-  GroupView: screenGroupNames.GROUPS_TAB
+  GroupView: screenGroupNames.CALENDAR
 };
 
 const screensWithoutFooter = {
@@ -549,7 +549,7 @@ const screenNamesByEntityType = {
 const screenNamesTabByEntityType = {
   [entityTypes.EVENT]: screenNames.Events,
   [entityTypes.USER]: screenNames.PeopleTab,
-  [entityTypes.GROUP]: screenNames.GroupsTab,
+  [entityTypes.GROUP]: screenNames.Calendar,
   [entityTypes.POST]: screenNames.CityResults
 };
 

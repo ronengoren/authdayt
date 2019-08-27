@@ -51,6 +51,18 @@ const styles = StyleSheet.create({
     minWidth: 30,
     height: "100%",
     marginLeft: 10
+  },
+  tet: {
+    color: "pink",
+
+    marginLeft: 250,
+    color: "white",
+    fontSize: 50,
+    fontWeight: "900",
+    // borderWidth: 1,
+    textShadowColor: "#5eadbb",
+    textShadowRadius: 2
+    // letterSpacing: 1.5,
   }
 });
 
@@ -80,12 +92,16 @@ class Header extends Component {
           barStyle="dark-content"
           backgroundColor="transparent"
         />
+
         <View onLayout={this.calcLeftComponentWidth}>
           {!searchMode && this.renderLeftSection()}
         </View>
+
         {this.renderMiddleSection()}
+
         <View onLayout={this.calcRightComponentWidth}>
           {this.renderRightSection()}
+          <Text style={styles.tet}>tet</Text>
         </View>
       </View>
     );
@@ -162,7 +178,7 @@ class Header extends Component {
           </Text>
           {!!subTitle && (
             <Text numberOfLines={1} size={12} color={daytColors.b60}>
-              {subTitle}
+              {/* {subTitle} */}
             </Text>
           )}
         </TouchableOpacity>

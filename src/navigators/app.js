@@ -14,7 +14,7 @@ import { get } from "../infra/utils";
 import Home from "./home";
 // import People from "./people";
 import Profile from "./Profile";
-import Groups from "./groups";
+import Calendar from "./calendar";
 import Communications from "./communications";
 
 const screenInterpolator = sceneProps => {
@@ -66,8 +66,8 @@ const TabSection = createBottomTabNavigator(
     //   screen: People
     // },
 
-    [screenGroupNames.GROUPS_TAB]: {
-      screen: Groups,
+    [screenGroupNames.CALENDAR]: {
+      screen: Calendar,
       navigationOptions: {
         tabBarTestID: "groupsTabBtn"
       }
@@ -98,6 +98,12 @@ const MiddleSection = createDrawerNavigator({
     //   return {
     //     header: <Header hasBackButton title={title} />
     //   };
+    // }
+  },
+  [screenGroupNames.CALENDAR]: {
+    screen: Calendar
+    // navigationOptions: {
+    //   tabBarTestID: "groupsTabBtn"
     // }
   }
 });
