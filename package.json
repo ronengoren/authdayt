@@ -16,7 +16,7 @@
     "fs": "0.0.1-security",
     "hoist-non-react-statics": "^3.3.0",
     "i18n-js": "^3.3.0",
-    "immer": "^3.2.0",
+    "immer": "^9.0.6",
     "intl": "^1.2.5",
     "memoize-one": "^5.0.5",
     "moment": "^2.24.0",
