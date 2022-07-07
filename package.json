@@ -19,7 +19,7 @@
     "immer": "^3.2.0",
     "intl": "^1.2.5",
     "memoize-one": "^5.0.5",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "nodemon": "^1.19.1",
     "normalizr": "^3.4.0",
     "pluralize": "^8.0.0",
